@@ -6543,6 +6543,7 @@ function HistoryModal({
   const [aiError, setAiError] = useState(null);
   const _fetchingRef = useRef(false);
   const _analysisRef = useRef(null);
+  const _demoTimerRef = useRef(null);
   const meta = COMPANY_META[c.ticker] || {
     founded: c.founded || 2000,
     events: []
@@ -6594,33 +6595,26 @@ function HistoryModal({
     }, "\u26A1 ", ev.l));
   };
 
-  // AI Analysis cekici — GMA Intelligence Layer
+  // AI Analysis cekici — GMA Intelligence Layer (logged-in users only)
   const fetchAnalysis = async () => {
     if (_fetchingRef.current) return;
     if (_analysisRef.current) return;
-    _fetchingRef.current = true;
-    setLoadingAI(true);
-    setAiError(null);
     const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
-    if (!_user) {
-      await new Promise(r => setTimeout(r, 1500));
-      _analysisRef.current = GMA_DEMO_ANALYSIS;
-      setAnalysis({...GMA_DEMO_ANALYSIS});
-      setLoadingAI(false);
-      _fetchingRef.current = false;
-      return;
-    }
+    if (!_user) return;
     _gmaInitCredits(_user.email);
     const credits = _gmaCredits(_user.email);
     if (credits <= 0) {
-      await new Promise(r => setTimeout(r, 1500));
+      _fetchingRef.current = true;
+      setLoadingAI(true);
+      await new Promise(r => setTimeout(r, 1200));
       _analysisRef.current = GMA_DEMO_ANALYSIS;
       setAnalysis({...GMA_DEMO_ANALYSIS});
       setLoadingAI(false);
       _fetchingRef.current = false;
       return;
     }
-
+    _fetchingRef.current = true;
+    setLoadingAI(true);
     setAiError(null);
     _gmaDeductCredit(_user.email);
 
@@ -6693,9 +6687,27 @@ function HistoryModal({
   };
 
   useEffect(() => {
-    if (tab === "analysis" || tab === "risk") {
-      fetchAnalysis();
+    if (tab !== "analysis" && tab !== "risk") return;
+    if (_analysisRef.current) return;
+    if (_fetchingRef.current) return;
+
+    const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
+    if (!_user) {
+      _fetchingRef.current = true;
+      setLoadingAI(true);
+      _demoTimerRef.current = setTimeout(() => {
+        _analysisRef.current = GMA_DEMO_ANALYSIS;
+        setAnalysis({...GMA_DEMO_ANALYSIS});
+        setLoadingAI(false);
+        _fetchingRef.current = false;
+      }, 1200);
+      return () => {
+        clearTimeout(_demoTimerRef.current);
+        _fetchingRef.current = false;
+        setLoadingAI(false);
+      };
     }
+    fetchAnalysis();
   }, [tab]);
 
     const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
