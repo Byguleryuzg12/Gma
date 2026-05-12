@@ -6480,6 +6480,55 @@ const COMPANY_META = Object.fromEntries(Object.keys(FOUNDING_YEARS).map(ticker =
   events: COMPANY_EVENTS[ticker] || []
 }]));
 
+// ── GMA DEMO MODE — Paddle review / API-key-absent fallback ──
+const GMA_DEMO_ANALYSIS = {
+  summary: "Apple Inc. demonstrates exceptional financial resilience with consistent revenue growth across its diversified product and services ecosystem. The company's transition to recurring services revenue provides stable high-margin income, while premium brand positioning maintains strong pricing power against competitors.",
+  positive: [
+    "Services segment growing 14% YoY — now 22% of total revenue with 72% gross margins",
+    "Strong balance sheet: $162B cash reserves enabling R&D investment and buybacks",
+    "Ecosystem lock-in drives 95%+ customer retention and cross-product adoption rates"
+  ],
+  negative: [
+    "iPhone revenue (~52% of total) creates single-product dependency risk",
+    "EU App Store regulatory headwinds may compress services margins in 2026",
+    "Premium pricing limits addressable market in high-growth emerging economies"
+  ],
+  innovation: [
+    "Vision Pro spatial computing positions company for next-generation computing paradigm",
+    "Custom silicon (M-series) delivers industry-leading performance-per-watt ratios"
+  ],
+  sentiment: "POZITIF",
+  strengthScore: 87,
+  riskScore: 28,
+  _demo: true
+};
+
+const GMA_DEMO_COMPARE = companies => ({
+  companyAnalysis: companies.map((c, i) => ({
+    ticker: c.ticker,
+    totalScore: [87, 83, 79, 74][i] || 74,
+    growthPotential: [82, 79, 76, 71][i] || 71,
+    riskLevel: [28, 31, 35, 38][i] || 38,
+    innovationScore: [91, 88, 80, 75][i] || 75,
+    financialStrength: [89, 85, 78, 72][i] || 72,
+    marketPosition: [94, 87, 81, 76][i] || 76,
+    summary: `${c.name} shows solid market positioning with consistent fundamentals and strong competitive moat in its core segments.`,
+    strengths: ["Dominant market share in core segments", "Strong recurring revenue streams", "Proven management execution track record"],
+    risks: ["Market concentration exposure", "Macro sensitivity in key geographies"],
+    nearFuture: "AI integration and product expansion expected to sustain growth trajectory through 2026-2027."
+  })),
+  recommendation: {
+    bestTicker: companies[0]?.ticker || "AAPL",
+    confidenceRate: 84,
+    globalRiskShare: 4.2,
+    rationale: "Superior financial metrics combined with innovation pipeline makes this the preferred allocation under current market conditions.",
+    alternatif: companies[1]?.ticker || "MSFT",
+    alternativeNote: "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as secondary allocation."
+  },
+  overallAssessment: "Portfolio demonstrates solid diversification across market leaders with complementary business models. Current macro environment favors quality over growth, supporting this allocation strategy.",
+  _demo: true
+});
+
 // ── HISTORY MODAL ──
 function HistoryModal({
   c,
@@ -6543,60 +6592,22 @@ function HistoryModal({
   // AI Analysis cekici — GMA Intelligence Layer
   const fetchAnalysis = async () => {
     const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
-    if (!_user) { setAiError('__LOGIN_REQUIRED__'); return; }
+    if (!_user) {
+      setLoadingAI(true);
+      await new Promise(r => setTimeout(r, 1500));
+      setAnalysis({...GMA_DEMO_ANALYSIS});
+      setLoadingAI(false);
+      return;
+    }
     _gmaInitCredits(_user.email);
     const credits = _gmaCredits(_user.email);
-    if (credits <= 0) { setAiError('__NO_CREDITS__'); return; }
-
-// ── GMA DEMO MODE — Paddle review / API-key-absent fallback ──
-const GMA_DEMO_ANALYSIS = {
-  summary: "Apple Inc. demonstrates exceptional financial resilience with consistent revenue growth across its diversified product and services ecosystem. The company's transition to recurring services revenue provides stable high-margin income, while premium brand positioning maintains strong pricing power against competitors.",
-  positive: [
-    "Services segment growing 14% YoY — now 22% of total revenue with 72% gross margins",
-    "Strong balance sheet: $162B cash reserves enabling R&D investment and buybacks",
-    "Ecosystem lock-in drives 95%+ customer retention and cross-product adoption rates"
-  ],
-  negative: [
-    "iPhone revenue (~52% of total) creates single-product dependency risk",
-    "EU App Store regulatory headwinds may compress services margins in 2026",
-    "Premium pricing limits addressable market in high-growth emerging economies"
-  ],
-  innovation: [
-    "Vision Pro spatial computing positions company for next-generation computing paradigm",
-    "Custom silicon (M-series) delivers industry-leading performance-per-watt ratios"
-  ],
-  sentiment: "POZITIF",
-  strengthScore: 87,
-  riskScore: 28,
-  _demo: true
-};
-
-const GMA_DEMO_COMPARE = companies => ({
-  companyAnalysis: companies.map((c, i) => ({
-    ticker: c.ticker,
-    totalScore: [87, 83, 79, 74][i] || 74,
-    growthPotential: [82, 79, 76, 71][i] || 71,
-    riskLevel: [28, 31, 35, 38][i] || 38,
-    innovationScore: [91, 88, 80, 75][i] || 75,
-    financialStrength: [89, 85, 78, 72][i] || 72,
-    marketPosition: [94, 87, 81, 76][i] || 76,
-    summary: `${c.name} shows solid market positioning with consistent fundamentals and strong competitive moat in its core segments.`,
-    strengths: ["Dominant market share in core segments", "Strong recurring revenue streams", "Proven management execution track record"],
-    risks: ["Market concentration exposure", "Macro sensitivity in key geographies"],
-    nearFuture: "AI integration and product expansion expected to sustain growth trajectory through 2026-2027."
-  })),
-  recommendation: {
-    bestTicker: companies[0]?.ticker || "AAPL",
-    confidenceRate: 84,
-    globalRiskShare: 4.2,
-    rationale: "Superior financial metrics combined with innovation pipeline makes this the preferred allocation under current market conditions.",
-    alternatif: companies[1]?.ticker || "MSFT",
-    alternativeNote: "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as secondary allocation."
-  },
-  overallAssessment: "Portfolio demonstrates solid diversification across market leaders with complementary business models. Current macro environment favors quality over growth, supporting this allocation strategy.",
-  _demo: true
-});
-
+    if (credits <= 0) {
+      setLoadingAI(true);
+      await new Promise(r => setTimeout(r, 1500));
+      setAnalysis({...GMA_DEMO_ANALYSIS});
+      setLoadingAI(false);
+      return;
+    }
 
     setLoadingAI(true);
     setAiError(null);
@@ -7627,8 +7638,10 @@ function CompareModal({
       }
     })();
     if (!_cu) {
+      setLoading(true);
+      await new Promise(r => setTimeout(r, 1500));
+      setResult(GMA_DEMO_COMPARE(co));
       setLoading(false);
-      setError('__LOGIN_REQUIRED__');
       return;
     }
     setLoading(true);
