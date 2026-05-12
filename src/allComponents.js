@@ -6543,7 +6543,6 @@ function HistoryModal({
   const [aiError, setAiError] = useState(null);
   const _fetchingRef = useRef(false);
   const _analysisRef = useRef(null);
-  const _demoTimerRef = useRef(null);
   const contentDivRef = useRef(null);
   const meta = COMPANY_META[c.ticker] || {
     founded: c.founded || 2000,
@@ -6596,12 +6595,22 @@ function HistoryModal({
     }, "\u26A1 ", ev.l));
   };
 
-  // AI Analysis cekici — GMA Intelligence Layer (logged-in users only)
+  // AI Analysis cekici — GMA Intelligence Layer
   const fetchAnalysis = async () => {
     if (_fetchingRef.current) return;
     if (_analysisRef.current) return;
     const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
-    if (!_user) return;
+    if (!_user) {
+      _fetchingRef.current = true;
+      setLoadingAI(true);
+      setAiError(null);
+      await new Promise(r => setTimeout(r, 900));
+      _analysisRef.current = GMA_DEMO_ANALYSIS;
+      setAnalysis({...GMA_DEMO_ANALYSIS});
+      setLoadingAI(false);
+      _fetchingRef.current = false;
+      return;
+    }
     _gmaInitCredits(_user.email);
     const credits = _gmaCredits(_user.email);
     if (credits <= 0) {
@@ -6693,25 +6702,6 @@ function HistoryModal({
 
   useEffect(() => {
     if (tab !== "analysis" && tab !== "risk") return;
-    if (_analysisRef.current) return;
-    if (_fetchingRef.current) return;
-
-    const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
-    if (!_user) {
-      _fetchingRef.current = true;
-      setLoadingAI(true);
-      _demoTimerRef.current = setTimeout(() => {
-        _analysisRef.current = GMA_DEMO_ANALYSIS;
-        setAnalysis({...GMA_DEMO_ANALYSIS});
-        setLoadingAI(false);
-        _fetchingRef.current = false;
-      }, 1200);
-      return () => {
-        clearTimeout(_demoTimerRef.current);
-        _fetchingRef.current = false;
-        setLoadingAI(false);
-      };
-    }
     fetchAnalysis();
   }, [tab]);
 
@@ -7425,9 +7415,7 @@ function HistoryModal({
     className: "legal-scroll-area",
     style: {
       borderTop: "1px solid #1e293b",
-      background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))",
-      overflowY: "auto",
-      flex: "1 1 auto"
+      background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))"
     }
   }, /*#__PURE__*/React.createElement("div", {style:{display:"block",clear:"both",margin:"4px 0"}}), /*#__PURE__*/React.createElement("div", {
     className: "legal-warning-container",

@@ -128,9 +128,7 @@
       flex: 0 0 auto !important;
     }
     .legal-scroll-area {
-      overflow-y: auto !important;
-      max-height: 40vh;
-      -webkit-overflow-scrolling: touch;
+      overflow-y: visible;
     }
     .yasal-uyari-title {
       font-size: 10px !important;
