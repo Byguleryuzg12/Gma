@@ -6541,6 +6541,8 @@ function HistoryModal({
   const [analysis, setAnalysis] = useState(null);
   const [loadingAI, setLoadingAI] = useState(false);
   const [aiError, setAiError] = useState(null);
+  const _fetchingRef = useRef(false);
+  const _analysisRef = useRef(null);
   const meta = COMPANY_META[c.ticker] || {
     founded: c.founded || 2000,
     events: []
@@ -6594,27 +6596,31 @@ function HistoryModal({
 
   // AI Analysis cekici — GMA Intelligence Layer
   const fetchAnalysis = async () => {
-    if (loadingAI) return;
-    if (analysis) return;
+    if (_fetchingRef.current) return;
+    if (_analysisRef.current) return;
+    _fetchingRef.current = true;
+    setLoadingAI(true);
+    setAiError(null);
     const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
     if (!_user) {
-      setLoadingAI(true);
       await new Promise(r => setTimeout(r, 1500));
+      _analysisRef.current = GMA_DEMO_ANALYSIS;
       setAnalysis({...GMA_DEMO_ANALYSIS});
       setLoadingAI(false);
+      _fetchingRef.current = false;
       return;
     }
     _gmaInitCredits(_user.email);
     const credits = _gmaCredits(_user.email);
     if (credits <= 0) {
-      setLoadingAI(true);
       await new Promise(r => setTimeout(r, 1500));
+      _analysisRef.current = GMA_DEMO_ANALYSIS;
       setAnalysis({...GMA_DEMO_ANALYSIS});
       setLoadingAI(false);
+      _fetchingRef.current = false;
       return;
     }
 
-    setLoadingAI(true);
     setAiError(null);
     _gmaDeductCredit(_user.email);
 
@@ -6677,8 +6683,13 @@ function HistoryModal({
 
     } catch (e) {
       _gmaSetCredits(_user.email, (_gmaCredits(_user.email)||0)+1);
-      await new Promise(r => setTimeout(r, 1500)); setAnalysis({...GMA_DEMO_ANALYSIS});
-    } finally { setLoadingAI(false); }
+      await new Promise(r => setTimeout(r, 1500));
+      _analysisRef.current = GMA_DEMO_ANALYSIS;
+      setAnalysis({...GMA_DEMO_ANALYSIS});
+    } finally {
+      setLoadingAI(false);
+      _fetchingRef.current = false;
+    }
   };
 
   useEffect(() => {
