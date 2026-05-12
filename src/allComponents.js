@@ -6544,6 +6544,7 @@ function HistoryModal({
   const _fetchingRef = useRef(false);
   const _analysisRef = useRef(null);
   const _demoTimerRef = useRef(null);
+  const contentDivRef = useRef(null);
   const meta = COMPANY_META[c.ticker] || {
     founded: c.founded || 2000,
     events: []
@@ -6622,7 +6623,7 @@ function HistoryModal({
       // Call GMA serverless endpoint (Vercel /api/analyze)
       const endpoint = window.location.hostname === 'localhost'
         ? 'http://localhost:3000/api/analyze'
-        : 'https://globalmarketanalytics.com/api/analyze';
+        : window.location.origin + '/api/analyze';
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -6685,6 +6686,10 @@ function HistoryModal({
       _fetchingRef.current = false;
     }
   };
+
+  useEffect(() => {
+    if (contentDivRef.current) contentDivRef.current.scrollTop = 0;
+  }, [tab]);
 
   useEffect(() => {
     if (tab !== "analysis" && tab !== "risk") return;
@@ -6838,6 +6843,7 @@ function HistoryModal({
       fetchAnalysis();
     }
   }, "\u26A1 RISK & OPPORTUNITY")), /*#__PURE__*/React.createElement("div", {
+    ref: contentDivRef,
     style: {
       flex: 1,
       overflow: "auto",
