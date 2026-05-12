@@ -6837,13 +6837,15 @@ function HistoryModal({
     style: {
       flex: 1,
       overflow: "auto",
-      padding: "20px 24px"
+      padding: "20px 24px",
+      display: "flex",
+      flexDirection: "column"
     }
   }, tab === "chart" && /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
-      height: "100%"
+      flex: 1
     }
   },
   /*#__PURE__*/React.createElement("div", {
@@ -6933,7 +6935,7 @@ function HistoryModal({
       color: "#94a3b8",
       marginLeft: "6px"
     }
-  }, ev.l)))))), tab === "analysis" && /*#__PURE__*/React.createElement("div", null, loadingAI && /*#__PURE__*/React.createElement("div", {
+  }, ev.l)))))), tab === "analysis" && /*#__PURE__*/React.createElement("div", {style:{flex:"1 0 auto"}}, loadingAI && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px",
@@ -7221,7 +7223,7 @@ function HistoryModal({
       color: "#6366f1",
       flexShrink: 0
     }
-  }, "\u25C8"), " ", item))))), tab === "risk" && /*#__PURE__*/React.createElement("div", null, loadingAI && /*#__PURE__*/React.createElement("div", {
+  }, "\u25C8"), " ", item))))), tab === "risk" && /*#__PURE__*/React.createElement("div", {style:{flex:"1 0 auto"}}, loadingAI && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px",
@@ -7415,7 +7417,8 @@ function HistoryModal({
     className: "legal-scroll-area",
     style: {
       borderTop: "1px solid #1e293b",
-      background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))"
+      background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))",
+      marginTop: "auto"
     }
   }, /*#__PURE__*/React.createElement("div", {style:{display:"block",clear:"both",margin:"4px 0"}}), /*#__PURE__*/React.createElement("div", {
     className: "legal-warning-container",
