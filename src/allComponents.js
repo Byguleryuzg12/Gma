@@ -6594,6 +6594,8 @@ function HistoryModal({
 
   // AI Analysis cekici — GMA Intelligence Layer
   const fetchAnalysis = async () => {
+    if (loadingAI) return;
+    if (analysis) return;
     const _user = (() => { try { return JSON.parse(localStorage.getItem('gma_current_user')); } catch { return null; } })();
     if (!_user) {
       setLoadingAI(true);
@@ -6680,7 +6682,7 @@ function HistoryModal({
   };
 
   useEffect(() => {
-    if ((tab === "analysis" || tab === "risk") && !analysis && !loadingAI) {
+    if (tab === "analysis" || tab === "risk") {
       fetchAnalysis();
     }
   }, [tab]);
@@ -6804,13 +6806,13 @@ function HistoryModal({
     style: tabStyle(tab === "analysis"),
     onClick: () => {
       setTab("analysis");
-      if (!analysis && !loadingAI) fetchAnalysis();
+      fetchAnalysis();
     }
   }, "\uD83E\uDD16 AI ANALYSIS"), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "risk"),
     onClick: () => {
       setTab("risk");
-      if (!analysis && !loadingAI) fetchAnalysis();
+      fetchAnalysis();
     }
   }, "\u26A1 RISK & OPPORTUNITY")), /*#__PURE__*/React.createElement("div", {
     style: {
