@@ -6498,8 +6498,11 @@ const GMA_DEMO_ANALYSIS = {
     "Custom silicon (M-series) delivers industry-leading performance-per-watt ratios"
   ],
   sentiment: "POZITIF",
+  sentimentPuan: 78,
   strengthScore: 87,
   riskScore: 28,
+  kisaTimeframe: "Strong Q4 earnings forecast and new iPhone cycle expected to support near-term price appreciation. Services revenue growth provides consistent upside catalyst.",
+  uzunTimeframe: "Sustained services segment expansion, Vision Pro ecosystem maturation, and continued share buyback program positions AAPL for long-term value appreciation through 2027.",
   _demo: true
 };
 
@@ -6877,7 +6880,7 @@ function HistoryModal({
       letterSpacing: "0.08em",
       marginBottom: "10px"
     }
-  }, "ANAHTAR OLAYLAR"), /*#__PURE__*/React.createElement("div", {
+  }, "KEY EVENTS"), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexWrap: "wrap",
@@ -6979,7 +6982,7 @@ function HistoryModal({
     }
   },
     /*#__PURE__*/React.createElement("div", {style:{fontSize:"40px",marginBottom:"12px"}}, "\uD83D\uDD12"),
-    /*#__PURE__*/React.createElement("div", {style:{fontSize:"16px",fontWeight:"bold",color:"#fbbf24",marginBottom:"8px"}}, "Krediniz Bitti"),
+    /*#__PURE__*/React.createElement("div", {style:{fontSize:"16px",fontWeight:"bold",color:"#fbbf24",marginBottom:"8px"}}, "Credits Used Up"),
     /*#__PURE__*/React.createElement("div", {style:{fontSize:"12px",color:"#94a3b8",marginBottom:"20px",lineHeight:1.6}},
       "You have used your 2 free analyses. Choose a GMA plan to continue."
     ),
@@ -7036,7 +7039,7 @@ function HistoryModal({
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\u21BA Tekrar Dene"))), !loadingAI && !aiError && !analysis && /*#__PURE__*/React.createElement("div", {
+  }, "\u21BA Try Again"))), !loadingAI && !aiError && !analysis && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px"
@@ -7266,7 +7269,7 @@ function HistoryModal({
       fontWeight: "bold",
       marginBottom: "8px"
     }
-  }, "\u26A0 Hata"), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 Error"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "11px",
       color: "#94a3b8",
@@ -7292,7 +7295,7 @@ function HistoryModal({
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\u21BA Tekrar Dene"))), !loadingAI && !analysis && !aiError && /*#__PURE__*/React.createElement("div", {
+  }, "\u21BA Try Again"))), !loadingAI && !analysis && !aiError && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px"
@@ -8019,7 +8022,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\u21BA Tekrar Dene"))), !loading && result && tab === "overview" && /*#__PURE__*/React.createElement("div", null,
+  }, "\u21BA Try Again"))), !loading && result && tab === "overview" && /*#__PURE__*/React.createElement("div", null,
     result._demo && /*#__PURE__*/React.createElement("div", {style:{display:'flex',justifyContent:'flex-end',marginBottom:'8px'}},
       /*#__PURE__*/React.createElement("span", {style:{fontSize:'10px',color:'#e879f9',background:'rgba(232,121,249,0.1)',border:'1px solid rgba(232,121,249,0.25)',borderRadius:'20px',padding:'3px 10px',letterSpacing:'0.08em',fontFamily:"'Courier New',monospace"}},
         "◈ PREVIEW MODE · SAMPLE DATA"
@@ -8129,7 +8132,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         fontSize: "12px",
         color: "#94a3b8"
       }
-    }, "TOPLAM SKOR")), /*#__PURE__*/React.createElement("div", {
+    }, "TOTAL SCORE")), /*#__PURE__*/React.createElement("div", {
       style: {
         textAlign: "center"
       }
@@ -8144,7 +8147,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         fontSize: "12px",
         color: "#94a3b8"
       }
-    }, "BUYUME")), /*#__PURE__*/React.createElement("div", {
+    }, "GROWTH")), /*#__PURE__*/React.createElement("div", {
       style: {
         textAlign: "center"
       }
@@ -8187,7 +8190,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       v: f.marketPosition,
       c: "#fbbf24"
     }, {
-      l: "Risk Seviyesi",
+      l: "Risk Level",
       v: f.riskLevel,
       c: f.riskLevel > 60 ? "#f87171" : "#fb923c"
     }];
@@ -8275,7 +8278,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         color: "#f87171",
         marginBottom: "6px"
       }
-    }, "RISKLER"), f.risks?.map((r, i) => /*#__PURE__*/React.createElement("div", {
+    }, "RISKS"), f.risks?.map((r, i) => /*#__PURE__*/React.createElement("div", {
       key: i,
       style: {
         fontSize: "13px",
