@@ -8336,7 +8336,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontSize: "12px",
       color: "#94a3b8"
     }
-  }, "AI GUVEN ORANI")), /*#__PURE__*/React.createElement("div", {
+  }, "AI CONFIDENCE RATE")), /*#__PURE__*/React.createElement("div", {
     style: {
       width: "1px",
       height: "40px",
@@ -8353,7 +8353,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontSize: "12px",
       color: "#94a3b8"
     }
-  }, "KURESEL RISK PAYI"))), /*#__PURE__*/React.createElement("div", {
+  }, "GLOBAL RISK SHARE"))), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "14px",
       color: "#94a3b8",
