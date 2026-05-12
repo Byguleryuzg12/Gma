@@ -6833,13 +6833,19 @@ function HistoryModal({
       fetchAnalysis();
     }
   }, "\u26A1 RISK & OPPORTUNITY")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
+      minHeight: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
     ref: contentDivRef,
     style: {
       flex: 1,
       overflow: "auto",
-      padding: "20px 24px",
-      display: "flex",
-      flexDirection: "column"
+      padding: "20px 24px"
     }
   }, tab === "chart" && /*#__PURE__*/React.createElement("div", {
     style: {
@@ -7413,12 +7419,12 @@ function HistoryModal({
       color: "#f87171",
       flexShrink: 0
     }
-  }, "\u2212"), " ", item)))))), /*#__PURE__*/React.createElement("div", {
+  }, "\u2212"), " ", item))))))), /*#__PURE__*/React.createElement("div", {
     className: "legal-scroll-area",
     style: {
       borderTop: "1px solid #1e293b",
       background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))",
-      marginTop: "auto"
+      flexShrink: 0
     }
   }, /*#__PURE__*/React.createElement("div", {style:{display:"block",clear:"both",margin:"4px 0"}}), /*#__PURE__*/React.createElement("div", {
     className: "legal-warning-container",
