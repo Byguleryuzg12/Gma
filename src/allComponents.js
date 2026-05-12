@@ -6678,6 +6678,13 @@ function HistoryModal({
       await new Promise(r => setTimeout(r, 1500)); setAnalysis({...GMA_DEMO_ANALYSIS});
     } finally { setLoadingAI(false); }
   };
+
+  useEffect(() => {
+    if ((tab === "analysis" || tab === "risk") && !analysis && !loadingAI) {
+      fetchAnalysis();
+    }
+  }, [tab]);
+
     const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
   const sentimentIcon = s => s === "POZITIF" ? "▲" : s === "NEGATIF" ? "▼" : "◆";
   const tabStyle = active => ({
