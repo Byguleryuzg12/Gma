@@ -6837,7 +6837,7 @@ function HistoryModal({
       flex: 1,
       display: "flex",
       flexDirection: "column",
-      overflow: "hidden",
+      overflow: "auto",
       minHeight: 0
     }
   }, /*#__PURE__*/React.createElement("div", {
