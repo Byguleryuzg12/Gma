@@ -6824,13 +6824,11 @@ function HistoryModal({
     style: tabStyle(tab === "analysis"),
     onClick: () => {
       setTab("analysis");
-      fetchAnalysis();
     }
   }, "\uD83E\uDD16 AI ANALYSIS"), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "risk"),
     onClick: () => {
       setTab("risk");
-      fetchAnalysis();
     }
   }, "\u26A1 RISK & OPPORTUNITY")), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -7419,7 +7417,7 @@ function HistoryModal({
       color: "#f87171",
       flexShrink: 0
     }
-  }, "\u2212"), " ", item))))))), /*#__PURE__*/React.createElement("div", {
+  }, "\u2212"), " ", item)))))), /*#__PURE__*/React.createElement("div", {
     className: "legal-scroll-area",
     style: {
       borderTop: "1px solid #1e293b",
@@ -7480,7 +7478,7 @@ function HistoryModal({
       lineHeight: "1.2",
       margin: "0"
     }
-  }, item))))))));
+  }, item)))))))));
 }
 const genSpark = (price, change, n = 26) => {
   const start = price / (1 + change / 100);
