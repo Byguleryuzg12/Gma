@@ -1,26 +1,28 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method Not Allowed' });
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
     return;
   }
 
-  let body;
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+
+  let body = typeof req.body === 'string' ? {} : (req.body || {});
+  
   try {
-    body = await new Promise((resolve, reject) => {
-      let data = '';
-      req.on('data', chunk => { data += chunk; });
-      req.on('end', () => {
-        try {
-          resolve(JSON.parse(data || '{}'));
-        } catch (error) {
-          reject(error);
-        }
-      });
-      req.on('error', reject);
-    });
+    if (typeof req.body === 'string') {
+      body = JSON.parse(req.body);
+    } else if (Buffer.isBuffer(req.body)) {
+      body = JSON.parse(req.body.toString());
+    }
   } catch (error) {
-    res.status(400).json({ error: 'Invalid JSON payload' });
-    return;
+    return res.status(400).json({ error: 'Invalid JSON payload', details: error.message });
   }
 
   const { ticker, name, sector, price, change } = body || {};

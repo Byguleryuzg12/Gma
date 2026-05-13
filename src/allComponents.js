@@ -7423,8 +7423,7 @@ function HistoryModal({
     className: "legal-scroll-area",
     style: {
       borderTop: "1px solid #1e293b",
-      background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))",
-      flexShrink: 0
+      background: "linear-gradient(135deg,rgba(251,191,36,0.06),rgba(248,113,113,0.04))"
     }
   }, /*#__PURE__*/React.createElement("div", {style:{display:"block",clear:"both",margin:"4px 0"}}), /*#__PURE__*/React.createElement("div", {
     className: "legal-warning-container",
