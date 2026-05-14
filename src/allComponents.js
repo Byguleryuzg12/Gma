@@ -6533,6 +6533,292 @@ const GMA_DEMO_COMPARE = companies => ({
 });
 
 // ── HISTORY MODAL ──
+function AIAnalysisModal({
+  c,
+  onClose
+}) {
+  const sec = SECTORS[c.sector] || {
+    color: "#94a3b8",
+    label: c.sector
+  };
+  const analysis = GMA_DEMO_ANALYSIS;
+  const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: onClose,
+    style: {
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0,0,0,0.88)",
+      zIndex: 9200,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "16px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    style: {
+      width: "100%",
+      maxWidth: "700px",
+      maxHeight: "88vh",
+      overflow: "auto",
+      background: "linear-gradient(145deg,#09101f,#060912)",
+      border: `1px solid ${sec.color}44`,
+      borderRadius: "18px",
+      padding: "22px",
+      fontFamily: "'Courier New',monospace"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      gap: "16px",
+      marginBottom: "18px"
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#a78bfa",
+      fontSize: "12px",
+      fontWeight: "bold",
+      letterSpacing: "0.1em",
+      marginBottom: "6px"
+    }
+  }, "\uD83E\uDD16 AI ANAL\u0130Z"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f1f5f9",
+      fontSize: "20px",
+      fontWeight: "bold"
+    }
+  }, c.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#64748b",
+      fontSize: "13px",
+      marginTop: "4px"
+    }
+  }, c.ticker, " \xB7 $", fmtPrice(c.price), " \xB7 ", c.change >= 0 ? "\u25B2" : "\u25BC", " ", Math.abs(c.change).toFixed(2), "%")), /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    style: {
+      background: "transparent",
+      border: "none",
+      color: "#94a3b8",
+      cursor: "pointer",
+      fontSize: "22px"
+    }
+  }, "\u2715")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid #0f172a",
+      borderRadius: "12px",
+      padding: "16px",
+      marginBottom: "14px",
+      background: "rgba(255,255,255,0.02)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: sentimentColor(analysis.sentiment),
+      fontSize: "13px",
+      fontWeight: "bold",
+      marginBottom: "8px"
+    }
+  }, analysis.sentiment, " \xB7 ", analysis.sentimentPuan, "/100"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#94a3b8",
+      fontSize: "14px",
+      lineHeight: 1.6
+    }
+  }, analysis.summary)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+      gap: "12px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(52,211,153,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(52,211,153,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#34d399",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px"
+    }
+  }, "POSITIVE FACTORS"), analysis.positive.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      color: "#94a3b8",
+      fontSize: "13px",
+      lineHeight: 1.45,
+      marginBottom: "7px"
+    }
+  }, "+ ", item))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(248,113,113,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(248,113,113,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f87171",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px"
+    }
+  }, "RISK FACTORS"), analysis.negative.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      color: "#94a3b8",
+      fontSize: "13px",
+      lineHeight: 1.45,
+      marginBottom: "7px"
+    }
+  }, "- ", item))))));
+}
+
+function RiskOpportunityDemoModal({
+  c,
+  onClose
+}) {
+  const sec = SECTORS[c.sector] || {
+    color: "#94a3b8",
+    label: c.sector
+  };
+  const risks = [
+    "Revenue concentration and macro sensitivity may increase downside volatility.",
+    "Regulatory, margin, or execution pressure can weaken the near-term setup.",
+    "Valuation risk rises when price momentum runs ahead of fundamentals."
+  ];
+  const opportunities = [
+    "Strong market position can support pricing power and resilient cash flow.",
+    "AI, automation, or product expansion may create new growth channels.",
+    "Operational scale can convert demand recovery into margin improvement."
+  ];
+  const row = (items, color, sign) => items.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      display: "flex",
+      gap: "8px",
+      color: "#94a3b8",
+      fontSize: "13px",
+      lineHeight: 1.45,
+      marginBottom: "8px"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: color,
+      flexShrink: 0
+    }
+  }, sign), item));
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: onClose,
+    style: {
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0,0,0,0.88)",
+      zIndex: 9250,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "16px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    style: {
+      width: "100%",
+      maxWidth: "720px",
+      background: "linear-gradient(145deg,#09101f,#060912)",
+      border: `1px solid ${sec.color}44`,
+      borderRadius: "18px",
+      padding: "22px",
+      fontFamily: "'Courier New',monospace"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      gap: "16px",
+      marginBottom: "18px"
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f59e0b",
+      fontSize: "12px",
+      fontWeight: "bold",
+      letterSpacing: "0.1em",
+      marginBottom: "6px"
+    }
+  }, "\u26A0 RISK & OPPORTUNITY DEMO"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f1f5f9",
+      fontSize: "20px",
+      fontWeight: "bold"
+    }
+  }, c.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#64748b",
+      fontSize: "13px",
+      marginTop: "4px"
+    }
+  }, c.ticker, " \xB7 ", sec.label)), /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    style: {
+      background: "transparent",
+      border: "none",
+      color: "#94a3b8",
+      cursor: "pointer",
+      fontSize: "22px"
+    }
+  }, "\u2715")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+      gap: "12px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(248,113,113,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(248,113,113,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f87171",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px",
+      letterSpacing: "0.08em"
+    }
+  }, "RISK SIGNALS"), row(risks, "#f87171", "-")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(52,211,153,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(52,211,153,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#34d399",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px",
+      letterSpacing: "0.08em"
+    }
+  }, "OPPORTUNITY SIGNALS"), row(opportunities, "#34d399", "+"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "14px",
+      color: "#475569",
+      fontSize: "11px",
+      textAlign: "center"
+    }
+  }, "Demo content only. Connect live model output later for company-specific scoring.")));
+}
+
 function HistoryModal({
   c,
   onClose
@@ -8847,6 +9133,8 @@ function CompanyCard({
   onWatch,
   onAlert,
   onHistory,
+  onAIAnalysis,
+  onRiskOpportunity,
   inCompare,
   onCompare,
   compareDisabled
@@ -8864,12 +9152,14 @@ function CompanyCard({
     disabled: disabled,
     title: label,
     style: {
-      flex: "1 1 calc(16.666% - 5px)",
-      minWidth: "60px",
+      flex: "1 1 calc(33.333% - 5px)",
+      minWidth: "64px",
+      minHeight: "54px",
       padding: "6px 0",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      justifyContent: "center",
       gap: "2px",
       background: active ? `${activeColor}18` : "rgba(255,255,255,0.03)",
       border: `1px solid ${active ? activeColor + "44" : "#1e293b"}`,
@@ -8885,11 +9175,15 @@ function CompanyCard({
     }
   }, icon), /*#__PURE__*/React.createElement("span", {
     style: {
-      fontSize: "12px",
+      fontSize: "11px",
       color: active ? activeColor : "#e2e8f0",
       fontFamily: "'Courier New',monospace",
       fontWeight: "bold",
-      letterSpacing: "0.04em"
+      letterSpacing: "0.04em",
+      lineHeight: 1.1,
+      textAlign: "center",
+      maxWidth: "100%",
+      overflowWrap: "anywhere"
     }
   }, label));
   return /*#__PURE__*/React.createElement("div", {
@@ -9049,7 +9343,7 @@ function CompanyCard({
       flexWrap: "wrap",
       justifyContent: "space-between"
     }
-    }, iconBtn("📊", "CHART", false, sec.color, onHistory, false), iconBtn("⚖️", "COMPARE", inCompare, "#e879f9", onCompare, compareDisabled && !inCompare), iconBtn("📈", "ADD", false, "#34d399", onBuy, !isListed), iconBtn("🛒", "CART", inCart, "#38bdf8", onCart, false), iconBtn("👁", "WATCH", isWatched, "#fbbf24", onWatch, false, "#ffffff"), iconBtn("🔔", "ALERT", hasAlert, "#fb923c", onAlert, false)));
+    }, iconBtn("📊", "CHART", false, sec.color, onHistory, false), iconBtn("\uD83E\uDD16", "AI ANAL\u0130Z", false, "#a78bfa", onAIAnalysis, false), iconBtn("\u26A0", "RISK & OPPORTUNITY", false, "#f59e0b", onRiskOpportunity, false), iconBtn("⚖️", "COMPARE", inCompare, "#e879f9", onCompare, compareDisabled && !inCompare), iconBtn("📈", "ADD", false, "#34d399", onBuy, !isListed), iconBtn("🛒", "CART", inCart, "#38bdf8", onCart, false), iconBtn("👁", "WATCH", isWatched, "#fbbf24", onWatch, false, "#ffffff"), iconBtn("🔔", "ALERT", hasAlert, "#fb923c", onAlert, false)));
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -12344,6 +12638,8 @@ function MarketDashboard({
   const [buyModal, setBuyModal] = useState(null);
   const [alertModal, setAlertModal] = useState(null);
   const [historyModal, setHistoryModal] = useState(null);
+  const [aiAnalysisModal, setAiAnalysisModal] = useState(null);
+  const [riskOpportunityModal, setRiskOpportunityModal] = useState(null);
   const [compareList, setCompareList] = useState(new Set());
   const [compareModal, setCompareModal] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
@@ -12994,6 +13290,8 @@ function MarketDashboard({
     inCompare: compareList.has(c.ticker),
     compareDisabled: compareList.size >= 5,
     onHistory: () => setHistoryModal(c),
+    onAIAnalysis: () => setAiAnalysisModal(c),
+    onRiskOpportunity: () => setRiskOpportunityModal(c),
     onBuy: () => setBuyModal(c),
     onCart: () => toggleCart(c.ticker, c.name),
     onWatch: () => toggleWatch(c.ticker, c.name),
@@ -13029,6 +13327,12 @@ function MarketDashboard({
   }, "\u25C8 ALL ", filtered.length, " ORGANIZATIONS SHOWN"), historyModal && /*#__PURE__*/React.createElement(HistoryModal, {
     c: historyModal,
     onClose: () => setHistoryModal(null)
+  }), aiAnalysisModal && /*#__PURE__*/React.createElement(AIAnalysisModal, {
+    c: aiAnalysisModal,
+    onClose: () => setAiAnalysisModal(null)
+  }), riskOpportunityModal && /*#__PURE__*/React.createElement(RiskOpportunityDemoModal, {
+    c: riskOpportunityModal,
+    onClose: () => setRiskOpportunityModal(null)
   }), buyModal && /*#__PURE__*/React.createElement(BuyModal, {
     c: buyModal,
     onClose: () => setBuyModal(null),
