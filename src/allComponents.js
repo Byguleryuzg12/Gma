@@ -7189,7 +7189,11 @@ function HistoryModal({
       overflow: "auto",
       padding: "20px 24px"
     }
-  }, tab === "chart" && /*#__PURE__*/React.createElement("div", {
+  }, tab === "ai" && /*#__PURE__*/React.createElement(AIAnalysisInlinePanel, {
+    c: c
+  }), tab === "risk" && /*#__PURE__*/React.createElement(RiskOpportunityInlinePanel, {
+    c: c
+  }), tab === "chart" && /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
