@@ -928,6 +928,85 @@ const GMA_EXTRA_I18N = {
 Object.entries(GMA_EXTRA_I18N).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
+const GMA_DEEP_I18N = {
+  en: {
+    dashboardTitle: "MARKET DASHBOARD", dashboardSub: "ORGANIZATIONS · LIVE SIMULATION + AI REFRESH", decliners: "DECLINERS", avgChange: "AVG. CHANGE", myPanel: "MY PANEL", fetchAiData: "FETCH AI DATA", refreshing: "REFRESHING...", searchPlaceholder: "Search by ticker, company name, or full name... (e.g. AAPL, Apple, Tesla)", results: "results", marketStatus: "MARKET STATUS", allStatus: "ALL", listedStatus: "LISTED", privateStatus: "PRIVATE", ipoRadarStatus: "IPO RADAR", ipoSoonStatus: "IPO SOON", ipoPrepStatus: "IPO PREP", rumorStatus: "RUMOR", liveAutoLabel: "LIVE", autoRefreshShort: "2.5s AUTO-REFRESH", prepStatus: "PREP", allOrganizationsShownPrefix: "ALL", allOrganizationsShownSuffix: "ORGANIZATIONS SHOWN",
+    personalInfo: "PERSONAL INFORMATION", userFallback: "User", member: "Member", freeMember: "Free Member", noPlanSelected: "No Plan Selected", gmaCore: "GMA CORE", intelligenceLayerActive: "Intelligence Layer: Active", consensusSystem: "Three-Layer Consensus System · Sovereign Intelligence", analysisCredits: "ANALYSIS CREDITS", strategicAnalysis: "STRATEGIC ANALYSIS", accessExhausted: "Access exhausted", creditsRemaining: "credits remaining", accuracyIndex: "ACCURACY INDEX", verifiedBy: "Verified by", yearsOfData: "126 Years of Data", creditsNote: "Each GMA Deep Analysis uses 1 credit. A subscription is required after access expires.", creditsExhaustedNote: "Your analysis credits are exhausted. Choose a GMA plan to continue.", accountActions: "ACCOUNT ACTIONS", profileSaved: "Profile saved!", edit: "EDIT",
+    dnaEdit: "GMA DNA EDIT", step: "STEP", selected: "selected", continue: "CONTINUE", gmaUserDna: "GMA USER DNA", dnaIntro: "Your preferences define the tone and scope of the GMA Intelligence Layer.", dnaMarketScope: "Market Scope", dnaFocusRegion: "Focus Region", dnaSectors: "Sectors", dnaRiskStyle: "Risk Style", dnaTimeframe: "Timeframe", dnaTone: "Analysis Style", dnaVolumeScale: "Volume Scale",
+    dnaQ_market_scope: "Your Analysis Scope?", dnaOpt_market_scope_global: "Global Markets", dnaOpt_market_scope_emerging: "Emerging Markets", dnaDetail_market_scope_global: "NASDAQ, NYSE, Europe, Asia", dnaDetail_market_scope_emerging: "BIST and similar markets",
+    dnaQ_country: "Focus Country / Region?", dnaOpt_country_na: "North America", dnaOpt_country_eu: "Europe", dnaOpt_country_apac: "Asia & Pacific", dnaOpt_country_me: "Middle East", dnaDetail_country_na: "US / NASDAQ / NYSE", dnaDetail_country_eu: "EU / DAX / CAC / FTSE", dnaDetail_country_apac: "TR / CN / JP / Hang Seng", dnaDetail_country_me: "DIFX / Tadawul",
+    dnaQ_sectors: "Priority Ecosystems (Max 3)", dnaOpt_sectors_tech: "Technology", dnaOpt_sectors_energy: "Energy", dnaOpt_sectors_defense: "Defense", dnaOpt_sectors_food: "Food", dnaOpt_sectors_health: "Health", dnaOpt_sectors_finance: "Finance",
+    dnaQ_risk: "Your Investment Style?", dnaOpt_risk_cube: "Cube", dnaOpt_risk_prism: "Prism", dnaOpt_risk_pyramid: "Pyramid", dnaDetail_risk_cube: "Conservative", dnaDetail_risk_prism: "Balanced", dnaDetail_risk_pyramid: "Aggressive",
+    dnaQ_timeframe: "Your Investment Timeframe?", dnaOpt_timeframe_short: "Short", dnaOpt_timeframe_medium: "Medium", dnaOpt_timeframe_long: "Long", dnaDetail_timeframe_short: "0-1 Year", dnaDetail_timeframe_medium: "1-3 Years", dnaDetail_timeframe_long: "3+ Years",
+    dnaQ_tone: "Analysis Style?", dnaOpt_tone_clear: "Clear", dnaOpt_tone_technical: "Technical", dnaDetail_tone_clear: "Simple and concise", dnaDetail_tone_technical: "Deep and data-driven",
+    dnaQ_budget: "Your Volume Scale?", dnaOpt_budget_micro: "Micro", dnaOpt_budget_macro: "Macro", dnaOpt_budget_corporate: "Corporate",
+    legalEffectiveDate: "Effective Date: April 2026", legalGdprDate: "Effective Date: April 2026 — GDPR Compliant", legalTranslating: "Translating content to your language...", legalNoAdvice: "NO FINANCIAL ADVICE", privacyPolicyTitle: "Privacy Policy", termsTitle: "Terms of Service", refundTitle: "Refund Policy", privacyWarning: "Global Market Analytics (GMA) is a data visualisation platform. GMA is not a registered investment advisor and does not provide financial, investment, legal, or tax advice. All content and AI-generated analyses are for informational purposes only. Investment decisions are made solely at the user's own risk.", termsWarning: "GMA is not a registered investment advisor. All content is for informational purposes only. Always seek independent professional financial advice before making investment decisions.", refundHeroTitle: "7-Day Money-Back Guarantee", refundHeroText: "Not satisfied? Get a full refund within 7 days — no questions asked. Email support@globalmarketanalytics.com and we'll process it within 5–7 business days.", paddleSecured: "Paddle Secured", oneClickCancel: "One-Click Cancel", noLockIn: "No Lock-in", sevenDayGuarantee: "7-Day Guarantee",
+    noApiKey: "No API key — add it from Settings", liveDataUpdated: "Live data updated", simulationRunning: "Simulation is running", cartRemoved: "removed from cart", basketAdded: "added to basket", watchRemoved: "removed from watchlist", watchAdded: "added to watchlist", alertCreated: "alert created", maxCompare: "A maximum of 5 companies can be selected", addedToComparison: "added to comparison", cart: "CART", watchlist: "WATCHLIST", cartEmpty: "Cart is empty", watchlistEmpty: "Watchlist is empty", noPurchasesYet: "No purchases yet", remove: "remove", units: "units", buyIn: "buy-in", currentValue: "Current Value", cost: "Cost", profitLoss: "Profit / Loss", legal: "LEGAL", legalNoticeTitle: "LEGAL NOTICE", legalNoticeNotAdvice: "LEGAL NOTICE - NOT INVESTMENT ADVICE", signInLegalPrefix: "By signing in", signInLegalSuffix: "by continuing.", disclaimer1: "This platform is for digital informational purposes only.", disclaimer2: "No content or AI output is investment advice.", disclaimer3: "All investment decisions are the investor's own responsibility.", disclaimer4: "Past performance does not guarantee future results.", disclaimer5: "Consult a licensed financial advisor before trading.", disclaimer6: "Data may be simulated and may not represent live exchange data."
+  },
+  tr: {
+    dashboardTitle: "PIYASA PANELI", dashboardSub: "KURULUS · CANLI SIMULASYON + AI YENILEME", decliners: "DUSENLER", avgChange: "ORT. DEGISIM", myPanel: "PANELIM", fetchAiData: "AI VERI CEK", refreshing: "YENILENIYOR...", searchPlaceholder: "Ticker, sirket adi veya tam ad ile ara... (orn. AAPL, Apple, Tesla)", results: "sonuc", marketStatus: "PIYASA DURUMU", allStatus: "TUMU", listedStatus: "LISTELI", privateStatus: "OZEL", ipoRadarStatus: "IPO RADARI", ipoSoonStatus: "IPO YAKIN", ipoPrepStatus: "IPO HAZIRLIK", rumorStatus: "SOYLENTI", liveAutoLabel: "CANLI", autoRefreshShort: "2.5 sn OTOMATIK", prepStatus: "HAZIRLIK", allOrganizationsShownPrefix: "TUM", allOrganizationsShownSuffix: "KURULUS GOSTERILDI",
+    personalInfo: "KISISEL BILGILER", userFallback: "Kullanici", member: "Uye", freeMember: "Ucretsiz Uye", noPlanSelected: "Plan Secilmedi", gmaCore: "GMA CEKIRDEK", intelligenceLayerActive: "Zeka Katmani: Aktif", consensusSystem: "Uc Katmanli Konsensus Sistemi · Bagimsiz Zeka", analysisCredits: "ANALIZ KREDILERI", strategicAnalysis: "STRATEJIK ANALIZ", accessExhausted: "Erisim tukendi", creditsRemaining: "kredi kaldi", accuracyIndex: "DOGRULUK ENDEKSI", verifiedBy: "Dogrulayan", yearsOfData: "126 Yillik Veri", creditsNote: "Her GMA Derin Analizi 1 kredi kullanir. Erisim suresi dolduktan sonra abonelik gerekir.", creditsExhaustedNote: "Analiz kredileriniz tukendi. Devam etmek icin bir GMA plani secin.", accountActions: "HESAP ISLEMLERI", profileSaved: "Profil kaydedildi!", edit: "DUZENLE",
+    dnaEdit: "GMA DNA DUZENLE", step: "ADIM", selected: "secildi", continue: "DEVAM ET", gmaUserDna: "GMA KULLANICI DNA", dnaIntro: "Tercihleriniz GMA Zeka Katmani'nin tonunu ve kapsamını belirler.", dnaMarketScope: "Piyasa Kapsami", dnaFocusRegion: "Odak Bolge", dnaSectors: "Sektorler", dnaRiskStyle: "Risk Stili", dnaTimeframe: "Zaman Ufku", dnaTone: "Analiz Stili", dnaVolumeScale: "Hacim Olcegi",
+    dnaQ_market_scope: "Analiz Kapsaminiz?", dnaOpt_market_scope_global: "Kuresel Piyasalar", dnaOpt_market_scope_emerging: "Gelisen Piyasalar", dnaDetail_market_scope_global: "NASDAQ, NYSE, Avrupa, Asya", dnaDetail_market_scope_emerging: "BIST ve benzer piyasalar",
+    dnaQ_country: "Odak Ulke / Bolge?", dnaOpt_country_na: "Kuzey Amerika", dnaOpt_country_eu: "Avrupa", dnaOpt_country_apac: "Asya & Pasifik", dnaOpt_country_me: "Orta Dogu", dnaDetail_country_na: "ABD / NASDAQ / NYSE", dnaDetail_country_eu: "AB / DAX / CAC / FTSE", dnaDetail_country_apac: "TR / CN / JP / Hang Seng", dnaDetail_country_me: "DIFX / Tadawul",
+    dnaQ_sectors: "Oncelikli Ekosistemler (Maks 3)", dnaOpt_sectors_tech: "Teknoloji", dnaOpt_sectors_energy: "Enerji", dnaOpt_sectors_defense: "Savunma", dnaOpt_sectors_food: "Gida", dnaOpt_sectors_health: "Saglik", dnaOpt_sectors_finance: "Finans",
+    dnaQ_risk: "Yatirim Stiliniz?", dnaOpt_risk_cube: "Kup", dnaOpt_risk_prism: "Prizma", dnaOpt_risk_pyramid: "Piramit", dnaDetail_risk_cube: "Muhafazakar", dnaDetail_risk_prism: "Dengeli", dnaDetail_risk_pyramid: "Agresif",
+    dnaQ_timeframe: "Yatirim Zaman Ufkunuz?", dnaOpt_timeframe_short: "Kisa", dnaOpt_timeframe_medium: "Orta", dnaOpt_timeframe_long: "Uzun", dnaDetail_timeframe_short: "0-1 Yil", dnaDetail_timeframe_medium: "1-3 Yil", dnaDetail_timeframe_long: "3+ Yil",
+    dnaQ_tone: "Analiz Stili?", dnaOpt_tone_clear: "Net", dnaOpt_tone_technical: "Teknik", dnaDetail_tone_clear: "Sade ve oz", dnaDetail_tone_technical: "Derin ve veri odakli",
+    dnaQ_budget: "Hacim Olceginiz?", dnaOpt_budget_micro: "Mikro", dnaOpt_budget_macro: "Makro", dnaOpt_budget_corporate: "Kurumsal",
+    legalEffectiveDate: "Yururluk Tarihi: Nisan 2026", legalGdprDate: "Yururluk Tarihi: Nisan 2026 — GDPR Uyumlu", legalTranslating: "Icerik dilinize cevriliyor...", legalNoAdvice: "YATIRIM TAVSIYESI DEGILDIR", privacyPolicyTitle: "Gizlilik Politikasi", termsTitle: "Hizmet Sartlari", refundTitle: "Iade Politikasi", privacyWarning: "Global Market Analytics (GMA) bir veri gorsellestirme platformudur. GMA kayitli bir yatirim danismani degildir; finansal, yatirim, hukuki veya vergi tavsiyesi sunmaz. Tum icerik ve AI analizleri yalnizca bilgilendirme amaclidir. Yatirim kararlari tamamen kullanicinin kendi sorumlulugundadir.", termsWarning: "GMA kayitli bir yatirim danismani degildir. Tum icerik yalnizca bilgilendirme amaclidir. Yatirim karari almadan once bagimsiz profesyonel finansal danismanlik alin.", refundHeroTitle: "7 Gun Para Iade Garantisi", refundHeroText: "Memnun kalmadiniz mi? Ilk 7 gun icinde kosulsuz tam iade talep edin. support@globalmarketanalytics.com adresine yazin; 5-7 is gunu icinde isleme alalim.", paddleSecured: "Paddle Guvenceli", oneClickCancel: "Tek Tikla Iptal", noLockIn: "Baglayicilik Yok", sevenDayGuarantee: "7 Gun Garanti",
+    noApiKey: "API anahtari yok — Ayarlar'dan ekleyin", liveDataUpdated: "Canli veri guncellendi", simulationRunning: "Simulasyon calisiyor", cartRemoved: "sepetten cikarildi", basketAdded: "sepete eklendi", watchRemoved: "izleme listesinden cikarildi", watchAdded: "izleme listesine eklendi", alertCreated: "uyari olusturuldu", maxCompare: "En fazla 5 sirket secilebilir", addedToComparison: "karsilastirmaya eklendi", cart: "SEPET", watchlist: "IZLEME", cartEmpty: "Sepet bos", watchlistEmpty: "Izleme listesi bos", noPurchasesYet: "Henuz alim yok", remove: "kaldir", units: "adet", buyIn: "alis", currentValue: "Guncel Deger", cost: "Maliyet", profitLoss: "Kar / Zarar", legal: "YASAL", legalNoticeTitle: "YASAL UYARI", legalNoticeNotAdvice: "YASAL UYARI - YATIRIM TAVSIYESI DEGILDIR", signInLegalPrefix: "Giris yaparak", signInLegalSuffix: "devam etmeyi kabul edersiniz.", disclaimer1: "Bu platform yalnizca dijital bilgilendirme amaclidir.", disclaimer2: "Hicbir icerik veya AI ciktisi yatirim tavsiyesi degildir.", disclaimer3: "Tum yatirim kararlari yatirimcinin kendi sorumlulugundadir.", disclaimer4: "Gecmis performans gelecekteki sonuclari garanti etmez.", disclaimer5: "Islem yapmadan once lisansli bir finansal danismana basvurun.", disclaimer6: "Veriler simule edilmis olabilir ve canli borsa verisini temsil etmeyebilir."
+  },
+  ru: { dashboardTitle: "PANEL RYNKA", dashboardSub: "ORGANIZATSII · ZHIVAYA SIMULYATSIYA + AI OBNOVLENIE", decliners: "SNIZHENIE", avgChange: "SRED. IZMENENIE", myPanel: "MOYA PANEL", fetchAiData: "ZAGRUZIT AI DANNYE", refreshing: "OBNOVLENIE...", searchPlaceholder: "Poisk po tickeru, kompanii ili polnomu nazvaniyu... (napr. AAPL, Apple, Tesla)", results: "rezultatov", marketStatus: "STATUS RYNKA", allStatus: "VSE", listedStatus: "LISTING", privateStatus: "CHASTNYE", ipoRadarStatus: "IPO RADAR", ipoSoonStatus: "SKORO IPO", ipoPrepStatus: "PODGOTOVKA IPO", rumorStatus: "SLUHI", liveAutoLabel: "LIVE", autoRefreshShort: "2.5s AVTO", prepStatus: "PODG.", allOrganizationsShownPrefix: "VSE", allOrganizationsShownSuffix: "ORGANIZATSII POKAZANY", personalInfo: "LICHNAYA INFORMATSIA", userFallback: "Polzovatel", member: "Uchastnik", freeMember: "Besplatnyy uchastnik", noPlanSelected: "Plan ne vybran", gmaCore: "YADRO GMA", intelligenceLayerActive: "Analiticheskiy sloy: aktiven", consensusSystem: "Trehsloynaya sistema konsensusa · suverennaya analitika", analysisCredits: "KREDITY ANALIZA", strategicAnalysis: "STRATEGICHESKIY ANALIZ", accessExhausted: "Dostup ischerpan", creditsRemaining: "kreditov ostalos", accuracyIndex: "INDEKS TOCHNOSTI", verifiedBy: "Provereno", yearsOfData: "126 let dannyh", creditsNote: "Kazhdyy glubokiy analiz GMA ispolzuet 1 kredit. Posle okonchaniya dostupa nuzhna podpiska.", creditsExhaustedNote: "Kredity analiza ischerpany. Vyberite plan GMA, chtoby prodolzhit.", accountActions: "DEYSTVIYA AKKAUNTA", profileSaved: "Profil sohranen!", edit: "IZMENIT", dnaEdit: "IZMENIT GMA DNA", step: "SHAG", selected: "vybrano", continue: "PRODOLZHIT", gmaUserDna: "GMA DNA POLZOVATELYA", dnaIntro: "Vashi predpochteniya opredelyayut ton i oblast GMA Intelligence Layer.", dnaMarketScope: "Oblast rynka", dnaFocusRegion: "Fokus-region", dnaSectors: "Sektory", dnaRiskStyle: "Stil riska", dnaTimeframe: "Gorizont", dnaTone: "Stil analiza", dnaVolumeScale: "Masshtab obema", legalEffectiveDate: "Data vstupleniya v silu: aprel 2026", legalGdprDate: "Data vstupleniya v silu: aprel 2026 — sootvetstvuet GDPR", legalTranslating: "Kontent perevoditsya na vash yazyk...", legalNoAdvice: "NE FINANSOVAYA REKOMENDATSIYA", privacyPolicyTitle: "Politika konfidentsialnosti", termsTitle: "Usloviya servisa", refundTitle: "Politika vozvrata", privacyWarning: "Global Market Analytics (GMA) yavlyaetsya platformoy vizualizatsii dannyh. GMA ne yavlyaetsya zaregistrirovannym investitsionnym konsultantom i ne predostavlyaet finansovye, investitsionnye, yuridicheskie ili nalogovye sovety. Ves kontent i AI-analiz prednaznacheny tolko dlya informatsii. Investitsionnye resheniya prinimaet sam polzovatel.", termsWarning: "GMA ne yavlyaetsya zaregistrirovannym investitsionnym konsultantom. Ves kontent tolko informatsionnyy. Pered investitsionnymi resheniyami obratites k nezavisimomu spetsialistu.", refundHeroTitle: "7-dnevnaya garantiya vozvrata", refundHeroText: "Ne ustroilo? Poluchite polnyy vozvrat v techenie 7 dney bez lishnih voprosov. Napishite na support@globalmarketanalytics.com; obrabotka zaymet 5-7 rabochih dney.", paddleSecured: "Zashchishcheno Paddle", oneClickCancel: "Otmena v odin klik", noLockIn: "Bez privyazki", sevenDayGuarantee: "7-dnevnaya garantiya" },
+  ar: { dashboardTitle: "لوحة الأسواق", dashboardSub: "مؤسسات · محاكاة مباشرة + تحديث AI", decliners: "المنخفضة", avgChange: "متوسط التغير", myPanel: "لوحتي", fetchAiData: "جلب بيانات AI", refreshing: "جار التحديث...", searchPlaceholder: "ابحث بالرمز أو اسم الشركة أو الاسم الكامل... (مثل AAPL، Apple، Tesla)", results: "نتائج", marketStatus: "حالة السوق", allStatus: "الكل", listedStatus: "مدرجة", privateStatus: "خاصة", ipoRadarStatus: "رادار IPO", ipoSoonStatus: "IPO قريب", ipoPrepStatus: "تحضير IPO", rumorStatus: "شائعة", liveAutoLabel: "مباشر", autoRefreshShort: "تحديث تلقائي 2.5ث", prepStatus: "تحضير", allOrganizationsShownPrefix: "كل", allOrganizationsShownSuffix: "المؤسسات معروضة", personalInfo: "المعلومات الشخصية", userFallback: "مستخدم", member: "عضو", freeMember: "عضو مجاني", noPlanSelected: "لم يتم اختيار خطة", gmaCore: "نواة GMA", intelligenceLayerActive: "طبقة الذكاء: نشطة", consensusSystem: "نظام إجماع ثلاثي الطبقات · ذكاء مستقل", analysisCredits: "أرصدة التحليل", strategicAnalysis: "تحليل استراتيجي", accessExhausted: "انتهى الوصول", creditsRemaining: "أرصدة متبقية", accuracyIndex: "مؤشر الدقة", verifiedBy: "تم التحقق بواسطة", yearsOfData: "126 سنة من البيانات", creditsNote: "كل تحليل GMA عميق يستخدم رصيدًا واحدًا. بعد انتهاء الوصول يلزم اشتراك.", creditsExhaustedNote: "انتهت أرصدة التحليل. اختر خطة GMA للمتابعة.", accountActions: "إجراءات الحساب", profileSaved: "تم حفظ الملف الشخصي!", edit: "تعديل", dnaEdit: "تعديل GMA DNA", step: "خطوة", selected: "محدد", continue: "متابعة", gmaUserDna: "GMA DNA للمستخدم", dnaIntro: "تحدد تفضيلاتك نبرة ونطاق طبقة ذكاء GMA.", dnaMarketScope: "نطاق السوق", dnaFocusRegion: "منطقة التركيز", dnaSectors: "القطاعات", dnaRiskStyle: "أسلوب المخاطر", dnaTimeframe: "الأفق الزمني", dnaTone: "أسلوب التحليل", dnaVolumeScale: "مقياس الحجم", legalEffectiveDate: "تاريخ النفاذ: أبريل 2026", legalGdprDate: "تاريخ النفاذ: أبريل 2026 — متوافق مع GDPR", legalTranslating: "جار ترجمة المحتوى إلى لغتك...", legalNoAdvice: "ليست نصيحة مالية", privacyPolicyTitle: "سياسة الخصوصية", termsTitle: "شروط الخدمة", refundTitle: "سياسة الاسترداد", privacyWarning: "Global Market Analytics (GMA) منصة لعرض البيانات. GMA ليست مستشارًا استثماريًا مسجلًا ولا تقدم نصائح مالية أو استثمارية أو قانونية أو ضريبية. كل المحتوى والتحليلات المدعومة بالذكاء الاصطناعي لأغراض معلوماتية فقط. قرارات الاستثمار تقع بالكامل على مسؤولية المستخدم.", termsWarning: "GMA ليست مستشارًا استثماريًا مسجلًا. كل المحتوى معلوماتي فقط. اطلب استشارة مالية مهنية مستقلة قبل اتخاذ قرارات الاستثمار.", refundHeroTitle: "ضمان استرداد خلال 7 أيام", refundHeroText: "غير راضٍ؟ احصل على استرداد كامل خلال 7 أيام دون أسئلة. راسل support@globalmarketanalytics.com وسنعالجه خلال 5-7 أيام عمل.", paddleSecured: "محمي بواسطة Paddle", oneClickCancel: "إلغاء بنقرة واحدة", noLockIn: "بدون التزام", sevenDayGuarantee: "ضمان 7 أيام" },
+  zh: { dashboardTitle: "市场面板", dashboardSub: "机构 · 实时模拟 + AI 刷新", decliners: "下跌", avgChange: "平均变化", myPanel: "我的面板", fetchAiData: "获取 AI 数据", refreshing: "刷新中...", searchPlaceholder: "按代码、公司名或全名搜索...（如 AAPL、Apple、Tesla）", results: "结果", marketStatus: "市场状态", allStatus: "全部", listedStatus: "上市", privateStatus: "私有", ipoRadarStatus: "IPO 雷达", ipoSoonStatus: "即将 IPO", ipoPrepStatus: "IPO 准备", rumorStatus: "传闻", liveAutoLabel: "实时", autoRefreshShort: "2.5秒自动刷新", prepStatus: "准备", allOrganizationsShownPrefix: "全部", allOrganizationsShownSuffix: "机构已显示", personalInfo: "个人信息", userFallback: "用户", member: "会员", freeMember: "免费会员", noPlanSelected: "未选择计划", gmaCore: "GMA 核心", intelligenceLayerActive: "智能层：已启用", consensusSystem: "三层共识系统 · 主权智能", analysisCredits: "分析额度", strategicAnalysis: "战略分析", accessExhausted: "访问已用尽", creditsRemaining: "额度剩余", accuracyIndex: "准确率指数", verifiedBy: "验证依据", yearsOfData: "126 年数据", creditsNote: "每次 GMA 深度分析使用 1 个额度。访问期结束后需要订阅。", creditsExhaustedNote: "您的分析额度已用尽。请选择 GMA 计划继续。", accountActions: "账户操作", profileSaved: "资料已保存！", edit: "编辑", dnaEdit: "编辑 GMA DNA", step: "步骤", selected: "已选择", continue: "继续", gmaUserDna: "GMA 用户 DNA", dnaIntro: "您的偏好会定义 GMA 智能层的语气和范围。", dnaMarketScope: "市场范围", dnaFocusRegion: "关注区域", dnaSectors: "行业", dnaRiskStyle: "风险风格", dnaTimeframe: "时间周期", dnaTone: "分析风格", dnaVolumeScale: "规模", legalEffectiveDate: "生效日期：2026年4月", legalGdprDate: "生效日期：2026年4月 — 符合 GDPR", legalTranslating: "正在翻译为您的语言...", legalNoAdvice: "非金融建议", privacyPolicyTitle: "隐私政策", termsTitle: "服务条款", refundTitle: "退款政策", privacyWarning: "Global Market Analytics (GMA) 是数据可视化平台。GMA 不是注册投资顾问，不提供金融、投资、法律或税务建议。所有内容和 AI 分析仅供参考。投资决定完全由用户自行承担风险。", termsWarning: "GMA 不是注册投资顾问。所有内容仅供参考。做出投资决定前，请寻求独立专业金融建议。", refundHeroTitle: "7 天退款保证", refundHeroText: "不满意？购买后 7 天内可无条件全额退款。请发送邮件至 support@globalmarketanalytics.com，我们将在 5-7 个工作日内处理。", paddleSecured: "Paddle 安全保障", oneClickCancel: "一键取消", noLockIn: "无锁定", sevenDayGuarantee: "7 天保证" },
+  hi: { dashboardTitle: "मार्केट डैशबोर्ड", dashboardSub: "संगठन · लाइव सिमुलेशन + AI रिफ्रेश", decliners: "गिरावट", avgChange: "औसत बदलाव", myPanel: "मेरा पैनल", fetchAiData: "AI डेटा लाएँ", refreshing: "रिफ्रेश हो रहा है...", searchPlaceholder: "टिकर, कंपनी नाम या पूरे नाम से खोजें... (जैसे AAPL, Apple, Tesla)", results: "परिणाम", marketStatus: "बाज़ार स्थिति", allStatus: "सभी", listedStatus: "सूचीबद्ध", privateStatus: "निजी", ipoRadarStatus: "IPO रडार", ipoSoonStatus: "जल्द IPO", ipoPrepStatus: "IPO तैयारी", rumorStatus: "अफवाह", liveAutoLabel: "लाइव", autoRefreshShort: "2.5s ऑटो-रिफ्रेश", prepStatus: "तैयारी", allOrganizationsShownPrefix: "सभी", allOrganizationsShownSuffix: "संगठन दिखाए गए", personalInfo: "व्यक्तिगत जानकारी", userFallback: "उपयोगकर्ता", member: "सदस्य", freeMember: "मुफ़्त सदस्य", noPlanSelected: "कोई योजना नहीं चुनी गई", gmaCore: "GMA कोर", intelligenceLayerActive: "इंटेलिजेंस लेयर: सक्रिय", consensusSystem: "तीन-स्तरीय सहमति प्रणाली · स्वतंत्र इंटेलिजेंस", analysisCredits: "विश्लेषण क्रेडिट", strategicAnalysis: "रणनीतिक विश्लेषण", accessExhausted: "एक्सेस समाप्त", creditsRemaining: "क्रेडिट शेष", accuracyIndex: "सटीकता सूचकांक", verifiedBy: "द्वारा सत्यापित", yearsOfData: "126 वर्षों का डेटा", creditsNote: "प्रत्येक GMA डीप विश्लेषण 1 क्रेडिट उपयोग करता है। एक्सेस समाप्त होने के बाद सदस्यता आवश्यक है।", creditsExhaustedNote: "आपके विश्लेषण क्रेडिट समाप्त हो गए हैं। जारी रखने के लिए GMA योजना चुनें।", accountActions: "खाता क्रियाएँ", profileSaved: "प्रोफ़ाइल सहेजी गई!", edit: "संपादित करें", dnaEdit: "GMA DNA संपादित करें", step: "चरण", selected: "चयनित", continue: "जारी रखें", gmaUserDna: "GMA उपयोगकर्ता DNA", dnaIntro: "आपकी प्राथमिकताएँ GMA Intelligence Layer की शैली और दायरा तय करती हैं।", dnaMarketScope: "बाज़ार दायरा", dnaFocusRegion: "फोकस क्षेत्र", dnaSectors: "क्षेत्र", dnaRiskStyle: "जोखिम शैली", dnaTimeframe: "समय सीमा", dnaTone: "विश्लेषण शैली", dnaVolumeScale: "वॉल्यूम स्केल", legalEffectiveDate: "प्रभावी तिथि: अप्रैल 2026", legalGdprDate: "प्रभावी तिथि: अप्रैल 2026 — GDPR अनुरूप", legalTranslating: "सामग्री आपकी भाषा में अनुवाद हो रही है...", legalNoAdvice: "वित्तीय सलाह नहीं", privacyPolicyTitle: "गोपनीयता नीति", termsTitle: "सेवा की शर्तें", refundTitle: "रिफंड नीति", privacyWarning: "Global Market Analytics (GMA) एक डेटा विज़ुअलाइज़ेशन प्लेटफ़ॉर्म है। GMA पंजीकृत निवेश सलाहकार नहीं है और वित्तीय, निवेश, कानूनी या कर सलाह नहीं देता। सभी सामग्री और AI विश्लेषण केवल जानकारी के लिए हैं। निवेश निर्णय पूरी तरह उपयोगकर्ता के अपने जोखिम पर हैं।", termsWarning: "GMA पंजीकृत निवेश सलाहकार नहीं है। सभी सामग्री केवल जानकारी के लिए है। निवेश निर्णय लेने से पहले स्वतंत्र पेशेवर वित्तीय सलाह लें।", refundHeroTitle: "7-दिन मनी-बैक गारंटी", refundHeroText: "संतुष्ट नहीं? 7 दिनों के भीतर पूरा रिफंड लें। support@globalmarketanalytics.com पर ईमेल करें; हम 5-7 व्यावसायिक दिनों में प्रक्रिया करेंगे।", paddleSecured: "Paddle सुरक्षित", oneClickCancel: "वन-क्लिक कैंसल", noLockIn: "कोई लॉक-इन नहीं", sevenDayGuarantee: "7-दिन गारंटी" },
+  de: { dashboardTitle: "MARKT-DASHBOARD", dashboardSub: "ORGANISATIONEN · LIVE-SIMULATION + AI-AKTUALISIERUNG", decliners: "VERLIERER", avgChange: "DURCHSCHN. ÄNDERUNG", myPanel: "MEIN PANEL", fetchAiData: "AI-DATEN LADEN", refreshing: "AKTUALISIERT...", searchPlaceholder: "Nach Ticker, Unternehmensname oder Vollname suchen... (z. B. AAPL, Apple, Tesla)", results: "Ergebnisse", marketStatus: "MARKTSTATUS", allStatus: "ALLE", listedStatus: "GELISTET", privateStatus: "PRIVAT", ipoRadarStatus: "IPO-RADAR", ipoSoonStatus: "IPO BALD", ipoPrepStatus: "IPO-VORBEREITUNG", rumorStatus: "GERÜCHT", liveAutoLabel: "LIVE", autoRefreshShort: "2.5s AUTO-REFRESH", prepStatus: "VORB.", allOrganizationsShownPrefix: "ALLE", allOrganizationsShownSuffix: "ORGANISATIONEN ANGEZEIGT", personalInfo: "PERSÖNLICHE INFORMATIONEN", userFallback: "Nutzer", member: "Mitglied", freeMember: "Kostenloses Mitglied", noPlanSelected: "Kein Plan ausgewählt", gmaCore: "GMA CORE", intelligenceLayerActive: "Intelligence Layer: Aktiv", consensusSystem: "Dreischichtiges Konsenssystem · Souveräne Intelligenz", analysisCredits: "ANALYSE-CREDITS", strategicAnalysis: "STRATEGISCHE ANALYSE", accessExhausted: "Zugang erschöpft", creditsRemaining: "Credits übrig", accuracyIndex: "GENAUIGKEITSINDEX", verifiedBy: "Verifiziert durch", yearsOfData: "126 Jahre Daten", creditsNote: "Jede GMA-Tiefenanalyse nutzt 1 Credit. Nach Ablauf des Zugangs ist ein Abonnement erforderlich.", creditsExhaustedNote: "Ihre Analyse-Credits sind erschöpft. Wählen Sie einen GMA-Plan, um fortzufahren.", accountActions: "KONTOAKTIONEN", profileSaved: "Profil gespeichert!", edit: "BEARBEITEN", dnaEdit: "GMA DNA BEARBEITEN", step: "SCHRITT", selected: "ausgewählt", continue: "WEITER", gmaUserDna: "GMA NUTZER-DNA", dnaIntro: "Ihre Präferenzen bestimmen Ton und Umfang des GMA Intelligence Layer.", dnaMarketScope: "Marktumfang", dnaFocusRegion: "Fokusregion", dnaSectors: "Sektoren", dnaRiskStyle: "Risikostil", dnaTimeframe: "Zeithorizont", dnaTone: "Analysestil", dnaVolumeScale: "Volumenskala", legalEffectiveDate: "Gültig ab: April 2026", legalGdprDate: "Gültig ab: April 2026 — DSGVO-konform", legalTranslating: "Inhalt wird in Ihre Sprache übersetzt...", legalNoAdvice: "KEINE FINANZBERATUNG", privacyPolicyTitle: "Datenschutzrichtlinie", termsTitle: "Nutzungsbedingungen", refundTitle: "Rückerstattungsrichtlinie", privacyWarning: "Global Market Analytics (GMA) ist eine Datenvisualisierungsplattform. GMA ist kein registrierter Anlageberater und bietet keine Finanz-, Anlage-, Rechts- oder Steuerberatung. Alle Inhalte und AI-Analysen dienen nur Informationszwecken. Anlageentscheidungen erfolgen ausschließlich auf eigenes Risiko.", termsWarning: "GMA ist kein registrierter Anlageberater. Alle Inhalte dienen nur Informationszwecken. Holen Sie vor Anlageentscheidungen unabhängige professionelle Finanzberatung ein.", refundHeroTitle: "7-Tage-Geld-zurück-Garantie", refundHeroText: "Nicht zufrieden? Erhalten Sie innerhalb von 7 Tagen eine volle Rückerstattung. Schreiben Sie an support@globalmarketanalytics.com; wir bearbeiten dies innerhalb von 5-7 Werktagen.", paddleSecured: "Paddle gesichert", oneClickCancel: "Ein-Klick-Kündigung", noLockIn: "Keine Bindung", sevenDayGuarantee: "7-Tage-Garantie" },
+  es: { dashboardTitle: "PANEL DE MERCADO", dashboardSub: "ORGANIZACIONES · SIMULACIÓN EN VIVO + ACTUALIZACIÓN AI", decliners: "BAJADAS", avgChange: "CAMBIO PROM.", myPanel: "MI PANEL", fetchAiData: "OBTENER DATOS AI", refreshing: "ACTUALIZANDO...", searchPlaceholder: "Busca por ticker, nombre de empresa o nombre completo... (ej. AAPL, Apple, Tesla)", results: "resultados", marketStatus: "ESTADO DEL MERCADO", allStatus: "TODO", listedStatus: "COTIZADAS", privateStatus: "PRIVADAS", ipoRadarStatus: "RADAR IPO", ipoSoonStatus: "IPO PRONTO", ipoPrepStatus: "PREP. IPO", rumorStatus: "RUMOR", liveAutoLabel: "EN VIVO", autoRefreshShort: "2.5s AUTO", prepStatus: "PREP.", allOrganizationsShownPrefix: "TODAS", allOrganizationsShownSuffix: "ORGANIZACIONES MOSTRADAS", personalInfo: "INFORMACIÓN PERSONAL", userFallback: "Usuario", member: "Miembro", freeMember: "Miembro gratis", noPlanSelected: "Sin plan seleccionado", gmaCore: "NÚCLEO GMA", intelligenceLayerActive: "Capa de inteligencia: activa", consensusSystem: "Sistema de consenso de tres capas · Inteligencia soberana", analysisCredits: "CRÉDITOS DE ANÁLISIS", strategicAnalysis: "ANÁLISIS ESTRATÉGICO", accessExhausted: "Acceso agotado", creditsRemaining: "créditos restantes", accuracyIndex: "ÍNDICE DE PRECISIÓN", verifiedBy: "Verificado por", yearsOfData: "126 años de datos", creditsNote: "Cada análisis profundo de GMA usa 1 crédito. Se requiere suscripción al vencer el acceso.", creditsExhaustedNote: "Tus créditos de análisis se agotaron. Elige un plan GMA para continuar.", accountActions: "ACCIONES DE CUENTA", profileSaved: "¡Perfil guardado!", edit: "EDITAR", dnaEdit: "EDITAR GMA DNA", step: "PASO", selected: "seleccionado", continue: "CONTINUAR", gmaUserDna: "GMA DNA DE USUARIO", dnaIntro: "Tus preferencias definen el tono y alcance de la capa de inteligencia GMA.", dnaMarketScope: "Alcance de mercado", dnaFocusRegion: "Región foco", dnaSectors: "Sectores", dnaRiskStyle: "Estilo de riesgo", dnaTimeframe: "Horizonte temporal", dnaTone: "Estilo de análisis", dnaVolumeScale: "Escala de volumen", legalEffectiveDate: "Fecha de vigencia: abril de 2026", legalGdprDate: "Fecha de vigencia: abril de 2026 — Cumple GDPR", legalTranslating: "Traduciendo contenido a tu idioma...", legalNoAdvice: "NO ES ASESORAMIENTO FINANCIERO", privacyPolicyTitle: "Política de privacidad", termsTitle: "Términos de servicio", refundTitle: "Política de reembolso", privacyWarning: "Global Market Analytics (GMA) es una plataforma de visualización de datos. GMA no es un asesor de inversiones registrado y no proporciona asesoramiento financiero, de inversión, legal ni fiscal. Todo el contenido y los análisis AI son solo informativos. Las decisiones de inversión son responsabilidad exclusiva del usuario.", termsWarning: "GMA no es un asesor de inversiones registrado. Todo el contenido es solo informativo. Busca asesoramiento financiero profesional independiente antes de invertir.", refundHeroTitle: "Garantía de reembolso de 7 días", refundHeroText: "¿No estás satisfecho? Obtén un reembolso completo dentro de 7 días, sin preguntas. Escribe a support@globalmarketanalytics.com y lo procesaremos en 5-7 días hábiles.", paddleSecured: "Protegido por Paddle", oneClickCancel: "Cancelación en un clic", noLockIn: "Sin permanencia", sevenDayGuarantee: "Garantía de 7 días" }
+};
+Object.entries(GMA_DEEP_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
+const GMA_LEGAL_STATIC = {
+  tr: {
+    privacy: [
+      {t:"1. Topladigimiz Bilgiler",b:"GMA istemci tarafli bir web uygulamasi olarak calisir. Yalnizca gerekli minimum verileri toplariz:\n\n• Hesap Bilgileri: e-posta ve gorunen ad, tarayicinizda yerel olarak saklanir (localStorage).\n• API Anahtarlari: yalnizca tarayicinizda saklanir ve dogrudan Anthropic'e iletilir. GMA bu anahtarlari sunucularinda almaz.\n• Odeme Verileri: tamamen Paddle.com tarafindan islenir. GMA kart bilgilerini almaz, saklamaz veya islemez.\n• Analitik: kisisel veri icermeyen anonim ve toplu kullanim verileri."},
+      {t:"2. Isleme Hukuki Dayanagi (GDPR)",b:"Genel Veri Koruma Tuzugu (GDPR) kapsaminda su hukuki dayanaklara dayaniriz:\n\n• Sozlesmesel Gereklilik — abone olunan hizmeti sunmak icin e-postanizin islenmesi.\n• Mesru Menfaat — anonim analitiklerle platform performansini iyilestirmek.\n• Riza — istege bagli veri toplama icin. Rizanizi istediginiz zaman geri cekebilirsiniz."},
+      {t:"3. Paddle ile Odeme Isleme",b:"Tum odemeler Merchant of Record is ortagimiz Paddle.com tarafindan islenir. Abone oldugunuzda:\n\n• Paddle'in PCI-DSS uyumlu guvenli odeme ekranina yonlendirilirsiniz.\n• Kart bilgileri yalnizca Paddle altyapisina girilir. GMA odeme bilgilerinizi gormez.\n• Paddle Gizlilik Politikasi: https://www.paddle.com/legal/privacy\n• Faturalama sorulari: support@globalmarketanalytics.com"},
+      {t:"4. Cerezler ve Takip",b:"GMA reklam cerezleri, ucuncu taraf takip pikselleri veya davranissal reklam analitigi kullanmaz. Yalnizca kimlik dogrulama icin zorunlu oturum cerezleri kullanilabilir. Kullanici davranisi reklamverenlere satilmaz."},
+      {t:"5. Ucuncu Taraf Veri Saglayicilari",b:"GMA, kendi gizlilik politikalarina tabi olan saglayicilarla entegre calisir:\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — gercek zamanli piyasa verisi saglayicisi\n• Frankfurter API — doviz kuru verileri\n• Paddle.com — odeme isleme\n\nBu saglayicilar normal operasyonlar sirasinda IP adresinizi isleyebilir."},
+      {t:"6. Haklariniz (GDPR)",b:"AEA veya Birlesik Krallik'taysanız su haklara sahipsiniz:\n\n• Erisim Hakki — kisisel verilerinizin bir kopyasini talep etme.\n• Duzeltme Hakki — hatali verileri duzeltme.\n• Silme Hakki — verilerinizin silinmesini talep etme.\n• Islemeyi Kisitlama Hakki — verilerinizin nasil islendigini sinirlama.\n• Veri Tasinabilirligi Hakki — makine tarafindan okunabilir formatta veri alma.\n• Itiraz Hakki — mesru menfaate dayali islemeye itiraz etme.\n\nIletisim: support@globalmarketanalytics.com. 30 gun icinde yanit veririz."},
+      {t:"7. Veri Saklama",b:"Tarayici localStorage verileri, tarayicinizi temizleyene veya hesabinizi silene kadar saklanir. Faturalama ve yasal uyum icin gerekli olanlar disinda sunucularimizda kisisel veri tutmayiz."},
+      {t:"8. Veri Guvenligi",b:"Aktarimdaki tum veriler icin HTTPS/TLS sifreleme kullaniriz. Odeme islemleri tamamen PCI-DSS uyumlu Paddle altyapisina devredilir. Guvenlik uygulamalari duzenli olarak gozden gecirilir."},
+      {t:"9. Cocuklarin Gizliligi",b:"GMA 18 yas alti bireylere yonelik degildir. Bilerek reşit olmayanlardan kisisel bilgi toplamayiz. Bir reşit olmayan kisi veri sagladiysa derhal silme icin support@globalmarketanalytics.com adresiyle iletisime gecin."},
+      {t:"10. Politikadaki Degisiklikler",b:"Bu Gizlilik Politikasi zaman zaman guncellenebilir. Yururluk tarihi en son revizyonu gosterir. Onemli degisiklikler kayitli kullanicilara e-posta ile bildirilir. Kullanmaya devam etmeniz kabul anlamina gelir."},
+      {t:"11. Iletisim ve Veri Sorumlusu",b:"Global Market Analytics\nEmail: support@globalmarketanalytics.com\nWebsite: https://globalmarketanalytics.com\n\nYerel veri koruma otoritenize sikayette bulunma hakkiniz vardir."}
+    ],
+    terms: [
+      {t:"1. Sartlarin Kabulu",b:"Global Market Analytics (GMA) platformuna eriserek veya platformu kullanarak bu Hizmet Sartlari'ni ve geçerli tum yasalari kabul edersiniz. Herhangi bir bolume katilmiyorsaniz kullanimi derhal durdurun."},
+      {t:"2. Hizmetin Tanimi",b:"GMA; abonelik esasli AI destekli piyasa verisi gorsellestirme, finansal veri toplama ve analiz araclari sunan dijital bir platformdur.\n\nTum piyasa verileri ucuncu taraf saglayicilardan gelir ve yalnizca bilgilendirme amaciyla sunulur."},
+      {t:"3. Yatirim Tavsiyesi Degildir",b:"⚠ GMA KAYITLI BIR YATIRIM DANISMANI DEGILDIR.\n\nPlatformdaki hicbir sey finansal, yatirim, hukuki veya vergi tavsiyesi degildir. AI tarafindan uretilen analizler, piyasa ozetleri ve veri gorsellestirmeleri yalnizca bilgilendirme ve egitim amaclidir.\n\nYatirim karari almadan once nitelikli bir finansal danismana basvurun. Platform kullanimindan dogan finansal kayiplardan GMA sorumlu degildir."},
+      {t:"4. Kullanici Hesaplari",b:"Kayit icin en az 18 yasinda olmalisiniz. Su konulardan siz sorumlusunuz:\n\n• Hesap bilgilerinizin gizliligini korumak.\n• Hesabiniz altinda gerceklesen tum faaliyetler.\n• Yetkisiz erisim durumunda support@globalmarketanalytics.com adresine derhal bildirim yapmak."},
+      {t:"5. Abonelikler ve Paddle ile Faturalama",b:"Tum ucretli abonelikler Merchant of Record is ortagimiz Paddle.com tarafindan islenir.\n\n• Abonelikler yenileme tarihinden once iptal edilmedikce otomatik yenilenir.\n• Hesap Ayarlari uzerinden her zaman tek tikla iptal mumkundur.\n• Fiyat degisiklikleri en az 30 gun once bildirilir.\n• Paddle.com sartlari da gecerlidir: https://www.paddle.com/legal"},
+      {t:"6. Iptal",b:"Hesap Ayarlari uzerinden istediginiz zaman iptal edebilirsiniz (tek tikla, cezasiz). Iptal mevcut fatura doneminin sonunda gecerli olur. Iade Politikamizda belirtilenler disinda kismi donemler icin oransal iade yapilmaz."},
+      {t:"7. Kabul Edilebilir Kullanim",b:"Sunlari yapmamayi kabul edersiniz:\n\n• Platformu hukuka aykiri amaclarla kullanmak.\n• Platform verilerini tersine muhendislik, kazima veya sistematik olarak cikarma girisiminde bulunmak.\n• Hesap bilgilerini ucuncu taraflarla paylasmak.\n• Platform uzerinden yaniltici finansal bilgi uretmek veya dagitmak.\n• Erisim kontrollerini veya abonelik sinirlamalarini asmaya calismak."},
+      {t:"8. Fikri Mulkiyet",b:"Tum icerik, marka, yazilim ve islevler Global Market Analytics veya lisans verenlerinin munhasir mulkiyetidir. Size yalnizca kisisel ve ticari olmayan kullanim icin sinirli, munhasir olmayan bir lisans verilir."},
+      {t:"9. Sorumlulugun Sinirlandirilmasi",b:"Yasanin izin verdigi azami olcude GMA ve bagli kuruluslari dolayli, arizi, sonucsal veya cezai zararlardan sorumlu olmayacaktir. GMA'nin toplam sorumlulugu, talep tarihinden onceki on iki ayda odediginiz tutari asamaz."},
+      {t:"10. Garanti Reddi",b:"PLATFORM 'OLDUGU GIBI' SUNULUR VE HICBIR TUR GARANTI VERILMEZ. GMA HIZMETIN KESINTISIZ VEYA HATASIZ OLACAGINI, PIYASA VERILERININ DOGRULUGUNU VEYA GUNCELLIGINI GARANTI ETMEZ. KULLANIM TAMAMEN KENDI RISKINIZEDIR."},
+      {t:"11. Geçerli Hukuk ve Degisiklikler",b:"Bu Sartlar geçerli hukuka tabidir. GMA bu Sartlari istedigi zaman degistirebilir; onemli degisiklikler kayitli kullanicilara e-posta ile bildirilir. Kullanmaya devam etmeniz revize sartlari kabul ettiginiz anlamina gelir."},
+      {t:"12. Iletisim",b:"Global Market Analytics\nEmail: support@globalmarketanalytics.com\nWebsite: https://globalmarketanalytics.com"}
+    ],
+    refund: [
+      {t:"1. 7 Gun Para Iade Garantisi",b:"GMA, tum ucretli planlarda (Gunluk, Aylik, Yillik) 7 gun tam para iade garantisi sunar. Herhangi bir nedenle memnun kalmazsaniz ilk satin aliminizdan itibaren 7 gun icinde tam iade talep edebilirsiniz.\n\nBu garanti her plan kademesi icin ilk satin alima uygulanir; sonraki yenilemeler icin geçerli degildir."},
+      {t:"2. Iade Talebi Nasil Yapilir",b:"Satin alimdan itibaren 7 gun icinde bizimle iletisime gecin:\n\n• Email: support@globalmarketanalytics.com\n• Konu: Refund Request — [kayitli e-posta adresiniz]\n• Ekleyin: satin alma tarihi ve kullanilan e-posta adresi.\n\nIadeler Paddle.com uzerinden orijinal odeme yonteminize 5-7 is gunu icinde islenir."},
+      {t:"3. Tek Tikla Abonelik Iptali",b:"Hesap Ayarlari'ndan istediginiz zaman iptal edebilirsiniz — ceza veya iptal ucreti yoktur.\n\n• Iptal, gelecekteki tum ucretlendirmeleri durdurur.\n• Ucretli ozelliklere erisim mevcut fatura donemi sonuna kadar devam eder.\n• 7 gunluk pencere sonrasi kismi fatura donemleri icin oransal iade yoktur."},
+      {t:"4. Yenileme Ucretleri",b:"Abonelik yenilemeleri 7 gun garantisi kapsaminda degildir. Ucretlendirmeden kacınmak icin yenileme tarihinizden once iptal edin. Yenileme itirazlari icin support@globalmarketanalytics.com adresiyle iletisime gecin; durum bazinda degerlendirme yapariz."},
+      {t:"5. Istisnalar",b:"Asagidakiler iade icin uygun degildir:\n\n• 7 gunluk pencere sonrasi yapilan talepler.\n• Hizmet Sartlari'ni ihlal ettigi tespit edilen hesaplar.\n• Ucretsiz plan (ucret uygulanmaz).\n• Sahte satin alim veya chargeback kotuye kullanimi."},
+      {t:"6. Odeme Isleyici (Paddle)",b:"Tum iadeler Paddle.com uzerinden islenir. Banka isleme sureleri degisebilir (genellikle ekstrenize yansimasi 5-10 is gunu).\n\nPaddle ile dogrudan faturalama sorulari icin: https://www.paddle.com/legal"},
+      {t:"7. Iletisim",b:"Global Market Analytics\nEmail: support@globalmarketanalytics.com\nWebsite: https://globalmarketanalytics.com\n\nTum iade taleplerine 1 is gunu icinde yanit vermeyi hedefleriz."}
+    ]
+  }
+};
 Object.keys(T).forEach(code => {
   Object.keys(T.en).forEach(key => {
     if (!T[code][key]) T[code][key] = T.en[key];
@@ -6463,6 +6542,7 @@ function AIAnalysisModal({
   c,
   onClose
 }) {
+  const { t } = useLang();
   const sec = SECTORS[c.sector] || {
     color: "#94a3b8",
     label: c.sector
@@ -7434,14 +7514,14 @@ function HistoryModal({
       color: "#fbbf24",
       letterSpacing: "0.03em"
     }
-  }, "LEGAL NOTICE - NOT INVESTMENT ADVICE")), /*#__PURE__*/React.createElement("div", {
+  }, t('legalNoticeNotAdvice'))), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: "4px 12px 20px",
       display: "grid",
       gridTemplateColumns: "1fr",
       gap: "2px"
     }
-  }, ["This platform is for digital informational purposes only.", "No content or AI output is investment advice.", "All investment decisions are the investor’s own responsibility.", "Past performance does not guarantee future results.", "Consult a licensed financial advisor before trading.", "Data may be simulated and may not represent live exchange data."].map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, [t('disclaimer1'), t('disclaimer2'), t('disclaimer3'), t('disclaimer4'), t('disclaimer5'), t('disclaimer6')].map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "legal-disclaimer-item",
     style: {
@@ -8938,6 +9018,7 @@ function SidePanel({
   onUnwatch,
   onClose
 }) {
+  const { t } = useLang();
   const [tab, setTab] = useState("cart");
   const cartItems = rows.filter(r => cart.has(r.ticker));
   const watchItems = rows.filter(r => watchlist.has(r.ticker));
@@ -8984,7 +9065,7 @@ function SidePanel({
       fontWeight: "bold",
       color: "#38bdf8"
     }
-  }, "\u25C8 MY PANEL"), /*#__PURE__*/React.createElement("button", {
+  }, "\u25C8 ", t('myPanel')), /*#__PURE__*/React.createElement("button", {
     onClick: onClose,
     style: {
       background: "transparent",
@@ -9001,13 +9082,13 @@ function SidePanel({
   }, /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "cart"),
     onClick: () => setTab("cart")
-  }, "\uD83D\uDED2 CART (", cartItems.length, ")"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83D\uDED2 ", t('cart'), " (", cartItems.length, ")"), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "watch"),
     onClick: () => setTab("watch")
-  }, "\uD83D\uDC41 WATCHLIST (", watchItems.length, ")"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83D\uDC41 ", t('watchlist'), " (", watchItems.length, ")"), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "port"),
     onClick: () => setTab("port")
-  }, "\uD83D\uDCCA PORTFOY (", portItems.length, ")")), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83D\uDCCA ", t('portfolioTrackingTitle'), " (", portItems.length, ")")), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       overflowY: "auto",
@@ -9020,7 +9101,7 @@ function SidePanel({
       fontSize: "15px",
       marginTop: "40px"
     }
-  }, "Cart is empty") : cartItems.map(r => /*#__PURE__*/React.createElement("div", {
+  }, t('cartEmpty')) : cartItems.map(r => /*#__PURE__*/React.createElement("div", {
     key: r.ticker,
     style: {
       background: "rgba(255,255,255,0.03)",
@@ -9065,14 +9146,14 @@ function SidePanel({
       fontSize: "13px",
       cursor: "pointer"
     }
-  }, "remove \u2715")))))), tab === "watch" && (watchItems.length === 0 ? /*#__PURE__*/React.createElement("div", {
+  }, t('remove'), " \u2715")))))), tab === "watch" && (watchItems.length === 0 ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       color: "#94a3b8",
       fontSize: "15px",
       marginTop: "40px"
     }
-  }, "Watchlist is empty") : watchItems.map(r => /*#__PURE__*/React.createElement("div", {
+  }, t('watchlistEmpty')) : watchItems.map(r => /*#__PURE__*/React.createElement("div", {
     key: r.ticker,
     style: {
       background: "rgba(255,255,255,0.03)",
@@ -9122,14 +9203,14 @@ function SidePanel({
       fontSize: "13px",
       cursor: "pointer"
     }
-  }, "remove \u2715")))))), tab === "port" && (portItems.length === 0 ? /*#__PURE__*/React.createElement("div", {
+  }, t('remove'), " \u2715")))))), tab === "port" && (portItems.length === 0 ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       color: "#94a3b8",
       fontSize: "15px",
       marginTop: "40px"
     }
-  }, "No purchases yet") : /*#__PURE__*/React.createElement(React.Fragment, null, portItems.map((p, i) => {
+  }, t('noPurchasesYet')) : /*#__PURE__*/React.createElement(React.Fragment, null, portItems.map((p, i) => {
     // Fix 5: Find current price from rows and calculate P&L
     const currentRow = rows.find(r => r.ticker === p.ticker);
     const currentPrice = currentRow?.price ?? p.unitPrice;
@@ -9163,7 +9244,7 @@ function SidePanel({
         fontSize: "13px",
         color: "#94a3b8"
       }
-    }, p.qty, " units · buy-in $", p.unitPrice.toFixed(2), " · current $", currentPrice.toFixed(2))), /*#__PURE__*/React.createElement("div", {
+    }, p.qty, " ", t('units'), " · ", t('buyIn'), " $", p.unitPrice.toFixed(2), " · ", t('currentValue'), " $", currentPrice.toFixed(2))), /*#__PURE__*/React.createElement("div", {
       style: {
         textAlign: "right"
       }
@@ -9203,7 +9284,7 @@ function SidePanel({
         color: "#94a3b8",
         marginBottom: "4px"
       }
-    }, /*#__PURE__*/React.createElement("span", null, "Maliyet"), /*#__PURE__*/React.createElement("span", null, "$", totalCost.toFixed(2))), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("span", null, t('cost')), /*#__PURE__*/React.createElement("span", null, "$", totalCost.toFixed(2))), /*#__PURE__*/React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-between",
@@ -9211,7 +9292,7 @@ function SidePanel({
         color: "#94a3b8",
         marginBottom: "4px"
       }
-    }, /*#__PURE__*/React.createElement("span", null, "Current Value"), /*#__PURE__*/React.createElement("span", null, "$", totalCurrent.toFixed(2))), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("span", null, t('currentValue')), /*#__PURE__*/React.createElement("span", null, "$", totalCurrent.toFixed(2))), /*#__PURE__*/React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-between",
@@ -9224,7 +9305,7 @@ function SidePanel({
       style: {
         color: "#94a3b8"
       }
-    }, "KAR / ZARAR"), /*#__PURE__*/React.createElement("span", {
+    }, t('profitLoss')), /*#__PURE__*/React.createElement("span", {
       style: {
         color: isProfit ? "#34d399" : "#f87171"
       }
@@ -12795,7 +12876,7 @@ function MarketDashboard({
           const alreadyFired = firedAlerts.current[c.ticker];
           if (c.change >= threshold && !alreadyFired) {
             firedAlerts.current[c.ticker] = true;
-            addToast(`${c.name} exceeded the %${threshold} threshold! (${c.change.toFixed(2)}%)`, "warn", "◆");
+            addToast(`${c.name} ${t('alertCreated')} %${threshold} (${c.change.toFixed(2)}%)`, "warn", "◆");
           } else if (c.change < threshold && alreadyFired) {
             // Reset when price falls below the threshold - alert again on the next crossing
             firedAlerts.current[c.ticker] = false;
@@ -12848,13 +12929,13 @@ function MarketDashboard({
       return _PRIORITY_TICKERS.indexOf(t) < 0;
     });
 
-    setApiMsg('\u27F3 Loading priority prices (' + priority.length + ' symbols)...');
+    setApiMsg('\u27F3 ' + priority.length + ' symbols...');
     var allPrices = {};
     try {
       var fp1 = await fetchFinnhubBatch(priority, 7000);
       Object.assign(allPrices, fp1);
       _applyPrices(allPrices);
-      setApiMsg('\u2713 ' + Object.keys(allPrices).length + ' live (loading rest in background...)');
+      setApiMsg('\u2713 ' + Object.keys(allPrices).length + ' live');
     } catch(e) {
       setApiMsg('Finnhub error: ' + e.message);
     }
@@ -12886,10 +12967,10 @@ function MarketDashboard({
   // GMA API refresh
   const refresh = useCallback(async () => {
     setLoading(true);
-    setApiMsg("GMA Intelligence Layer is accessing data...");
+    setApiMsg("GMA Intelligence Layer...");
     const apiKey3 = localStorage.getItem('gma_platform_key') || '';
     if (!apiKey3) {
-      setApiMsg("· No API key — add it from Settings");
+      setApiMsg("· " + t('noApiKey'));
       setLoading(false);
       setTimeout(() => setApiMsg(""), 4000);
       return;
@@ -12930,9 +13011,9 @@ function MarketDashboard({
           return c;
         }));
         setUpdated(new Date());
-        setApiMsg("✓ Live data updated");
+        setApiMsg("✓ " + t('liveDataUpdated'));
       } else {
-        setApiMsg("Simulation is running");
+        setApiMsg(t('simulationRunning'));
       }
     } catch (e) {
       setApiMsg("API error: " + e.message);
@@ -12958,7 +13039,7 @@ function MarketDashboard({
       const wasIn = n.has(ticker);
       wasIn ? n.delete(ticker) : n.add(ticker);
       // Fix 3: Toast mesaji closure'daki eski `cart` degil, guncel `wasIn` uzerinden turetiliyor
-      addToast(wasIn ? `${name} removed from cart` : `${name} added to basket`, "success", "◆");
+      addToast(wasIn ? `${name} ${t('cartRemoved')}` : `${name} ${t('basketAdded')}`, "success", "◆");
       return n;
     });
   }, [addToast]);
@@ -12968,7 +13049,7 @@ function MarketDashboard({
       const wasIn = n.has(ticker);
       wasIn ? n.delete(ticker) : n.add(ticker);
       // Fix 3: Toast mesaji closure'daki eski `watchlist` degil, guncel `wasIn` uzerinden turetiliyor
-      addToast(wasIn ? `${name} removed from watchlist` : `${name} added to watchlist`, "success", "◆");
+      addToast(wasIn ? `${name} ${t('watchRemoved')}` : `${name} ${t('watchAdded')}`, "success", "◆");
       return n;
     });
   }, [addToast]);
@@ -12978,7 +13059,7 @@ function MarketDashboard({
       [c.ticker]: pct
     }));
     setAlertModal(null);
-    addToast(`${c.name} for +%${pct} alert created`, "warn", "◆");
+    addToast(`${c.name} +%${pct} ${t('alertCreated')}`, "warn", "◆");
   }, [addToast]);
   const toggleCompare = useCallback((ticker, name) => {
     setCompareList(prev => {
@@ -12988,11 +13069,11 @@ function MarketDashboard({
         return next;
       }
       if (next.size >= 5) {
-        addToast("A maximum of 5 companies can be selected", "error", "· ");
+        addToast(t('maxCompare'), "error", "· ");
         return prev;
       }
       next.add(ticker);
-      addToast(`${name} added to comparison (${next.size}/5)`, "success", "⚖️");
+      addToast(`${name} ${t('addedToComparison')} (${next.size}/5)`, "success", "⚖️");
       return next;
     });
   }, [addToast]);
@@ -13058,14 +13139,14 @@ function MarketDashboard({
       color: "#38bdf8",
       letterSpacing: "0.06em"
     }
-  }, "\u25C8 MARKET DASHBOARD"), /*#__PURE__*/React.createElement("div", {
+  }, "\u25C8 ", t('dashboardTitle')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "13px",
       color: "#94a3b8",
       marginTop: "2px",
       letterSpacing: "0.05em"
     }
-  }, COMPANIES_FINAL.length, " ORGANIZATIONS · LIVE SIMULATION + AI REFRESH")), /*#__PURE__*/React.createElement("div", {
+  }, COMPANIES_FINAL.length, " ", t('dashboardSub'))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       gap: "10px",
@@ -13073,15 +13154,15 @@ function MarketDashboard({
       flexWrap: "wrap"
     }
   }, /*#__PURE__*/React.createElement(Stat, {
-    label: "GAINERS",
+    label: t('gainers'),
     value: `▲ ${gainers}`,
     color: "#34d399"
   }), /*#__PURE__*/React.createElement(Stat, {
-    label: "DECLINERS",
+    label: t('decliners'),
     value: `▼ ${losers}`,
     color: "#f87171"
   }), /*#__PURE__*/React.createElement(Stat, {
-    label: "AVG. CHANGE",
+    label: t('avgChange'),
     value: `${avgChange >= 0 ? "+" : ""}${avgChange.toFixed(2)}%`,
     color: avgChange >= 0 ? "#34d399" : "#f87171"
   }), /*#__PURE__*/React.createElement("button", {
@@ -13099,7 +13180,7 @@ function MarketDashboard({
       letterSpacing: "0.06em",
       position: "relative"
     }
-  }, "\uD83D\uDDC2 MY PANEL", panelCount > 0 && /*#__PURE__*/React.createElement("span", {
+  }, "\uD83D\uDDC2 ", t('myPanel'), panelCount > 0 && /*#__PURE__*/React.createElement("span", {
     style: {
       position: "absolute",
       top: "-6px",
@@ -13132,7 +13213,7 @@ function MarketDashboard({
       opacity: loading ? 0.65 : 1,
       transition: "opacity 0.2s"
     }
-  }, loading ? "⟳ REFRESHNIYOR..." : "⟳ FETCH AI DATA"))), /*#__PURE__*/React.createElement("div", {
+  }, loading ? "⟳ " + t('refreshing') : "⟳ " + t('fetchAiData')))), /*#__PURE__*/React.createElement("div", {
     style: {
       background: "#070c1a",
       borderBottom: "1px solid rgba(56,189,248,0.08)",
@@ -13182,7 +13263,7 @@ function MarketDashboard({
     type: "text",
     value: search,
     onChange: e => setSearch(e.target.value),
-    placeholder: "Search by ticker, company name, or full name... (e.g. AAPL, Apple, Tesla)",
+    placeholder: t('searchPlaceholder'),
     style: {
       flex: 1,
       background: "rgba(255,255,255,0.04)",
@@ -13204,7 +13285,7 @@ function MarketDashboard({
       whiteSpace: "nowrap",
       flexShrink: 0
     }
-  }, filtered.length, " results"), /*#__PURE__*/React.createElement("button", {
+  }, filtered.length, " ", t('results')), /*#__PURE__*/React.createElement("button", {
     onClick: () => setSearch(""),
     style: {
       background: "rgba(248,113,113,0.1)",
@@ -13218,7 +13299,7 @@ function MarketDashboard({
       fontFamily: "'Courier New',monospace",
       fontWeight: "bold"
     }
-  }, "\u2715 CLEAR"))), /*#__PURE__*/React.createElement("div", {
+  }, "\u2715 ", t('clear')))), /*#__PURE__*/React.createElement("div", {
     style: {
       background: "rgba(0,0,0,0.3)",
       borderBottom: "1px solid #0d1525",
@@ -13235,39 +13316,39 @@ function MarketDashboard({
       letterSpacing: "0.06em",
       marginRight: "4px"
     }
-  }, "MARKET STATUS"), [{
+  }, t('marketStatus')), [{
     key: "all",
-    label: `ALL (${COMPANIES_FINAL.length})`,
+    label: `${t('allStatus')} (${COMPANIES_FINAL.length})`,
     color: "#38bdf8",
     icon: "◆"
   }, {
     key: "listed",
-    label: `LISTED (${listedCount})`,
+    label: `${t('listedStatus')} (${listedCount})`,
     color: "#34d399",
     icon: "◆"
   }, {
     key: "private",
-    label: `PRIVATE (${privateCount})`,
+    label: `${t('privateStatus')} (${privateCount})`,
     color: "#a78bfa",
     icon: "⬇"
   }, {
     key: "ipo_any",
-    label: `IPO RADAR (${preIpoCount + ipoPrepCount + ipoRumorCount})`,
+    label: `${t('ipoRadarStatus')} (${preIpoCount + ipoPrepCount + ipoRumorCount})`,
     color: "#fbbf24",
     icon: "◎"
   }, {
     key: "pre_ipo",
-    label: `IPO SOON (${preIpoCount})`,
+    label: `${t('ipoSoonStatus')} (${preIpoCount})`,
     color: "#f97316",
     icon: "⚡"
   }, {
     key: "ipo_prep",
-    label: `IPO PREP (${ipoPrepCount})`,
+    label: `${t('ipoPrepStatus')} (${ipoPrepCount})`,
     color: "#fbbf24",
     icon: "◎"
   }, {
     key: "ipo_rumor",
-    label: `RUMOR (${ipoRumorCount})`,
+    label: `${t('rumorStatus')} (${ipoRumorCount})`,
     color: "#818cf8",
     icon: "○"
   }].map(({
@@ -13321,11 +13402,11 @@ function MarketDashboard({
       letterSpacing: "0.06em",
       marginRight: "4px"
     }
-  }, "SECTOR"), /*#__PURE__*/React.createElement(BtnFilter, {
+  }, t('sectors')), /*#__PURE__*/React.createElement(BtnFilter, {
     active: filter === "all",
     color: "#38bdf8",
     onClick: () => setFilter("all")
-  }, "ALL"), allSectors.map(s => /*#__PURE__*/React.createElement(BtnFilter, {
+  }, t('allSectors')), allSectors.map(s => /*#__PURE__*/React.createElement(BtnFilter, {
     key: s,
     active: filter === s,
     color: SECTORS[s]?.color || "#94a3b8",
@@ -13354,32 +13435,32 @@ function MarketDashboard({
       color: "#94a3b8",
       letterSpacing: "0.05em"
     }
-  }, "LIVE \xB7 ", updated.toLocaleTimeString("en-US"), " · 2.5s AUTO-REFRESH"), /*#__PURE__*/React.createElement("span", {
+  }, t('liveAutoLabel'), " \xB7 ", updated.toLocaleTimeString("en-US"), " · ", t('autoRefreshShort')), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "13px",
       color: "#34d399"
     }
-  }, "\u25C8 LISTED: ", listedCount), /*#__PURE__*/React.createElement("span", {
+  }, "\u25C8 ", t('listedStatus'), ": ", listedCount), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "13px",
       color: "#a78bfa"
     }
-  }, "\u2B21 PRIVATE: ", privateCount), /*#__PURE__*/React.createElement("span", {
+  }, "\u2B21 ", t('privateStatus'), ": ", privateCount), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "13px",
       color: "#f97316"
     }
-  }, "\u26A1 IPO SOON: ", preIpoCount), /*#__PURE__*/React.createElement("span", {
+  }, "\u26A1 ", t('ipoSoonStatus'), ": ", preIpoCount), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "13px",
       color: "#fbbf24"
     }
-  }, "\u25CE PREP: ", ipoPrepCount), /*#__PURE__*/React.createElement("span", {
+  }, "\u25CE ", t('prepStatus'), ": ", ipoPrepCount), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "13px",
       color: "#818cf8"
     }
-  }, "\u25CC RUMOR: ", ipoRumorCount), apiMsg && /*#__PURE__*/React.createElement("span", {
+  }, "\u25CC ", t('rumorStatus'), ": ", ipoRumorCount), apiMsg && /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "13px",
       color: "#a78bfa"
@@ -13434,7 +13515,7 @@ function MarketDashboard({
       color: "#1e293b",
       letterSpacing: "0.06em"
     }
-  }, "\u25C8 ALL ", filtered.length, " ORGANIZATIONS SHOWN"), historyModal && /*#__PURE__*/React.createElement(HistoryModal, {
+  }, "\u25C8 ", t('allOrganizationsShownPrefix'), " ", filtered.length, " ", t('allOrganizationsShownSuffix')), historyModal && /*#__PURE__*/React.createElement(HistoryModal, {
     c: historyModal,
     onClose: () => setHistoryModal(null)
   }), aiAnalysisModal && /*#__PURE__*/React.createElement(AIAnalysisModal, {
@@ -15198,7 +15279,7 @@ function LoginPage({
       color: '#94a3b8',
       lineHeight: 1.7
     }
-  }, "By signing in", ' ', /*#__PURE__*/React.createElement("button", {
+  }, t('signInLegalPrefix'), ' ', /*#__PURE__*/React.createElement("button", {
     onClick: () => onNavigate('privacy'),
     style: {
       background: 'none',
@@ -15209,7 +15290,7 @@ function LoginPage({
       fontFamily: 'inherit',
       textDecoration: 'underline'
     }
-  }, "Privacy Policy"), " by continuing."), /*#__PURE__*/React.createElement("div", {
+  }, t('privacyPolicyTitle')), " ", t('signInLegalSuffix')), /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: 'center',
       marginTop: '10px'
@@ -15251,12 +15332,11 @@ function UserPanelPage({
   var creditTotal = 3;
   var credits = creditTotal;
   var creditUsed = 0;
-  var creditsDisplay = 'Strategic Analysis Credits: ' + credits + ' / ' + creditTotal;
   var creditsColor = credits === null ? '#34d399' : credits >= 2 ? '#34d399' : credits >= 1 ? '#fbbf24' : '#f87171';
-  var creditsNote = 'Each GMA Deep Analysis uses 1 credit. A subscription is required after access expires.';
+  var creditsNote = t('creditsNote');
 
   var planData = (function(){ try { return JSON.parse(localStorage.getItem('gma_plan_' + email) || 'null'); } catch { return null; } })();
-  var planLabel = planData ? ((GMA_PLANS[planData.planId] || {}).label || planData.planId) : 'No Plan Selected';
+  var planLabel = planData ? ((GMA_PLANS[planData.planId] || {}).label || planData.planId) : t('noPlanSelected');
 
   var [prof, setProf] = React.useState(function(){
     try {
@@ -15312,12 +15392,12 @@ function UserPanelPage({
               background:photo?'transparent':'linear-gradient(135deg,#0ea5e9,#6366f1)',
               display:'flex',alignItems:'center',justifyContent:'center',fontSize:'28px',fontWeight:'bold',color:'#fff'}},
             photo?React.createElement("img",{src:photo,alt:"profile",style:{width:'100%',height:'100%',objectFit:'cover'}})
-                 :(prof.name?.[0]?.toUpperCase()||user?.name?.[0]?.toUpperCase()||'K'),
+                 :(prof.name?.[0]?.toUpperCase()||user?.name?.[0]?.toUpperCase()||'U'),
             React.createElement("div",{style:{position:'absolute',bottom:0,right:0,background:'rgba(0,0,0,0.7)',padding:'2px 5px',fontSize:'11px'}},"\ud83d\udcf7")
           ),
           React.createElement("input",{ref:fileRef,type:"file",accept:"image/*",onChange:handlePhoto,style:{display:'none'}}),
           React.createElement("div",{style:{flex:1}},
-            React.createElement("div",{style:{fontSize:'19px',fontWeight:'bold',color:'#f1f5f9'}},prof.name||user?.name||'User'),
+            React.createElement("div",{style:{fontSize:'19px',fontWeight:'bold',color:'#f1f5f9'}},prof.name||user?.name||t('userFallback')),
             React.createElement("div",{style:{fontSize:'14px',color:'#64748b',marginTop:'3px'}},prof.email||user?.email||''),
             prof.city&&React.createElement("div",{style:{fontSize:'13px',color:'#94a3b8',marginTop:'4px'}},"\ud83d\udccd ",prof.city),
             React.createElement("div",{style:{fontSize:'12px',color:'#64748b',marginTop:'5px'}},
@@ -15331,23 +15411,23 @@ function UserPanelPage({
                 border:'1px solid '+(editProf?'rgba(248,113,113,0.3)':'rgba(56,189,248,0.3)'),
                 borderRadius:'9px',color:editProf?'#f87171':'#38bdf8',
                 cursor:'pointer',fontSize:'14px',fontFamily:'inherit',fontWeight:'bold'}},
-              editProf?'\u2715 CANCEL':'\u270f EDIT')
+              editProf?'\u2715 ' + t('cancel'):'\u270f ' + t('edit'))
           )
         ),
         !editProf&&prof.bio&&React.createElement("div",{style:{fontSize:'14px',color:'#94a3b8',lineHeight:1.7,padding:'10px',background:'rgba(255,255,255,0.03)',borderRadius:'8px',marginBottom:'12px'}},prof.bio),
         editProf&&React.createElement("div",null,
-          React.createElement("div",{style:{fontSize:'13px',color:'#38bdf8',letterSpacing:'0.07em',marginBottom:'12px',borderBottom:'1px solid #0f172a',paddingBottom:'8px'}},"\ud83d\udc64 PERSONAL INFORMATION"),
+          React.createElement("div",{style:{fontSize:'13px',color:'#38bdf8',letterSpacing:'0.07em',marginBottom:'12px',borderBottom:'1px solid #0f172a',paddingBottom:'8px'}},"\ud83d\udc64 ", t('personalInfo')),
           React.createElement("div",{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginBottom:'8px'}},
-            React.createElement("div",null,React.createElement("span",{style:lbl},"FULL NAME"),React.createElement("input",{value:prof.name,onChange:function(e){setProf(function(p){return Object.assign({},p,{name:e.target.value});});},placeholder:"Full Name",style:inp})),
-            React.createElement("div",null,React.createElement("span",{style:lbl},"CITY"),React.createElement("input",{value:prof.city,onChange:function(e){setProf(function(p){return Object.assign({},p,{city:e.target.value});});},placeholder:"Tashkent",style:inp})),
-            React.createElement("div",null,React.createElement("span",{style:lbl},"EMAIL"),React.createElement("input",{value:prof.email,onChange:function(e){setProf(function(p){return Object.assign({},p,{email:e.target.value});});},type:"email",style:inp})),
-            React.createElement("div",null,React.createElement("span",{style:lbl},"PHONE"),React.createElement("input",{value:prof.phone,onChange:function(e){setProf(function(p){return Object.assign({},p,{phone:e.target.value});});},placeholder:"+998 90 000 00 00",style:inp}))
+            React.createElement("div",null,React.createElement("span",{style:lbl},t('fullname')),React.createElement("input",{value:prof.name,onChange:function(e){setProf(function(p){return Object.assign({},p,{name:e.target.value});});},placeholder:t('namePlaceholder'),style:inp})),
+            React.createElement("div",null,React.createElement("span",{style:lbl},t('city')),React.createElement("input",{value:prof.city,onChange:function(e){setProf(function(p){return Object.assign({},p,{city:e.target.value});});},placeholder:"Tashkent",style:inp})),
+            React.createElement("div",null,React.createElement("span",{style:lbl},t('email')),React.createElement("input",{value:prof.email,onChange:function(e){setProf(function(p){return Object.assign({},p,{email:e.target.value});});},type:"email",style:inp})),
+            React.createElement("div",null,React.createElement("span",{style:lbl},t('phone')),React.createElement("input",{value:prof.phone,onChange:function(e){setProf(function(p){return Object.assign({},p,{phone:e.target.value});});},placeholder:"+998 90 000 00 00",style:inp}))
           ),
           React.createElement("div",{style:{display:'flex',gap:'10px'}},
-            React.createElement("button",{onClick:handleSaveProf,style:{flex:2,padding:'10px',background:'linear-gradient(135deg,#0ea5e9,#6366f1)',border:'none',borderRadius:'9px',color:'#fff',cursor:'pointer',fontSize:'15px',fontFamily:'inherit',fontWeight:'bold'}},"💾 SAVE PROFILE"),
-            React.createElement("button",{onClick:function(){setEditProf(false);},style:{flex:1,padding:'10px',background:'transparent',border:'1px solid #1e293b',borderRadius:'9px',color:'#64748b',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}},"CANCEL")
+            React.createElement("button",{onClick:handleSaveProf,style:{flex:2,padding:'10px',background:'linear-gradient(135deg,#0ea5e9,#6366f1)',border:'none',borderRadius:'9px',color:'#fff',cursor:'pointer',fontSize:'15px',fontFamily:'inherit',fontWeight:'bold'}},"💾 ", t('saveProfile')),
+            React.createElement("button",{onClick:function(){setEditProf(false);},style:{flex:1,padding:'10px',background:'transparent',border:'1px solid #1e293b',borderRadius:'9px',color:'#64748b',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}},t('cancel'))
           ),
-          profSaved&&React.createElement("div",{style:{marginTop:'8px',fontSize:'14px',color:'#34d399'}},"✔ Profile saved!")
+          profSaved&&React.createElement("div",{style:{marginTop:'8px',fontSize:'14px',color:'#34d399'}},"✔ ", t('profileSaved'))
         )
       ),
 
@@ -15362,28 +15442,28 @@ function UserPanelPage({
           border:"1px solid rgba(251,191,36,0.25)",
           borderRadius:"999px",fontSize:"11px",color:"#fbbf24",
           letterSpacing:"0.05em",fontWeight:"500"
-        }}, planData ? ((GMA_PLANS[planData.planId]||{}).label||planData.planId) + " Member" : "Free Member")
+        }}, planData ? ((GMA_PLANS[planData.planId]||{}).label||planData.planId) + " " + t('member') : t('freeMember'))
       ),
       /* GMA Core Card */
       React.createElement("div",{style:Object.assign({},card,{border:"1px solid rgba(167,139,250,0.2)",textAlign:"center",padding:"28px 20px"})},
-        React.createElement("div",{style:{fontSize:"11px",color:"#64748b",letterSpacing:"0.15em",marginBottom:"8px"}},"\u25c8 GMA CORE"),
-        React.createElement("div",{style:{fontSize:"22px",fontWeight:"300",color:"#e2e8f0",marginBottom:"6px",letterSpacing:"0.02em"}},"Intelligence Layer: Active"),
-        React.createElement("div",{style:{fontSize:"11px",color:"#38bdf8",letterSpacing:"0.08em"}},"Three-Layer Consensus System · Sovereign Intelligence")
+        React.createElement("div",{style:{fontSize:"11px",color:"#64748b",letterSpacing:"0.15em",marginBottom:"8px"}},"\u25c8 ", t('gmaCore')),
+        React.createElement("div",{style:{fontSize:"22px",fontWeight:"300",color:"#e2e8f0",marginBottom:"6px",letterSpacing:"0.02em"}},t('intelligenceLayerActive')),
+        React.createElement("div",{style:{fontSize:"11px",color:"#38bdf8",letterSpacing:"0.08em"}},t('consensusSystem'))
       ),
       /* Kredi & Plan Card */
       React.createElement("div",{style:Object.assign({},card,{border:'1px solid rgba(167,139,250,0.2)'})},
-        React.createElement("div",{style:{fontSize:'13px',color:'#a78bfa',letterSpacing:'0.08em',marginBottom:'14px'}},"\ud83d\udcca ANALYSIS CREDITS"),
+        React.createElement("div",{style:{fontSize:'13px',color:'#a78bfa',letterSpacing:'0.08em',marginBottom:'14px'}},"\ud83d\udcca ", t('analysisCredits')),
         React.createElement("div",{style:{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'12px'}},
           React.createElement("div",null,
-            React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.05em',marginBottom:'4px'}},"STRATEGIC ANALYSIS"),
+            React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.05em',marginBottom:'4px'}},t('strategicAnalysis')),
             React.createElement("div",{style:{fontSize:'28px',fontWeight:'300',color:creditsColor,letterSpacing:'0.02em'}}, credits + ' / ' + creditTotal),
-            React.createElement("div",{style:{fontSize:'11px',color:'#94a3b8',marginTop:'4px'}}, credits === 0 ? 'Access exhausted' : 'credits remaining')
+            React.createElement("div",{style:{fontSize:'11px',color:'#94a3b8',marginTop:'4px'}}, credits === 0 ? t('accessExhausted') : t('creditsRemaining'))
           ),
           React.createElement("button",{
             onClick:function(){onNavigate('pricing');},
             style:{padding:'8px 16px',background:'rgba(167,139,250,0.12)',border:'1px solid rgba(167,139,250,0.3)',
               borderRadius:'8px',color:'#a78bfa',cursor:'pointer',fontSize:'12px',fontFamily:'inherit',fontWeight:'bold'}},
-            "🚀 Upgrade Plan")
+            "🚀 ", t('upgrade'))
         ),
         React.createElement("div",{style:{
           background:'linear-gradient(135deg,rgba(251,191,36,0.06),rgba(56,189,248,0.04))',
@@ -15392,24 +15472,24 @@ function UserPanelPage({
           display:'flex',alignItems:'center',justifyContent:'space-between',gap:'10px'
         }},
           React.createElement('div',null,
-            React.createElement('div',{style:{fontSize:'11px',color:'#64748b',letterSpacing:'0.08em',marginBottom:'2px'}},'\u25c8 ACCURACY INDEX'),
+            React.createElement('div',{style:{fontSize:'11px',color:'#64748b',letterSpacing:'0.08em',marginBottom:'2px'}},'\u25c8 ', t('accuracyIndex')),
             React.createElement('div',{style:{fontSize:'20px',fontWeight:'300',color:'#fbbf24',letterSpacing:'0.02em'}},'84%')
           ),
           React.createElement('div',{style:{fontSize:'10px',color:'#94a3b8',textAlign:'right',lineHeight:1.4}},
-            React.createElement('div',null,'Verified by'),
-            React.createElement('div',{style:{color:'#38bdf8'}},'126 Years of Data')
+            React.createElement('div',null,t('verifiedBy')),
+            React.createElement('div',{style:{color:'#38bdf8'}},t('yearsOfData'))
           )
         ),
         React.createElement("div",{style:{background:'rgba(255,255,255,0.02)',borderRadius:'8px',padding:'10px 12px',fontSize:'12px',color:'#64748b',lineHeight:1.6}},
           credits<=0
-            ?"\ud83d\udd12 Your analysis credits are exhausted. Choose a GMA plan to continue."
+            ?"\ud83d\udd12 " + t('creditsExhaustedNote')
             : creditsNote
         )
       ),
 
       /* Hesap Islemleri */
       React.createElement("div",{style:card},
-        React.createElement("div",{style:{fontSize:'14px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'12px'}},"\u2699\ufe0f ACCOUNT ACTIONS"),
+        React.createElement("div",{style:{fontSize:'14px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'12px'}},"\u2699\ufe0f ", t('accountActions')),
         React.createElement("div",{style:{display:'flex',gap:'10px',flexWrap:'wrap'}},
           React.createElement("button",{onClick:function(){onNavigate('dashboard');},
             style:{padding:'9px 16px',background:'rgba(56,189,248,0.1)',border:'1px solid rgba(56,189,248,0.3)',
@@ -15465,6 +15545,8 @@ function useLegalTranslate(sections, pageKey) {
   var _t = React.useState(sections); var translated = _t[0]; var setTranslated = _t[1];
   var _l = React.useState(false); var loading = _l[0]; var setLoading = _l[1];
   React.useEffect(function() {
+    var staticSections = GMA_LEGAL_STATIC[lang] && GMA_LEGAL_STATIC[lang][pageKey];
+    if (staticSections) { setTranslated(staticSections); return; }
     if (lang === 'en') { setTranslated(sections); return; }
     var cacheKey = 'gma_legal_' + pageKey + '_' + lang;
     try {
@@ -15503,6 +15585,7 @@ function useLegalTranslate(sections, pageKey) {
 // ──  6. PRIVACY  ──
 // ═══════════════════════════════════════════════════════════════
 function PrivacyPage({onNavigate}) {
+  var t = useLang().t;
   var S = {
     wrap:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'},
     inner:{maxWidth:'760px',margin:'0 auto'},
@@ -15536,18 +15619,18 @@ function PrivacyPage({onNavigate}) {
   var result = useLegalTranslate(EN_SECS,'privacy');
   var secs=result.translated; var translating=result.loading;
   return React.createElement("div",{style:S.wrap},React.createElement("div",{style:S.inner},
-    React.createElement("h1",{style:S.h1},"Privacy Policy"),
-    React.createElement("div",{style:S.sub},"Effective Date: April 2026 \u2014 GDPR Compliant"),
-    translating&&React.createElement("div",{style:S.tip},"\u23F3 Translating content to your language..."),
+    React.createElement("h1",{style:S.h1},t('privacyPolicyTitle')),
+    React.createElement("div",{style:S.sub},t('legalGdprDate')),
+    translating&&React.createElement("div",{style:S.tip},"\u23F3 ", t('legalTranslating')),
     React.createElement("div",{style:S.warn},
-      React.createElement("div",{style:S.wt},"\u26A0 NO FINANCIAL ADVICE"),
-      React.createElement("div",{style:S.wb},"Global Market Analytics (GMA) is a data visualisation platform. ",React.createElement("strong",null,"GMA IS NOT A REGISTERED INVESTMENT ADVISOR AND DOES NOT PROVIDE FINANCIAL, INVESTMENT, LEGAL, OR TAX ADVICE.")," All content and AI-generated analyses are for informational purposes only. Investment decisions are made solely at the user's own risk.")
+      React.createElement("div",{style:S.wt},"\u26A0 ", t('legalNoAdvice')),
+      React.createElement("div",{style:S.wb},t('privacyWarning'))
     ),
     secs.map(function(s,i){return React.createElement("div",{key:i,style:S.card},React.createElement("div",{style:S.ct},"\u2713 ",s.t),React.createElement("div",{style:S.cb},s.b));}),
     React.createElement("div",{style:{marginTop:'24px',display:'flex',gap:'12px',flexWrap:'wrap'}},
-      React.createElement("button",{onClick:function(){onNavigate('terms');},style:S.bb},"\u2192 Terms of Service"),
-      React.createElement("button",{onClick:function(){onNavigate('refund');},style:S.bg},"\u2192 Refund Policy"),
-      React.createElement("button",{onClick:function(){onNavigate('home');},style:S.btn},"\u2190 Home")
+      React.createElement("button",{onClick:function(){onNavigate('terms');},style:S.bb},"\u2192 ", t('termsTitle')),
+      React.createElement("button",{onClick:function(){onNavigate('refund');},style:S.bg},"\u2192 ", t('refundTitle')),
+      React.createElement("button",{onClick:function(){onNavigate('home');},style:S.btn},"\u2190 ", t('home'))
     )
   ));
 }
@@ -15556,6 +15639,7 @@ function PrivacyPage({onNavigate}) {
 // -- TERMS OF SERVICE --
 // ======================================================================
 function TermsPage({onNavigate}) {
+  var t = useLang().t;
   var S = {
     wrap:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'},
     inner:{maxWidth:'760px',margin:'0 auto'},
@@ -15590,19 +15674,19 @@ function TermsPage({onNavigate}) {
   var result = useLegalTranslate(EN_SECS,'terms');
   var secs=result.translated; var translating=result.loading;
   return React.createElement("div",{style:S.wrap},React.createElement("div",{style:S.inner},
-    React.createElement("div",{style:S.badge},"\uD83D\uDCC4 TERMS OF SERVICE"),
-    React.createElement("h1",{style:S.h1},"Terms of Service"),
-    React.createElement("div",{style:S.sub},"Effective Date: April 2026"),
-    translating&&React.createElement("div",{style:S.tip},"\u23F3 Translating content to your language..."),
+    React.createElement("div",{style:S.badge},"\uD83D\uDCC4 ", t('termsTitle')),
+    React.createElement("h1",{style:S.h1},t('termsTitle')),
+    React.createElement("div",{style:S.sub},t('legalEffectiveDate')),
+    translating&&React.createElement("div",{style:S.tip},"\u23F3 ", t('legalTranslating')),
     React.createElement("div",{style:S.warn},
-      React.createElement("div",{style:S.wt},"\u26A0 NO FINANCIAL ADVICE"),
-      React.createElement("div",{style:S.wb},React.createElement("strong",null,"GMA IS NOT A REGISTERED INVESTMENT ADVISOR.")," All content is for informational purposes only. Always seek independent professional financial advice before making investment decisions.")
+      React.createElement("div",{style:S.wt},"\u26A0 ", t('legalNoAdvice')),
+      React.createElement("div",{style:S.wb},t('termsWarning'))
     ),
     secs.map(function(s,i){return React.createElement("div",{key:i,style:S.card},React.createElement("div",{style:S.ct},"\u2713 ",s.t),React.createElement("div",{style:S.cb},s.b));}),
     React.createElement("div",{style:{marginTop:'24px',display:'flex',gap:'12px',flexWrap:'wrap'}},
-      React.createElement("button",{onClick:function(){onNavigate('privacy');},style:S.bb},"\u2192 Privacy Policy"),
-      React.createElement("button",{onClick:function(){onNavigate('refund');},style:S.bg},"\u2192 Refund Policy"),
-      React.createElement("button",{onClick:function(){onNavigate('home');},style:S.btn},"\u2190 Home")
+      React.createElement("button",{onClick:function(){onNavigate('privacy');},style:S.bb},"\u2192 ", t('privacyPolicyTitle')),
+      React.createElement("button",{onClick:function(){onNavigate('refund');},style:S.bg},"\u2192 ", t('refundTitle')),
+      React.createElement("button",{onClick:function(){onNavigate('home');},style:S.btn},"\u2190 ", t('home'))
     )
   ));
 }
@@ -15611,6 +15695,7 @@ function TermsPage({onNavigate}) {
 // -- REFUND POLICY --
 // ======================================================================
 function RefundPage({onNavigate}) {
+  var t = useLang().t;
   var S = {
     wrap:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'},
     inner:{maxWidth:'760px',margin:'0 auto'},
@@ -15637,22 +15722,22 @@ function RefundPage({onNavigate}) {
   var result = useLegalTranslate(EN_SECS,'refund');
   var secs=result.translated; var translating=result.loading;
   return React.createElement("div",{style:S.wrap},React.createElement("div",{style:S.inner},
-    React.createElement("div",{style:S.badge},"\uD83D\uDCB0 REFUND POLICY"),
-    React.createElement("h1",{style:S.h1},"Refund Policy"),
-    React.createElement("div",{style:S.sub},"Effective Date: April 2026"),
-    translating&&React.createElement("div",{style:S.tip},"\u23F3 Translating content to your language..."),
+    React.createElement("div",{style:S.badge},"\uD83D\uDCB0 ", t('refundTitle')),
+    React.createElement("h1",{style:S.h1},t('refundTitle')),
+    React.createElement("div",{style:S.sub},t('legalEffectiveDate')),
+    translating&&React.createElement("div",{style:S.tip},"\u23F3 ", t('legalTranslating')),
     React.createElement("div",{style:S.hi},
-      React.createElement("div",{style:{fontSize:'17px',fontWeight:'bold',color:'#34d399',marginBottom:'8px'}},"\u2713 7-Day Money-Back Guarantee"),
-      React.createElement("div",{style:{fontSize:'14px',color:'#94a3b8',lineHeight:1.8}},"Not satisfied? Get a full refund within 7 days \u2014 no questions asked. Email ",React.createElement("strong",{style:{color:'#38bdf8'}},"support@globalmarketanalytics.com")," and we'll process it within 5\u20137 business days."),
+      React.createElement("div",{style:{fontSize:'17px',fontWeight:'bold',color:'#34d399',marginBottom:'8px'}},"\u2713 ", t('refundHeroTitle')),
+      React.createElement("div",{style:{fontSize:'14px',color:'#94a3b8',lineHeight:1.8}},t('refundHeroText')),
       React.createElement("div",{style:{marginTop:'14px',display:'flex',gap:'10px',flexWrap:'wrap'}},
-        ["\uD83D\uDD12 Paddle Secured","\u2713 One-Click Cancel","\u2713 No Lock-in","\u2713 7-Day Guarantee"].map(function(b){return React.createElement("div",{key:b,style:{fontSize:'11px',color:'#64748b',background:'rgba(255,255,255,0.03)',border:'1px solid #1e293b',borderRadius:'16px',padding:'4px 12px'}},b);})
+        ["\uD83D\uDD12 " + t('paddleSecured'),"\u2713 " + t('oneClickCancel'),"\u2713 " + t('noLockIn'),"\u2713 " + t('sevenDayGuarantee')].map(function(b){return React.createElement("div",{key:b,style:{fontSize:'11px',color:'#64748b',background:'rgba(255,255,255,0.03)',border:'1px solid #1e293b',borderRadius:'16px',padding:'4px 12px'}},b);})
       )
     ),
     secs.map(function(s,i){return React.createElement("div",{key:i,style:S.card},React.createElement("div",{style:S.ct},"\u2713 ",s.t),React.createElement("div",{style:S.cb},s.b));}),
     React.createElement("div",{style:{marginTop:'24px',display:'flex',gap:'12px',flexWrap:'wrap'}},
-      React.createElement("button",{onClick:function(){onNavigate('privacy');},style:S.bb},"\u2192 Privacy Policy"),
-      React.createElement("button",{onClick:function(){onNavigate('terms');},style:S.bb},"\u2192 Terms of Service"),
-      React.createElement("button",{onClick:function(){onNavigate('home');},style:S.btn},"\u2190 Home")
+      React.createElement("button",{onClick:function(){onNavigate('privacy');},style:S.bb},"\u2192 ", t('privacyPolicyTitle')),
+      React.createElement("button",{onClick:function(){onNavigate('terms');},style:S.bb},"\u2192 ", t('termsTitle')),
+      React.createElement("button",{onClick:function(){onNavigate('home');},style:S.btn},"\u2190 ", t('home'))
     )
   ));
 }
@@ -16011,7 +16096,7 @@ function GlobalFooter({
       letterSpacing: '0.06em',
       marginBottom: '10px'
     }
-  }, "LEGAL"), [['privacy', 'Privacy Policy'], ['terms', 'Terms of Service'], ['refund', 'Refund Policy']].map(([key, label], i) => /*#__PURE__*/React.createElement("button", {
+  }, t('legal')), [['privacy', t('privacyPolicyTitle')], ['terms', t('termsTitle')], ['refund', t('refundTitle')]].map(([key, label], i) => /*#__PURE__*/React.createElement("button", {
     key: i,
     onClick: () => onNavigate(key),
     style: {
@@ -16036,7 +16121,7 @@ function GlobalFooter({
       letterSpacing: '0.06em',
       marginBottom: '10px'
     }
-  }, "\u26A0 LEGAL NOTICE"), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 ", t('legalNoticeTitle')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '16px',
       color: '#94a3b8',
@@ -16390,6 +16475,7 @@ function getVisibleQuestions(answers) {
 }
 
 function OnboardingOverlay({ user, onComplete, editMode, initialAnswers, editOnlyId, onSingleEditDone }) {
+  const { t } = useLang();
   const [answers, setAnswers] = React.useState(initialAnswers || {});
   const [selectedSectors, setSelectedSectors] = React.useState(() => {
     if (initialAnswers && Array.isArray(initialAnswers.sectors)) return initialAnswers.sectors;
@@ -16491,16 +16577,16 @@ function OnboardingOverlay({ user, onComplete, editMode, initialAnswers, editOnl
       // Step indicator
       React.createElement('div', {
         style:{fontSize:'11px',color:'#64748b',letterSpacing:'0.2em',marginBottom:'16px',fontWeight:'400'}
-      }, editOnlyId ? 'GMA DNA EDIT' : ('STEP ' + displayStepNum + ' / ' + totalSteps)),
+      }, editOnlyId ? t('dnaEdit') : (t('step') + ' ' + displayStepNum + ' / ' + totalSteps)),
       // Heading
       React.createElement('h2', {
         style:{fontSize:'28px',fontWeight:'200',color:'#f1f5f9',marginBottom:'8px',letterSpacing:'-0.02em',lineHeight:1.3,margin:0}
-      }, q.label),
+      }, t('dnaQ_' + q.id) || q.label),
       // Multi helper / spacer
       isMulti
         ? React.createElement('div', {
             style:{fontSize:'11px',color:'#94a3b8',marginTop:'10px',marginBottom:'24px',letterSpacing:'0.05em'}
-          }, selectedSectors.length + ' / 3 selected')
+          }, selectedSectors.length + ' / 3 ' + t('selected'))
         : React.createElement('div', {style:{height:'28px'}}),
       // Options grid
       React.createElement('div', {
@@ -16537,10 +16623,10 @@ function OnboardingOverlay({ user, onComplete, editMode, initialAnswers, editOnl
           React.createElement('div', {
             style:{fontSize:'26px',color: isSelected ? '#38bdf8' : '#64748b',fontWeight:'200'}
           }, opt.icon),
-          React.createElement('div', {style:{fontWeight:'400'}}, opt.l),
+          React.createElement('div', {style:{fontWeight:'400'}}, t('dnaOpt_' + q.id + '_' + opt.v) || opt.l),
           opt.detail && React.createElement('div', {
             style:{fontSize:'10px',color:'#64748b',letterSpacing:'0.03em'}
-          }, opt.detail)
+          }, t('dnaDetail_' + q.id + '_' + opt.v) || opt.detail)
         );
       })),
       // Multi confirm button
@@ -16556,7 +16642,7 @@ function OnboardingOverlay({ user, onComplete, editMode, initialAnswers, editOnl
           opacity: selectedSectors.length > 0 ? 1 : 0.4,
           transition:'all 0.25s'
         }
-      }, 'DEVAM ET \u2192'),
+      }, t('continue') + ' \u2192'),
       // Cancel in edit mode
       editOnlyId && React.createElement('button', {
         onClick: () => onSingleEditDone && onSingleEditDone(null),
@@ -16568,35 +16654,36 @@ function OnboardingOverlay({ user, onComplete, editMode, initialAnswers, editOnl
           fontFamily:'inherit',fontSize:'13px',fontWeight:'300',letterSpacing:'0.05em',
           cursor:'pointer'
         }
-      }, '\u2715 CANCEL')
+      }, '\u2715 ' + t('cancel'))
     )
   );
 }
 
 // GMA DNA Card — displayed in UserPanel
 function GMA_DNA_Card({ user, onEditField }) {
+  var t = useLang().t;
   var dna = null;
   try { dna = JSON.parse(localStorage.getItem('gma_user_dna_' + user.email)); } catch {}
   if (!dna) return null;
 
   // Label maps
   var labels = {
-    market_scope: 'Market Scope',
-    country:      'Focus Region',
-    sectors:      'Sectors',
-    risk:         'Risk Style',
-    timeframe:    'Timeframe',
-    tone:         'Analiz Dili',
-    budget:       'Volume Scale'
+    market_scope: t('dnaMarketScope'),
+    country:      t('dnaFocusRegion'),
+    sectors:      t('dnaSectors'),
+    risk:         t('dnaRiskStyle'),
+    timeframe:    t('dnaTimeframe'),
+    tone:         t('dnaTone'),
+    budget:       t('dnaVolumeScale')
   };
   var valueMap = {
-    global:'Global Markets', emerging:'Emerging Markets',
-    na:'North America', eu:'Europe', apac:'Asia & Pacific (including TR)', me:'Middle East',
-    tech:'Technology', energy:'Energy', defense:'Defense', food:'Food', health:'Health', finance:'Finance',
-    cube:'Cube \u2014 Conservative', prism:'Prism \u2014 Balanced', pyramid:'Pyramid \u2014 Aggressive',
-    short:'Short (0-1 Y)', medium:'Medium (1-3 Y)', long:'Long (3+ Y)',
-    clear:'Clear', technical:'Technical',
-    micro:'Micro', macro:'Macro', corporate:'Corporate'
+    global:t('dnaOpt_market_scope_global'), emerging:t('dnaOpt_market_scope_emerging'),
+    na:t('dnaOpt_country_na'), eu:t('dnaOpt_country_eu'), apac:t('dnaOpt_country_apac'), me:t('dnaOpt_country_me'),
+    tech:t('dnaOpt_sectors_tech'), energy:t('dnaOpt_sectors_energy'), defense:t('dnaOpt_sectors_defense'), food:t('dnaOpt_sectors_food'), health:t('dnaOpt_sectors_health'), finance:t('dnaOpt_sectors_finance'),
+    cube:t('dnaOpt_risk_cube') + ' \u2014 ' + t('dnaDetail_risk_cube'), prism:t('dnaOpt_risk_prism') + ' \u2014 ' + t('dnaDetail_risk_prism'), pyramid:t('dnaOpt_risk_pyramid') + ' \u2014 ' + t('dnaDetail_risk_pyramid'),
+    short:t('dnaOpt_timeframe_short') + ' (0-1 Y)', medium:t('dnaOpt_timeframe_medium') + ' (1-3 Y)', long:t('dnaOpt_timeframe_long') + ' (3+ Y)',
+    clear:t('dnaOpt_tone_clear'), technical:t('dnaOpt_tone_technical'),
+    micro:t('dnaOpt_budget_micro'), macro:t('dnaOpt_budget_macro'), corporate:t('dnaOpt_budget_corporate')
   };
   var formatVal = function(key, val) {
     if (Array.isArray(val)) return val.map(v => valueMap[v] || v).join(' \xb7 ');
@@ -16633,7 +16720,7 @@ function GMA_DNA_Card({ user, onEditField }) {
           letterSpacing:'0.05em', cursor:'pointer',
           transition:'all 0.2s'
         }
-      }, 'EDIT')
+      }, t('edit'))
     );
   });
 
@@ -16647,10 +16734,10 @@ function GMA_DNA_Card({ user, onEditField }) {
   },
     React.createElement('div', {
       style:{fontSize:'12px',color:'#a78bfa',letterSpacing:'0.12em',marginBottom:'6px'}
-    }, '\u25c8 GMA USER DNA'),
+    }, '\u25c8 ', t('gmaUserDna')),
     React.createElement('div', {
       style:{fontSize:'11px',color:'#64748b',marginBottom:'16px',lineHeight:1.5}
-    }, 'Your preferences define the tone and scope of the GMA Intelligence Layer.'),
+    }, t('dnaIntro')),
     rows
   );
 }
