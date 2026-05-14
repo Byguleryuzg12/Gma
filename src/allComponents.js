@@ -6548,9 +6548,32 @@ function HistoryModal({
     label: ""
   };
   const [tab, setTab] = useState("chart");
+  const contentDivRef = useRef(null);
+  // Analysis states (not used for now, but needed to prevent undefined errors)
+  const [loadingAI] = useState(false);
+  const [aiError] = useState(null);
+  const [analysis] = useState(null);
+  
+  // Dummy functions for analysis (not used but needed to prevent errors in dead code)
+  const fetchAnalysis = () => {};
 
   // Grafik renkleri
   const chartColor = c.change >= 0 ? "#34d399" : "#f87171";
+
+  // Tab style
+  const tabStyle = active => ({
+    flex: 1,
+    padding: "12px 16px",
+    border: "none",
+    background: active ? "#0f172a" : "transparent",
+    borderBottom: active ? "2px solid #6366f1" : "1px solid #0f172a",
+    color: active ? "#e879f9" : "#94a3b8",
+    cursor: "pointer",
+    fontSize: "14px",
+    fontFamily: "inherit",
+    fontWeight: active ? "bold" : "normal",
+    transition: "all 0.2s"
+  });
 
   // Custom tooltip
   const CustomTooltip = ({
@@ -6806,7 +6829,6 @@ function HistoryModal({
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      fontSize: "26px",
       fontSize: "26px",
       marginBottom: "12px"
     }
