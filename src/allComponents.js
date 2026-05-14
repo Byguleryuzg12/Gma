@@ -6,13 +6,13 @@
 // ═══════════════════════════════════════════════════════
 const LANGS = [
   {c:'en', n:'English', f:'EN'},
-  {c:'tr', n:'Turkce', f:'TR'},
-  {c:'ru', n:'Russkiy', f:'RU'},
-  {c:'ar', n:'Al-Arabiyah', f:'AR', r:1},
-  {c:'zh', n:'Zhongwen', f:'ZH'},
+  {c:'tr', n:'Turkce / Turkish', f:'TR'},
+  {c:'ru', n:'Russkiy / Russian', f:'RU'},
+  {c:'ar', n:'Arabic', f:'AR', r:1},
+  {c:'zh', n:'Chinese', f:'ZH'},
   {c:'hi', n:'Hindi', f:'HI'},
   {c:'de', n:'Deutsch', f:'DE'},
-  {c:'es', n:'Espanol', f:'ES'}
+  {c:'es', n:'Espanol / Spanish', f:'ES'}
 ];
 
 // ── Platform API Key (Admin tarafindan set edilir, usersdan istenmez) ──
@@ -364,132 +364,6 @@ const T = {
     aboutCardPrivacyB: "User data is never sent to external servers. All preferences, API keys, and portfolio information are stored exclusively in your browser local storage."
   },
   ru: {
-    home: "HOME",
-    markets: "MARKETS",
-    about: "ABOUT",
-    contact: "CONTACT",
-    privacy: "PRIVACY",
-    pricing: "PRICING",
-    login: "SIGN IN",
-    register: "SIGN UP",
-    logout: "SIGN OUT",
-    loginTitle: "Sign in to your account",
-    registerTitle: "Create your free account",
-    viewMarkets: "VIEW MARKETS",
-    loginRegister: "SIGN IN / SIGN UP",
-    googleContinue: "Continue with Google",
-    heroTitle: "See Global Markets\nwith Greater Clarity",
-    heroSub: "600+ global organizations, real-time market data, and structured intelligence via the GMA Consensus Engine.",
-    heroBtn1: "VIEW MARKETS",
-    heroBtn2: "SEE PRICING",
-    heroBtn3: "SIGN UP",
-    heroSubtitle: "Reduce uncertainty with structured analysis and clearer decision framing.",
-    step1t: "Sign Up",
-    step1d: "Create an account in 30 seconds with email or Google",
-    step2t: "Choose Plan",
-    step2d: "Select from plans starting at $2.99/day",
-    step3t: "Analyze",
-    step3d: "Strategic clarity via the GMA Consensus Engine",
-    step4t: "Decide",
-    step4d: "Build your own decision framework with reliable data and analytical clarity",
-    howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
-    featTitle: "Platform Features",
-    featSub: "Everything in one place",
-    feat1t: "Live Market Feed",
-    feat1d: "Track 600+ companies, crypto, commodities and currencies in real time",
-    feat2t: "GMA Triumvirate Analysis",
-    feat2d: "Review institutional-grade signal alignment from the GMA Consensus Engine",
-    feat3t: "Historical Charts",
-    feat3d: "Historical charts from founding year, crisis analysis and long-term trends",
-    feat4t: "Company Comparison",
-    feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
-    feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
-    feat6t: "80 Languages",
-    feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
-    ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
-    ctaSub: "Analyze global markets at a professional level with plans starting from $2.99/day.",
-    ctaBtn1: "Choose Plan →",
-    ctaBtn2: "Explore First",
-    ctaFree: "Start Free",
-    ctaFreeSub: "Explore markets without signing in.",
-    sector: "Sector",
-    sectors: "SECTOR",
-    allSectors: "ALL",
-    gainers: "GAINERS",
-    losers: "LOSERS",
-    live: "LIVE",
-    autoRefresh: "AUTO-REFRESH",
-    loadMore: "LOAD MORE",
-    allShown: "ALL ORGANIZATIONS SHOWN",
-    compare: "COMPARE",
-    analyzeAI: "AI ANALYZE",
-    clear: "Clear",
-    accountMgmt: "Account Management",
-    profileInfo: "PROFILE INFORMATION",
-    accountOps: "ACCOUNT OPERATIONS",
-    apiKeyLabel: "GMA PLATFORM ACCESS KEY",
-    backToMarkets: "Back to Markets",
-    editProfile: "EDIT",
-    saveProfile: "SAVE PROFILE",
-    cancel: "CANCEL",
-    myPlan: "My Active Plan",
-    credits: "Credits",
-    upgrade: "Upgrade Plan",
-    contactTitle: "Get in Touch",
-    contactSub: "We are here for any questions and feedback.",
-    contactInfo: "Contact Information",
-    formName: "FULL NAME",
-    formEmail: "EMAIL",
-    formSubject: "SUBJECT",
-    formMsg: "MESSAGE",
-    formSend: "SEND",
-    formSending: "SENDING...",
-    formSent: "Your message has been sent!",
-    aboutTitle: "About Global Market Analytics",
-    aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
-    aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
-    aboutVision: "Our Vision",
-    aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
-    footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
-    copyright: "All rights reserved.",
-    email: "EMAIL",
-    password: "PASSWORD",
-    fullname: "FULL NAME",
-    city: "CITY",
-    phone: "PHONE",
-    bio: "BIO",
-    socialMedia: "SOCIAL MEDIA",
-    send: "SEND",
-    processing: "PROCESSING...",
-    or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
-    pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
-    selectPlan: "Select Plan →",
-    freePlan: "Start Free",
-    aiPartners: "Integrated AI Partners",
-    pricingNote: "One subscription unlocks the GMA Consensus Engine. GPT, Claude and Gemini operate as supporting engines, while GMA remains the analytical layer.",
-    paySuccess: "Access Activated",
-    payKey: "Your Platform Access Key",
-    payKeyNote: "This key is linked to your account. Do not share with anyone.",
-    payContinue: "Go to Markets →",
-    termsNav: "TERMS",
-    refundNav: "REFUND",
-    aboutCardPlatformT: "Platform",
-    aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
-    aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
-    aboutCardDataT: "Historical Data",
-    aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
-    aboutCardSourcesT: "Data Sources",
-    aboutCardSourcesB: "Live data is provided via Finnhub API. Forex rates are sourced from open.er-api.com. No external proxies are used.",
-    aboutCardPrivacyT: "Privacy",
-    aboutCardPrivacyB: "User data is never sent to external servers. All preferences, API keys, and portfolio information are stored exclusively in your browser local storage."
-  },
-  ar: {
     home: "HOME",
     markets: "MARKETS",
     about: "ABOUT",
@@ -1016,6 +890,48 @@ const GMA_I18N_OVERRIDES = {
 };
 Object.entries(GMA_I18N_OVERRIDES).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
+});
+const GMA_EXTRA_I18N = {
+  en: {
+    organizationsLabel: "Organizations", sectorsLabel: "Sectors", realTimeLabel: "Real-Time", liveDataLabel: "Live Data", intelligenceLayerLabel: "GMA Intelligence Layer",
+    liveMarketsTitle: "Live Markets", liveMarketsDesc: "Track stock, commodity and forex prices in real time", aiAnalysisTitle: "AI Analysis", aiAnalysisDesc: "Get in-depth company and risk analysis with GMA Intelligence Layer", comparisonTitle: "Comparison", comparisonDesc: "AI-assisted side-by-side comparison of up to 5 companies", portfolioTrackingTitle: "Portfolio Tracking", portfolioTrackingDesc: "Record purchases and calculate profit/loss", platformFeaturesLabel: "PLATFORM FEATURES", startFreeTitle: "Start for Free", startFreeDesc: "Explore all market data without signing in.", back: "Back", messagePlaceholder: "Your message...", subjectPlaceholder: "Subject", namePlaceholder: "Your name", paymentSuccessful: "PAYMENT SUCCESSFUL", goToMarkets: "Go to Markets", myProfile: "My Profile", marketDataPlan: "Market Data (600+ Organizations)", gmaStructuredAnalysis: "GMA Structured Analysis", gmaConsensus: "GMA Triumvirate Consensus", monthlyAiAnalyses: "Monthly AI Analyses", alertsWatchlist: "Alerts & Watchlist", portfolioManagement: "Portfolio Management", prioritySupport: "Priority Support", unlimited: "Unlimited"
+  },
+  tr: {
+    organizationsLabel: "Kurulus", sectorsLabel: "Sektor", realTimeLabel: "Gercek Zamanli", liveDataLabel: "Canli Veri", intelligenceLayerLabel: "GMA Zeka Katmani",
+    liveMarketsTitle: "Canli Piyasalar", liveMarketsDesc: "Hisse, emtia ve forex fiyatlarini gercek zamanli takip edin", aiAnalysisTitle: "AI Analiz", aiAnalysisDesc: "GMA Zeka Katmani ile derin sirket ve risk analizi alin", comparisonTitle: "Karsilastirma", comparisonDesc: "5 sirkete kadar AI destekli yan yana karsilastirma", portfolioTrackingTitle: "Portfoy Takibi", portfolioTrackingDesc: "Alimlari kaydedin ve kar/zarar hesaplayin", platformFeaturesLabel: "PLATFORM OZELLIKLERI", startFreeTitle: "Ucretsiz Baslayin", startFreeDesc: "Giris yapmadan tum piyasa verilerini kesfedin.", back: "Geri", messagePlaceholder: "Mesajiniz...", subjectPlaceholder: "Konu", namePlaceholder: "Adiniz", paymentSuccessful: "ODEME BASARILI", goToMarkets: "Piyasalara Git", myProfile: "Profilim", marketDataPlan: "Piyasa Verisi (600+ Kurulus)", gmaStructuredAnalysis: "GMA Yapilandirilmis Analiz", gmaConsensus: "GMA Triumvirate Konsensusu", monthlyAiAnalyses: "Aylik AI Analizleri", alertsWatchlist: "Uyarilar ve Izleme Listesi", portfolioManagement: "Portfoy Yonetimi", prioritySupport: "Oncelikli Destek", unlimited: "Sinirsiz"
+  },
+  ru: {
+    organizationsLabel: "Organizatsii", sectorsLabel: "Sektory", realTimeLabel: "Realnoe vremya", liveDataLabel: "Zhivye dannye", intelligenceLayerLabel: "Sloy analitiki GMA",
+    liveMarketsTitle: "Zhivye rynki", liveMarketsDesc: "Otslezhivayte aktsii, syre i forex v realnom vremeni", aiAnalysisTitle: "AI-analiz", aiAnalysisDesc: "Glubokiy analiz kompaniy i riskov s GMA", comparisonTitle: "Sravnenie", comparisonDesc: "AI-sravnenie do 5 kompaniy ryadom", portfolioTrackingTitle: "Uchet portfelya", portfolioTrackingDesc: "Fiksiruyte pokupki i schitayte pribyl/ubytok", platformFeaturesLabel: "VOZMOZHNOSTI PLATFORMY", startFreeTitle: "Nachat besplatno", startFreeDesc: "Izuchayte dannye rynka bez vhoda.", back: "Nazad", messagePlaceholder: "Vashe soobshchenie...", subjectPlaceholder: "Tema", namePlaceholder: "Vashe imya", paymentSuccessful: "OPLATA USPESHNA", goToMarkets: "K rynkam", myProfile: "Moy profil", marketDataPlan: "Dannye rynka (600+ organizatsiy)", gmaStructuredAnalysis: "Strukturirovannyy analiz GMA", gmaConsensus: "Konsensus GMA Triumvirate", monthlyAiAnalyses: "Ezhemesyachnye AI-analizy", alertsWatchlist: "Uvedomleniya i spisok nablyudeniya", portfolioManagement: "Upravlenie portfelem", prioritySupport: "Prioritetnaya podderzhka", unlimited: "Bez limita"
+  },
+  ar: {
+    organizationsLabel: "المؤسسات", sectorsLabel: "القطاعات", realTimeLabel: "فوري", liveDataLabel: "بيانات مباشرة", intelligenceLayerLabel: "طبقة ذكاء GMA",
+    liveMarketsTitle: "أسواق مباشرة", liveMarketsDesc: "تابع الأسهم والسلع والعملات في الوقت الحقيقي", aiAnalysisTitle: "تحليل AI", aiAnalysisDesc: "احصل على تحليل عميق للشركات والمخاطر عبر GMA", comparisonTitle: "مقارنة", comparisonDesc: "مقارنة جانبية مدعومة بالذكاء الاصطناعي لما يصل إلى 5 شركات", portfolioTrackingTitle: "تتبع المحفظة", portfolioTrackingDesc: "سجل عمليات الشراء واحسب الربح والخسارة", platformFeaturesLabel: "ميزات المنصة", startFreeTitle: "ابدأ مجانًا", startFreeDesc: "استكشف جميع بيانات السوق دون تسجيل الدخول.", back: "رجوع", messagePlaceholder: "رسالتك...", subjectPlaceholder: "الموضوع", namePlaceholder: "اسمك", paymentSuccessful: "تم الدفع بنجاح", goToMarkets: "اذهب إلى الأسواق", myProfile: "ملفي الشخصي", marketDataPlan: "بيانات السوق (600+ مؤسسة)", gmaStructuredAnalysis: "تحليل GMA منظم", gmaConsensus: "إجماع GMA Triumvirate", monthlyAiAnalyses: "تحليلات AI شهرية", alertsWatchlist: "التنبيهات وقائمة المتابعة", portfolioManagement: "إدارة المحفظة", prioritySupport: "دعم أولوية", unlimited: "غير محدود"
+  },
+  zh: {
+    organizationsLabel: "机构", sectorsLabel: "行业", realTimeLabel: "实时", liveDataLabel: "实时数据", intelligenceLayerLabel: "GMA 智能层",
+    liveMarketsTitle: "实时市场", liveMarketsDesc: "实时跟踪股票、大宗商品和外汇价格", aiAnalysisTitle: "AI 分析", aiAnalysisDesc: "通过 GMA 获取深入的公司与风险分析", comparisonTitle: "比较", comparisonDesc: "最多 5 家公司的 AI 辅助并列比较", portfolioTrackingTitle: "投资组合跟踪", portfolioTrackingDesc: "记录买入并计算盈亏", platformFeaturesLabel: "平台功能", startFreeTitle: "免费开始", startFreeDesc: "无需登录即可浏览全部市场数据。", back: "返回", messagePlaceholder: "请输入您的消息...", subjectPlaceholder: "主题", namePlaceholder: "您的姓名", paymentSuccessful: "支付成功", goToMarkets: "前往市场", myProfile: "我的资料", marketDataPlan: "市场数据（600+ 机构）", gmaStructuredAnalysis: "GMA 结构化分析", gmaConsensus: "GMA Triumvirate 共识", monthlyAiAnalyses: "每月 AI 分析", alertsWatchlist: "提醒与观察列表", portfolioManagement: "投资组合管理", prioritySupport: "优先支持", unlimited: "无限"
+  },
+  hi: {
+    organizationsLabel: "संगठन", sectorsLabel: "क्षेत्र", realTimeLabel: "रीयल-टाइम", liveDataLabel: "लाइव डेटा", intelligenceLayerLabel: "GMA इंटेलिजेंस लेयर",
+    liveMarketsTitle: "लाइव बाज़ार", liveMarketsDesc: "स्टॉक, कमोडिटी और फॉरेक्स कीमतों को रीयल-टाइम में ट्रैक करें", aiAnalysisTitle: "AI विश्लेषण", aiAnalysisDesc: "GMA के साथ कंपनी और जोखिम का गहन विश्लेषण प्राप्त करें", comparisonTitle: "तुलना", comparisonDesc: "अधिकतम 5 कंपनियों की AI-सहायता वाली साथ-साथ तुलना", portfolioTrackingTitle: "पोर्टफोलियो ट्रैकिंग", portfolioTrackingDesc: "खरीद दर्ज करें और लाभ/हानि की गणना करें", platformFeaturesLabel: "प्लेटफ़ॉर्म सुविधाएँ", startFreeTitle: "मुफ़्त शुरू करें", startFreeDesc: "साइन इन किए बिना सभी बाज़ार डेटा देखें।", back: "वापस", messagePlaceholder: "आपका संदेश...", subjectPlaceholder: "विषय", namePlaceholder: "आपका नाम", paymentSuccessful: "भुगतान सफल", goToMarkets: "बाज़ारों पर जाएँ", myProfile: "मेरी प्रोफ़ाइल", marketDataPlan: "बाज़ार डेटा (600+ संगठन)", gmaStructuredAnalysis: "GMA संरचित विश्लेषण", gmaConsensus: "GMA Triumvirate सहमति", monthlyAiAnalyses: "मासिक AI विश्लेषण", alertsWatchlist: "अलर्ट और वॉचलिस्ट", portfolioManagement: "पोर्टफोलियो प्रबंधन", prioritySupport: "प्राथमिकता समर्थन", unlimited: "असीमित"
+  },
+  de: {
+    organizationsLabel: "Organisationen", sectorsLabel: "Sektoren", realTimeLabel: "Echtzeit", liveDataLabel: "Live-Daten", intelligenceLayerLabel: "GMA Intelligence Layer",
+    liveMarketsTitle: "Live-Markte", liveMarketsDesc: "Aktien, Rohstoffe und Forex in Echtzeit verfolgen", aiAnalysisTitle: "AI-Analyse", aiAnalysisDesc: "Tiefgehende Unternehmens- und Risikoanalyse mit GMA", comparisonTitle: "Vergleich", comparisonDesc: "AI-gestutzter Vergleich von bis zu 5 Unternehmen", portfolioTrackingTitle: "Portfolio-Tracking", portfolioTrackingDesc: "Kaufe erfassen und Gewinn/Verlust berechnen", platformFeaturesLabel: "PLATTFORMFUNKTIONEN", startFreeTitle: "Kostenlos starten", startFreeDesc: "Alle Marktdaten ohne Anmeldung erkunden.", back: "Zuruck", messagePlaceholder: "Ihre Nachricht...", subjectPlaceholder: "Betreff", namePlaceholder: "Ihr Name", paymentSuccessful: "ZAHLUNG ERFOLGREICH", goToMarkets: "Zu Markten", myProfile: "Mein Profil", marketDataPlan: "Marktdaten (600+ Organisationen)", gmaStructuredAnalysis: "GMA Strukturierte Analyse", gmaConsensus: "GMA Triumvirate Consensus", monthlyAiAnalyses: "Monatliche AI-Analysen", alertsWatchlist: "Alarme und Watchlist", portfolioManagement: "Portfolioverwaltung", prioritySupport: "Priorisierter Support", unlimited: "Unbegrenzt"
+  },
+  es: {
+    organizationsLabel: "Organizaciones", sectorsLabel: "Sectores", realTimeLabel: "Tiempo real", liveDataLabel: "Datos en vivo", intelligenceLayerLabel: "Capa de inteligencia GMA",
+    liveMarketsTitle: "Mercados en vivo", liveMarketsDesc: "Sigue acciones, materias primas y forex en tiempo real", aiAnalysisTitle: "Analisis AI", aiAnalysisDesc: "Analisis profundo de companias y riesgos con GMA", comparisonTitle: "Comparacion", comparisonDesc: "Comparacion asistida por AI de hasta 5 companias", portfolioTrackingTitle: "Seguimiento de cartera", portfolioTrackingDesc: "Registra compras y calcula ganancias/perdidas", platformFeaturesLabel: "FUNCIONES DE LA PLATAFORMA", startFreeTitle: "Comenzar gratis", startFreeDesc: "Explora todos los datos de mercado sin iniciar sesion.", back: "Volver", messagePlaceholder: "Tu mensaje...", subjectPlaceholder: "Asunto", namePlaceholder: "Tu nombre", paymentSuccessful: "PAGO EXITOSO", goToMarkets: "Ir a mercados", myProfile: "Mi perfil", marketDataPlan: "Datos de mercado (600+ organizaciones)", gmaStructuredAnalysis: "Analisis estructurado GMA", gmaConsensus: "Consenso GMA Triumvirate", monthlyAiAnalyses: "Analisis AI mensuales", alertsWatchlist: "Alertas y lista de seguimiento", portfolioManagement: "Gestion de cartera", prioritySupport: "Soporte prioritario", unlimited: "Ilimitado"
+  }
+};
+Object.entries(GMA_EXTRA_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
+Object.keys(T).forEach(code => {
+  Object.keys(T.en).forEach(key => {
+    if (!T[code][key]) T[code][key] = T.en[key];
+  });
 });
 const CORE_LANGS = ['en', 'tr', 'ru', 'ar', 'zh', 'hi', 'de', 'es'];
 Object.keys(T).forEach(lang => {
@@ -14084,31 +14000,31 @@ function PricingPage({
   const [activePlanId, setActivePlanId] = React.useState(null);
   const plans = Object.values(GMA_PLANS);
   const featureRows = [{
-    label: 'Market Data (600+ Organizations)',
+    label: t('marketDataPlan'),
     vals: [true, true, true, true]
   }, {
-    label: 'Historical Charts',
+    label: t('feat3t'),
     vals: [true, true, true, true]
   }, {
-    label: 'GMA Structured Analysis',
+    label: t('gmaStructuredAnalysis'),
     vals: [false, true, true, true]
   }, {
-    label: 'GMA Triumvirate Consensus',
+    label: t('gmaConsensus'),
     vals: [false, false, true, true]
   }, {
-    label: 'Company Comparison',
-    vals: ['1', '5', '30', 'Unlimited']
+    label: t('feat4t'),
+    vals: ['1', '5', '30', t('unlimited')]
   }, {
-    label: 'Monthly AI Analyses',
+    label: t('monthlyAiAnalyses'),
     vals: ['5', '30', '300', '5000+']
   }, {
-    label: 'Alerts & Watchlist',
+    label: t('alertsWatchlist'),
     vals: [false, true, true, true]
   }, {
-    label: 'Portfolio Management',
+    label: t('portfolioManagement'),
     vals: [false, false, true, true]
   }, {
-    label: 'Priority Support',
+    label: t('prioritySupport'),
     vals: [false, false, false, true]
   }];
   const handleSelect = plan => {
@@ -14165,7 +14081,7 @@ function PricingPage({
         letterSpacing: '0.12em',
         marginBottom: '8px'
       }
-    }, "PAYMENT SUCCESSFUL"), /*#__PURE__*/React.createElement("h2", {
+    }, t('paymentSuccessful')), /*#__PURE__*/React.createElement("h2", {
       style: {
         fontSize: 'clamp(22px,3vw,34px)',
         fontWeight: 'bold',
@@ -14265,7 +14181,7 @@ function PricingPage({
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent'
     }
-  }, "AI Power for Global Investing"), /*#__PURE__*/React.createElement("p", {
+  }, t('pricingTitle')), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: '15px',
       color: '#cbd5e1',
@@ -14352,7 +14268,7 @@ function PricingPage({
       flexDirection: 'column',
       gap: '7px'
     }
-  }, [plan.multiAI ? '✓ GMA Triumvirate (3 engines)' : '✗ GMA Triumvirate', plan.id !== 'free' ? '✓ GMA Intelligence Layer Analysis' : '✗ AI Analysis', `✓ ${plan.credits} credits/period`, plan.id === 'yearly' ? '✓ Priority Support' : ''].filter(Boolean).map((f, i) => /*#__PURE__*/React.createElement("div", {
+  }, [plan.multiAI ? `✓ ${t('gmaConsensus')} (3)` : `✗ ${t('gmaConsensus')}`, plan.id !== 'free' ? `✓ ${t('gmaStructuredAnalysis')}` : `✗ ${t('aiAnalysisTitle')}`, `✓ ${plan.credits} ${t('credits')}`, plan.id === 'yearly' ? `✓ ${t('prioritySupport')}` : ''].filter(Boolean).map((f, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       fontSize: '12px',
@@ -14549,45 +14465,45 @@ function HomePage({
   } = useLang();
   const stats = [{
     val: COMPANIES_FINAL.length + "+",
-    label: "Organizations",
+    label: t('organizationsLabel'),
     icon: "\uD83C\uDFE2"
   }, {
     val: "13",
-    label: "Sectors",
+    label: t('sectorsLabel'),
     icon: "\uD83D\uDCCA"
   }, {
     val: "Real-Time",
-    label: "Live Data",
+    label: t('liveDataLabel'),
     icon: "\u26A1"
   }, {
     val: "AI",
-    label: "GMA Intelligence Layer",
+    label: t('intelligenceLayerLabel'),
     icon: "\uD83E\uDD16"
   }];
   const features = [{
     icon: "\uD83D\uDCC8",
-    title: "Live Markets",
-    desc: "Track stock, commodity and forex prices in real time"
+    title: t('liveMarketsTitle'),
+    desc: t('liveMarketsDesc')
   }, {
     icon: "\uD83E\uDD16",
-    title: "AI Analysis",
-    desc: "Get in-depth company and risk analysis with GMA Intelligence Layer"
+    title: t('aiAnalysisTitle'),
+    desc: t('aiAnalysisDesc')
   }, {
     icon: "\uD83D\uDCCA",
-    title: "Historical Charts",
-    desc: "Historical data from 1900 for Gold, from 1930 for major currencies"
+    title: t('feat3t'),
+    desc: t('feat3d')
   }, {
     icon: "\u2696\uFE0F",
-    title: "Comparison",
-    desc: "AI-assisted side-by-side comparison of up to 5 companies"
+    title: t('comparisonTitle'),
+    desc: t('comparisonDesc')
   }, {
     icon: "\uD83D\uDD14",
-    title: "Smart Alerts",
-    desc: "Set target change alerts and receive instant notifications"
+    title: t('feat5t'),
+    desc: t('feat5d')
   }, {
     icon: "\uD83D\uDCBC",
-    title: "Portfolio Tracking",
-    desc: "Record purchases and calculate profit/loss"
+    title: t('portfolioTrackingTitle'),
+    desc: t('portfolioTrackingDesc')
   }];
   return /*#__PURE__*/React.createElement("div", {
     style: {
@@ -14725,13 +14641,13 @@ function HomePage({
       letterSpacing: '0.08em',
       marginBottom: '10px'
     }
-  }, "PLATFORM FEATURES"), /*#__PURE__*/React.createElement("div", {
+  }, t('platformFeaturesLabel')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '26px',
       fontWeight: 'bold',
       color: '#f1f5f9'
     }
-  }, "Everything in one place")), /*#__PURE__*/React.createElement("div", {
+  }, t('featSub'))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
@@ -14781,13 +14697,13 @@ function HomePage({
       color: '#f1f5f9',
       marginBottom: '12px'
     }
-  }, "Start for Free"), /*#__PURE__*/React.createElement("div", {
+  }, t('startFreeTitle')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '17px',
       color: '#94a3b8',
       marginBottom: '24px'
     }
-  }, "Explore all market data without signing in."), /*#__PURE__*/React.createElement("button", {
+  }, t('startFreeDesc')), /*#__PURE__*/React.createElement("button", {
     onClick: () => onNavigate('dashboard'),
     style: {
       background: 'linear-gradient(135deg,#0ea5e9,#6366f1)',
@@ -15804,36 +15720,36 @@ function ContactPage({onNavigate}) {
       ),
 
       React.createElement("div",{style:{background:'linear-gradient(145deg,#0c1220,#080d18)',border:'1px solid #0f172a',borderRadius:'12px',padding:'24px'}},
-        React.createElement("div",{style:{fontSize:'14px',color:'#64748b',letterSpacing:'0.08em',marginBottom:'18px'}},"SEND MESSAGE"),
+        React.createElement("div",{style:{fontSize:'14px',color:'#64748b',letterSpacing:'0.08em',marginBottom:'18px'}},t('formSend'), " ", t('formMsg')),
 
         React.createElement("div",{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'14px',marginBottom:'14px'}},
           React.createElement("div",null,
-            React.createElement("label",{style:labelStyle},"NAME"),
-            React.createElement("input",{type:'text',value:form.name,onChange:function(e){setForm(function(f){return Object.assign({},f,{name:e.target.value});});},placeholder:'Your name',style:inputStyle})
+            React.createElement("label",{style:labelStyle},t('formName')),
+            React.createElement("input",{type:'text',value:form.name,onChange:function(e){setForm(function(f){return Object.assign({},f,{name:e.target.value});});},placeholder:t('namePlaceholder'),style:inputStyle})
           ),
           React.createElement("div",null,
-            React.createElement("label",{style:labelStyle},"EMAIL"),
+            React.createElement("label",{style:labelStyle},t('formEmail')),
             React.createElement("input",{type:'email',value:form.email,onChange:function(e){setForm(function(f){return Object.assign({},f,{email:e.target.value});});},placeholder:'your@email.com',style:inputStyle})
           )
         ),
 
         React.createElement("div",{style:{marginBottom:'14px'}},
-          React.createElement("label",{style:labelStyle},"SUBJECT"),
-          React.createElement("input",{type:'text',value:form.subject,onChange:function(e){setForm(function(f){return Object.assign({},f,{subject:e.target.value});});},placeholder:'Subject',style:inputStyle})
+          React.createElement("label",{style:labelStyle},t('formSubject')),
+          React.createElement("input",{type:'text',value:form.subject,onChange:function(e){setForm(function(f){return Object.assign({},f,{subject:e.target.value});});},placeholder:t('subjectPlaceholder'),style:inputStyle})
         ),
 
         React.createElement("div",{style:{marginBottom:'18px'}},
-          React.createElement("label",{style:labelStyle},"MESSAGE"),
-          React.createElement("textarea",{value:form.msg,onChange:function(e){setForm(function(f){return Object.assign({},f,{msg:e.target.value});});},placeholder:'Your message...',rows:5,style:Object.assign({},inputStyle,{resize:'vertical'})})
+          React.createElement("label",{style:labelStyle},t('formMsg')),
+          React.createElement("textarea",{value:form.msg,onChange:function(e){setForm(function(f){return Object.assign({},f,{msg:e.target.value});});},placeholder:t('messagePlaceholder'),rows:5,style:Object.assign({},inputStyle,{resize:'vertical'})})
         ),
 
-        sent && React.createElement("div",{style:{marginBottom:'12px',padding:'10px',background:'rgba(52,211,153,0.1)',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'8px',fontSize:'13px',color:'#34d399'}},"\u2713 Opening your mail client..."),
+        sent && React.createElement("div",{style:{marginBottom:'12px',padding:'10px',background:'rgba(52,211,153,0.1)',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'8px',fontSize:'13px',color:'#34d399'}},"\u2713 ", t('formSent')),
 
-        React.createElement("button",{onClick:handleSend,style:{width:'100%',padding:'12px',background:'linear-gradient(135deg,#0ea5e9,#6366f1)',border:'none',borderRadius:'8px',color:'#fff',fontSize:'14px',fontWeight:'bold',cursor:'pointer',fontFamily:'inherit',letterSpacing:'0.06em'}},"SEND MESSAGE \u2192")
+        React.createElement("button",{onClick:handleSend,style:{width:'100%',padding:'12px',background:'linear-gradient(135deg,#0ea5e9,#6366f1)',border:'none',borderRadius:'8px',color:'#fff',fontSize:'14px',fontWeight:'bold',cursor:'pointer',fontFamily:'inherit',letterSpacing:'0.06em'}},t('formSend'), " \u2192")
       ),
 
       React.createElement("div",{style:{marginTop:'20px'}},
-        React.createElement("button",{onClick:function(){onNavigate('home');},style:{padding:'11px 24px',background:'transparent',border:'1px solid #1e293b',borderRadius:'8px',color:'#64748b',cursor:'pointer',fontFamily:'inherit',fontSize:'13px'}},"\u2190 Back")
+        React.createElement("button",{onClick:function(){onNavigate('home');},style:{padding:'11px 24px',background:'transparent',border:'1px solid #1e293b',borderRadius:'8px',color:'#64748b',cursor:'pointer',fontFamily:'inherit',fontSize:'13px'}},"\u2190 ", t('back'))
       )
     )
   );
