@@ -15876,6 +15876,7 @@ function GlobalHeader({
   });
   var rightSide = React.createElement("div",
     {style:{display:'flex',alignItems:'center',gap:'8px',flexShrink:0}},
+    React.createElement(LangSelector, null),
     user
       ? React.createElement("button", {
           onClick:function(){onNavigate('profile');},
