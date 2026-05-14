@@ -1,20 +1,18 @@
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+﻿import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 
 
 // ═══════════════════════════════════════════════════════
 // ──  LANGUAGE SELECTOR (80 Languages) ──
 // ═══════════════════════════════════════════════════════
 const LANGS = [
-  {c:'en', n:'English',    f:'🇬🇧'},
-  {c:'tr', n:'Turkish',     f:'🇹🇷'},
-  {c:'de', n:'Deutsch',    f:'🇩🇪'},
-  {c:'fr', n:'French',   f:'🇫🇷'},
-  {c:'it', n:'Italiano',   f:'🇮🇹'},
-  {c:'ru', n:'Русский',    f:'🇷🇺'},
-  {c:'ar', n:'العربية',    f:'🇸🇦', r:1},
-  {c:'zh', n:'中文',        f:'🇨🇳'},
-  {c:'ja', n:'日本語',      f:'🇯🇵'},
-  {c:'hi', n:'हिन्दी',    f:'🇮🇳'}
+  {c:'en', n:'English', f:'EN'},
+  {c:'tr', n:'Turkce', f:'TR'},
+  {c:'ru', n:'Russkiy', f:'RU'},
+  {c:'ar', n:'Al-Arabiyah', f:'AR', r:1},
+  {c:'zh', n:'Zhongwen', f:'ZH'},
+  {c:'hi', n:'Hindi', f:'HI'},
+  {c:'de', n:'Deutsch', f:'DE'},
+  {c:'es', n:'Espanol', f:'ES'}
 ];
 
 // ── Platform API Key (Admin tarafindan set edilir, usersdan istenmez) ──
@@ -999,7 +997,27 @@ const T = {
 
 // ── Fallback: eksik keyler Ingilizce doner ──
 const EN = T.en;
-const CORE_LANGS = ['tr', 'en', 'ru', 'ar', 'es', 'fr', 'de'];
+const GMA_I18N_OVERRIDES = {
+  en: { feat6t: "8 Languages", feat6d: "A carefully localized platform experience in English, Turkish, Russian, Arabic, Chinese, Hindi, German and Spanish" },
+  tr: {
+    home: "ANA SAYFA", markets: "PIYASALAR", about: "HAKKINDA", contact: "ILETISIM", privacy: "GIZLILIK", pricing: "FIYATLAR", login: "GIRIS YAP", register: "KAYIT OL", logout: "CIKIS YAP",
+    loginTitle: "Hesabiniza giris yapin", registerTitle: "Ucretsiz hesabinizi olusturun", viewMarkets: "PIYASALARI GOR", loginRegister: "GIRIS / KAYIT", googleContinue: "Google ile devam et",
+    heroTitle: "Kuresel Piyasalari\nDaha Net Gorun", heroSub: "600+ kuresel kurulus, gercek zamanli piyasa verisi ve GMA Consensus Engine ile yapilandirilmis finansal zeka.", heroSubtitle: "Yapilandirilmis analiz ve daha net karar cercevesiyle belirsizligi azaltin.",
+    howTitle: "Nasil Calisir", featTitle: "Platform Ozellikleri", featSub: "Her sey tek yerde", feat6t: "8 Dil", feat6d: "Ingilizce, Turkce, Rusca, Arapca, Cince, Hintce, Almanca ve Ispanyolca icin ozenle yerellestirilmis deneyim",
+    sector: "Sektor", allSectors: "TUMU", gainers: "YUKSELENLER", losers: "DUSENLER", live: "CANLI", compare: "KARSILASTIR", analyzeAI: "AI ANALIZ", contactTitle: "Bize Ulasin",
+    legalNotice: "Bu platform yatirim tavsiyesi vermez. GMA, yalnizca bilgilendirme amaciyla AI destekli analitik icgoruler sunar.", footerDesc: "Kuresel piyasalarda netlik saglamak icin tasarlanmis finansal zeka platformu.", pricingTitle: "Kuresel Yatirim Icin AI Gucu"
+  },
+  ru: { home: "GLAVNAYA", markets: "RYNKI", about: "O PROEKTE", contact: "KONTAKTY", privacy: "KONFIDENTSIALNOST", pricing: "TARIFY", login: "VOYTI", heroTitle: "Smotrite na globalnye rynki\ns bolshey yasnostyu", heroSub: "600+ globalnyh organizatsiy, dannye rynka v realnom vremeni i strukturirovannaya analitika cherez GMA Consensus Engine.", feat6t: "8 yazykov", feat6d: "Interfeys na angliyskom, turetskom, russkom, arabskom, kitayskom, hindi, nemetskom i ispanskom", compare: "SRAVNIT", analyzeAI: "AI-ANALIZ", legalNotice: "Eta platforma ne predostavlyaet investitsionnyh rekomendatsiy." },
+  ar: { home: "الرئيسية", markets: "الأسواق", about: "حول المنصة", contact: "اتصل بنا", privacy: "الخصوصية", pricing: "الأسعار", login: "تسجيل الدخول", heroTitle: "شاهد الأسواق العالمية\nبوضوح أكبر", heroSub: "أكثر من 600 مؤسسة عالمية، وبيانات سوق فورية، وذكاء منظم عبر GMA Consensus Engine.", feat6t: "8 لغات", feat6d: "تجربة مترجمة بعناية إلى الإنجليزية والتركية والروسية والعربية والصينية والهندية والألمانية والإسبانية", compare: "قارن", analyzeAI: "تحليل AI", legalNotice: "هذه المنصة لا تقدم نصائح استثمارية." },
+  zh: { home: "首页", markets: "市场", about: "关于", contact: "联系", privacy: "隐私", pricing: "价格", login: "登录", heroTitle: "以更高的清晰度\n观察全球市场", heroSub: "600+ 家全球机构、实时市场数据，以及由 GMA Consensus Engine 提供的结构化智能。", feat6t: "8 种语言", feat6d: "精心本地化支持英语、土耳其语、俄语、阿拉伯语、中文、印地语、德语和西班牙语", compare: "比较", analyzeAI: "AI 分析", legalNotice: "本平台不提供投资建议。" },
+  hi: { home: "होम", markets: "बाज़ार", about: "परिचय", contact: "संपर्क", privacy: "गोपनीयता", pricing: "मूल्य", login: "साइन इन", heroTitle: "वैश्विक बाज़ारों को\nअधिक स्पष्टता से देखें", heroSub: "600+ वैश्विक संगठन, रीयल-टाइम बाज़ार डेटा और GMA Consensus Engine के माध्यम से संरचित इंटेलिजेंस।", feat6t: "8 भाषाएँ", feat6d: "अंग्रेज़ी, तुर्की, रूसी, अरबी, चीनी, हिंदी, जर्मन और स्पेनिश में स्थानीयकृत अनुभव", compare: "तुलना", analyzeAI: "AI विश्लेषण", legalNotice: "यह प्लेटफ़ॉर्म निवेश सलाह नहीं देता।" },
+  de: { home: "START", markets: "MARKTE", about: "UBER UNS", contact: "KONTAKT", privacy: "DATENSCHUTZ", pricing: "PREISE", login: "ANMELDEN", heroTitle: "Globale Markte\nmit mehr Klarheit sehen", heroSub: "600+ globale Organisationen, Echtzeit-Marktdaten und strukturierte Intelligenz uber die GMA Consensus Engine.", feat6t: "8 Sprachen", feat6d: "Lokalisierte Plattform auf Englisch, Turkisch, Russisch, Arabisch, Chinesisch, Hindi, Deutsch und Spanisch", compare: "VERGLEICHEN", analyzeAI: "AI-ANALYSE", legalNotice: "Diese Plattform bietet keine Anlageberatung." },
+  es: { home: "INICIO", markets: "MERCADOS", about: "ACERCA DE", contact: "CONTACTO", privacy: "PRIVACIDAD", pricing: "PRECIOS", login: "INICIAR SESION", heroTitle: "Vea los mercados globales\ncon mayor claridad", heroSub: "Mas de 600 organizaciones globales, datos de mercado en tiempo real e inteligencia estructurada mediante GMA Consensus Engine.", feat6t: "8 idiomas", feat6d: "Experiencia localizada en ingles, turco, ruso, arabe, chino, hindi, aleman y espanol", compare: "COMPARAR", analyzeAI: "ANALISIS AI", legalNotice: "Esta plataforma no ofrece asesoramiento de inversion." }
+};
+Object.entries(GMA_I18N_OVERRIDES).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
+const CORE_LANGS = ['en', 'tr', 'ru', 'ar', 'zh', 'hi', 'de', 'es'];
 Object.keys(T).forEach(lang => {
   Object.keys(EN).forEach(k => {
     if (!T[lang][k]) T[lang][k] = EN[k];
@@ -1161,7 +1179,7 @@ function LangSelector() {
       boxShadow: "0 8px 32px rgba(0,0,0,0.7)"
     }
   }, (() => {
-    const SUPPORTED = ['tr', 'en', 'ru', 'ar', 'es', 'fr', 'de', 'zh', 'ja', 'ko', 'pt', 'uz', 'az'];
+    const SUPPORTED = ['en', 'tr', 'ru', 'ar', 'zh', 'hi', 'de', 'es'];
     const sup = LANGS.filter(l => SUPPORTED.includes(l.c));
     const rest = LANGS.filter(l => !SUPPORTED.includes(l.c));
     const renderBtn = l => /*#__PURE__*/React.createElement("button", {
@@ -1193,15 +1211,7 @@ function LangSelector() {
         letterSpacing: "0.08em",
         borderBottom: "1px solid #1e293b"
       }
-    }, "\u2726 FULL TRANSLATION (13 languages)"), sup.map(renderBtn), /*#__PURE__*/React.createElement("div", {
-      style: {
-        padding: "4px 12px 3px",
-        fontSize: "9px",
-        color: "#64748b",
-        letterSpacing: "0.08em",
-        borderTop: "1px solid #0f172a"
-      }
-    }, "OTHER LANGUAGES (English UI)"), rest.map(renderBtn));
+    }, "\u2726 FULL TRANSLATION (8 languages)"), sup.map(renderBtn));
   })()));
 }
 
