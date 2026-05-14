@@ -6819,6 +6819,176 @@ function RiskOpportunityDemoModal({
   }, "Demo content only. Connect live model output later for company-specific scoring.")));
 }
 
+function AIAnalysisInlinePanel({
+  c
+}) {
+  const analysis = GMA_DEMO_ANALYSIS;
+  const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid #0f172a",
+      borderRadius: "12px",
+      padding: "16px",
+      marginBottom: "14px",
+      background: "rgba(255,255,255,0.02)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#a78bfa",
+      fontSize: "12px",
+      fontWeight: "bold",
+      letterSpacing: "0.1em",
+      marginBottom: "8px"
+    }
+  }, "AI ANALYSIS DEMO"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: sentimentColor(analysis.sentiment),
+      fontSize: "13px",
+      fontWeight: "bold",
+      marginBottom: "8px"
+    }
+  }, analysis.sentiment, " \xB7 ", analysis.sentimentPuan, "/100"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#94a3b8",
+      fontSize: "14px",
+      lineHeight: 1.6
+    }
+  }, c.name, " demo layer: ", analysis.summary)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+      gap: "12px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(52,211,153,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(52,211,153,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#34d399",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px"
+    }
+  }, "POSITIVE FACTORS"), analysis.positive.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      color: "#94a3b8",
+      fontSize: "13px",
+      lineHeight: 1.45,
+      marginBottom: "7px"
+    }
+  }, "+ ", item))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(248,113,113,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(248,113,113,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f87171",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px"
+    }
+  }, "RISK FACTORS"), analysis.negative.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      color: "#94a3b8",
+      fontSize: "13px",
+      lineHeight: 1.45,
+      marginBottom: "7px"
+    }
+  }, "- ", item)))));
+}
+
+function RiskOpportunityInlinePanel({
+  c
+}) {
+  const risks = [
+    "Revenue concentration and macro sensitivity may increase downside volatility.",
+    "Regulatory, margin, or execution pressure can weaken the near-term setup.",
+    "Valuation risk rises when price momentum runs ahead of fundamentals."
+  ];
+  const opportunities = [
+    "Strong market position can support pricing power and resilient cash flow.",
+    "AI, automation, or product expansion may create new growth channels.",
+    "Operational scale can convert demand recovery into margin improvement."
+  ];
+  const row = (items, color, sign) => items.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      display: "flex",
+      gap: "8px",
+      color: "#94a3b8",
+      fontSize: "13px",
+      lineHeight: 1.45,
+      marginBottom: "8px"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: color,
+      flexShrink: 0
+    }
+  }, sign), item));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f59e0b",
+      fontSize: "12px",
+      fontWeight: "bold",
+      letterSpacing: "0.1em",
+      marginBottom: "12px"
+    }
+  }, "RISK & OPPORTUNITY DEMO"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+      gap: "12px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(248,113,113,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(248,113,113,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#f87171",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px",
+      letterSpacing: "0.08em"
+    }
+  }, "RISK SIGNALS"), row(risks, "#f87171", "-")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid rgba(52,211,153,0.24)",
+      borderRadius: "10px",
+      padding: "14px",
+      background: "rgba(52,211,153,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "#34d399",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "10px",
+      letterSpacing: "0.08em"
+    }
+  }, "OPPORTUNITY SIGNALS"), row(opportunities, "#34d399", "+"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "14px",
+      color: "#475569",
+      fontSize: "11px",
+      textAlign: "center"
+    }
+  }, c.name, " demo content only. Connect live model output later for company-specific scoring."));
+}
+
 function HistoryModal({
   c,
   onClose
@@ -6998,7 +7168,13 @@ function HistoryModal({
   }, /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "chart"),
     onClick: () => setTab("chart")
-  }, "\uD83D\uDCCA HISTORICAL CHART")), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83D\uDCCA HISTORICAL CHART"), /*#__PURE__*/React.createElement("button", {
+    style: tabStyle(tab === "ai"),
+    onClick: () => setTab("ai")
+  }, "\uD83E\uDD16 AI ANALYSIS"), /*#__PURE__*/React.createElement("button", {
+    style: tabStyle(tab === "risk"),
+    onClick: () => setTab("risk")
+  }, "\u26A0 RISK & OPPORTUNITY")), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       display: "flex",
@@ -7107,7 +7283,11 @@ function HistoryModal({
       color: "#94a3b8",
       marginLeft: "6px"
     }
-  }, ev.l)))))), false && /*#__PURE__*/React.createElement("div", {style:{flex:"1 0 auto"}}, loadingAI && /*#__PURE__*/React.createElement("div", {
+  }, ev.l)))))), tab === "ai" && /*#__PURE__*/React.createElement(AIAnalysisInlinePanel, {
+    c: c
+  }), tab === "risk" && /*#__PURE__*/React.createElement(RiskOpportunityInlinePanel, {
+    c: c
+  }), false && /*#__PURE__*/React.createElement("div", {style:{flex:"1 0 auto"}}, loadingAI && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px",
@@ -9343,7 +9523,7 @@ function CompanyCard({
       flexWrap: "wrap",
       justifyContent: "space-between"
     }
-    }, iconBtn("📊", "CHART", false, sec.color, onHistory, false), iconBtn("\uD83E\uDD16", "AI ANAL\u0130Z", false, "#a78bfa", onAIAnalysis, false), iconBtn("\u26A0", "RISK & OPPORTUNITY", false, "#f59e0b", onRiskOpportunity, false), iconBtn("⚖️", "COMPARE", inCompare, "#e879f9", onCompare, compareDisabled && !inCompare), iconBtn("📈", "ADD", false, "#34d399", onBuy, !isListed), iconBtn("🛒", "CART", inCart, "#38bdf8", onCart, false), iconBtn("👁", "WATCH", isWatched, "#fbbf24", onWatch, false, "#ffffff"), iconBtn("🔔", "ALERT", hasAlert, "#fb923c", onAlert, false)));
+    }, iconBtn("📊", "CHART", false, sec.color, onHistory, false), iconBtn("⚖️", "COMPARE", inCompare, "#e879f9", onCompare, compareDisabled && !inCompare), iconBtn("📈", "ADD", false, "#34d399", onBuy, !isListed), iconBtn("🛒", "CART", inCart, "#38bdf8", onCart, false), iconBtn("👁", "WATCH", isWatched, "#fbbf24", onWatch, false, "#ffffff"), iconBtn("🔔", "ALERT", hasAlert, "#fb923c", onAlert, false)));
 }
 
 // ═══════════════════════════════════════════════════════════════
