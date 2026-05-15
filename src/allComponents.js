@@ -1216,6 +1216,19 @@ const GMA_PRICING_LEGAL_FIXES = {
 Object.entries(GMA_PRICING_LEGAL_FIXES).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
+const GMA_SECTOR_I18N = {
+  en: { sectorTech:"TECHNOLOGY", sectorAi:"AI", sectorCrypto:"CRYPTO", sectorFood:"FOOD", sectorAuto:"AUTOMOTIVE", sectorAerospace:"AEROSPACE", sectorDefense:"DEFENSE", sectorChip:"SEMICONDUCTOR", sectorFinance:"FINANCE", sectorMetals:"PRECIOUS METALS", sectorBanking:"BANKING", sectorFashion:"FASHION", sectorHealth:"HEALTH", valuationEstimate:"valuation estimate" },
+  tr: { sectorTech:"TEKNOLOJİ", sectorAi:"YZ", sectorCrypto:"KRİPTO", sectorFood:"GIDA", sectorAuto:"OTOMOTİV", sectorAerospace:"HAVACILIK", sectorDefense:"SAVUNMA", sectorChip:"YARI İLETKEN", sectorFinance:"FİNANS", sectorMetals:"DEĞERLİ MADENLER", sectorBanking:"BANKACILIK", sectorFashion:"MODA", sectorHealth:"SAĞLIK", valuationEstimate:"değerleme tahmini" },
+  ru: { sectorTech:"TEKHNOLOGII", sectorAi:"ИИ", sectorCrypto:"KRYPTO", sectorFood:"PITANIE", sectorAuto:"AVTOMOBILI", sectorAerospace:"AEROKOSMICHESKAYA", sectorDefense:"OBORONA", sectorChip:"POLUPROVODNIKI", sectorFinance:"FINANSY", sectorMetals:"DRAGOTSENNYE METALLY", sectorBanking:"BANKING", sectorFashion:"MODA", sectorHealth:"ZDRAVOOKHRANENIE", valuationEstimate:"otsenka stoimosti" },
+  ar: { sectorTech:"تقنية", sectorAi:"ذكاء اصطناعي", sectorCrypto:"تشفير", sectorFood:"غذاء", sectorAuto:"سيارات", sectorAerospace:"فضائية", sectorDefense:"دفاع", sectorChip:"أشباه الموصلات", sectorFinance:"تمويل", sectorMetals:"معادن ثمينة", sectorBanking:"مصرفية", sectorFashion:"أزياء", sectorHealth:"صحة", valuationEstimate:"تقدير التقييم" },
+  zh: { sectorTech:"科技", sectorAi:"人工智能", sectorCrypto:"加密货币", sectorFood:"食品", sectorAuto:"汽车", sectorAerospace:"航空航天", sectorDefense:"国防", sectorChip:"半导体", sectorFinance:"金融", sectorMetals:"贵金属", sectorBanking:"银行业", sectorFashion:"时尚", sectorHealth:"健康", valuationEstimate:"估值预测" },
+  hi: { sectorTech:"प्रौद्योगिकी", sectorAi:"एआई", sectorCrypto:"क्रिप्टो", sectorFood:"खाद्य", sectorAuto:"ऑटोमोटिव", sectorAerospace:"एयरोस्पेस", sectorDefense:"रक्षा", sectorChip:"सेमीकंडक्टर", sectorFinance:"वित्त", sectorMetals:"कीमती धातु", sectorBanking:"बैंकिंग", sectorFashion:"फैशन", sectorHealth:"स्वास्थ्य", valuationEstimate:"मूल्यांकन अनुमान" },
+  de: { sectorTech:"TECHNOLOGIE", sectorAi:"KI", sectorCrypto:"KRYPTO", sectorFood:"LEBENSMITTEL", sectorAuto:"AUTOMOBIL", sectorAerospace:"LUFT & RAUMFAHRT", sectorDefense:"VERTEIDIGUNG", sectorChip:"HALBLEITER", sectorFinance:"FINANZEN", sectorMetals:"EDELMETALLE", sectorBanking:"BANKWESEN", sectorFashion:"MODE", sectorHealth:"GESUNDHEIT", valuationEstimate:"Bewertungsschätzung" },
+  es: { sectorTech:"TECNOLOGÍA", sectorAi:"IA", sectorCrypto:"CRIPTO", sectorFood:"ALIMENTOS", sectorAuto:"AUTOMOTRIZ", sectorAerospace:"AEROESPACIAL", sectorDefense:"DEFENSA", sectorChip:"SEMICONDUCTORES", sectorFinance:"FINANZAS", sectorMetals:"METALES PRECIOSOS", sectorBanking:"BANCA", sectorFashion:"MODA", sectorHealth:"SALUD", valuationEstimate:"estimación de valoración" }
+};
+Object.entries(GMA_SECTOR_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
 const GMA_PLAN_I18N_FIXES = {
   en: {
     planFreeLabel:"Free Trial", planExplorerLabel:"Explorer", planStrategistLabel:"Strategist", planProArchitectLabel:"Pro-Architect",
@@ -2149,30 +2162,35 @@ function SvgHistoryChart({
 const IPO_STATUS = {
   listed: {
     label: "LISTED",
+    tKey: "listedStatus",
     color: "#34d399",
     icon: "◆",
     desc: "Listed stock is actively traded"
   },
   private: {
     label: "PRIVATE",
+    tKey: "privateStatus",
     color: "#a78bfa",
     icon: "⬇",
     desc: "Private company"
   },
   pre_ipo: {
     label: "IPO SOON",
+    tKey: "ipoSoonStatus",
     color: "#f97316",
     icon: "⚡",
     desc: "IPO filing submitted"
   },
   ipo_prep: {
     label: "IPO PREP",
+    tKey: "ipoPrepStatus",
     color: "#fbbf24",
     icon: "◎",
     desc: "IPO preparation is in progress"
   },
   ipo_rumor: {
     label: "IPO RUMOR",
+    tKey: "rumorStatus",
     color: "#818cf8",
     icon: "○",
     desc: "Analyst/press estimate"
@@ -2181,54 +2199,67 @@ const IPO_STATUS = {
 const SECTORS = {
   tech: {
     label: "TECHNOLOGY",
+    tKey: "sectorTech",
     color: "#38bdf8"
   },
   ai: {
     label: "AI",
+    tKey: "sectorAi",
     color: "#a78bfa"
   },
   crypto: {
     label: "CRYPTO",
+    tKey: "sectorCrypto",
     color: "#fbbf24"
   },
   food: {
     label: "FOOD",
+    tKey: "sectorFood",
     color: "#34d399"
   },
   auto: {
     label: "AUTOMOTIVE",
+    tKey: "sectorAuto",
     color: "#f87171"
   },
   aerospace: {
     label: "AEROSPACE",
+    tKey: "sectorAerospace",
     color: "#818cf8"
   },
   defense: {
     label: "DEFENSE",
+    tKey: "sectorDefense",
     color: "#fb923c"
   },
   chip: {
     label: "SEMICONDUCTOR",
+    tKey: "sectorChip",
     color: "#22d3ee"
   },
   finance: {
     label: "FINANCE",
+    tKey: "sectorFinance",
     color: "#86efac"
   },
   metals: {
     label: "PRECIOUS METALS",
+    tKey: "sectorMetals",
     color: "#fcd34d"
   },
   banking: {
     label: "BANKING",
+    tKey: "sectorBanking",
     color: "#60a5fa"
   },
   fashion: {
     label: "FASHION",
+    tKey: "sectorFashion",
     color: "#f472b6"
   },
   health: {
     label: "HEALTH",
+    tKey: "sectorHealth",
     color: "#4ade80"
   }
 };
@@ -7435,7 +7466,7 @@ function RiskOpportunityDemoModal({
       fontSize: "13px",
       marginTop: "4px"
     }
-  }, c.ticker, " \xB7 ", sec.label)), /*#__PURE__*/React.createElement("button", {
+  }, c.ticker, " \xB7 ", t(sec.tKey) || sec.label)), /*#__PURE__*/React.createElement("button", {
     onClick: onClose,
     style: {
       background: "transparent",
@@ -7818,13 +7849,13 @@ function HistoryModal({
       fontSize: "12px",
       fontWeight: "bold"
     }
-  }, ipoSt.icon, " ", ipoSt.label)), /*#__PURE__*/React.createElement("div", {
+  }, ipoSt.icon, " ", t(ipoSt.tKey) || ipoSt.label)), /*#__PURE__*/React.createElement("div", {
     className: "modal-header-info",
     style: {
       fontSize: "13px",
       color: "#64748b"
     }
-  }, t('founded'), ": ", meta.founded, " · ", t('sectorMeta'), ": ", sec.label, " · ", t('livePrice'), ": $", c.price.toFixed(2))), /*#__PURE__*/React.createElement("button", {
+  }, t('founded'), ": ", meta.founded, " · ", t('sectorMeta'), ": ", t(sec.tKey) || sec.label, " · ", t('livePrice'), ": $", c.price.toFixed(2))), /*#__PURE__*/React.createElement("button", {
     onClick: onClose,
     style: {
       background: "transparent",
@@ -10130,7 +10161,7 @@ function CompanyCard({
     style: {
       color: sec.color
     }
-  }, sec.label)), !isListed && /*#__PURE__*/React.createElement("div", {
+  }, t(sec.tKey) || sec.label)), !isListed && /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: "4px",
       display: "inline-block",
@@ -10143,7 +10174,7 @@ function CompanyCard({
       borderRadius: "4px",
       padding: "2px 6px"
     }
-  }, ipoSt.icon, " ", ipoSt.label, c.ipoYear ? ` ${c.ipoYear}` : ""))), /*#__PURE__*/React.createElement("div", {
+  }, ipoSt.icon, " ", t(ipoSt.tKey) || ipoSt.label, c.ipoYear ? ` ${c.ipoYear}` : ""))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -10164,7 +10195,7 @@ function CompanyCard({
       color: "#94a3b8",
       marginTop: "2px"
     }
-  }, isListed ? "USD · NASDAQ/NYSE/BIST" : "valuation estimate")), /*#__PURE__*/React.createElement("div", {
+  }, isListed ? "USD · NASDAQ/NYSE/BIST" : t('valuationEstimate'))), /*#__PURE__*/React.createElement("div", {
     style: {
       background: up ? "rgba(52,211,153,0.13)" : "rgba(248,113,113,0.13)",
       color: clr,
@@ -15199,7 +15230,7 @@ function PricingPage({
     user: user,
     onClose: () => setPayModal(null),
     onSuccess: handlePaySuccess
-  }));
+  })));
 }
 // ═══════════════════════════════════════════════════════════════
 // ──  1. HOME  ──
