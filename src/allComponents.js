@@ -1011,6 +1011,86 @@ const GMA_CONTENT_I18N = {
 Object.entries(GMA_CONTENT_I18N).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
+const GMA_STATIC_UI_I18N = {
+  en: {
+    founded: "Founded", sectorMeta: "Sector", livePrice: "Live", yearsOfMarketHistory: "years of market history", simulatedHistoricalData: "Simulated historical data · Based on the current live price", keyEvents: "KEY EVENTS", today: "today",
+    yearHistoricalChart: "Year Historical Chart", starter: "STARTER", current: "CURRENT", historicalHigh: "HISTORICAL HIGH", historicalLow: "HISTORICAL LOW", totalReturn: "TOTAL RETURN", historicalDataNotice: "Historical data is for reference only and is not investment advice",
+    liveCommoditiesForex: "LIVE COMMODITIES & FOREX", metals: "METALS", energy: "ENERGY", forex: "FOREX", fetchingData: "Fetching data...", liveDataStatus: "LIVE DATA", simulated: "SIMULATED", refresh: "REFRESH", refreshTitle: "Refresh", forexSourceNote: "Frankfurter API · ECB data · 1 USD = X units · Change versus previous day", commoditySourceNote: "Finnhub API · Real-time · Live data",
+    companyComparisonAnalysis: "COMPANY COMPARISON ANALYSIS", companiesAiComparison: "companies · AI-powered comparison", overview: "OVERVIEW", scoreAnalysis: "SCORE ANALYSIS", recommendation: "RECOMMENDATION", companiesReady: "Companies Ready", startAiComparisonAnalysis: "Start AI Comparison Analysis", comparisonIntro: "GMA Intelligence Layer generates detailed scores and recommendations for each company", aiAnalysisRunning: "AI analysis is running...", companiesBeingCompared: "are being compared", signInRequired: "Sign-in Required", comparisonLoginRequired: "You need to sign in to your account for company comparison analysis.", analysisError: "Analysis Error", tryAgain: "Try Again", previewModeSampleData: "PREVIEW MODE · SAMPLE DATA", recommended: "RECOMMENDED", totalScore: "TOTAL SCORE", growth: "GROWTH", risk: "RISK", growthPotential: "Growth Potential", financialStrength: "Financial Strength", innovationScore: "Innovation Score", marketPosition: "Market Position", riskLevel: "Risk Level", strengths: "STRENGTHS", risks: "RISKS", aiRecommendation: "AI RECOMMENDATION", aiConfidenceRate: "AI CONFIDENCE RATE", globalRiskShare: "GLOBAL RISK SHARE", globalRisk: "Global Risk", aiConfidence: "AI Confidence", alternativeChoice: "ALTERNATIVE CHOICE", scoreRanking: "SCORE RANKING", finalDecisionNotice: "FINAL DECISION BELONGS TO THE INVESTOR - NOT INVESTMENT ADVICE",
+    finalBullet1: "This analysis is only an AI-based digital assessment.", finalBullet2: "No recommendation replaces a final investment decision.", finalBullet3: "A 5% global risk allowance is included in the calculations.", finalBullet4: "All trading decisions are the investor's responsibility.", finalBullet5: "Past performance does not guarantee future returns.", finalBullet6: "Consult a licensed financial advisor."
+  },
+  tr: {
+    founded: "Kurulus", sectorMeta: "Sektor", livePrice: "Canli", yearsOfMarketHistory: "yillik piyasa gecmisi", simulatedHistoricalData: "Simule tarihsel veri · Mevcut canli fiyata dayalidir", keyEvents: "ONEMLI OLAYLAR", today: "bugun",
+    yearHistoricalChart: "Yillik Tarihsel Grafik", starter: "BASLANGIC", current: "GUNCEL", historicalHigh: "TARIHSEL ZIRVE", historicalLow: "TARIHSEL DIP", totalReturn: "TOPLAM GETIRI", historicalDataNotice: "Tarihsel veri yalnizca referans amaclidir ve yatirim tavsiyesi degildir",
+    liveCommoditiesForex: "CANLI EMTIA & FOREX", metals: "METALLER", energy: "ENERJI", forex: "FOREX", fetchingData: "Veri aliniyor...", liveDataStatus: "CANLI VERI", simulated: "SIMULE", refresh: "YENILE", refreshTitle: "Yenile", forexSourceNote: "Frankfurter API · ECB verisi · 1 USD = X birim · Onceki gune gore degisim", commoditySourceNote: "Finnhub API · Gercek zamanli · Canli veri",
+    companyComparisonAnalysis: "SIRKET KARSILASTIRMA ANALIZI", companiesAiComparison: "sirket · AI destekli karsilastirma", overview: "GENEL BAKIS", scoreAnalysis: "SKOR ANALIZI", recommendation: "ONERI", companiesReady: "Sirket Hazir", startAiComparisonAnalysis: "AI Karsilastirma Analizini Baslat", comparisonIntro: "GMA Zeka Katmani her sirket icin detayli skorlar ve oneriler uretir", aiAnalysisRunning: "AI analizi calisiyor...", companiesBeingCompared: "karsilastiriliyor", signInRequired: "Giris Gerekli", comparisonLoginRequired: "Sirket karsilastirma analizi icin hesabiniza giris yapmalisiniz.", analysisError: "Analiz Hatasi", tryAgain: "Tekrar Dene", previewModeSampleData: "ONIZLEME MODU · ORNEK VERI", recommended: "ONERILEN", totalScore: "TOPLAM SKOR", growth: "BUYUME", risk: "RISK", growthPotential: "Buyume Potansiyeli", financialStrength: "Finansal Guc", innovationScore: "Inovasyon Skoru", marketPosition: "Piyasa Konumu", riskLevel: "Risk Seviyesi", strengths: "GUCLU YONLER", risks: "RISKLER", aiRecommendation: "AI ONERISI", aiConfidenceRate: "AI GUVEN ORANI", globalRiskShare: "KURESEL RISK PAYI", globalRisk: "Kuresel Risk", aiConfidence: "AI Guveni", alternativeChoice: "ALTERNATIF SECIM", scoreRanking: "SKOR SIRALAMASI", finalDecisionNotice: "NIHAI KARAR YATIRIMCIYA AITTIR - YATIRIM TAVSIYESI DEGILDIR",
+    finalBullet1: "Bu analiz yalnizca AI tabanli dijital bir degerlendirmedir.", finalBullet2: "Hicbir oneri nihai yatirim kararinin yerine gecmez.", finalBullet3: "Hesaplamalara %5 kuresel risk payi dahildir.", finalBullet4: "Tum islem kararlari yatirimcinin sorumlulugundadir.", finalBullet5: "Gecmis performans gelecek getirileri garanti etmez.", finalBullet6: "Lisansli bir finansal danismana basvurun."
+  },
+  ru: {
+    founded: "Osnovano", sectorMeta: "Sektor", livePrice: "Zhivaya tsena", yearsOfMarketHistory: "let rynochnoy istorii", simulatedHistoricalData: "Simulirovannye istoricheskie dannye · Na osnove tekushchey tseny", keyEvents: "KLYUCHEVYE SOBYTIYA", today: "segodnya",
+    yearHistoricalChart: "Letniy istoricheskiy grafik", starter: "START", current: "TEKUSHCHEE", historicalHigh: "ISTORICHESKIY MAKSIMUM", historicalLow: "ISTORICHESKIY MINIMUM", totalReturn: "OBSHCHAYA DOHODNOST", historicalDataNotice: "Istoricheskie dannye tolko dlya spravki i ne yavlyayutsya investitsionnoy rekomendatsiey",
+    liveCommoditiesForex: "ZHIVYE TOVARY I FOREX", metals: "METALLY", energy: "ENERGIYA", forex: "FOREX", fetchingData: "Zagruzka dannyh...", liveDataStatus: "ZHIVYE DANNYE", simulated: "SIMULYATSIYA", refresh: "OBNOVIT", refreshTitle: "Obnovit", forexSourceNote: "Frankfurter API · dannye ECB · 1 USD = X edinits · izmenenie k predydushchemu dnyu", commoditySourceNote: "Finnhub API · realnoe vremya · zhivye dannye",
+    companyComparisonAnalysis: "ANALIZ SRAVNENIYA KOMPANIY", companiesAiComparison: "kompanii · sravnenie s AI", overview: "OBZOR", scoreAnalysis: "ANALIZ BALLOV", recommendation: "REKOMENDATSIYA", companiesReady: "Kompanii gotovy", startAiComparisonAnalysis: "Nachat AI-sravnenie", comparisonIntro: "GMA Intelligence Layer sozdaet podrobnye otsenki i rekomendatsii po kazhdoy kompanii", aiAnalysisRunning: "AI-analiz vypolnyaetsya...", companiesBeingCompared: "sravnivayutsya", signInRequired: "Trebuetsya vhod", comparisonLoginRequired: "Dlya analiza sravneniya kompaniy nuzhno voyti v akkaunt.", analysisError: "Oshibka analiza", tryAgain: "Poprobovat snova", previewModeSampleData: "REZHIM PREDPROSMOTRA · PRIMERNYYE DANNYE", recommended: "REKOMENDUETSYA", totalScore: "OBSHCHIY BALL", growth: "ROST", risk: "RISK", growthPotential: "Potentsial rosta", financialStrength: "Finansovaya sila", innovationScore: "Innovatsionnyy ball", marketPosition: "Pozitsiya na rynke", riskLevel: "Uroven riska", strengths: "SILNYE STORONY", risks: "RISKI", aiRecommendation: "AI-REKOMENDATSIYA", aiConfidenceRate: "UVERENNOST AI", globalRiskShare: "DOLYA GLOBALNOGO RISKA", globalRisk: "Globalnyy risk", aiConfidence: "Uverennost AI", alternativeChoice: "ALTERNATIVNYY VYBOR", scoreRanking: "REYTING BALLOV", finalDecisionNotice: "FINALNOE RESHENIE PRINIMAET INVESTOR - NE INVESTITSIONNAYA REKOMENDATSIYA",
+    finalBullet1: "Etot analiz yavlyaetsya tolko AI-tsifrovoy otsenkoy.", finalBullet2: "Ni odna rekomendatsiya ne zamenyaet finalnoe investitsionnoe reshenie.", finalBullet3: "V raschetah uchitano 5% globalnogo riska.", finalBullet4: "Vse torgovye resheniya na otvetstvennosti investora.", finalBullet5: "Proshlye rezultaty ne garantiruyut budushchuyu dohodnost.", finalBullet6: "Obratites k litsenzirovannomu finansovomu konsultantu."
+  },
+  ar: {
+    founded: "تأسست", sectorMeta: "القطاع", livePrice: "السعر المباشر", yearsOfMarketHistory: "سنة من تاريخ السوق", simulatedHistoricalData: "بيانات تاريخية محاكاة · بناء على السعر المباشر الحالي", keyEvents: "أحداث رئيسية", today: "اليوم",
+    yearHistoricalChart: "رسم تاريخي بالسنوات", starter: "البداية", current: "الحالي", historicalHigh: "أعلى مستوى تاريخي", historicalLow: "أدنى مستوى تاريخي", totalReturn: "العائد الإجمالي", historicalDataNotice: "البيانات التاريخية للمرجع فقط وليست نصيحة استثمارية",
+    liveCommoditiesForex: "السلع والفوركس مباشرة", metals: "المعادن", energy: "الطاقة", forex: "الفوركس", fetchingData: "جار جلب البيانات...", liveDataStatus: "بيانات مباشرة", simulated: "محاكاة", refresh: "تحديث", refreshTitle: "تحديث", forexSourceNote: "Frankfurter API · بيانات ECB · 1 USD = X وحدات · التغير مقابل اليوم السابق", commoditySourceNote: "Finnhub API · وقت حقيقي · بيانات مباشرة",
+    companyComparisonAnalysis: "تحليل مقارنة الشركات", companiesAiComparison: "شركات · مقارنة مدعومة بالذكاء الاصطناعي", overview: "نظرة عامة", scoreAnalysis: "تحليل الدرجات", recommendation: "توصية", companiesReady: "شركات جاهزة", startAiComparisonAnalysis: "ابدأ تحليل مقارنة AI", comparisonIntro: "تولد طبقة ذكاء GMA درجات وتوصيات تفصيلية لكل شركة", aiAnalysisRunning: "تحليل AI قيد التشغيل...", companiesBeingCompared: "تتم مقارنتها", signInRequired: "تسجيل الدخول مطلوب", comparisonLoginRequired: "تحتاج إلى تسجيل الدخول لحسابك لتحليل مقارنة الشركات.", analysisError: "خطأ في التحليل", tryAgain: "حاول مرة أخرى", previewModeSampleData: "وضع المعاينة · بيانات نموذجية", recommended: "موصى به", totalScore: "الدرجة الإجمالية", growth: "النمو", risk: "المخاطر", growthPotential: "إمكانات النمو", financialStrength: "القوة المالية", innovationScore: "درجة الابتكار", marketPosition: "الموقع السوقي", riskLevel: "مستوى المخاطر", strengths: "نقاط القوة", risks: "المخاطر", aiRecommendation: "توصية AI", aiConfidenceRate: "معدل ثقة AI", globalRiskShare: "حصة المخاطر العالمية", globalRisk: "المخاطر العالمية", aiConfidence: "ثقة AI", alternativeChoice: "خيار بديل", scoreRanking: "ترتيب الدرجات", finalDecisionNotice: "القرار النهائي يعود للمستثمر - ليست نصيحة استثمارية",
+    finalBullet1: "هذا التحليل تقييم رقمي قائم على AI فقط.", finalBullet2: "لا تحل أي توصية محل قرار الاستثمار النهائي.", finalBullet3: "تتضمن الحسابات مخصص مخاطر عالمي بنسبة 5%.", finalBullet4: "كل قرارات التداول مسؤولية المستثمر.", finalBullet5: "الأداء السابق لا يضمن عوائد مستقبلية.", finalBullet6: "استشر مستشارا ماليا مرخصا."
+  },
+  zh: {
+    founded: "成立", sectorMeta: "行业", livePrice: "实时价格", yearsOfMarketHistory: "年市场历史", simulatedHistoricalData: "模拟历史数据 · 基于当前实时价格", keyEvents: "关键事件", today: "今天",
+    yearHistoricalChart: "年度历史图表", starter: "起点", current: "当前", historicalHigh: "历史高点", historicalLow: "历史低点", totalReturn: "总回报", historicalDataNotice: "历史数据仅供参考，不构成投资建议",
+    liveCommoditiesForex: "实时大宗商品与外汇", metals: "金属", energy: "能源", forex: "外汇", fetchingData: "正在获取数据...", liveDataStatus: "实时数据", simulated: "模拟", refresh: "刷新", refreshTitle: "刷新", forexSourceNote: "Frankfurter API · ECB 数据 · 1 USD = X 单位 · 较前一日变化", commoditySourceNote: "Finnhub API · 实时 · 实时数据",
+    companyComparisonAnalysis: "公司比较分析", companiesAiComparison: "家公司 · AI 辅助比较", overview: "概览", scoreAnalysis: "评分分析", recommendation: "推荐", companiesReady: "家公司已准备", startAiComparisonAnalysis: "开始 AI 比较分析", comparisonIntro: "GMA 智能层为每家公司生成详细评分和建议", aiAnalysisRunning: "AI 分析正在运行...", companiesBeingCompared: "正在比较", signInRequired: "需要登录", comparisonLoginRequired: "您需要登录账户才能使用公司比较分析。", analysisError: "分析错误", tryAgain: "重试", previewModeSampleData: "预览模式 · 示例数据", recommended: "推荐", totalScore: "总分", growth: "增长", risk: "风险", growthPotential: "增长潜力", financialStrength: "财务实力", innovationScore: "创新评分", marketPosition: "市场地位", riskLevel: "风险等级", strengths: "优势", risks: "风险", aiRecommendation: "AI 推荐", aiConfidenceRate: "AI 置信度", globalRiskShare: "全球风险占比", globalRisk: "全球风险", aiConfidence: "AI 置信度", alternativeChoice: "备选方案", scoreRanking: "评分排名", finalDecisionNotice: "最终决定属于投资者 - 不构成投资建议",
+    finalBullet1: "此分析仅为基于 AI 的数字评估。", finalBullet2: "任何建议都不能替代最终投资决定。", finalBullet3: "计算中包含 5% 的全球风险余量。", finalBullet4: "所有交易决定均由投资者负责。", finalBullet5: "过去表现不保证未来收益。", finalBullet6: "请咨询持牌金融顾问。"
+  },
+  hi: {
+    founded: "स्थापना", sectorMeta: "क्षेत्र", livePrice: "लाइव मूल्य", yearsOfMarketHistory: "वर्ष का बाज़ार इतिहास", simulatedHistoricalData: "सिम्युलेटेड ऐतिहासिक डेटा · वर्तमान लाइव मूल्य पर आधारित", keyEvents: "मुख्य घटनाएँ", today: "आज",
+    yearHistoricalChart: "वर्षीय ऐतिहासिक चार्ट", starter: "आरंभ", current: "वर्तमान", historicalHigh: "ऐतिहासिक उच्च", historicalLow: "ऐतिहासिक निम्न", totalReturn: "कुल रिटर्न", historicalDataNotice: "ऐतिहासिक डेटा केवल संदर्भ के लिए है और निवेश सलाह नहीं है",
+    liveCommoditiesForex: "लाइव कमोडिटी और फॉरेक्स", metals: "धातु", energy: "ऊर्जा", forex: "फॉरेक्स", fetchingData: "डेटा लाया जा रहा है...", liveDataStatus: "लाइव डेटा", simulated: "सिम्युलेटेड", refresh: "रीफ्रेश", refreshTitle: "रीफ्रेश", forexSourceNote: "Frankfurter API · ECB डेटा · 1 USD = X इकाइयाँ · पिछले दिन की तुलना में बदलाव", commoditySourceNote: "Finnhub API · रीयल-टाइम · लाइव डेटा",
+    companyComparisonAnalysis: "कंपनी तुलना विश्लेषण", companiesAiComparison: "कंपनियाँ · AI-सहायता वाली तुलना", overview: "अवलोकन", scoreAnalysis: "स्कोर विश्लेषण", recommendation: "सिफारिश", companiesReady: "कंपनियाँ तैयार", startAiComparisonAnalysis: "AI तुलना विश्लेषण शुरू करें", comparisonIntro: "GMA Intelligence Layer हर कंपनी के लिए विस्तृत स्कोर और सुझाव बनाता है", aiAnalysisRunning: "AI विश्लेषण चल रहा है...", companiesBeingCompared: "की तुलना हो रही है", signInRequired: "साइन-इन आवश्यक", comparisonLoginRequired: "कंपनी तुलना विश्लेषण के लिए आपको अपने खाते में साइन इन करना होगा।", analysisError: "विश्लेषण त्रुटि", tryAgain: "फिर कोशिश करें", previewModeSampleData: "पूर्वावलोकन मोड · नमूना डेटा", recommended: "अनुशंसित", totalScore: "कुल स्कोर", growth: "वृद्धि", risk: "जोखिम", growthPotential: "वृद्धि क्षमता", financialStrength: "वित्तीय मजबूती", innovationScore: "नवाचार स्कोर", marketPosition: "बाज़ार स्थिति", riskLevel: "जोखिम स्तर", strengths: "मजबूतियाँ", risks: "जोखिम", aiRecommendation: "AI सिफारिश", aiConfidenceRate: "AI भरोसा दर", globalRiskShare: "वैश्विक जोखिम हिस्सा", globalRisk: "वैश्विक जोखिम", aiConfidence: "AI भरोसा", alternativeChoice: "वैकल्पिक चयन", scoreRanking: "स्कोर रैंकिंग", finalDecisionNotice: "अंतिम निर्णय निवेशक का है - निवेश सलाह नहीं",
+    finalBullet1: "यह विश्लेषण केवल AI-आधारित डिजिटल आकलन है।", finalBullet2: "कोई भी सिफारिश अंतिम निवेश निर्णय की जगह नहीं लेती।", finalBullet3: "गणना में 5% वैश्विक जोखिम भत्ता शामिल है।", finalBullet4: "सभी ट्रेडिंग निर्णय निवेशक की जिम्मेदारी हैं।", finalBullet5: "पिछला प्रदर्शन भविष्य के रिटर्न की गारंटी नहीं देता।", finalBullet6: "लाइसेंस प्राप्त वित्तीय सलाहकार से सलाह लें।"
+  },
+  de: {
+    founded: "Gegrundet", sectorMeta: "Sektor", livePrice: "Live", yearsOfMarketHistory: "Jahre Markthistorie", simulatedHistoricalData: "Simulierte historische Daten · Basierend auf dem aktuellen Live-Preis", keyEvents: "WICHTIGE EREIGNISSE", today: "heute",
+    yearHistoricalChart: "Jahres-Historienchart", starter: "START", current: "AKTUELL", historicalHigh: "HISTORISCHES HOCH", historicalLow: "HISTORISCHES TIEF", totalReturn: "GESAMTRENDITE", historicalDataNotice: "Historische Daten dienen nur als Referenz und sind keine Anlageberatung",
+    liveCommoditiesForex: "LIVE-ROHSTOFFE & FOREX", metals: "METALLE", energy: "ENERGIE", forex: "FOREX", fetchingData: "Daten werden geladen...", liveDataStatus: "LIVE-DATEN", simulated: "SIMULIERT", refresh: "AKTUALISIEREN", refreshTitle: "Aktualisieren", forexSourceNote: "Frankfurter API · EZB-Daten · 1 USD = X Einheiten · Anderung zum Vortag", commoditySourceNote: "Finnhub API · Echtzeit · Live-Daten",
+    companyComparisonAnalysis: "UNTERNEHMENSVERGLEICH-ANALYSE", companiesAiComparison: "Unternehmen · AI-gestutzter Vergleich", overview: "UBERBLICK", scoreAnalysis: "SCORE-ANALYSE", recommendation: "EMPFEHLUNG", companiesReady: "Unternehmen bereit", startAiComparisonAnalysis: "AI-Vergleichsanalyse starten", comparisonIntro: "GMA Intelligence Layer erstellt detaillierte Scores und Empfehlungen fur jedes Unternehmen", aiAnalysisRunning: "AI-Analyse lauft...", companiesBeingCompared: "werden verglichen", signInRequired: "Anmeldung erforderlich", comparisonLoginRequired: "Fur die Unternehmensvergleichsanalyse mussen Sie angemeldet sein.", analysisError: "Analysefehler", tryAgain: "Erneut versuchen", previewModeSampleData: "VORSCHAU-MODUS · BEISPIELDATEN", recommended: "EMPFOHLEN", totalScore: "GESAMTSCORE", growth: "WACHSTUM", risk: "RISIKO", growthPotential: "Wachstumspotenzial", financialStrength: "Finanzielle Starke", innovationScore: "Innovationsscore", marketPosition: "Marktposition", riskLevel: "Risikostufe", strengths: "STARKEN", risks: "RISIKEN", aiRecommendation: "AI-EMPFEHLUNG", aiConfidenceRate: "AI-VERTRAUEN", globalRiskShare: "GLOBALER RISIKOANTEIL", globalRisk: "Globales Risiko", aiConfidence: "AI-Vertrauen", alternativeChoice: "ALTERNATIVE WAHL", scoreRanking: "SCORE-RANKING", finalDecisionNotice: "DIE ENDENTSCHEIDUNG LIEGT BEIM INVESTOR - KEINE ANLAGEBERATUNG",
+    finalBullet1: "Diese Analyse ist nur eine AI-basierte digitale Einschatzung.", finalBullet2: "Keine Empfehlung ersetzt eine finale Anlageentscheidung.", finalBullet3: "Ein globaler Risikoaufschlag von 5% ist in den Berechnungen enthalten.", finalBullet4: "Alle Handelsentscheidungen liegen in der Verantwortung des Investors.", finalBullet5: "Vergangene Performance garantiert keine kunftigen Renditen.", finalBullet6: "Konsultieren Sie einen lizenzierten Finanzberater."
+  },
+  es: {
+    founded: "Fundada", sectorMeta: "Sector", livePrice: "En vivo", yearsOfMarketHistory: "anos de historial de mercado", simulatedHistoricalData: "Datos historicos simulados · Basados en el precio actual en vivo", keyEvents: "EVENTOS CLAVE", today: "hoy",
+    yearHistoricalChart: "Grafico historico anual", starter: "INICIO", current: "ACTUAL", historicalHigh: "MAXIMO HISTORICO", historicalLow: "MINIMO HISTORICO", totalReturn: "RETORNO TOTAL", historicalDataNotice: "Los datos historicos son solo referencia y no son asesoramiento de inversion",
+    liveCommoditiesForex: "COMMODITIES & FOREX EN VIVO", metals: "METALES", energy: "ENERGIA", forex: "FOREX", fetchingData: "Obteniendo datos...", liveDataStatus: "DATOS EN VIVO", simulated: "SIMULADO", refresh: "ACTUALIZAR", refreshTitle: "Actualizar", forexSourceNote: "Frankfurter API · datos ECB · 1 USD = X unidades · cambio frente al dia anterior", commoditySourceNote: "Finnhub API · tiempo real · datos en vivo",
+    companyComparisonAnalysis: "ANALISIS DE COMPARACION DE EMPRESAS", companiesAiComparison: "empresas · comparacion con AI", overview: "RESUMEN", scoreAnalysis: "ANALISIS DE PUNTUACION", recommendation: "RECOMENDACION", companiesReady: "Empresas listas", startAiComparisonAnalysis: "Iniciar analisis comparativo AI", comparisonIntro: "GMA Intelligence Layer genera puntuaciones y recomendaciones detalladas para cada empresa", aiAnalysisRunning: "El analisis AI esta en curso...", companiesBeingCompared: "estan siendo comparadas", signInRequired: "Inicio de sesion requerido", comparisonLoginRequired: "Debes iniciar sesion para usar el analisis comparativo de empresas.", analysisError: "Error de analisis", tryAgain: "Intentar de nuevo", previewModeSampleData: "MODO VISTA PREVIA · DATOS DE MUESTRA", recommended: "RECOMENDADA", totalScore: "PUNTUACION TOTAL", growth: "CRECIMIENTO", risk: "RIESGO", growthPotential: "Potencial de crecimiento", financialStrength: "Fortaleza financiera", innovationScore: "Puntuacion de innovacion", marketPosition: "Posicion de mercado", riskLevel: "Nivel de riesgo", strengths: "FORTALEZAS", risks: "RIESGOS", aiRecommendation: "RECOMENDACION AI", aiConfidenceRate: "CONFIANZA AI", globalRiskShare: "CUOTA DE RIESGO GLOBAL", globalRisk: "Riesgo global", aiConfidence: "Confianza AI", alternativeChoice: "OPCION ALTERNATIVA", scoreRanking: "RANKING DE PUNTUACION", finalDecisionNotice: "LA DECISION FINAL PERTENECE AL INVERSOR - NO ES ASESORAMIENTO DE INVERSION",
+    finalBullet1: "Este analisis es solo una evaluacion digital basada en AI.", finalBullet2: "Ninguna recomendacion reemplaza la decision final de inversion.", finalBullet3: "Los calculos incluyen una asignacion de riesgo global del 5%.", finalBullet4: "Todas las decisiones de trading son responsabilidad del inversor.", finalBullet5: "El rendimiento pasado no garantiza retornos futuros.", finalBullet6: "Consulta a un asesor financiero autorizado."
+  }
+};
+Object.entries(GMA_STATIC_UI_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
+const GMA_MARKET_EXTRA_I18N = {
+  en: {
+    aiAnalysisDemo: "AI ANALYSIS DEMO", positiveFactors: "POSITIVE FACTORS", negativeFactors: "NEGATIVE FACTORS", riskFactors: "RISK FACTORS", riskOpportunityDemo: "RISK & OPPORTUNITY DEMO", riskSignals: "RISK SIGNALS", opportunitySignals: "OPPORTUNITY SIGNALS", demoContentOnly: "Demo content only. Connect live model output later for company-specific scoring.", companyDemoContentOnly: "demo content only. Connect live model output later for company-specific scoring.", riskAnalysisLoading: "Risk analysis is loading...", aiFeatureLoginRequired: "To use AI analysis features, you need to sign in to your account first.", error: "Error", noAiKey: "GMA AI key configuration required. Contact support.", noCredits: "Your analysis credits are used up. Choose a plan to continue.", loadRiskAnalysis: "Load Risk Analysis", riskAnalysisIntro: "GMA Intelligence Layer analyzes positive and negative factors",
+    demoRisk1: "Revenue concentration and macro sensitivity may increase downside volatility.", demoRisk2: "Regulatory, margin, or execution pressure can weaken the near-term setup.", demoRisk3: "Valuation risk rises when price momentum runs ahead of fundamentals.", demoOpp1: "Strong market position can support pricing power and resilient cash flow.", demoOpp2: "AI, automation, or product expansion may create new growth channels.", demoOpp3: "Operational scale can convert demand recovery into margin improvement."
+  },
+  tr: {
+    aiAnalysisDemo: "AI ANALIZ DEMO", positiveFactors: "POZITIF FAKTORLER", negativeFactors: "NEGATIF FAKTORLER", riskFactors: "RISK FAKTORLERI", riskOpportunityDemo: "RISK & FIRSAT DEMO", riskSignals: "RISK SINYALLERI", opportunitySignals: "FIRSAT SINYALLERI", demoContentOnly: "Yalnizca demo iceriktir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.", companyDemoContentOnly: "yalnizca demo iceriktir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.", riskAnalysisLoading: "Risk analizi yukleniyor...", aiFeatureLoginRequired: "AI analiz ozelliklerini kullanmak icin once hesabiniza giris yapmalisiniz.", error: "Hata", noAiKey: "GMA AI anahtar yapilandirmasi gerekli. Destek ekibiyle iletisime gecin.", noCredits: "Analiz kredileriniz bitti. Devam etmek icin bir plan secin.", loadRiskAnalysis: "Risk Analizini Yukle", riskAnalysisIntro: "GMA Zeka Katmani pozitif ve negatif faktorleri analiz eder",
+    demoRisk1: "Gelir yogunlasmasi ve makro hassasiyet asagi yonlu oynakligi artirabilir.", demoRisk2: "Regulasyon, marj veya uygulama baskisi yakin vadeli gorunumu zayiflatabilir.", demoRisk3: "Fiyat ivmesi temellerin onune gecerse degerleme riski artar.", demoOpp1: "Guclu piyasa konumu fiyatlama gucunu ve direncli nakit akisini destekleyebilir.", demoOpp2: "AI, otomasyon veya urun genislemesi yeni buyume kanallari yaratabilir.", demoOpp3: "Operasyonel olcek talep toparlanmasini marj iyilesmesine cevirebilir."
+  },
+  ru: { positiveFactors: "POLOZHITELNYE FAKTORY", riskFactors: "FAKTORY RISKA", riskOpportunityDemo: "RISK I VOZMOZHNOSTI DEMO", riskSignals: "SIGNALY RISKA", opportunitySignals: "SIGNALY VOZMOZHNOSTEY", loadRiskAnalysis: "Zagruzit analiz riska" },
+  ar: { positiveFactors: "عوامل إيجابية", riskFactors: "عوامل المخاطر", riskOpportunityDemo: "عرض المخاطر والفرص", riskSignals: "إشارات المخاطر", opportunitySignals: "إشارات الفرص", loadRiskAnalysis: "تحميل تحليل المخاطر" },
+  zh: { positiveFactors: "积极因素", riskFactors: "风险因素", riskOpportunityDemo: "风险与机会演示", riskSignals: "风险信号", opportunitySignals: "机会信号", loadRiskAnalysis: "加载风险分析" },
+  hi: { positiveFactors: "सकारात्मक कारक", riskFactors: "जोखिम कारक", riskOpportunityDemo: "जोखिम और अवसर डेमो", riskSignals: "जोखिम संकेत", opportunitySignals: "अवसर संकेत", loadRiskAnalysis: "जोखिम विश्लेषण लोड करें" },
+  de: { positiveFactors: "POSITIVE FAKTOREN", riskFactors: "RISIKOFAKTOREN", riskOpportunityDemo: "RISIKO & CHANCE DEMO", riskSignals: "RISIKOSIGNALE", opportunitySignals: "CHANCENSIGNALE", loadRiskAnalysis: "Risikoanalyse laden" },
+  es: { positiveFactors: "FACTORES POSITIVOS", riskFactors: "FACTORES DE RIESGO", riskOpportunityDemo: "DEMO DE RIESGO Y OPORTUNIDAD", riskSignals: "SENALES DE RIESGO", opportunitySignals: "SENALES DE OPORTUNIDAD", loadRiskAnalysis: "Cargar analisis de riesgo" }
+};
+Object.entries(GMA_MARKET_EXTRA_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...GMA_MARKET_EXTRA_I18N.en, ...values };
+});
 const GMA_LEGAL_STATIC = {
   tr: {
     privacy: [
@@ -1203,7 +1283,13 @@ function LangSelector() {
     style: {
       fontSize: '12px'
     }
-  }, "\u27F3") : cur.f, " ", cur.c.toUpperCase(), " ", open ? "▲" : "▼"), open && /*#__PURE__*/React.createElement("div", {
+  }, "\u27F3") : /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif",
+      fontSize: "16px",
+      lineHeight: 1
+    }
+  }, cur.f), " ", cur.c.toUpperCase(), " ", open ? "▲" : "▼"), open && /*#__PURE__*/React.createElement("div", {
     style: {
       position: "absolute",
       top: "calc(100% + 4px)",
@@ -1241,7 +1327,20 @@ function LangSelector() {
         color: l.c === lang ? "#38bdf8" : "#94a3b8",
         textAlign: "left"
       }
-    }, l.f, " ", l.n, " ", l.c === lang && "✓");
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: "22px",
+        display: "inline-flex",
+        justifyContent: "center",
+        fontFamily: "'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif",
+        fontSize: "16px",
+        lineHeight: 1
+      }
+    }, l.f), /*#__PURE__*/React.createElement("span", {
+      style: {
+        flex: 1
+      }
+    }, l.n), l.c === lang && "✓");
     return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
       style: {
         padding: "4px 12px 3px",
@@ -6634,7 +6733,7 @@ function AIAnalysisModal({
       letterSpacing: "0.1em",
       marginBottom: "6px"
     }
-  }, "\uD83E\uDD16 AI ANAL\u0130Z"), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83E\uDD16 ", t('aiAnalysis')), /*#__PURE__*/React.createElement("div", {
     style: {
       color: "#f1f5f9",
       fontSize: "20px",
@@ -6696,7 +6795,7 @@ function AIAnalysisModal({
       fontWeight: "bold",
       marginBottom: "10px"
     }
-  }, "POSITIVE FACTORS"), analysis.positive.map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, t('positiveFactors')), analysis.positive.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       color: "#94a3b8",
@@ -6718,7 +6817,7 @@ function AIAnalysisModal({
       fontWeight: "bold",
       marginBottom: "10px"
     }
-  }, "RISK FACTORS"), analysis.negative.map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, t('riskFactors')), analysis.negative.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       color: "#94a3b8",
@@ -6733,19 +6832,20 @@ function RiskOpportunityDemoModal({
   c,
   onClose
 }) {
+  const { t } = useLang();
   const sec = SECTORS[c.sector] || {
     color: "#94a3b8",
     label: c.sector
   };
   const risks = [
-    "Revenue concentration and macro sensitivity may increase downside volatility.",
-    "Regulatory, margin, or execution pressure can weaken the near-term setup.",
-    "Valuation risk rises when price momentum runs ahead of fundamentals."
+    t('demoRisk1'),
+    t('demoRisk2'),
+    t('demoRisk3')
   ];
   const opportunities = [
-    "Strong market position can support pricing power and resilient cash flow.",
-    "AI, automation, or product expansion may create new growth channels.",
-    "Operational scale can convert demand recovery into margin improvement."
+    t('demoOpp1'),
+    t('demoOpp2'),
+    t('demoOpp3')
   ];
   const row = (items, color, sign) => items.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
@@ -6802,7 +6902,7 @@ function RiskOpportunityDemoModal({
       letterSpacing: "0.1em",
       marginBottom: "6px"
     }
-  }, "\u26A0 RISK & OPPORTUNITY DEMO"), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 ", t('riskOpportunityDemo')), /*#__PURE__*/React.createElement("div", {
     style: {
       color: "#f1f5f9",
       fontSize: "20px",
@@ -6844,7 +6944,7 @@ function RiskOpportunityDemoModal({
       marginBottom: "10px",
       letterSpacing: "0.08em"
     }
-  }, "RISK SIGNALS"), row(risks, "#f87171", "-")), /*#__PURE__*/React.createElement("div", {
+  }, t('riskSignals')), row(risks, "#f87171", "-")), /*#__PURE__*/React.createElement("div", {
     style: {
       border: "1px solid rgba(52,211,153,0.24)",
       borderRadius: "10px",
@@ -6859,19 +6959,20 @@ function RiskOpportunityDemoModal({
       marginBottom: "10px",
       letterSpacing: "0.08em"
     }
-  }, "OPPORTUNITY SIGNALS"), row(opportunities, "#34d399", "+"))), /*#__PURE__*/React.createElement("div", {
+  }, t('opportunitySignals')), row(opportunities, "#34d399", "+"))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: "14px",
       color: "#475569",
       fontSize: "11px",
       textAlign: "center"
     }
-  }, "Demo content only. Connect live model output later for company-specific scoring.")));
+  }, t('demoContentOnly'))));
 }
 
 function AIAnalysisInlinePanel({
   c
 }) {
+  const { t } = useLang();
   const analysis = GMA_DEMO_ANALYSIS;
   const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
@@ -6890,7 +6991,7 @@ function AIAnalysisInlinePanel({
       letterSpacing: "0.1em",
       marginBottom: "8px"
     }
-  }, "AI ANALYSIS DEMO"), /*#__PURE__*/React.createElement("div", {
+  }, t('aiAnalysisDemo')), /*#__PURE__*/React.createElement("div", {
     style: {
       color: sentimentColor(analysis.sentiment),
       fontSize: "13px",
@@ -6923,7 +7024,7 @@ function AIAnalysisInlinePanel({
       fontWeight: "bold",
       marginBottom: "10px"
     }
-  }, "POSITIVE FACTORS"), analysis.positive.map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, t('positiveFactors')), analysis.positive.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       color: "#94a3b8",
@@ -6945,7 +7046,7 @@ function AIAnalysisInlinePanel({
       fontWeight: "bold",
       marginBottom: "10px"
     }
-  }, "RISK FACTORS"), analysis.negative.map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, t('riskFactors')), analysis.negative.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       color: "#94a3b8",
@@ -6959,15 +7060,16 @@ function AIAnalysisInlinePanel({
 function RiskOpportunityInlinePanel({
   c
 }) {
+  const { t } = useLang();
   const risks = [
-    "Revenue concentration and macro sensitivity may increase downside volatility.",
-    "Regulatory, margin, or execution pressure can weaken the near-term setup.",
-    "Valuation risk rises when price momentum runs ahead of fundamentals."
+    t('demoRisk1'),
+    t('demoRisk2'),
+    t('demoRisk3')
   ];
   const opportunities = [
-    "Strong market position can support pricing power and resilient cash flow.",
-    "AI, automation, or product expansion may create new growth channels.",
-    "Operational scale can convert demand recovery into margin improvement."
+    t('demoOpp1'),
+    t('demoOpp2'),
+    t('demoOpp3')
   ];
   const row = (items, color, sign) => items.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
@@ -6993,7 +7095,7 @@ function RiskOpportunityInlinePanel({
       letterSpacing: "0.1em",
       marginBottom: "12px"
     }
-  }, "RISK & OPPORTUNITY DEMO"), /*#__PURE__*/React.createElement("div", {
+  }, t('riskOpportunityDemo')), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
@@ -7014,7 +7116,7 @@ function RiskOpportunityInlinePanel({
       marginBottom: "10px",
       letterSpacing: "0.08em"
     }
-  }, "RISK SIGNALS"), row(risks, "#f87171", "-")), /*#__PURE__*/React.createElement("div", {
+  }, t('riskSignals')), row(risks, "#f87171", "-")), /*#__PURE__*/React.createElement("div", {
     style: {
       border: "1px solid rgba(52,211,153,0.24)",
       borderRadius: "10px",
@@ -7029,14 +7131,14 @@ function RiskOpportunityInlinePanel({
       marginBottom: "10px",
       letterSpacing: "0.08em"
     }
-  }, "OPPORTUNITY SIGNALS"), row(opportunities, "#34d399", "+"))), /*#__PURE__*/React.createElement("div", {
+  }, t('opportunitySignals')), row(opportunities, "#34d399", "+"))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: "14px",
       color: "#475569",
       fontSize: "11px",
       textAlign: "center"
     }
-  }, c.name, " demo content only. Connect live model output later for company-specific scoring."));
+  }, c.name, " ", t('companyDemoContentOnly')));
 }
 
 function HistoryModal({
@@ -7201,7 +7303,7 @@ function HistoryModal({
       fontSize: "13px",
       color: "#64748b"
     }
-  }, "Founded: ", meta.founded, " · Sector: ", sec.label, " · Live: $", c.price.toFixed(2))), /*#__PURE__*/React.createElement("button", {
+  }, t('founded'), ": ", meta.founded, " · ", t('sectorMeta'), ": ", sec.label, " · ", t('livePrice'), ": $", c.price.toFixed(2))), /*#__PURE__*/React.createElement("button", {
     onClick: onClose,
     style: {
       background: "transparent",
@@ -7267,13 +7369,13 @@ function HistoryModal({
       fontSize: "9px",
       color: "#e2e8f0"
     }
-  }, meta.founded, " \u2014 2026 \xB7 ", 2026 - meta.founded, " years of market history"), /*#__PURE__*/React.createElement("div", {
+  }, meta.founded, " \u2014 2026 \xB7 ", 2026 - meta.founded, " ", t('yearsOfMarketHistory')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "8px",
       color: "#94a3b8",
       marginTop: "1px"
     }
-  }, "Simulated historical data · Based on the current live price")), /*#__PURE__*/React.createElement("div", {
+  }, t('simulatedHistoricalData'))), /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "right"
     }
@@ -7288,7 +7390,7 @@ function HistoryModal({
       fontSize: "9px",
       color: c.change >= 0 ? "#34d399" : "#f87171"
     }
-  }, c.change >= 0 ? "▲" : "▼", " ", Math.abs(c.change).toFixed(2), "% today"))), /*#__PURE__*/React.createElement("div", {
+  }, c.change >= 0 ? "▲" : "▼", " ", Math.abs(c.change).toFixed(2), "% ", t('today')))), /*#__PURE__*/React.createElement("div", {
     className: "chart-wrapper",
     style: {
       height: "280px",
@@ -7313,7 +7415,7 @@ function HistoryModal({
       letterSpacing: "0.08em",
       marginBottom: "10px"
     }
-  }, "KEY EVENTS"), /*#__PURE__*/React.createElement("div", {
+  }, t('keyEvents')), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexWrap: "wrap",
@@ -7357,7 +7459,7 @@ function HistoryModal({
     style: {
       fontSize: "15px"
     }
-  }, "Risk analysis is loading...")), aiError && !loadingAI && /*#__PURE__*/React.createElement("div", {
+  }, t('riskAnalysisLoading'))), aiError && !loadingAI && /*#__PURE__*/React.createElement("div", {
     style: {
       margin: "20px 0"
     }
@@ -7378,14 +7480,14 @@ function HistoryModal({
       color: "#38bdf8",
       marginBottom: "8px"
     }
-  }, "Sign-in Required"), /*#__PURE__*/React.createElement("div", {
+  }, t('signInRequired')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "12px",
       color: "#94a3b8",
       marginBottom: "20px",
       lineHeight: 1.6
     }
-  }, "To use AI analysis features,", /*#__PURE__*/React.createElement("br", null), "you need to sign in to your account first."), /*#__PURE__*/React.createElement("button", {
+  }, t('aiFeatureLoginRequired')), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       onClose();
       window.dispatchEvent(new CustomEvent('gma:navigate', {
@@ -7418,7 +7520,7 @@ function HistoryModal({
       fontWeight: "bold",
       marginBottom: "8px"
     }
-  }, "\u26A0 Error"), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 ", t('error')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "11px",
       color: "#94a3b8",
@@ -7427,9 +7529,9 @@ function HistoryModal({
       marginBottom: "10px"
     }
   }, aiError === '__NO_KEY__'
-    ? "GMA AI key configuration required. Contact support."
+    ? t('noAiKey')
     : aiError === '__NO_CREDITS__'
-    ? "Your analysis credits are used up. Choose a plan to continue."
+    ? t('noCredits')
     : aiError
   ), /*#__PURE__*/React.createElement("button", {
     onClick: fetchAnalysis,
@@ -7444,7 +7546,7 @@ function HistoryModal({
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\u21BA Try Again"))), !loadingAI && !analysis && !aiError && /*#__PURE__*/React.createElement("div", {
+  }, "\u21BA ", t('tryAgain')))), !loadingAI && !analysis && !aiError && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px"
@@ -7462,13 +7564,13 @@ function HistoryModal({
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\u26A1 Load Risk Analysis"), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A1 ", t('loadRiskAnalysis')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "14px",
       color: "#94a3b8",
       marginTop: "10px"
     }
-  }, "GMA Intelligence Layer analyzes positive and negative factors")), analysis && !loadingAI && /*#__PURE__*/React.createElement("div", {
+  }, t('riskAnalysisIntro'))), analysis && !loadingAI && /*#__PURE__*/React.createElement("div", {
     style: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
@@ -7488,7 +7590,7 @@ function HistoryModal({
       letterSpacing: "0.08em",
       marginBottom: "12px"
     }
-  }, "\u2705 POSITIVE FACTORS"), analysis.positive?.map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, "\u2705 ", t('positiveFactors')), analysis.positive?.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       display: "flex",
@@ -7517,7 +7619,7 @@ function HistoryModal({
       letterSpacing: "0.08em",
       marginBottom: "12px"
     }
-  }, "\u26A0 NEGATIVE FACTORS"), analysis.negative?.map((item, i) => /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 ", t('negativeFactors')), analysis.negative?.map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       display: "flex",
@@ -7766,6 +7868,7 @@ function CompareModal({
   companies,
   onClose
 }) {
+  const { t } = useLang();
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false); // false — users baslatir
   const [error, setError] = useState(null);
@@ -7990,13 +8093,13 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#e879f9",
       letterSpacing: "0.06em"
     }
-  }, "\u2696\uFE0F COMPANY COMPARISON ANALYSIS"), /*#__PURE__*/React.createElement("div", {
+  }, "\u2696\uFE0F ", t('companyComparisonAnalysis')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "14px",
       color: "#94a3b8",
       marginTop: "3px"
     }
-  }, companies.length, " companies · AI-powered comparison")), /*#__PURE__*/React.createElement("button", {
+  }, companies.length, " ", t('companiesAiComparison'))), /*#__PURE__*/React.createElement("button", {
     onClick: onClose,
     style: {
       background: "transparent",
@@ -8013,13 +8116,13 @@ CRITICAL: Return only JSON. The first character must be { and the last character
   }, /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "overview"),
     onClick: () => setTab("overview")
-  }, "\uD83D\uDCCA OVERVIEW"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83D\uDCCA ", t('overview')), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "scores"),
     onClick: () => setTab("scores")
-  }, "\uD83C\uDFAF SCORE ANALYSIS"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83C\uDFAF ", t('scoreAnalysis')), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "recommend"),
     onClick: () => setTab("recommend")
-  }, "\u2B50 RECOMMENDATION")), /*#__PURE__*/React.createElement("div", {
+  }, "\u2B50 ", t('recommendation'))), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       overflow: "auto",
@@ -8042,7 +8145,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       marginBottom: "8px",
       fontWeight: "bold"
     }
-  }, companies.length, " Companies Ready"), /*#__PURE__*/React.createElement("div", {
+  }, companies.length, " ", t('companiesReady')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "14px",
       color: "#94a3b8",
@@ -8062,13 +8165,13 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontWeight: "bold",
       letterSpacing: "0.07em"
     }
-  }, "\uD83E\uDD16 Start AI Comparison Analysis"), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83E\uDD16 ", t('startAiComparisonAnalysis')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "13px",
       color: "#94a3b8",
       marginTop: "10px"
     }
-  }, "GMA Intelligence Layer generates detailed scores and recommendations for each company")), loading && /*#__PURE__*/React.createElement("div", {
+  }, t('comparisonIntro')), loading && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "60px 0"
@@ -8084,12 +8187,12 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#e879f9",
       marginBottom: "8px"
     }
-  }, "AI analysis is running..."), /*#__PURE__*/React.createElement("div", {
+  }, t('aiAnalysisRunning')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "14px",
       color: "#94a3b8"
     }
-  }, companies.map(c => c.name).join(" · "), " are being compared")), error && !loading && /*#__PURE__*/React.createElement("div", null, error === '__LOGIN_REQUIRED__' ? /*#__PURE__*/React.createElement("div", {
+  }, companies.map(c => c.name).join(" · "), " ", t('companiesBeingCompared')), error && !loading && /*#__PURE__*/React.createElement("div", null, error === '__LOGIN_REQUIRED__' ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px 20px",
@@ -8109,14 +8212,14 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#38bdf8",
       marginBottom: "8px"
     }
-  }, "Sign-in Required"), /*#__PURE__*/React.createElement("div", {
+  }, t('signInRequired')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "12px",
       color: "#94a3b8",
       marginBottom: "20px",
       lineHeight: 1.6
     }
-  }, "You need to sign in to your account for company comparison analysis."), /*#__PURE__*/React.createElement("button", {
+  }, t('comparisonLoginRequired')), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       onClose();
       window.dispatchEvent(new CustomEvent('gma:navigate', {
@@ -8148,7 +8251,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontSize: "13px",
       marginBottom: "8px"
     }
-  }, "\u26A0 Analysis Error"), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 ", t('analysisError')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "11px",
       color: "#94a3b8",
@@ -8169,10 +8272,10 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\u21BA Try Again"))), !loading && result && tab === "overview" && /*#__PURE__*/React.createElement("div", null,
+  }, "\u21BA ", t('tryAgain')))), !loading && result && tab === "overview" && /*#__PURE__*/React.createElement("div", null,
     result._demo && /*#__PURE__*/React.createElement("div", {style:{display:'flex',justifyContent:'flex-end',marginBottom:'8px'}},
       /*#__PURE__*/React.createElement("span", {style:{fontSize:'10px',color:'#e879f9',background:'rgba(232,121,249,0.1)',border:'1px solid rgba(232,121,249,0.25)',borderRadius:'20px',padding:'3px 10px',letterSpacing:'0.08em',fontFamily:"'Courier New',monospace"}},
-        "◈ PREVIEW MODE · SAMPLE DATA"
+        "\u25C8 ", t('previewModeSampleData')
       )
     ),
     /*#__PURE__*/React.createElement("div", {
@@ -8219,7 +8322,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         fontSize: "12px",
         fontWeight: "bold"
       }
-    }, "\u2B50 RECOMMENDATIONLEN"), /*#__PURE__*/React.createElement("div", {
+    }, "\u2B50 ", t('recommended')), /*#__PURE__*/React.createElement("div", {
       style: {
         display: "flex",
         gap: "8px",
@@ -8279,7 +8382,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         fontSize: "12px",
         color: "#94a3b8"
       }
-    }, "TOTAL SCORE")), /*#__PURE__*/React.createElement("div", {
+    }, t('totalScore'))), /*#__PURE__*/React.createElement("div", {
       style: {
         textAlign: "center"
       }
@@ -8294,7 +8397,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         fontSize: "12px",
         color: "#94a3b8"
       }
-    }, "GROWTH")), /*#__PURE__*/React.createElement("div", {
+    }, t('growth'))), /*#__PURE__*/React.createElement("div", {
       style: {
         textAlign: "center"
       }
@@ -8309,7 +8412,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         fontSize: "12px",
         color: "#94a3b8"
       }
-    }, "RISK"))), /*#__PURE__*/React.createElement("div", {
+    }, t('risk')))), /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: "13px",
         color: "#94a3b8",
@@ -8321,23 +8424,23 @@ CRITICAL: Return only JSON. The first character must be { and the last character
     const co = companies.find(c => c.ticker === f.ticker) || {};
     const isWinner = f.ticker === winner;
     const scores = [{
-      l: "Growth Potential",
+      l: t('growthPotential'),
       v: f.growthPotential,
       c: "#34d399"
     }, {
-      l: "Financial Strength",
+      l: t('financialStrength'),
       v: f.financialStrength,
       c: "#38bdf8"
     }, {
-      l: "Innovation Score",
+      l: t('innovationScore'),
       v: f.innovationScore,
       c: "#a78bfa"
     }, {
-      l: "Market Position",
+      l: t('marketPosition'),
       v: f.marketPosition,
       c: "#fbbf24"
     }, {
-      l: "Risk Level",
+      l: t('riskLevel'),
       v: f.riskLevel,
       c: f.riskLevel > 60 ? "#f87171" : "#fb923c"
     }];
@@ -8405,7 +8508,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         color: "#34d399",
         marginBottom: "6px"
       }
-    }, "STRENGTHS"), f.strengths?.map((g, i) => /*#__PURE__*/React.createElement("div", {
+    }, t('strengths')), f.strengths?.map((g, i) => /*#__PURE__*/React.createElement("div", {
       key: i,
       style: {
         fontSize: "13px",
@@ -8425,7 +8528,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
         color: "#f87171",
         marginBottom: "6px"
       }
-    }, "RISKS"), f.risks?.map((r, i) => /*#__PURE__*/React.createElement("div", {
+    }, t('risks')), f.risks?.map((r, i) => /*#__PURE__*/React.createElement("div", {
       key: i,
       style: {
         fontSize: "13px",
@@ -8449,7 +8552,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       letterSpacing: "0.06em",
       marginBottom: "12px"
     }
-  }, "AI RECOMMENDATION"), /*#__PURE__*/React.createElement("div", {
+  }, t('aiRecommendation')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "36px",
       fontWeight: "bold",
@@ -8483,7 +8586,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontSize: "12px",
       color: "#94a3b8"
     }
-  }, "AI CONFIDENCE RATE")), /*#__PURE__*/React.createElement("div", {
+  }, t('aiConfidenceRate'))), /*#__PURE__*/React.createElement("div", {
     style: {
       width: "1px",
       height: "40px",
@@ -8500,7 +8603,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontSize: "12px",
       color: "#94a3b8"
     }
-  }, "GLOBAL RISK SHARE"))), /*#__PURE__*/React.createElement("div", {
+  }, t('globalRiskShare')))), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "14px",
       color: "#94a3b8",
@@ -8522,7 +8625,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#94a3b8",
       marginBottom: "4px"
     }
-  }, /*#__PURE__*/React.createElement("span", null, "Global Risk: %", result.recommendation?.globalRiskShare), /*#__PURE__*/React.createElement("span", null, "AI Confidence: %", result.recommendation?.confidenceRate)), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", null, t('globalRisk'), ": %", result.recommendation?.globalRiskShare), /*#__PURE__*/React.createElement("span", null, t('aiConfidence'), ": %", result.recommendation?.confidenceRate)), /*#__PURE__*/React.createElement("div", {
     style: {
       height: "8px",
       background: "#0f172a",
@@ -8550,7 +8653,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#94a3b8",
       marginBottom: "6px"
     }
-  }, "ALTERNATIVE CHOICE"), /*#__PURE__*/React.createElement("div", {
+  }, t('alternativeChoice')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "17px",
       fontWeight: "bold",
@@ -8576,7 +8679,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       letterSpacing: "0.08em",
       marginBottom: "12px"
     }
-  }, "SKOR SIRALAMASI"), [...(result.companyAnalysis || [])].sort((a, b) => b.totalScore - a.totalScore).map((f, i) => {
+  }, t('scoreRanking')), [...(result.companyAnalysis || [])].sort((a, b) => b.totalScore - a.totalScore).map((f, i) => {
     const co = companies.find(c => c.ticker === f.ticker) || {};
     return /*#__PURE__*/React.createElement("div", {
       key: f.ticker,
@@ -8646,14 +8749,14 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#f87171",
       letterSpacing: "0.06em"
     }
-  }, "FINAL DECISION BELONGS TO THE INVESTOR - NOT INVESTMENT ADVICE")), /*#__PURE__*/React.createElement("div", {
+  }, t('finalDecisionNotice'))), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: "8px 26px 12px",
       display: "grid",
       gridTemplateColumns: "1fr 1fr 1fr",
       gap: "4px 16px"
     }
-  }, ["This analysis is only an AI-based digital assessment.", "No recommendation replaces a final investment decision.", "A 5% global risk allowance is included in the calculations.", "All trading decisions are the investor’s responsibility.", "Past performance does not guarantee future returns.", "Consult a licensed financial advisor."].map((t, i) => /*#__PURE__*/React.createElement("div", {
+  }, [t('finalBullet1'), t('finalBullet2'), t('finalBullet3'), t('finalBullet4'), t('finalBullet5'), t('finalBullet6')].map((item, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       display: "flex",
@@ -8672,7 +8775,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#94a3b8",
       lineHeight: 1.5
     }
-  }, t)))))));
+  }, item)))))))));
 }
 
 // ── TOAST BILDIRIM ──
@@ -11787,6 +11890,7 @@ function CommodityHistoryModal({
   type,
   onClose
 }) {
+  const { t } = useLang();
   const histData = type === 'forex' ? FOREX_HISTORY[sym] || null : COMMODITY_HISTORY[sym] || null;
   if (!histData) return null;
   const stats = (() => {
@@ -11876,7 +11980,7 @@ function CommodityHistoryModal({
       color: "#94a3b8",
       marginTop: "2px"
     }
-  }, histData.startYear || histData.data[0].year, " \u2014 2026 \xB7 ", stats.years, " Year Historical Chart"))), /*#__PURE__*/React.createElement("div", {
+  }, histData.startYear || histData.data[0].year, " \u2014 2026 \xB7 ", stats.years, " ", t('yearHistoricalChart')))), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "13px",
       color: "#94a3b8",
@@ -11901,27 +12005,27 @@ function CommodityHistoryModal({
       borderBottom: "1px solid #0f172a"
     }
   }, [{
-    label: "STARTER",
+    label: t('starter'),
     val: fmtV(stats.first),
     sub: histData.data[0].year,
     color: "#94a3b8"
   }, {
-    label: "CURRENT",
+    label: t('current'),
     val: fmtV(stats.last),
     sub: "2026",
     color: histData.color
   }, {
-    label: "HISTORICAL HIGH",
+    label: t('historicalHigh'),
     val: fmtV(stats.max),
     sub: stats.maxY,
     color: "#34d399"
   }, {
-    label: "HISTORICAL LOW",
+    label: t('historicalLow'),
     val: fmtV(stats.min),
     sub: stats.minY,
     color: "#f87171"
   }, {
-    label: "TOTAL RETURN",
+    label: t('totalReturn'),
     val: `${stats.totalReturn > 0 ? "+" : ""}${stats.totalReturn}%`,
     sub: `${stats.years} yearda`,
     color: stats.totalReturn > 0 ? "#34d399" : "#f87171"
@@ -11975,7 +12079,7 @@ function CommodityHistoryModal({
       display: "flex",
       justifyContent: "space-between"
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\u25CF Historical data is for reference only and is not investment advice"), /*#__PURE__*/React.createElement("span", null, "\u25C8 Global Market Analytics \xB7 2026"))));
+  }, /*#__PURE__*/React.createElement("span", null, "\u25CF ", t('historicalDataNotice')), /*#__PURE__*/React.createElement("span", null, "\u25C8 Global Market Analytics \xB7 2026"))));
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -12356,6 +12460,7 @@ async function fetchFinnhubForex(codes) {
 
 
 function LiveMarketPanel() {
+  const { t } = useLang();
   const [mData, setMData] = useState({});
   const [eData, setEData] = useState({});
   const [fxData, setFxData] = useState({});
@@ -12725,7 +12830,7 @@ function LiveMarketPanel() {
       color: '#60a5fa',
       letterSpacing: '0.06em'
     }
-  }, "\uD83D\uDC8E LIVE COMMODITIES & FOREX")), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83D\uDC8E ", t('liveCommoditiesForex'))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: '5px'
@@ -12733,13 +12838,13 @@ function LiveMarketPanel() {
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => setTab('metals'),
     style: tabSty(tab === 'metals', '#fcd34d')
-  }, "\uD83E\uDD47 METALS"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83E\uDD47 ", t('metals')), /*#__PURE__*/React.createElement("button", {
     onClick: () => setTab('energy'),
     style: tabSty(tab === 'energy', '#f97316')
-  }, "\u26FD ENERGY"), /*#__PURE__*/React.createElement("button", {
+  }, "\u26FD ", t('energy')), /*#__PURE__*/React.createElement("button", {
     onClick: () => setTab('forex'),
     style: tabSty(tab === 'forex', '#60a5fa')
-  }, "\uD83D\uDCB1 FOREX")), /*#__PURE__*/React.createElement("div", {
+  }, "\uD83D\uDCB1 ", t('forex'))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginLeft: 'auto',
       display: 'flex',
@@ -12752,7 +12857,7 @@ function LiveMarketPanel() {
       color: '#94a3b8',
       animation: 'pulse 1.5s infinite'
     }
-  }, "\u27F3 Fetching data..."), status !== 'loading' && /*#__PURE__*/React.createElement("span", {
+  }, "\u27F3 ", t('fetchingData')), status !== 'loading' && /*#__PURE__*/React.createElement("span", {
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -12770,7 +12875,7 @@ function LiveMarketPanel() {
       animation: isLive ? 'pulse 2s infinite' : 'none',
       display: 'inline-block'
     }
-  }), isLive ? 'LIVE DATA' : 'SIMULATED'), updated && /*#__PURE__*/React.createElement("span", {
+  }), isLive ? t('liveDataStatus') : t('simulated')), updated && /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: '15px',
       color: '#1e293b',
@@ -12778,7 +12883,7 @@ function LiveMarketPanel() {
     }
   }, updated.toLocaleTimeString('tr-TR'), " \xB7 \u21BA", countdown, "s"), /*#__PURE__*/React.createElement("button", {
     onClick: fetchAll,
-    title: "Refresh",
+    title: t('refreshTitle'),
     style: {
       background: 'rgba(56,189,248,0.06)',
       border: '1px solid rgba(56,189,248,0.18)',
@@ -12790,7 +12895,7 @@ function LiveMarketPanel() {
       fontFamily: 'inherit',
       fontWeight: 'bold'
     }
-  }, "\u21BA REFRESH"), /*#__PURE__*/React.createElement("button", {
+  }, "\u21BA ", t('refresh')), /*#__PURE__*/React.createElement("button", {
     onClick: () => setCollapsed(c => !c),
     style: {
       background: 'transparent',
@@ -12842,7 +12947,7 @@ function LiveMarketPanel() {
       color: '#94a3b8',
       letterSpacing: '0.04em'
     }
-  }, tab === 'forex' ? '● Frankfurter API · ECB data · 1 USD = X units · Change versus previous day' : '● Finnhub API · Real-time · Live data'))), histModal && /*#__PURE__*/React.createElement(CommodityHistoryModal, {
+  }, "\u25CF ", tab === 'forex' ? t('forexSourceNote') : t('commoditySourceNote')))), histModal && /*#__PURE__*/React.createElement(CommodityHistoryModal, {
     sym: histModal.sym,
     type: histModal.type,
     onClose: () => setHistModal(null)
