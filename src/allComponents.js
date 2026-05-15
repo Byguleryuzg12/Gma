@@ -1657,6 +1657,20 @@ Object.assign(GMA_LEGAL_STATIC, {
     ]
   }
 });
+const GMA_AI_LAYER_I18N = {
+  en: { aiLayerAnalytic:'Analytic Layer', aiLayerStrategy:'Deep Strategy', aiLayerHistorical:'Historical Filter' },
+  tr: { aiLayerAnalytic:'Analitik Katman', aiLayerStrategy:'Derin Strateji', aiLayerHistorical:'Tarihsel Filtre' },
+  ru: { aiLayerAnalytic:'Analiticheskiy sloy', aiLayerStrategy:'Glubokaya strategiya', aiLayerHistorical:'Istoricheskiy filtr' },
+  ar: { aiLayerAnalytic:'الطبقة التحليلية', aiLayerStrategy:'الاستراتيجية العميقة', aiLayerHistorical:'المرشح التاريخي' },
+  zh: { aiLayerAnalytic:'分析层', aiLayerStrategy:'深度策略', aiLayerHistorical:'历史过滤' },
+  hi: { aiLayerAnalytic:'विश्लेषण परत', aiLayerStrategy:'गहन रणनीति', aiLayerHistorical:'ऐतिहासिक फ़िल्टर' },
+  de: { aiLayerAnalytic:'Analyseebene', aiLayerStrategy:'Tiefe Strategie', aiLayerHistorical:'Historischer Filter' },
+  es: { aiLayerAnalytic:'Capa analítica', aiLayerStrategy:'Estrategia profunda', aiLayerHistorical:'Filtro histórico' }
+};
+Object.entries(GMA_AI_LAYER_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
+
 Object.keys(T).forEach(code => {
   Object.keys(T.en).forEach(key => {
     if (!T[code][key]) T[code][key] = T.en[key];
@@ -14688,7 +14702,7 @@ function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
       });
     } catch(e){setErrMsg('Paddle init failed: '+e.message);setStep('error');}
   }
-  var badges = ['\uD83D\uDD12 256-bit SSL','\u2713 Paddle Secured','\u2713 PCI DSS'];
+  var badges = ['\uD83D\uDD12 256-bit SSL','\u2713 ' + t('paddleSecured'),'\u2713 PCI DSS'];
   return React.createElement("div",{onClick:onClose,style:{position:'fixed',inset:0,background:'rgba(0,0,0,0.88)',zIndex:9900,display:'flex',alignItems:'center',justifyContent:'center',padding:'16px'}},
     React.createElement("div",{onClick:function(e){e.stopPropagation()},style:{background:'linear-gradient(145deg,#0a1220,#060912)',border:'1px solid '+planColor+'44',borderRadius:'20px',width:'100%',maxWidth:'440px',fontFamily:"'Courier New',monospace",overflow:'hidden'}},
       React.createElement("div",{style:{padding:'20px 24px 16px',borderBottom:'1px solid #1e293b',display:'flex',justifyContent:'space-between',alignItems:'center'}},
@@ -15127,13 +15141,13 @@ function PricingPage({
       marginBottom: '16px'
     }
   }, [
-{name:'Anthropic', layer:'Analytic Layer',  color:'#d97757',
+{name:'Anthropic', layer:t('aiLayerAnalytic'),  color:'#d97757',
       logoEl:/*#__PURE__*/React.createElement('svg',{xmlns:'http://www.w3.org/2000/svg',viewBox:'0 0 256 176',width:'28',height:'20'},
         /*#__PURE__*/React.createElement('path',{fill:'#d97757',d:'M147.46 0h43.47l79.07 176h-43.47zM65.54 0h43.47L28.94 176H-14.53zm50.41 110.91l-26.6-66.63-26.6 66.63z'}))},
-    {name:'OpenAI',    layer:'Deep Strategy',   color:'#10a37f',
+    {name:'OpenAI',    layer:t('aiLayerStrategy'),   color:'#10a37f',
       logoEl:/*#__PURE__*/React.createElement('svg',{xmlns:'http://www.w3.org/2000/svg',viewBox:'0 0 32 32',width:'24',height:'24'},
         /*#__PURE__*/React.createElement('path',{fill:'#10a37f',d:'M29.71 13.09A8.09 8.09 0 0 0 21.04 3.95a8.18 8.18 0 0 0-6.93.5 8.09 8.09 0 0 0-7.65 1.08 8.09 8.09 0 0 0-3.27 7.77 8.09 8.09 0 0 0 2.82 13.36 8.18 8.18 0 0 0 .82 6.91 8.09 8.09 0 0 0 8.67 3.87 8.09 8.09 0 0 0 6.09 2.72 8.09 8.09 0 0 0 7.71-5.6 8.09 8.09 0 0 0 5.41-3.92 8.09 8.09 0 0 0-1-9.55zM16.62 28.91a6 6 0 0 1-3.85-1.39l.19-.11 6.39-3.69a1 1 0 0 0 .52-.91v-9l2.7 1.56a.1.1 0 0 1 .05.07v7.46a6 6 0 0 1-6 6zM3.72 23.4a6 6 0 0 1-.72-4l.19.11 6.39 3.69a1 1 0 0 0 1 0l7.8-4.5v3.11a.09.09 0 0 1 0 .08L11.92 26a6 6 0 0 1-8.2-2.6zm-1.68-14a6 6 0 0 1 3.14-2.64v7.6a1 1 0 0 0 .52.91l7.75 4.47-2.7 1.56a.1.1 0 0 1-.09 0l-6.46-3.73a6 6 0 0 1-2.16-8.17zM26 11.85l-7.8-4.5 2.7-1.55a.1.1 0 0 1 .09 0l6.46 3.73a6 6 0 0 1-.9 10.81v-7.6a1.05 1.05 0 0 0-.55-.89zm2.69-4l-.19-.12-6.37-3.71a1 1 0 0 0-1.05 0l-7.79 4.5V5.4a.08.08 0 0 1 0-.08L19.81 2a6 6 0 0 1 8.9 6.21zm-16.88 5.51-2.7-1.55a.1.1 0 0 1 0-.09V4.36a6 6 0 0 1 9.84-4.61l-.19.11-6.39 3.69a1 1 0 0 0-.52.91zm1.47-3.17 3.47-2 3.47 2v4l-3.47 2-3.47-2z'}))},
-    {name:'Gemini',    layer:'Historical Filter', color:'#4285f4',
+    {name:'Gemini',    layer:t('aiLayerHistorical'), color:'#4285f4',
       logoEl:/*#__PURE__*/React.createElement('svg',{xmlns:'http://www.w3.org/2000/svg',viewBox:'0 0 24 24',width:'24',height:'24'},
         /*#__PURE__*/React.createElement('defs',null,
           /*#__PURE__*/React.createElement('linearGradient',{id:'gem-grad',x1:'0%',y1:'0%',x2:'100%',y2:'100%'},
@@ -15222,7 +15236,7 @@ function HomePage({
     label: t('sectorsLabel'),
     icon: "\uD83D\uDCCA"
   }, {
-    val: "Real-Time",
+    val: t('realTimeLabel'),
     label: t('liveDataLabel'),
     icon: "\u26A1"
   }, {
