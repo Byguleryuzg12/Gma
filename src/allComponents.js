@@ -2,17 +2,17 @@
 
 
 // ═══════════════════════════════════════════════════════
-// ──  LANGUAGE SELECTOR (80 Languages) ──
+// ──  LANGUAGE SELECTOR (8 Languages) ──
 // ═══════════════════════════════════════════════════════
 const LANGS = [
-  {c:'en', n:'English', f:'EN'},
-  {c:'tr', n:'Turkce / Turkish', f:'TR'},
-  {c:'ru', n:'Russkiy / Russian', f:'RU'},
-  {c:'ar', n:'Arabic', f:'AR', r:1},
-  {c:'zh', n:'Chinese', f:'ZH'},
-  {c:'hi', n:'Hindi', f:'HI'},
-  {c:'de', n:'Deutsch', f:'DE'},
-  {c:'es', n:'Espanol / Spanish', f:'ES'}
+  {c:'en', n:'English', f:'🇺🇸'},
+  {c:'tr', n:'Turkce', f:'🇹🇷'},
+  {c:'ru', n:'Русский', f:'🇷🇺'},
+  {c:'ar', n:'العربية', f:'🇸🇦', r:1},
+  {c:'zh', n:'简体中文', f:'🇨🇳'},
+  {c:'hi', n:'हिन्दी', f:'🇮🇳'},
+  {c:'de', n:'Deutsch', f:'🇩🇪'},
+  {c:'es', n:'Español', f:'🇪🇸'}
 ];
 
 // ── Platform API Key (Admin tarafindan set edilir, usersdan istenmez) ──
@@ -1250,7 +1250,7 @@ function LangSelector() {
         letterSpacing: "0.08em",
         borderBottom: "1px solid #1e293b"
       }
-    }, "\u2726 FULL TRANSLATION (8 languages)"), sup.map(renderBtn));
+    }, "\u2726 GMA LANGUAGES (8)"), sup.map(renderBtn));
   })()));
 }
 
