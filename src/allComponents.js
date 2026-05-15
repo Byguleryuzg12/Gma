@@ -1216,6 +1216,59 @@ const GMA_PRICING_LEGAL_FIXES = {
 Object.entries(GMA_PRICING_LEGAL_FIXES).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
+const GMA_PLAN_I18N_FIXES = {
+  en: {
+    planFreeLabel:"Free Trial", planExplorerLabel:"Explorer", planStrategistLabel:"Strategist", planProArchitectLabel:"Pro-Architect",
+    planFreeBadge:"3 ANALYSES", planExplorerBadge:"STARTER", planStrategistBadge:"MOST POPULAR", planProArchitectBadge:"SOVEREIGN",
+    planFreeScope:"1 Sector", planExplorerScope:"1 Sector · 10 Analyses", planStrategistScope:"Unlimited · All Sectors", planProArchitectScope:"Global + Signal DNA · 126 Years",
+    planFreeStats:"3 credits · 3 analyses", planExplorerStats:"10 credits · 10 analyses", planStrategistStats:"Unlimited credits · all sectors", planProArchitectStats:"Global access · 126 years", periodMonth:"/mo", accessActivated:"Access Activated"
+  },
+  tr: {
+    planFreeLabel:"Ücretsiz Deneme", planExplorerLabel:"Kaşif", planStrategistLabel:"Stratejist", planProArchitectLabel:"Pro-Mimar",
+    planFreeBadge:"3 ANALİZ", planExplorerBadge:"BAŞLANGIÇ", planStrategistBadge:"EN POPÜLER", planProArchitectBadge:"BAĞIMSIZ",
+    planFreeScope:"1 Sektör", planExplorerScope:"1 Sektör · 10 Analiz", planStrategistScope:"Sınırsız · Tüm Sektörler", planProArchitectScope:"Küresel + Sinyal DNA · 126 Yıl",
+    planFreeStats:"3 kredi · 3 analiz", planExplorerStats:"10 kredi · 10 analiz", planStrategistStats:"Sınırsız kredi · tüm sektörler", planProArchitectStats:"Küresel erişim · 126 yıl", periodMonth:"/ay", accessActivated:"Erişim Aktif"
+  },
+  ru: {
+    planFreeLabel:"Бесплатный пробный доступ", planExplorerLabel:"Исследователь", planStrategistLabel:"Стратег", planProArchitectLabel:"Про-архитектор",
+    planFreeBadge:"3 АНАЛИЗА", planExplorerBadge:"СТАРТ", planStrategistBadge:"САМЫЙ ПОПУЛЯРНЫЙ", planProArchitectBadge:"СУВЕРЕННЫЙ",
+    planFreeScope:"1 сектор", planExplorerScope:"1 сектор · 10 анализов", planStrategistScope:"Без лимита · все секторы", planProArchitectScope:"Глобально + Signal DNA · 126 лет",
+    planFreeStats:"3 кредита · 3 анализа", planExplorerStats:"10 кредитов · 10 анализов", planStrategistStats:"Безлимитные кредиты · все секторы", planProArchitectStats:"Глобальный доступ · 126 лет", periodMonth:"/мес", accessActivated:"Доступ активирован"
+  },
+  ar: {
+    planFreeLabel:"تجربة مجانية", planExplorerLabel:"المستكشف", planStrategistLabel:"الاستراتيجي", planProArchitectLabel:"المهندس المحترف",
+    planFreeBadge:"3 تحليلات", planExplorerBadge:"البداية", planStrategistBadge:"الأكثر شيوعاً", planProArchitectBadge:"سيادي",
+    planFreeScope:"قطاع واحد", planExplorerScope:"قطاع واحد · 10 تحليلات", planStrategistScope:"غير محدود · كل القطاعات", planProArchitectScope:"عالمي + Signal DNA · 126 سنة",
+    planFreeStats:"3 أرصدة · 3 تحليلات", planExplorerStats:"10 أرصدة · 10 تحليلات", planStrategistStats:"أرصدة غير محدودة · كل القطاعات", planProArchitectStats:"وصول عالمي · 126 سنة", periodMonth:"/شهر", accessActivated:"تم تفعيل الوصول"
+  },
+  zh: {
+    planFreeLabel:"免费试用", planExplorerLabel:"探索者", planStrategistLabel:"策略师", planProArchitectLabel:"专业架构师",
+    planFreeBadge:"3 次分析", planExplorerBadge:"入门", planStrategistBadge:"最受欢迎", planProArchitectBadge:"主权级",
+    planFreeScope:"1 个行业", planExplorerScope:"1 个行业 · 10 次分析", planStrategistScope:"不限次数 · 全部行业", planProArchitectScope:"全球 + Signal DNA · 126 年",
+    planFreeStats:"3 个额度 · 3 次分析", planExplorerStats:"10 个额度 · 10 次分析", planStrategistStats:"不限额度 · 全部行业", planProArchitectStats:"全球访问 · 126 年", periodMonth:"/月", accessActivated:"访问已激活"
+  },
+  hi: {
+    planFreeLabel:"मुफ्त परीक्षण", planExplorerLabel:"एक्सप्लोरर", planStrategistLabel:"रणनीतिकार", planProArchitectLabel:"प्रो-आर्किटेक्ट",
+    planFreeBadge:"3 विश्लेषण", planExplorerBadge:"आरंभिक", planStrategistBadge:"सबसे लोकप्रिय", planProArchitectBadge:"स्वायत्त",
+    planFreeScope:"1 सेक्टर", planExplorerScope:"1 सेक्टर · 10 विश्लेषण", planStrategistScope:"असीमित · सभी सेक्टर", planProArchitectScope:"वैश्विक + Signal DNA · 126 वर्ष",
+    planFreeStats:"3 क्रेडिट · 3 विश्लेषण", planExplorerStats:"10 क्रेडिट · 10 विश्लेषण", planStrategistStats:"असीमित क्रेडिट · सभी सेक्टर", planProArchitectStats:"वैश्विक एक्सेस · 126 वर्ष", periodMonth:"/माह", accessActivated:"एक्सेस सक्रिय"
+  },
+  de: {
+    planFreeLabel:"Kostenlose Testversion", planExplorerLabel:"Explorer", planStrategistLabel:"Stratege", planProArchitectLabel:"Pro-Architekt",
+    planFreeBadge:"3 ANALYSEN", planExplorerBadge:"START", planStrategistBadge:"BELIEBT", planProArchitectBadge:"SOUVERÄN",
+    planFreeScope:"1 Sektor", planExplorerScope:"1 Sektor · 10 Analysen", planStrategistScope:"Unbegrenzt · alle Sektoren", planProArchitectScope:"Global + Signal DNA · 126 Jahre",
+    planFreeStats:"3 Credits · 3 Analysen", planExplorerStats:"10 Credits · 10 Analysen", planStrategistStats:"Unbegrenzte Credits · alle Sektoren", planProArchitectStats:"Globaler Zugriff · 126 Jahre", periodMonth:"/Monat", accessActivated:"Zugriff aktiviert"
+  },
+  es: {
+    planFreeLabel:"Prueba gratis", planExplorerLabel:"Explorador", planStrategistLabel:"Estratega", planProArchitectLabel:"Pro-arquitecto",
+    planFreeBadge:"3 ANÁLISIS", planExplorerBadge:"INICIAL", planStrategistBadge:"MÁS POPULAR", planProArchitectBadge:"SOBERANO",
+    planFreeScope:"1 sector", planExplorerScope:"1 sector · 10 análisis", planStrategistScope:"Ilimitado · todos los sectores", planProArchitectScope:"Global + Signal DNA · 126 años",
+    planFreeStats:"3 créditos · 3 análisis", planExplorerStats:"10 créditos · 10 análisis", planStrategistStats:"Créditos ilimitados · todos los sectores", planProArchitectStats:"Acceso global · 126 años", periodMonth:"/mes", accessActivated:"Acceso activado"
+  }
+};
+Object.entries(GMA_PLAN_I18N_FIXES).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
 const GMA_PAGE_I18N_FIXES = {
   tr: {
     home:"ANA SAYFA", markets:"PİYASALAR", about:"HAKKINDA", contact:"İLETİŞİM", privacy:"GİZLİLİK", pricing:"FİYATLAR", login:"GİRİŞ YAP", register:"KAYIT OL", logout:"ÇIKIŞ YAP",
@@ -14553,26 +14606,35 @@ React.createElement("div",{style:S.section},"ANTHROPIC API"),
 // ══════════════════════════════════════════════════════
 const GMA_PLANS = {
   free: {
-    id: 'free', label: 'Free Trial', price: 0, period: '',
+    id: 'free', label: 'Free Trial', labelKey: 'planFreeLabel', price: 0, period: '',
     credits: 3, color: '#64748b', multiAI: false,
-    badge: '3 ANALYSES', scope: '1 Sector'
+    badge: '3 ANALYSES', badgeKey: 'planFreeBadge', scope: '1 Sector', scopeKey: 'planFreeScope', statsKey: 'planFreeStats'
   },
   explorer: {
-    id: 'explorer', label: 'Explorer', price: 19.99, period: '/ay',
+    id: 'explorer', label: 'Explorer', labelKey: 'planExplorerLabel', price: 19.99, period: '/ay', periodKey: 'periodMonth',
     credits: 10, color: '#38bdf8', multiAI: true,
-    badge: 'STARTER', scope: '1 Sector · 10 Analiz'
+    badge: 'STARTER', badgeKey: 'planExplorerBadge', scope: '1 Sector · 10 Analiz', scopeKey: 'planExplorerScope', statsKey: 'planExplorerStats'
   },
   strategist: {
-    id: 'strategist', label: 'Strategist', price: 49.99, period: '/ay',
+    id: 'strategist', label: 'Strategist', labelKey: 'planStrategistLabel', price: 49.99, period: '/ay', periodKey: 'periodMonth',
     credits: 999, color: '#a78bfa', multiAI: true,
-    badge: 'MOST POPULAR', scope: 'Unlimited · All Sectors'
+    badge: 'MOST POPULAR', badgeKey: 'planStrategistBadge', scope: 'Unlimited · All Sectors', scopeKey: 'planStrategistScope', statsKey: 'planStrategistStats'
   },
   pro_architect: {
-    id: 'pro_architect', label: 'Pro-Architect', price: 99.99, period: '/ay',
+    id: 'pro_architect', label: 'Pro-Architect', labelKey: 'planProArchitectLabel', price: 99.99, period: '/ay', periodKey: 'periodMonth',
     credits: 999, color: '#f59e0b', multiAI: true,
-    badge: 'SOVEREIGN', scope: 'Global + Signal DNA · 126 Years'
+    badge: 'SOVEREIGN', badgeKey: 'planProArchitectBadge', scope: 'Global + Signal DNA · 126 Years', scopeKey: 'planProArchitectScope', statsKey: 'planProArchitectStats'
   }
 };
+function getPlanText(t, plan, part) {
+  if (!plan) return '';
+  const key = plan[part + 'Key'];
+  return key ? t(key) : (plan[part] || '');
+}
+function getPlanPeriod(t, plan) {
+  if (!plan) return '';
+  return plan.periodKey ? t(plan.periodKey) : (plan.period || '');
+}
 const PADDLE_LINKS = {
   explorer:     GMA_CONFIG.paddle?.explorer     || localStorage.getItem('gma_paddle_explorer')     || 'https://buy.paddle.com/GMA_EXPLORER',
   strategist:   GMA_CONFIG.paddle?.strategist   || localStorage.getItem('gma_paddle_strategist')   || 'https://buy.paddle.com/GMA_STRATEGIST',
@@ -14633,8 +14695,8 @@ function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
         React.createElement("div",null,
           React.createElement("div",{style:{fontSize:'11px',color:planColor,letterSpacing:'0.1em',marginBottom:'4px'}},"\uD83D\uDCB3 ", t('secureCheckoutViaPaddle')),
           React.createElement("div",{style:{fontSize:'16px',fontWeight:'bold',color:'#f1f5f9'}},
-            plan&&plan.label," ", t('plan'), " \u2014 $",plan&&plan.price,
-            React.createElement("span",{style:{fontSize:'12px',color:'#64748b'}},plan&&plan.period)
+            getPlanText(t, plan, 'label'), " ", t('plan'), " \u2014 $",plan&&plan.price,
+            React.createElement("span",{style:{fontSize:'12px',color:'#64748b'}},getPlanPeriod(t, plan))
           )
         ),
         React.createElement("button",{onClick:onClose,style:{background:'transparent',border:'none',color:'#64748b',fontSize:'18px',cursor:'pointer',padding:'4px'}},"\u2715")
@@ -14662,9 +14724,9 @@ function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
         ),
         step==='success'&&React.createElement("div",{style:{textAlign:'center',padding:'30px 0'}},
           React.createElement("div",{style:{fontSize:'48px',marginBottom:'14px'}},"\uD83C\uDF89"),
-          React.createElement("div",{style:{fontSize:'15px',fontWeight:'bold',color:'#34d399',marginBottom:'8px'}},"Access Activated"),
+          React.createElement("div",{style:{fontSize:'15px',fontWeight:'bold',color:'#34d399',marginBottom:'8px'}},t('accessActivated')),
           React.createElement("div",{style:{fontSize:'12px',color:'#64748b',lineHeight:1.7,marginBottom:'20px'}},
-            plan&&plan.label," ", t('planActivatedShort'), " ", plan&&plan.credits," ", t('creditsAdded')),
+            getPlanText(t, plan, 'label'), " ", t('planActivatedShort'), " ", plan&&plan.credits," ", t('creditsAdded')),
           React.createElement("button",{onClick:function(){onSuccess&&onSuccess(plan.id);onClose()},style:{padding:'12px 28px',background:'linear-gradient(135deg,#059669,#10b981)',border:'none',borderRadius:'10px',color:'#fff',cursor:'pointer',fontSize:'13px',fontFamily:'inherit',fontWeight:'bold'}},
             "\u25C8 ", t('goToMarkets'), " \u2192")
         )
@@ -14777,7 +14839,7 @@ function PricingPage({
         marginBottom: '20px',
         lineHeight: 1.2
       }
-    }, plan?.label, " ", t('planActivated')), /*#__PURE__*/React.createElement("div", {
+    }, getPlanText(t, plan, 'label'), " ", t('planActivated')), /*#__PURE__*/React.createElement("div", {
       style: {
         background: 'rgba(52,211,153,0.06)',
         border: '1px solid rgba(52,211,153,0.25)',
