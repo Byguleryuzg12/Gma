@@ -967,6 +967,50 @@ const GMA_DEEP_I18N = {
 Object.entries(GMA_DEEP_I18N).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
+const GMA_CONTENT_I18N = {
+  en: {
+    platform: "PLATFORM", planActivated: "Plan Activated!", payKeyLinkedNote: "This key is linked to your account. Do not share it with anyone.", sovereignAutoNote: "GMA Sovereign Intelligence · All models are managed automatically. You do not need anything else.", footerBrandLine: "Global Market Analytics · 2026 · Sovereign Intelligence", footerCompliance: "Global Market Analytics (GMA) is a digital platform providing AI-driven market data visualization. GMA is not a registered investment advisor. All payments are securely processed by our partner, Paddle.com.", addToPortfolio: "ADD TO PORTFOLIO", currentPrice: "CURRENT PRICE", exchange: "EXCHANGE", quantity: "QUANTITY", unitPrice: "Unit Price", totalLabel: "TOTAL", simulatedTransaction: "This is a simulated transaction - no real purchase is made"
+  },
+  tr: {
+    feat1t: "Canli Piyasa Akisi", feat1d: "600+ sirket, kripto, emtia ve para birimini gercek zamanli takip edin", feat2t: "GMA Triumvirate Analizi", feat2d: "GMA Consensus Engine uzerinden kurumsal sinyal uyumunu inceleyin", feat3t: "Tarihsel Grafikler", feat3d: "Kurulus yilindan itibaren tarihsel grafikler, kriz analizi ve uzun vadeli trendler", feat4t: "Sirket Karsilastirma", feat4d: "5 sirkete kadar AI destekli karsilastirma ve daha net risk cercevesi", feat5t: "Akilli Uyarilar", feat5d: "Fiyat hedefi uyarilari kurun; yukselis ve dususlerde aninda bildirim alin", feat6t: "8 Dil", feat6d: "Ingilizce, Turkce, Rusca, Arapca, Cince, Hintce, Almanca ve Ispanyolca deneyimi",
+    contactSub: "Her soru ve geri bildiriminiz icin buradayiz.", contactInfo: "Iletisim Bilgileri", formName: "AD SOYAD", formEmail: "E-POSTA", formSubject: "KONU", formMsg: "MESAJ", formSend: "GONDER", formSending: "GONDERILIYOR...", formSent: "Mesajiniz gonderildi!", subjectPlaceholder: "Konu", messagePlaceholder: "Mesajiniz...", namePlaceholder: "Adiniz",
+    aboutTitle: "Global Market Analytics Hakkinda", aboutSub: "Kuresel piyasalarda yapilandirilmis analiz, netlik ve karar destegi sunan finansal zeka platformu.", aboutMission: "Misyonumuz", aboutMissionText: "Yatirim tavsiyesi sinirina gecmeden, yapilandirilmis analizle belirsizligi azaltan finansal karar altyapisi kurmak.", aboutVision: "Vizyonumuz", aboutVisionText: "Daha net anlayisin, daha dusuk belirsizligin ve daha guclu karar disiplininin kuresel piyasalarda erisilebilir oldugu bir dunya.", aboutCardPlatformT: "Platform", aboutCardPlatformB: "Global Market Analytics; 600+ kuresel kurulusun hisse verisini, IPO durumunu ve piyasa metriklerini tek arayuzde sunmak icin tasarlanmis finansal bilgi platformudur.", aboutCardAIT: "AI Entegrasyonu", aboutCardAIB: "GMA Consensus Engine tarafindan desteklenen platform; yapilandirilmis sirket analizi, risk cercevesi ve stratejik gorunum sunar. Tum ciktilar yalnizca bilgilendirme amaclidir ve yatirim tavsiyesi degildir.", aboutCardDataT: "Tarihsel Veri", aboutCardDataB: "Altin icin 1900'den, baslica para birimleri icin 1930'dan ve diger emtialar icin kayitli en erken tarihlerden 2026'ya uzanan tarihsel grafik endeksleri.", aboutCardSourcesT: "Veri Kaynaklari", aboutCardSourcesB: "Canli veriler Finnhub API ile saglanir. Forex oranlari open.er-api.com kaynaklidir. Harici proxy kullanilmaz.", aboutCardPrivacyT: "Gizlilik", aboutCardPrivacyB: "Kullanici verileri harici sunuculara gonderilmez. Tercihler, API anahtarlari ve portfoy bilgileri yalnizca tarayicinizin localStorage alaninda saklanir.",
+    pricingSub: "GMA Consensus Engine'e kurumsal seviyede tek abonelikle erisin.", aiPartners: "Entegre AI Is Ortaklari", pricingNote: "Tek abonelik GMA Consensus Engine'i acar. GPT, Claude ve Gemini destekleyici motorlar olarak calisir; analitik katman GMA'da kalir.", paySuccess: "Erisim Aktif", payKey: "Platform Erisim Anahtariniz", payKeyNote: "Bu anahtar hesabiniza baglidir. Kimseyle paylasmayin.", payContinue: "Piyasalara Git →", planActivated: "Plan Aktif!", payKeyLinkedNote: "Bu anahtar hesabiniza baglidir. Kimseyle paylasmayin.", sovereignAutoNote: "GMA Sovereign Intelligence · Tum modeller otomatik yonetilir. Baska bir seye ihtiyaciniz yok.", footerBrandLine: "Global Market Analytics · 2026 · Bagimsiz Zeka", footerCompliance: "Global Market Analytics (GMA), AI destekli piyasa verisi gorsellestirmesi sunan dijital bir platformdur. GMA kayitli bir yatirim danismani degildir. Tum odemeler is ortagimiz Paddle.com tarafindan guvenli sekilde islenir.", platform: "PLATFORM", addToPortfolio: "PORTFOYE EKLE", currentPrice: "GUNCEL FIYAT", exchange: "BORSA", quantity: "ADET", unitPrice: "Birim Fiyat", totalLabel: "TOPLAM", simulatedTransaction: "Bu simule edilmis bir islemdir - gercek alim yapilmaz"
+  },
+  ru: {
+    feat1t: "Zhivaya lenta rynka", feat1d: "Otslezhivayte 600+ kompaniy, kripto, syre i valyuty v realnom vremeni", feat2t: "Analiz GMA Triumvirate", feat2d: "Proveryayte institucionalnoe soglasovanie signalov v GMA Consensus Engine", feat3t: "Istoricheskie grafiki", feat3d: "Grafiki s goda osnovaniya, analiz krizisov i dolgorochnye trendy", feat4t: "Sravnenie kompaniy", feat4d: "Sravnivayte do 5 kompaniy s AI i bolee yasnoy risk-ramkoy", feat5t: "Umnye uvedomleniya", feat5d: "Nastroyte cenovye opoveshcheniya i poluchayte mgnovennye signaly o roste i padenii", feat6t: "8 yazykov", feat6d: "Interfeys na angliyskom, turetskom, russkom, arabskom, kitayskom, hindi, nemetskom i ispanskom",
+    contactSub: "My na svyazi po lyubym voprosam i otzyvam.", contactInfo: "Kontaktnaya informatsiya", formName: "POLNOE IMYA", formEmail: "EMAIL", formSubject: "TEMA", formMsg: "SOOBSHCHENIE", formSend: "OTPRAVIT", formSending: "OTPRAVKA...", formSent: "Soobshchenie otpravleno!", subjectPlaceholder: "Tema", messagePlaceholder: "Vashe soobshchenie...", namePlaceholder: "Vashe imya",
+    aboutTitle: "O Global Market Analytics", aboutSub: "Platforma finansovoy analitiki dlya strukturirovannogo analiza, yasnosti i podderzhki resheniy na globalnyh rynkah.", aboutMission: "Nasha missiya", aboutMissionText: "Sozdavat infrastrukturu finansovyh resheniy, kotoraya snizhaet neopredelennost cherez strukturirovannyy analiz bez investitsionnyh rekomendatsiy.", aboutVision: "Nashe videnie", aboutVisionText: "Mir, gde bolee yasnoe ponimanie, nizkaya neopredelennost i disciplina resheniy dostupny na globalnyh rynkah.", aboutCardPlatformT: "Platforma", aboutCardPlatformB: "Global Market Analytics obedinyaet dannye aktsiy, IPO-status i rynochnye metriki 600+ globalnyh organizatsiy v odnom interfeyse.", aboutCardAIT: "AI-integratsiya", aboutCardAIB: "Na baze GMA Consensus Engine platforma daet strukturirovannyy analiz kompaniy, risk-ramku i strategicheskiy prognoz. Vse vyvody tolko informatsionnye.", aboutCardDataT: "Istoricheskie dannye", aboutCardDataB: "Istoricheskie indeksy: zoloto s 1900 goda, osnovnye valyuty s 1930 goda, drugie tovary s samyh rannih dostupnyh dat do 2026.", aboutCardSourcesT: "Istochniki dannyh", aboutCardSourcesB: "Zhivye dannye postavlyaet Finnhub API. Forex kursy berutsya iz open.er-api.com. Vneshnie proxy ne ispolzuyutsya.", aboutCardPrivacyT: "Konfidentsialnost", aboutCardPrivacyB: "Danye polzovatelya ne otpravlyayutsya na vneshnie servery. Predpochteniya, API-klyuchi i portfel hranyatsya tolko v localStorage brauzera.",
+    pricingSub: "Dostup k GMA Consensus Engine po odnoy podpiske institucionalnogo urovnya.", aiPartners: "Integrirovannye AI-partnery", pricingNote: "Odnaya podpiska otkryvaet GMA Consensus Engine. GPT, Claude i Gemini rabotayut kak podderzhivayushchie dvizhki; GMA ostaetsya analiticheskim sloem.", paySuccess: "Dostup aktivirovan", payKey: "Vash klyuch dostupa", payKeyNote: "Etot klyuch privyazan k vashemu akkauntu. Ne peredavayte ego.", payContinue: "K rynkam →", planActivated: "Plan aktivirovan!", payKeyLinkedNote: "Etot klyuch privyazan k vashemu akkauntu. Ne peredavayte ego.", sovereignAutoNote: "GMA Sovereign Intelligence · Vse modeli upravlyayutsya avtomaticheski. Bolshe nichego ne nuzhno.", footerBrandLine: "Global Market Analytics · 2026 · Suverennaya analitika", footerCompliance: "Global Market Analytics (GMA) — tsifrovaya platforma dlya AI-vizualizatsii rynochnyh dannyh. GMA ne yavlyaetsya zaregistrirovannym investitsionnym konsultantom. Vse platezhi bezopasno obrabatyvayutsya partnerom Paddle.com.", platform: "PLATFORMA", addToPortfolio: "DOBAVIT V PORTFEL", currentPrice: "TEKUSHCHAYA TSENA", exchange: "BIRZHA", quantity: "KOLICHESTVO", unitPrice: "Tsena za edinitsu", totalLabel: "ITOGO", simulatedTransaction: "Eto simulirovannaya operatsiya - realnaya pokupka ne vypolnyaetsya"
+  },
+  ar: {
+    feat3t: "الرسوم التاريخية", feat3d: "رسوم من سنة التأسيس وتحليل الأزمات والاتجاهات طويلة الأجل", feat4t: "مقارنة الشركات", feat4d: "قارن حتى 5 شركات بمساعدة AI مع إطار مخاطر أوضح", feat5t: "تنبيهات ذكية", feat5d: "اضبط تنبيهات أهداف الأسعار واحصل على إشعارات فورية عند الصعود والهبوط", feat6t: "8 لغات", feat6d: "تجربة بالإنجليزية والتركية والروسية والعربية والصينية والهندية والألمانية والإسبانية",
+    contactSub: "نحن هنا لأي أسئلة أو ملاحظات.", contactInfo: "معلومات الاتصال", formName: "الاسم الكامل", formEmail: "البريد الإلكتروني", formSubject: "الموضوع", formMsg: "الرسالة", formSend: "إرسال", formSending: "جار الإرسال...", formSent: "تم إرسال رسالتك!", aboutTitle: "حول Global Market Analytics", aboutSub: "منصة ذكاء مالي تقدم تحليلاً منظماً ووضوحاً ودعماً للقرارات عبر الأسواق العالمية.", aboutMission: "مهمتنا", aboutMissionText: "بناء بنية تحتية للقرارات المالية تقلل عدم اليقين من خلال التحليل المنظم دون تقديم نصيحة استثمارية.", aboutVision: "رؤيتنا", aboutVisionText: "عالم تصبح فيه الرؤية الأوضح والانضباط الأقوى في القرار متاحين عبر الأسواق العالمية.", aboutCardPlatformT: "المنصة", aboutCardPlatformB: "Global Market Analytics منصة معلومات مالية تعرض بيانات الأسهم وحالة IPO ومؤشرات السوق لأكثر من 600 مؤسسة عالمية في واجهة واحدة.", aboutCardAIT: "تكامل AI", aboutCardAIB: "بدعم من GMA Consensus Engine تقدم المنصة تحليلاً منظماً للشركات وإطاراً للمخاطر ونظرة استراتيجية. كل المخرجات معلوماتية فقط.", aboutCardDataT: "البيانات التاريخية", aboutCardDataB: "مؤشرات رسوم تاريخية للذهب من 1900، وللعملات الرئيسية من 1930، وللسلع الأخرى من أقدم التواريخ المسجلة حتى 2026.", aboutCardSourcesT: "مصادر البيانات", aboutCardSourcesB: "توفر Finnhub API البيانات الحية. أسعار الفوركس من open.er-api.com. لا تستخدم بروكسيات خارجية.", aboutCardPrivacyT: "الخصوصية", aboutCardPrivacyB: "لا تُرسل بيانات المستخدم إلى خوادم خارجية. تحفظ التفضيلات ومفاتيح API ومعلومات المحفظة في localStorage داخل المتصفح فقط.", footerDesc: "منصة ذكاء مالي صممت لتقديم وضوح عبر الأسواق العالمية.", pricingSub: "الوصول إلى GMA Consensus Engine عبر اشتراك مؤسسي واحد.", payContinue: "اذهب إلى الأسواق →", planActivated: "تم تفعيل الخطة!", payKeyLinkedNote: "هذا المفتاح مرتبط بحسابك. لا تشاركه مع أحد.", sovereignAutoNote: "GMA Sovereign Intelligence · تتم إدارة جميع النماذج تلقائياً. لا تحتاج إلى أي شيء آخر.", footerBrandLine: "Global Market Analytics · 2026 · ذكاء مستقل", footerCompliance: "Global Market Analytics (GMA) منصة رقمية تعرض بيانات السوق المدعومة بالذكاء الاصطناعي. GMA ليست مستشاراً استثمارياً مسجلاً. تتم معالجة جميع المدفوعات بأمان عبر شريكنا Paddle.com.", platform: "المنصة", addToPortfolio: "أضف إلى المحفظة", currentPrice: "السعر الحالي", exchange: "البورصة", quantity: "الكمية", unitPrice: "سعر الوحدة", totalLabel: "الإجمالي", simulatedTransaction: "هذه عملية محاكاة - لا يتم شراء حقيقي"
+  },
+  zh: {
+    feat3t: "历史图表", feat3d: "从成立年份开始的历史图表、危机分析和长期趋势", feat4t: "公司比较", feat4d: "最多比较 5 家公司，并通过 AI 获得更清晰的风险框架", feat5t: "智能提醒", feat5d: "设置目标价格提醒，在上涨和下跌时获得即时通知", feat6t: "8 种语言", feat6d: "支持英语、土耳其语、俄语、阿拉伯语、中文、印地语、德语和西班牙语",
+    contactSub: "我们随时回答您的问题并接收反馈。", contactInfo: "联系信息", formName: "姓名", formEmail: "电子邮箱", formSubject: "主题", formMsg: "消息", formSend: "发送", formSending: "发送中...", formSent: "您的消息已发送！", aboutTitle: "关于 Global Market Analytics", aboutSub: "面向全球市场的金融智能平台，提供结构化分析、清晰视角和决策支持。", aboutMission: "我们的使命", aboutMissionText: "通过结构化分析降低不确定性，同时不跨越投资建议边界，建设金融决策基础设施。", aboutVision: "我们的愿景", aboutVisionText: "让更清晰的理解、更低的不确定性和更强的决策纪律在全球市场中触手可及。", aboutCardPlatformT: "平台", aboutCardPlatformB: "Global Market Analytics 是金融信息平台，在一个界面中提供 600+ 全球机构的股票数据、IPO 状态和市场指标。", aboutCardAIT: "AI 集成", aboutCardAIB: "平台由 GMA Consensus Engine 驱动，提供结构化公司分析、风险框架和战略展望。所有输出仅供参考。", aboutCardDataT: "历史数据", aboutCardDataB: "黄金历史图表可追溯至 1900 年，主要货币至 1930 年，其他大宗商品至最早记录日期，并覆盖到 2026 年。", aboutCardSourcesT: "数据来源", aboutCardSourcesB: "实时数据由 Finnhub API 提供。外汇汇率来自 open.er-api.com。不使用外部代理。", aboutCardPrivacyT: "隐私", aboutCardPrivacyB: "用户数据不会发送到外部服务器。偏好、API 密钥和投资组合信息仅存储在浏览器 localStorage 中。", footerDesc: "为全球市场提供清晰视角的金融智能平台。", pricingSub: "通过一个机构级订阅访问 GMA Consensus Engine。", payContinue: "前往市场 →", planActivated: "计划已激活！", payKeyLinkedNote: "此密钥与您的账户绑定。请勿分享给任何人。", sovereignAutoNote: "GMA Sovereign Intelligence · 所有模型自动管理。您无需其他操作。", footerBrandLine: "Global Market Analytics · 2026 · 主权智能", footerCompliance: "Global Market Analytics (GMA) 是提供 AI 驱动市场数据可视化的数字平台。GMA 不是注册投资顾问。所有付款均由合作伙伴 Paddle.com 安全处理。", platform: "平台", addToPortfolio: "添加到投资组合", currentPrice: "当前价格", exchange: "交易所", quantity: "数量", unitPrice: "单价", totalLabel: "总计", simulatedTransaction: "这是模拟交易 - 不会发生真实购买"
+  },
+  hi: {
+    feat3t: "ऐतिहासिक चार्ट", feat3d: "स्थापना वर्ष से ऐतिहासिक चार्ट, संकट विश्लेषण और दीर्घकालिक रुझान", feat4t: "कंपनी तुलना", feat4d: "AI के साथ 5 कंपनियों तक की तुलना और स्पष्ट जोखिम ढांचा", feat5t: "स्मार्ट अलर्ट", feat5d: "लक्ष्य मूल्य अलर्ट सेट करें और बढ़त/गिरावट पर तुरंत सूचनाएँ पाएँ", feat6t: "8 भाषाएँ", feat6d: "अंग्रेज़ी, तुर्की, रूसी, अरबी, चीनी, हिंदी, जर्मन और स्पेनिश अनुभव",
+    contactSub: "हम आपके प्रश्नों और प्रतिक्रिया के लिए उपलब्ध हैं।", contactInfo: "संपर्क जानकारी", formName: "पूरा नाम", formEmail: "ईमेल", formSubject: "विषय", formMsg: "संदेश", formSend: "भेजें", formSending: "भेजा जा रहा है...", formSent: "आपका संदेश भेज दिया गया!", aboutTitle: "Global Market Analytics के बारे में", aboutSub: "वैश्विक बाज़ारों में संरचित विश्लेषण, स्पष्टता और निर्णय समर्थन देने वाला वित्तीय इंटेलिजेंस प्लेटफ़ॉर्म।", aboutMission: "हमारा मिशन", aboutMissionText: "निवेश सलाह दिए बिना संरचित विश्लेषण के माध्यम से अनिश्चितता कम करने वाला वित्तीय निर्णय ढांचा बनाना।", aboutVision: "हमारी दृष्टि", aboutVisionText: "ऐसी दुनिया जहाँ स्पष्ट समझ, कम अनिश्चितता और मजबूत निर्णय अनुशासन वैश्विक बाज़ारों में उपलब्ध हों।", aboutCardPlatformT: "प्लेटफ़ॉर्म", aboutCardPlatformB: "Global Market Analytics एक वित्तीय सूचना प्लेटफ़ॉर्म है जो 600+ वैश्विक संगठनों के स्टॉक डेटा, IPO स्थिति और बाज़ार मेट्रिक्स को एक इंटरफ़ेस में देता है।", aboutCardAIT: "AI एकीकरण", aboutCardAIB: "GMA Consensus Engine द्वारा संचालित, प्लेटफ़ॉर्म संरचित कंपनी विश्लेषण, जोखिम फ्रेमिंग और रणनीतिक दृष्टिकोण देता है। सभी आउटपुट केवल जानकारी के लिए हैं।", aboutCardDataT: "ऐतिहासिक डेटा", aboutCardDataB: "सोने के लिए 1900 से, प्रमुख मुद्राओं के लिए 1930 से और अन्य कमोडिटी के लिए उपलब्ध शुरुआती तारीखों से 2026 तक ऐतिहासिक चार्ट।", aboutCardSourcesT: "डेटा स्रोत", aboutCardSourcesB: "लाइव डेटा Finnhub API से आता है। Forex दरें open.er-api.com से ली जाती हैं। बाहरी प्रॉक्सी उपयोग नहीं होते।", aboutCardPrivacyT: "गोपनीयता", aboutCardPrivacyB: "उपयोगकर्ता डेटा बाहरी सर्वरों पर नहीं भेजा जाता। प्राथमिकताएँ, API keys और पोर्टफोलियो जानकारी केवल ब्राउज़र localStorage में रहती है।", footerDesc: "वैश्विक बाज़ारों में स्पष्टता देने के लिए बनाया गया वित्तीय इंटेलिजेंस प्लेटफ़ॉर्म।", pricingSub: "एक संस्थागत-स्तर सदस्यता से GMA Consensus Engine तक पहुँचें।", payContinue: "बाज़ारों पर जाएँ →", planActivated: "योजना सक्रिय!", payKeyLinkedNote: "यह कुंजी आपके खाते से जुड़ी है। इसे किसी से साझा न करें।", sovereignAutoNote: "GMA Sovereign Intelligence · सभी मॉडल स्वतः प्रबंधित होते हैं। आपको और कुछ नहीं चाहिए।", footerBrandLine: "Global Market Analytics · 2026 · स्वतंत्र इंटेलिजेंस", footerCompliance: "Global Market Analytics (GMA) AI-संचालित बाज़ार डेटा विज़ुअलाइज़ेशन देने वाला डिजिटल प्लेटफ़ॉर्म है। GMA पंजीकृत निवेश सलाहकार नहीं है। सभी भुगतान हमारे भागीदार Paddle.com द्वारा सुरक्षित रूप से संसाधित होते हैं।", platform: "प्लेटफ़ॉर्म"
+  },
+  de: {
+    feat1t: "Live-Marktfeed", feat1d: "Verfolgen Sie 600+ Unternehmen, Krypto, Rohstoffe und Währungen in Echtzeit", feat2t: "GMA Triumvirate Analyse", feat2d: "Prüfen Sie institutionelle Signalabstimmung über die GMA Consensus Engine", feat3t: "Historische Charts", feat3d: "Historische Charts ab Gründungsjahr, Krisenanalyse und langfristige Trends", feat4t: "Unternehmensvergleich", feat4d: "Vergleichen Sie bis zu 5 Unternehmen mit AI und klarerem Risikorahmen", feat5t: "Intelligente Alarme", feat5d: "Legen Sie Kursziel-Alarme fest und erhalten Sie sofortige Benachrichtigungen bei Anstiegen und Rückgängen", feat6t: "8 Sprachen", feat6d: "Plattformerlebnis auf Englisch, Türkisch, Russisch, Arabisch, Chinesisch, Hindi, Deutsch und Spanisch",
+    contactSub: "Wir sind für Fragen und Feedback da.", contactInfo: "Kontaktinformationen", formName: "VOLLSTÄNDIGER NAME", formEmail: "E-MAIL", formSubject: "BETREFF", formMsg: "NACHRICHT", formSend: "SENDEN", formSending: "SENDEN...", formSent: "Ihre Nachricht wurde gesendet!", subjectPlaceholder: "Betreff", messagePlaceholder: "Ihre Nachricht...", namePlaceholder: "Ihr Name",
+    aboutTitle: "Über Global Market Analytics", aboutSub: "Eine Finanzintelligenz-Plattform für strukturierte Analysen, Klarheit und Entscheidungsunterstützung in globalen Märkten.", aboutMission: "Unsere Mission", aboutMissionText: "Finanzielle Entscheidungsinfrastruktur aufzubauen, die Unsicherheit durch strukturierte Analyse reduziert, ohne Anlageberatung zu leisten.", aboutVision: "Unsere Vision", aboutVisionText: "Eine Welt, in der klareres Verständnis, geringere Unsicherheit und stärkere Entscheidungsdisziplin in globalen Märkten zugänglich sind.", aboutCardPlatformT: "Plattform", aboutCardPlatformB: "Global Market Analytics bündelt Aktiendaten, IPO-Status und Marktkennzahlen von 600+ globalen Organisationen in einer Oberfläche.", aboutCardAIT: "AI-Integration", aboutCardAIB: "Angetrieben von der GMA Consensus Engine liefert die Plattform strukturierte Unternehmensanalyse, Risikorahmen und strategische Ausblicke. Alle Ausgaben dienen nur Informationszwecken.", aboutCardDataT: "Historische Daten", aboutCardDataB: "Historische Chart-Indizes ab 1900 für Gold, ab 1930 für wichtige Währungen und ab den frühesten Aufzeichnungen für weitere Rohstoffe bis 2026.", aboutCardSourcesT: "Datenquellen", aboutCardSourcesB: "Live-Daten kommen über Finnhub API. Forex-Kurse stammen von open.er-api.com. Externe Proxys werden nicht genutzt.", aboutCardPrivacyT: "Datenschutz", aboutCardPrivacyB: "Nutzerdaten werden nicht an externe Server gesendet. Präferenzen, API-Schlüssel und Portfoliodaten bleiben ausschließlich im Browser-localStorage.",
+    pricingSub: "Zugriff auf die GMA Consensus Engine über ein institutionelles Abonnement.", aiPartners: "Integrierte AI-Partner", pricingNote: "Ein Abonnement schaltet die GMA Consensus Engine frei. GPT, Claude und Gemini dienen als unterstützende Engines; GMA bleibt die analytische Ebene.", paySuccess: "Zugang aktiviert", payKey: "Ihr Plattform-Zugangsschlüssel", payKeyNote: "Dieser Schlüssel ist mit Ihrem Konto verknüpft. Teilen Sie ihn nicht.", payContinue: "Zu Märkten →", planActivated: "Plan aktiviert!", payKeyLinkedNote: "Dieser Schlüssel ist mit Ihrem Konto verknüpft. Teilen Sie ihn nicht.", sovereignAutoNote: "GMA Sovereign Intelligence · Alle Modelle werden automatisch verwaltet. Sie benötigen nichts Weiteres.", footerBrandLine: "Global Market Analytics · 2026 · Souveräne Intelligenz", footerCompliance: "Global Market Analytics (GMA) ist eine digitale Plattform für AI-gestützte Marktdatenvisualisierung. GMA ist kein registrierter Anlageberater. Alle Zahlungen werden sicher über unseren Partner Paddle.com verarbeitet.", platform: "PLATTFORM"
+  },
+  es: {
+    feat1t: "Feed de mercado en vivo", feat1d: "Sigue 600+ compañías, cripto, materias primas y divisas en tiempo real", feat2t: "Análisis GMA Triumvirate", feat2d: "Revisa la alineación institucional de señales desde GMA Consensus Engine", feat3t: "Gráficos históricos", feat3d: "Gráficos desde el año de fundación, análisis de crisis y tendencias de largo plazo", feat4t: "Comparación de empresas", feat4d: "Compara hasta 5 empresas con AI y un marco de riesgo más claro", feat5t: "Alertas inteligentes", feat5d: "Configura alertas de precio objetivo y recibe notificaciones instantáneas de subidas y bajadas", feat6t: "8 idiomas", feat6d: "Experiencia en inglés, turco, ruso, árabe, chino, hindi, alemán y español",
+    contactSub: "Estamos aquí para cualquier pregunta y comentario.", contactInfo: "Información de contacto", formName: "NOMBRE COMPLETO", formEmail: "EMAIL", formSubject: "ASUNTO", formMsg: "MENSAJE", formSend: "ENVIAR", formSending: "ENVIANDO...", formSent: "¡Tu mensaje ha sido enviado!", subjectPlaceholder: "Asunto", messagePlaceholder: "Tu mensaje...", namePlaceholder: "Tu nombre",
+    aboutTitle: "Acerca de Global Market Analytics", aboutSub: "Una plataforma de inteligencia financiera que ofrece análisis estructurado, claridad y apoyo de decisión en mercados globales.", aboutMission: "Nuestra misión", aboutMissionText: "Construir infraestructura de decisión financiera que reduzca la incertidumbre mediante análisis estructurado sin convertirse en asesoramiento de inversión.", aboutVision: "Nuestra visión", aboutVisionText: "Un mundo donde una comprensión más clara, menor incertidumbre y mayor disciplina de decisión sean accesibles en los mercados globales.", aboutCardPlatformT: "Plataforma", aboutCardPlatformB: "Global Market Analytics reúne datos de acciones, estado IPO y métricas de mercado de 600+ organizaciones globales en una sola interfaz.", aboutCardAIT: "Integración AI", aboutCardAIB: "Impulsada por GMA Consensus Engine, la plataforma entrega análisis estructurado de compañías, marco de riesgo y perspectivas estratégicas. Todos los resultados son solo informativos.", aboutCardDataT: "Datos históricos", aboutCardDataB: "Índices de gráficos históricos desde 1900 para oro, desde 1930 para divisas principales y desde las primeras fechas registradas para otros commodities hasta 2026.", aboutCardSourcesT: "Fuentes de datos", aboutCardSourcesB: "Los datos en vivo se proporcionan vía Finnhub API. Las tasas forex provienen de open.er-api.com. No se usan proxies externos.", aboutCardPrivacyT: "Privacidad", aboutCardPrivacyB: "Los datos de usuario nunca se envían a servidores externos. Preferencias, claves API e información de cartera se guardan solo en localStorage del navegador.",
+    pricingSub: "Accede a GMA Consensus Engine mediante una suscripción institucional.", aiPartners: "Partners AI integrados", pricingNote: "Una suscripción desbloquea GMA Consensus Engine. GPT, Claude y Gemini operan como motores de apoyo; GMA sigue siendo la capa analítica.", paySuccess: "Acceso activado", payKey: "Tu clave de acceso", payKeyNote: "Esta clave está vinculada a tu cuenta. No la compartas.", payContinue: "Ir a mercados →", planActivated: "¡Plan activado!", payKeyLinkedNote: "Esta clave está vinculada a tu cuenta. No la compartas.", sovereignAutoNote: "GMA Sovereign Intelligence · Todos los modelos se gestionan automáticamente. No necesitas nada más.", footerBrandLine: "Global Market Analytics · 2026 · Inteligencia soberana", footerCompliance: "Global Market Analytics (GMA) es una plataforma digital que ofrece visualización de datos de mercado impulsada por AI. GMA no es un asesor de inversiones registrado. Todos los pagos son procesados de forma segura por nuestro socio Paddle.com.", platform: "PLATAFORMA"
+  }
+};
+Object.entries(GMA_CONTENT_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
 const GMA_LEGAL_STATIC = {
   tr: {
     privacy: [
@@ -8668,6 +8712,7 @@ function BuyModal({
   onClose,
   onConfirm
 }) {
+  const { t } = useLang();
   const [qty, setQty] = useState(1);
   const total = (c.price * qty).toFixed(2);
   return /*#__PURE__*/React.createElement("div", {
@@ -8699,7 +8744,7 @@ function BuyModal({
       letterSpacing: "0.06em",
       marginBottom: "4px"
     }
-  }, "ADD TO PORTFOLIO"), /*#__PURE__*/React.createElement("div", {
+  }, t('addToPortfolio')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "20px",
       fontWeight: "bold",
@@ -8723,7 +8768,7 @@ function BuyModal({
       fontSize: "13px",
       color: "#94a3b8"
     }
-  }, "CURRENT PRICE"), /*#__PURE__*/React.createElement("div", {
+  }, t('currentPrice')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "24px",
       fontWeight: "bold",
@@ -8738,7 +8783,7 @@ function BuyModal({
       fontSize: "13px",
       color: "#94a3b8"
     }
-  }, "BORSA"), /*#__PURE__*/React.createElement("div", {
+  }, t('exchange')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "15px",
       color: "#94a3b8"
@@ -8753,7 +8798,7 @@ function BuyModal({
       color: "#94a3b8",
       marginBottom: "8px"
     }
-  }, "ADET"), /*#__PURE__*/React.createElement("div", {
+  }, t('quantity')), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "center",
@@ -8807,7 +8852,7 @@ function BuyModal({
       color: "#94a3b8",
       marginBottom: "6px"
     }
-  }, /*#__PURE__*/React.createElement("span", null, "Birim Fiyat"), /*#__PURE__*/React.createElement("span", null, "$", c.price.toFixed(2))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", null, t('unitPrice')), /*#__PURE__*/React.createElement("span", null, "$", c.price.toFixed(2))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -8815,7 +8860,7 @@ function BuyModal({
       color: "#94a3b8",
       marginBottom: "6px"
     }
-  }, /*#__PURE__*/React.createElement("span", null, "Adet"), /*#__PURE__*/React.createElement("span", null, qty)), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", null, t('quantity')), /*#__PURE__*/React.createElement("span", null, qty)), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -8825,7 +8870,7 @@ function BuyModal({
       borderTop: "1px solid #1e293b",
       paddingTop: "8px"
     }
-  }, /*#__PURE__*/React.createElement("span", null, "TOPLAM"), /*#__PURE__*/React.createElement("span", null, "$", Number(total).toLocaleString("en-US", {
+  }, /*#__PURE__*/React.createElement("span", null, t('totalLabel')), /*#__PURE__*/React.createElement("span", null, "$", Number(total).toLocaleString("en-US", {
     minimumFractionDigits: 2
   })))), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -8846,7 +8891,7 @@ function BuyModal({
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "CANCEL"), /*#__PURE__*/React.createElement("button", {
+  }, t('cancel')), /*#__PURE__*/React.createElement("button", {
     onClick: () => onConfirm(qty, total),
     style: {
       flex: 2,
@@ -8861,14 +8906,14 @@ function BuyModal({
       fontWeight: "bold",
       letterSpacing: "0.07em"
     }
-  }, "\u2713 ADD TO PORTFOLIO")), /*#__PURE__*/React.createElement("div", {
+  }, "\u2713 ", t('addToPortfolio'))), /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       fontSize: "12px",
       color: "#1e293b",
       marginTop: "10px"
     }
-  }, "\u26A0 This is a simulated transaction - no real purchase is made")));
+  }, "\u26A0 ", t('simulatedTransaction')));
 }
 
 // ── ALARM MODALI ──
@@ -13992,6 +14037,7 @@ function setPlanActive(email, planId) {
 // --  PADDLE PAYMENT MODAL --
 // ======================================================================
 function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
+  var t = useLang().t;
   var step = React.useState('confirm'), setStep = step[1]; step = step[0];
   var errMsg = React.useState(''), setErrMsg = errMsg[1]; errMsg = errMsg[0];
   var planColor = plan && plan.color ? plan.color : '#38bdf8';
@@ -14059,7 +14105,7 @@ function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
           React.createElement("div",{style:{fontSize:'12px',color:'#64748b',lineHeight:1.7,marginBottom:'20px'}},
             plan&&plan.label," plan access activated. ",plan&&plan.credits," credits added to your account."),
           React.createElement("button",{onClick:function(){onSuccess&&onSuccess(plan.id);onClose()},style:{padding:'12px 28px',background:'linear-gradient(135deg,#059669,#10b981)',border:'none',borderRadius:'10px',color:'#fff',cursor:'pointer',fontSize:'13px',fontFamily:'inherit',fontWeight:'bold'}},
-            "\u25C8 Go to Markets \u2192")
+            "\u25C8 ", t('goToMarkets'), " \u2192")
         )
       )
     )
@@ -14170,7 +14216,7 @@ function PricingPage({
         marginBottom: '20px',
         lineHeight: 1.2
       }
-    }, plan?.label, " Plan Activated!"), /*#__PURE__*/React.createElement("div", {
+    }, plan?.label, " ", t('planActivated')), /*#__PURE__*/React.createElement("div", {
       style: {
         background: 'rgba(52,211,153,0.06)',
         border: '1px solid rgba(52,211,153,0.25)',
@@ -14205,7 +14251,7 @@ function PricingPage({
         color: '#94a3b8',
         lineHeight: 1.7
       }
-    }, "This key is linked to your account. Do not share it with anyone.", /*#__PURE__*/React.createElement("br", null), "GMA Sovereign Intelligence · All models are managed automatically. You do not need anything else.")), /*#__PURE__*/React.createElement("div", {
+    }, t('payKeyLinkedNote'), /*#__PURE__*/React.createElement("br", null), t('sovereignAutoNote'))), /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
         gap: '12px',
@@ -14226,7 +14272,7 @@ function PricingPage({
         fontWeight: 'bold',
         boxShadow: '0 8px 24px rgba(14,165,233,0.3)'
       }
-    }, "\u25C8 Go to Markets \u2192"), /*#__PURE__*/React.createElement("button", {
+    }, "\u25C8 ", t('goToMarkets'), " \u2192"), /*#__PURE__*/React.createElement("button", {
       onClick: () => onNavigate('profile'),
       style: {
         padding: '14px 24px',
@@ -14797,7 +14843,7 @@ function HomePage({
       fontFamily: 'inherit',
       fontWeight: 'bold'
     }
-  }, "\u25C8 Go to Markets")),showAdminLogin&&/*#__PURE__*/React.createElement(AdminLoginModal,{onClose:function(){setShowAdminLogin(false);GMA_AdminSec.cleanUrl();},onSuccess:function(){setShowAdminLogin(false);setShowAdmin(true);GMA_AdminSec.cleanUrl();}}),showAdmin&&/*#__PURE__*/React.createElement(ApiKeyModal,{onClose:function(){setShowAdmin(false);GMA_AdminSec.revokeToken();}}));
+  }, "\u25C8 ", t('goToMarkets'))),showAdminLogin&&/*#__PURE__*/React.createElement(AdminLoginModal,{onClose:function(){setShowAdminLogin(false);GMA_AdminSec.cleanUrl();},onSuccess:function(){setShowAdminLogin(false);setShowAdmin(true);GMA_AdminSec.cleanUrl();}}),showAdmin&&/*#__PURE__*/React.createElement(ApiKeyModal,{onClose:function(){setShowAdmin(false);GMA_AdminSec.revokeToken();}}));
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -15781,7 +15827,7 @@ function ContactPage({onNavigate}) {
         React.createElement("div",{style:{background:'linear-gradient(145deg,#0c1220,#080d18)',border:'1px solid #0f172a',borderRadius:'12px',padding:'16px',display:'flex',gap:'12px',alignItems:'flex-start'}},
           React.createElement("span",{style:{fontSize:'20px'}},"\uD83D\uDCE7"),
           React.createElement("div",null,
-            React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'4px'}},"EMAIL"),
+            React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'4px'}},t('email')),
             React.createElement("a",{href:"mailto:support@globalmarketanalytics.com",style:{color:'#38bdf8',textDecoration:'none',fontSize:'13px',wordBreak:'break-all'}},"support@globalmarketanalytics.com")
           )
         ),
@@ -16071,7 +16117,7 @@ function GlobalFooter({
       letterSpacing: '0.06em',
       marginBottom: '10px'
     }
-  }, "PLATFORM"), [['home', t('home')], ['dashboard', t('markets')], ['about', t('about')], ['contact', t('contact')]].map(([key, label]) => /*#__PURE__*/React.createElement("button", {
+  }, t('platform')), [['home', t('home')], ['dashboard', t('markets')], ['about', t('about')], ['contact', t('contact')]].map(([key, label]) => /*#__PURE__*/React.createElement("button", {
     key: key,
     onClick: () => onNavigate(key),
     style: {
@@ -16139,7 +16185,7 @@ function GlobalFooter({
       color: '#64748b',
       letterSpacing: '0.05em'
     }
-  }, "\u25C8 Global Market Analytics \xB7 2026 \xB7 Sovereign Intelligence"), /*#__PURE__*/React.createElement("div", {style: {fontSize:'12px', color:'#94a3b8', marginTop:'8px', lineHeight:1.6, textAlign:'center'}}, "Global Market Analytics (GMA) is a digital platform providing AI-driven market data visualization. GMA is not a registered investment advisor. All payments are securely processed by our partner, Paddle.com."))));
+  }, "\u25C8 ", t('footerBrandLine')), /*#__PURE__*/React.createElement("div", {style: {fontSize:'12px', color:'#94a3b8', marginTop:'8px', lineHeight:1.6, textAlign:'center'}}, t('footerCompliance')))));
 }
 
 
