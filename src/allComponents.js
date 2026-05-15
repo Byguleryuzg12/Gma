@@ -15,6 +15,35 @@ const LANGS = [
   {c:'es', n:'Español', f:'🇪🇸'}
 ];
 
+function flagSvgSrc(code) {
+  const svg = {
+    en: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#fff'/><g fill='#b91c1c'><rect y='0' width='28' height='2'/><rect y='4' width='28' height='2'/><rect y='8' width='28' height='2'/><rect y='12' width='28' height='2'/><rect y='16' width='28' height='2'/></g><rect width='12' height='10' fill='#1e3a8a'/><circle cx='3' cy='3' r='1' fill='#fff'/><circle cx='7' cy='3' r='1' fill='#fff'/><circle cx='3' cy='7' r='1' fill='#fff'/><circle cx='7' cy='7' r='1' fill='#fff'/></svg>",
+    tr: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#e30a17'/><circle cx='11' cy='10' r='5' fill='#fff'/><circle cx='13' cy='10' r='4' fill='#e30a17'/><polygon points='19,6.8 20,9 22.3,9 20.4,10.3 21.2,12.6 19,11.2 16.8,12.6 17.6,10.3 15.7,9 18,9' fill='#fff'/></svg>",
+    ru: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#fff'/><rect y='6.67' width='28' height='6.66' fill='#2563eb'/><rect y='13.33' width='28' height='6.67' fill='#dc2626'/></svg>",
+    ar: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#166534'/><text x='14' y='10' text-anchor='middle' font-size='5' font-family='Arial' fill='#fff'>SA</text><rect x='8' y='13' width='12' height='1.2' fill='#fff'/></svg>",
+    zh: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#dc2626'/><polygon points='6,3 7,6 10,6 7.6,7.8 8.5,11 6,9 3.5,11 4.4,7.8 2,6 5,6' fill='#facc15'/><circle cx='13' cy='5' r='1.1' fill='#facc15'/><circle cx='16' cy='8' r='1.1' fill='#facc15'/><circle cx='16' cy='12' r='1.1' fill='#facc15'/><circle cx='13' cy='15' r='1.1' fill='#facc15'/></svg>",
+    hi: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='6.67' fill='#f97316'/><rect y='6.67' width='28' height='6.66' fill='#fff'/><rect y='13.33' width='28' height='6.67' fill='#16a34a'/><circle cx='14' cy='10' r='2.3' fill='none' stroke='#1d4ed8' stroke-width='1'/><circle cx='14' cy='10' r='.5' fill='#1d4ed8'/></svg>",
+    de: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='6.67' fill='#111827'/><rect y='6.67' width='28' height='6.66' fill='#dc2626'/><rect y='13.33' width='28' height='6.67' fill='#facc15'/></svg>",
+    es: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#dc2626'/><rect y='5' width='28' height='10' fill='#facc15'/><rect x='7' y='8' width='3' height='4' rx='.4' fill='#dc2626'/></svg>"
+  }[code] || "";
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+
+function LangFlag({ code }) {
+  return /*#__PURE__*/React.createElement("img", {
+    src: flagSvgSrc(code),
+    alt: "",
+    "aria-hidden": true,
+    style: {
+      width: "22px",
+      height: "16px",
+      borderRadius: "2px",
+      objectFit: "cover",
+      boxShadow: "0 0 0 1px rgba(255,255,255,0.18)"
+    }
+  });
+}
+
 // ── Platform API Key (Admin tarafindan set edilir, usersdan istenmez) ──
 // ╔══════════════════════════════════════════════════════════════╗
 // ║              GMA CONFIGURATION — PASTE HERE         ║
@@ -1283,13 +1312,12 @@ function LangSelector() {
     style: {
       fontSize: '12px'
     }
-  }, "\u27F3") : /*#__PURE__*/React.createElement("span", {
+  }, "\u27F3") : /*#__PURE__*/React.createElement(LangFlag, { code: cur.c }), /*#__PURE__*/React.createElement("span", null, cur.n), /*#__PURE__*/React.createElement("span", {
     style: {
-      fontFamily: "'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif",
-      fontSize: "16px",
-      lineHeight: 1
+      fontSize: "10px",
+      opacity: 0.8
     }
-  }, cur.f), " ", cur.c.toUpperCase(), " ", open ? "▲" : "▼"), open && /*#__PURE__*/React.createElement("div", {
+  }, open ? "▲" : "▼")), open && /*#__PURE__*/React.createElement("div", {
     style: {
       position: "absolute",
       top: "calc(100% + 4px)",
@@ -1306,7 +1334,6 @@ function LangSelector() {
   }, (() => {
     const SUPPORTED = ['en', 'tr', 'ru', 'ar', 'zh', 'hi', 'de', 'es'];
     const sup = LANGS.filter(l => SUPPORTED.includes(l.c));
-    const rest = LANGS.filter(l => !SUPPORTED.includes(l.c));
     const renderBtn = l => /*#__PURE__*/React.createElement("button", {
       key: l.c,
       onClick: () => {
@@ -1327,29 +1354,12 @@ function LangSelector() {
         color: l.c === lang ? "#38bdf8" : "#94a3b8",
         textAlign: "left"
       }
-    }, /*#__PURE__*/React.createElement("span", {
-      style: {
-        width: "22px",
-        display: "inline-flex",
-        justifyContent: "center",
-        fontFamily: "'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif",
-        fontSize: "16px",
-        lineHeight: 1
-      }
-    }, l.f), /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React.createElement(LangFlag, { code: l.c }), /*#__PURE__*/React.createElement("span", {
       style: {
         flex: 1
       }
     }, l.n), l.c === lang && "✓");
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-      style: {
-        padding: "4px 12px 3px",
-        fontSize: "9px",
-        color: "#94a3b8",
-        letterSpacing: "0.08em",
-        borderBottom: "1px solid #1e293b"
-      }
-    }, "\u2726 GMA LANGUAGES (8)"), sup.map(renderBtn));
+    return /*#__PURE__*/React.createElement(React.Fragment, null, sup.map(renderBtn));
   })()));
 }
 
