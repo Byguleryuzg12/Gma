@@ -941,7 +941,7 @@ const GMA_DEEP_I18N = {
     dnaQ_tone: "Analysis Style?", dnaOpt_tone_clear: "Clear", dnaOpt_tone_technical: "Technical", dnaDetail_tone_clear: "Simple and concise", dnaDetail_tone_technical: "Deep and data-driven",
     dnaQ_budget: "Your Volume Scale?", dnaOpt_budget_micro: "Micro", dnaOpt_budget_macro: "Macro", dnaOpt_budget_corporate: "Corporate",
     legalEffectiveDate: "Effective Date: April 2026", legalGdprDate: "Effective Date: April 2026 — GDPR Compliant", legalTranslating: "Translating content to your language...", legalNoAdvice: "NO FINANCIAL ADVICE", privacyPolicyTitle: "Privacy Policy", termsTitle: "Terms of Service", refundTitle: "Refund Policy", privacyWarning: "Global Market Analytics (GMA) is a data visualisation platform. GMA is not a registered investment advisor and does not provide financial, investment, legal, or tax advice. All content and AI-generated analyses are for informational purposes only. Investment decisions are made solely at the user's own risk.", termsWarning: "GMA is not a registered investment advisor. All content is for informational purposes only. Always seek independent professional financial advice before making investment decisions.", refundHeroTitle: "7-Day Money-Back Guarantee", refundHeroText: "Not satisfied? Get a full refund within 7 days — no questions asked. Email support@globalmarketanalytics.com and we'll process it within 5–7 business days.", paddleSecured: "Paddle Secured", oneClickCancel: "One-Click Cancel", noLockIn: "No Lock-in", sevenDayGuarantee: "7-Day Guarantee",
-    noApiKey: "No API key — add it from Settings", liveDataUpdated: "Live data updated", simulationRunning: "Simulation is running", cartRemoved: "removed from cart", basketAdded: "added to basket", watchRemoved: "removed from watchlist", watchAdded: "added to watchlist", alertCreated: "alert created", maxCompare: "A maximum of 5 companies can be selected", addedToComparison: "added to comparison", cart: "CART", watchlist: "WATCHLIST", cartEmpty: "Cart is empty", watchlistEmpty: "Watchlist is empty", noPurchasesYet: "No purchases yet", remove: "remove", units: "units", buyIn: "buy-in", currentValue: "Current Value", cost: "Cost", profitLoss: "Profit / Loss", legal: "LEGAL", legalNoticeTitle: "LEGAL NOTICE", legalNoticeNotAdvice: "LEGAL NOTICE - NOT INVESTMENT ADVICE", signInLegalPrefix: "By signing in", signInLegalSuffix: "by continuing.", disclaimer1: "This platform is for digital informational purposes only.", disclaimer2: "No content or AI output is investment advice.", disclaimer3: "All investment decisions are the investor's own responsibility.", disclaimer4: "Past performance does not guarantee future results.", disclaimer5: "Consult a licensed financial advisor before trading.", disclaimer6: "Data may be simulated and may not represent live exchange data."
+    noApiKey: "No API key — add it from Settings", liveDataUpdated: "Live data updated", simulationRunning: "Simulation is running", cartRemoved: "removed from cart", basketAdded: "added to basket", watchRemoved: "removed from watchlist", watchAdded: "added to watchlist", alertCreated: "alert created", maxCompare: "A maximum of 5 companies can be selected", addedToComparison: "added to comparison", chart: "CHART", compare: "COMPARE", add: "ADD", watch: "WATCH", alert: "ALERT", aiAnalysis: "AI ANALYSIS", riskOpportunity: "RISK & OPPORTUNITY", historicalChart: "HISTORICAL CHART", priceRiseAlert: "PRICE RISE ALERT", riseThreshold: "RISE THRESHOLD", target: "TARGET", setAlert: "SET ALERT", cart: "CART", watchlist: "WATCHLIST", cartEmpty: "Cart is empty", watchlistEmpty: "Watchlist is empty", noPurchasesYet: "No purchases yet", remove: "remove", units: "units", buyIn: "buy-in", currentValue: "Current Value", cost: "Cost", profitLoss: "Profit / Loss", legal: "LEGAL", legalNoticeTitle: "LEGAL NOTICE", legalNoticeNotAdvice: "LEGAL NOTICE - NOT INVESTMENT ADVICE", signInLegalPrefix: "By signing in", signInLegalSuffix: "by continuing.", disclaimer1: "This platform is for digital informational purposes only.", disclaimer2: "No content or AI output is investment advice.", disclaimer3: "All investment decisions are the investor's own responsibility.", disclaimer4: "Past performance does not guarantee future results.", disclaimer5: "Consult a licensed financial advisor before trading.", disclaimer6: "Data may be simulated and may not represent live exchange data."
   },
   tr: {
     dashboardTitle: "PIYASA PANELI", dashboardSub: "KURULUS · CANLI SIMULASYON + AI YENILEME", decliners: "DUSENLER", avgChange: "ORT. DEGISIM", myPanel: "PANELIM", fetchAiData: "AI VERI CEK", refreshing: "YENILENIYOR...", searchPlaceholder: "Ticker, sirket adi veya tam ad ile ara... (orn. AAPL, Apple, Tesla)", results: "sonuc", marketStatus: "PIYASA DURUMU", allStatus: "TUMU", listedStatus: "LISTELI", privateStatus: "OZEL", ipoRadarStatus: "IPO RADARI", ipoSoonStatus: "IPO YAKIN", ipoPrepStatus: "IPO HAZIRLIK", rumorStatus: "SOYLENTI", liveAutoLabel: "CANLI", autoRefreshShort: "2.5 sn OTOMATIK", prepStatus: "HAZIRLIK", allOrganizationsShownPrefix: "TUM", allOrganizationsShownSuffix: "KURULUS GOSTERILDI",
@@ -955,7 +955,7 @@ const GMA_DEEP_I18N = {
     dnaQ_tone: "Analiz Stili?", dnaOpt_tone_clear: "Net", dnaOpt_tone_technical: "Teknik", dnaDetail_tone_clear: "Sade ve oz", dnaDetail_tone_technical: "Derin ve veri odakli",
     dnaQ_budget: "Hacim Olceginiz?", dnaOpt_budget_micro: "Mikro", dnaOpt_budget_macro: "Makro", dnaOpt_budget_corporate: "Kurumsal",
     legalEffectiveDate: "Yururluk Tarihi: Nisan 2026", legalGdprDate: "Yururluk Tarihi: Nisan 2026 — GDPR Uyumlu", legalTranslating: "Icerik dilinize cevriliyor...", legalNoAdvice: "YATIRIM TAVSIYESI DEGILDIR", privacyPolicyTitle: "Gizlilik Politikasi", termsTitle: "Hizmet Sartlari", refundTitle: "Iade Politikasi", privacyWarning: "Global Market Analytics (GMA) bir veri gorsellestirme platformudur. GMA kayitli bir yatirim danismani degildir; finansal, yatirim, hukuki veya vergi tavsiyesi sunmaz. Tum icerik ve AI analizleri yalnizca bilgilendirme amaclidir. Yatirim kararlari tamamen kullanicinin kendi sorumlulugundadir.", termsWarning: "GMA kayitli bir yatirim danismani degildir. Tum icerik yalnizca bilgilendirme amaclidir. Yatirim karari almadan once bagimsiz profesyonel finansal danismanlik alin.", refundHeroTitle: "7 Gun Para Iade Garantisi", refundHeroText: "Memnun kalmadiniz mi? Ilk 7 gun icinde kosulsuz tam iade talep edin. support@globalmarketanalytics.com adresine yazin; 5-7 is gunu icinde isleme alalim.", paddleSecured: "Paddle Guvenceli", oneClickCancel: "Tek Tikla Iptal", noLockIn: "Baglayicilik Yok", sevenDayGuarantee: "7 Gun Garanti",
-    noApiKey: "API anahtari yok — Ayarlar'dan ekleyin", liveDataUpdated: "Canli veri guncellendi", simulationRunning: "Simulasyon calisiyor", cartRemoved: "sepetten cikarildi", basketAdded: "sepete eklendi", watchRemoved: "izleme listesinden cikarildi", watchAdded: "izleme listesine eklendi", alertCreated: "uyari olusturuldu", maxCompare: "En fazla 5 sirket secilebilir", addedToComparison: "karsilastirmaya eklendi", cart: "SEPET", watchlist: "IZLEME", cartEmpty: "Sepet bos", watchlistEmpty: "Izleme listesi bos", noPurchasesYet: "Henuz alim yok", remove: "kaldir", units: "adet", buyIn: "alis", currentValue: "Guncel Deger", cost: "Maliyet", profitLoss: "Kar / Zarar", legal: "YASAL", legalNoticeTitle: "YASAL UYARI", legalNoticeNotAdvice: "YASAL UYARI - YATIRIM TAVSIYESI DEGILDIR", signInLegalPrefix: "Giris yaparak", signInLegalSuffix: "devam etmeyi kabul edersiniz.", disclaimer1: "Bu platform yalnizca dijital bilgilendirme amaclidir.", disclaimer2: "Hicbir icerik veya AI ciktisi yatirim tavsiyesi degildir.", disclaimer3: "Tum yatirim kararlari yatirimcinin kendi sorumlulugundadir.", disclaimer4: "Gecmis performans gelecekteki sonuclari garanti etmez.", disclaimer5: "Islem yapmadan once lisansli bir finansal danismana basvurun.", disclaimer6: "Veriler simule edilmis olabilir ve canli borsa verisini temsil etmeyebilir."
+    noApiKey: "API anahtari yok — Ayarlar'dan ekleyin", liveDataUpdated: "Canli veri guncellendi", simulationRunning: "Simulasyon calisiyor", cartRemoved: "sepetten cikarildi", basketAdded: "sepete eklendi", watchRemoved: "izleme listesinden cikarildi", watchAdded: "izleme listesine eklendi", alertCreated: "uyari olusturuldu", maxCompare: "En fazla 5 sirket secilebilir", addedToComparison: "karsilastirmaya eklendi", chart: "GRAFIK", compare: "KARSILASTIR", add: "EKLE", watch: "IZLE", alert: "UYARI", aiAnalysis: "AI ANALIZ", riskOpportunity: "RISK & FIRSAT", historicalChart: "TARIHSEL GRAFIK", priceRiseAlert: "FIYAT YUKSELIS UYARISI", riseThreshold: "YUKSELIS ESIGI", target: "HEDEF", setAlert: "UYARI KUR", cart: "SEPET", watchlist: "IZLEME", cartEmpty: "Sepet bos", watchlistEmpty: "Izleme listesi bos", noPurchasesYet: "Henuz alim yok", remove: "kaldir", units: "adet", buyIn: "alis", currentValue: "Guncel Deger", cost: "Maliyet", profitLoss: "Kar / Zarar", legal: "YASAL", legalNoticeTitle: "YASAL UYARI", legalNoticeNotAdvice: "YASAL UYARI - YATIRIM TAVSIYESI DEGILDIR", signInLegalPrefix: "Giris yaparak", signInLegalSuffix: "devam etmeyi kabul edersiniz.", disclaimer1: "Bu platform yalnizca dijital bilgilendirme amaclidir.", disclaimer2: "Hicbir icerik veya AI ciktisi yatirim tavsiyesi degildir.", disclaimer3: "Tum yatirim kararlari yatirimcinin kendi sorumlulugundadir.", disclaimer4: "Gecmis performans gelecekteki sonuclari garanti etmez.", disclaimer5: "Islem yapmadan once lisansli bir finansal danismana basvurun.", disclaimer6: "Veriler simule edilmis olabilir ve canli borsa verisini temsil etmeyebilir."
   },
   ru: { dashboardTitle: "PANEL RYNKA", dashboardSub: "ORGANIZATSII · ZHIVAYA SIMULYATSIYA + AI OBNOVLENIE", decliners: "SNIZHENIE", avgChange: "SRED. IZMENENIE", myPanel: "MOYA PANEL", fetchAiData: "ZAGRUZIT AI DANNYE", refreshing: "OBNOVLENIE...", searchPlaceholder: "Poisk po tickeru, kompanii ili polnomu nazvaniyu... (napr. AAPL, Apple, Tesla)", results: "rezultatov", marketStatus: "STATUS RYNKA", allStatus: "VSE", listedStatus: "LISTING", privateStatus: "CHASTNYE", ipoRadarStatus: "IPO RADAR", ipoSoonStatus: "SKORO IPO", ipoPrepStatus: "PODGOTOVKA IPO", rumorStatus: "SLUHI", liveAutoLabel: "LIVE", autoRefreshShort: "2.5s AVTO", prepStatus: "PODG.", allOrganizationsShownPrefix: "VSE", allOrganizationsShownSuffix: "ORGANIZATSII POKAZANY", personalInfo: "LICHNAYA INFORMATSIA", userFallback: "Polzovatel", member: "Uchastnik", freeMember: "Besplatnyy uchastnik", noPlanSelected: "Plan ne vybran", gmaCore: "YADRO GMA", intelligenceLayerActive: "Analiticheskiy sloy: aktiven", consensusSystem: "Trehsloynaya sistema konsensusa · suverennaya analitika", analysisCredits: "KREDITY ANALIZA", strategicAnalysis: "STRATEGICHESKIY ANALIZ", accessExhausted: "Dostup ischerpan", creditsRemaining: "kreditov ostalos", accuracyIndex: "INDEKS TOCHNOSTI", verifiedBy: "Provereno", yearsOfData: "126 let dannyh", creditsNote: "Kazhdyy glubokiy analiz GMA ispolzuet 1 kredit. Posle okonchaniya dostupa nuzhna podpiska.", creditsExhaustedNote: "Kredity analiza ischerpany. Vyberite plan GMA, chtoby prodolzhit.", accountActions: "DEYSTVIYA AKKAUNTA", profileSaved: "Profil sohranen!", edit: "IZMENIT", dnaEdit: "IZMENIT GMA DNA", step: "SHAG", selected: "vybrano", continue: "PRODOLZHIT", gmaUserDna: "GMA DNA POLZOVATELYA", dnaIntro: "Vashi predpochteniya opredelyayut ton i oblast GMA Intelligence Layer.", dnaMarketScope: "Oblast rynka", dnaFocusRegion: "Fokus-region", dnaSectors: "Sektory", dnaRiskStyle: "Stil riska", dnaTimeframe: "Gorizont", dnaTone: "Stil analiza", dnaVolumeScale: "Masshtab obema", legalEffectiveDate: "Data vstupleniya v silu: aprel 2026", legalGdprDate: "Data vstupleniya v silu: aprel 2026 — sootvetstvuet GDPR", legalTranslating: "Kontent perevoditsya na vash yazyk...", legalNoAdvice: "NE FINANSOVAYA REKOMENDATSIYA", privacyPolicyTitle: "Politika konfidentsialnosti", termsTitle: "Usloviya servisa", refundTitle: "Politika vozvrata", privacyWarning: "Global Market Analytics (GMA) yavlyaetsya platformoy vizualizatsii dannyh. GMA ne yavlyaetsya zaregistrirovannym investitsionnym konsultantom i ne predostavlyaet finansovye, investitsionnye, yuridicheskie ili nalogovye sovety. Ves kontent i AI-analiz prednaznacheny tolko dlya informatsii. Investitsionnye resheniya prinimaet sam polzovatel.", termsWarning: "GMA ne yavlyaetsya zaregistrirovannym investitsionnym konsultantom. Ves kontent tolko informatsionnyy. Pered investitsionnymi resheniyami obratites k nezavisimomu spetsialistu.", refundHeroTitle: "7-dnevnaya garantiya vozvrata", refundHeroText: "Ne ustroilo? Poluchite polnyy vozvrat v techenie 7 dney bez lishnih voprosov. Napishite na support@globalmarketanalytics.com; obrabotka zaymet 5-7 rabochih dney.", paddleSecured: "Zashchishcheno Paddle", oneClickCancel: "Otmena v odin klik", noLockIn: "Bez privyazki", sevenDayGuarantee: "7-dnevnaya garantiya" },
   ar: { dashboardTitle: "لوحة الأسواق", dashboardSub: "مؤسسات · محاكاة مباشرة + تحديث AI", decliners: "المنخفضة", avgChange: "متوسط التغير", myPanel: "لوحتي", fetchAiData: "جلب بيانات AI", refreshing: "جار التحديث...", searchPlaceholder: "ابحث بالرمز أو اسم الشركة أو الاسم الكامل... (مثل AAPL، Apple، Tesla)", results: "نتائج", marketStatus: "حالة السوق", allStatus: "الكل", listedStatus: "مدرجة", privateStatus: "خاصة", ipoRadarStatus: "رادار IPO", ipoSoonStatus: "IPO قريب", ipoPrepStatus: "تحضير IPO", rumorStatus: "شائعة", liveAutoLabel: "مباشر", autoRefreshShort: "تحديث تلقائي 2.5ث", prepStatus: "تحضير", allOrganizationsShownPrefix: "كل", allOrganizationsShownSuffix: "المؤسسات معروضة", personalInfo: "المعلومات الشخصية", userFallback: "مستخدم", member: "عضو", freeMember: "عضو مجاني", noPlanSelected: "لم يتم اختيار خطة", gmaCore: "نواة GMA", intelligenceLayerActive: "طبقة الذكاء: نشطة", consensusSystem: "نظام إجماع ثلاثي الطبقات · ذكاء مستقل", analysisCredits: "أرصدة التحليل", strategicAnalysis: "تحليل استراتيجي", accessExhausted: "انتهى الوصول", creditsRemaining: "أرصدة متبقية", accuracyIndex: "مؤشر الدقة", verifiedBy: "تم التحقق بواسطة", yearsOfData: "126 سنة من البيانات", creditsNote: "كل تحليل GMA عميق يستخدم رصيدًا واحدًا. بعد انتهاء الوصول يلزم اشتراك.", creditsExhaustedNote: "انتهت أرصدة التحليل. اختر خطة GMA للمتابعة.", accountActions: "إجراءات الحساب", profileSaved: "تم حفظ الملف الشخصي!", edit: "تعديل", dnaEdit: "تعديل GMA DNA", step: "خطوة", selected: "محدد", continue: "متابعة", gmaUserDna: "GMA DNA للمستخدم", dnaIntro: "تحدد تفضيلاتك نبرة ونطاق طبقة ذكاء GMA.", dnaMarketScope: "نطاق السوق", dnaFocusRegion: "منطقة التركيز", dnaSectors: "القطاعات", dnaRiskStyle: "أسلوب المخاطر", dnaTimeframe: "الأفق الزمني", dnaTone: "أسلوب التحليل", dnaVolumeScale: "مقياس الحجم", legalEffectiveDate: "تاريخ النفاذ: أبريل 2026", legalGdprDate: "تاريخ النفاذ: أبريل 2026 — متوافق مع GDPR", legalTranslating: "جار ترجمة المحتوى إلى لغتك...", legalNoAdvice: "ليست نصيحة مالية", privacyPolicyTitle: "سياسة الخصوصية", termsTitle: "شروط الخدمة", refundTitle: "سياسة الاسترداد", privacyWarning: "Global Market Analytics (GMA) منصة لعرض البيانات. GMA ليست مستشارًا استثماريًا مسجلًا ولا تقدم نصائح مالية أو استثمارية أو قانونية أو ضريبية. كل المحتوى والتحليلات المدعومة بالذكاء الاصطناعي لأغراض معلوماتية فقط. قرارات الاستثمار تقع بالكامل على مسؤولية المستخدم.", termsWarning: "GMA ليست مستشارًا استثماريًا مسجلًا. كل المحتوى معلوماتي فقط. اطلب استشارة مالية مهنية مستقلة قبل اتخاذ قرارات الاستثمار.", refundHeroTitle: "ضمان استرداد خلال 7 أيام", refundHeroText: "غير راضٍ؟ احصل على استرداد كامل خلال 7 أيام دون أسئلة. راسل support@globalmarketanalytics.com وسنعالجه خلال 5-7 أيام عمل.", paddleSecured: "محمي بواسطة Paddle", oneClickCancel: "إلغاء بنقرة واحدة", noLockIn: "بدون التزام", sevenDayGuarantee: "ضمان 7 أيام" },
@@ -7043,6 +7043,7 @@ function HistoryModal({
   c,
   onClose
 }) {
+  const { t } = useLang();
   const meta = COMPANY_META[c.ticker] || {
     founded: c.founded || 2000,
     events: []
@@ -7218,13 +7219,13 @@ function HistoryModal({
   }, /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "chart"),
     onClick: () => setTab("chart")
-  }, "\uD83D\uDCCA HISTORICAL CHART"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83D\uDCCA ", t('historicalChart')), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "ai"),
     onClick: () => setTab("ai")
-  }, "\uD83E\uDD16 AI ANALYSIS"), /*#__PURE__*/React.createElement("button", {
+  }, "\uD83E\uDD16 ", t('aiAnalysis')), /*#__PURE__*/React.createElement("button", {
     style: tabStyle(tab === "risk"),
     onClick: () => setTab("risk")
-  }, "\u26A0 RISK & OPPORTUNITY")), /*#__PURE__*/React.createElement("div", {
+  }, "\u26A0 ", t('riskOpportunity'))), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       display: "flex",
@@ -7676,7 +7677,7 @@ function CompareBar({
       letterSpacing: "0.06em",
       flexShrink: 0
     }
-  }, "\u2696\uFE0F COMPARE (", companies.length, "/5)"), /*#__PURE__*/React.createElement("div", {
+  }, "\u2696\uFE0F ", t('compare'), " (", companies.length, "/5)"), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       gap: "6px",
@@ -8913,7 +8914,7 @@ function BuyModal({
       color: "#1e293b",
       marginTop: "10px"
     }
-  }, "\u26A0 ", t('simulatedTransaction')));
+  }, "\u26A0 ", t('simulatedTransaction'))));
 }
 
 // ── ALARM MODALI ──
@@ -8923,6 +8924,7 @@ function AlertModal({
   onClose,
   onSet
 }) {
+  const { t } = useLang();
   const [pct, setPct] = useState(currentAlert || 5);
   const target = (c.price * (1 + pct / 100)).toFixed(2);
   return /*#__PURE__*/React.createElement("div", {
@@ -8953,7 +8955,7 @@ function AlertModal({
       letterSpacing: "0.06em",
       marginBottom: "4px"
     }
-  }, "PRICE RISE ALERT"), /*#__PURE__*/React.createElement("div", {
+  }, t('priceRiseAlert')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "20px",
       fontWeight: "bold",
@@ -8966,7 +8968,7 @@ function AlertModal({
       fontSize: "13px",
       color: "#94a3b8"
     }
-  }, "RISE THRESHOLD: ", /*#__PURE__*/React.createElement("span", {
+  }, t('riseThreshold'), ": ", /*#__PURE__*/React.createElement("span", {
     style: {
       color: "#fbbf24",
       fontWeight: "bold"
@@ -8997,7 +8999,7 @@ function AlertModal({
       fontSize: "13px",
       color: "#94a3b8"
     }
-  }, "MEVCUT"), /*#__PURE__*/React.createElement("div", {
+  }, t('currentPrice')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "18px",
       color: "#f1f5f9",
@@ -9012,7 +9014,7 @@ function AlertModal({
       fontSize: "13px",
       color: "#94a3b8"
     }
-  }, "HEDEF"), /*#__PURE__*/React.createElement("div", {
+  }, t('target')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: "18px",
       color: "#fbbf24",
@@ -9036,7 +9038,7 @@ function AlertModal({
       fontSize: "15px",
       fontFamily: "inherit"
     }
-  }, "CANCEL"), /*#__PURE__*/React.createElement("button", {
+  }, t('cancel')), /*#__PURE__*/React.createElement("button", {
     onClick: () => onSet(pct),
     style: {
       flex: 2,
@@ -9050,7 +9052,7 @@ function AlertModal({
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "\uD83D\uDD14 SET ALERT"))));
+  }, "\uD83D\uDD14 ", t('setAlert')))));
 }
 
 // ── CART / WATCH PANEL ──
@@ -9375,6 +9377,7 @@ function CompanyCard({
   onCompare,
   compareDisabled
 }) {
+  const { t } = useLang();
   const sec = SECTORS[c.sector] || {
     color: "#94a3b8",
     label: c.sector
@@ -9579,7 +9582,7 @@ function CompanyCard({
       flexWrap: "wrap",
       justifyContent: "space-between"
     }
-    }, iconBtn("📊", "CHART", false, sec.color, onHistory, false), iconBtn("⚖️", "COMPARE", inCompare, "#e879f9", onCompare, compareDisabled && !inCompare), iconBtn("📈", "ADD", false, "#34d399", onBuy, !isListed), iconBtn("🛒", "CART", inCart, "#38bdf8", onCart, false), iconBtn("👁", "WATCH", isWatched, "#fbbf24", onWatch, false, "#ffffff"), iconBtn("🔔", "ALERT", hasAlert, "#fb923c", onAlert, false)));
+    }, iconBtn("📊", t('chart'), false, sec.color, onHistory, false), iconBtn("⚖️", t('compare'), inCompare, "#e879f9", onCompare, compareDisabled && !inCompare), iconBtn("📈", t('add'), false, "#34d399", onBuy, !isListed), iconBtn("🛒", t('cart'), inCart, "#38bdf8", onCart, false), iconBtn("👁", t('watch'), isWatched, "#fbbf24", onWatch, false, "#ffffff"), iconBtn("🔔", t('alert'), hasAlert, "#fb923c", onAlert, false)));
 }
 
 // ═══════════════════════════════════════════════════════════════
