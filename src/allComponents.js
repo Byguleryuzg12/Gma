@@ -13873,7 +13873,7 @@ function MarketDashboard({
       opacity: loading ? 0.65 : 1,
       transition: "opacity 0.2s"
     }
-  }, loading ? "⟳ " + t('refreshing') : "⟳ " + t('fetchAiData')))), /*#__PURE__*/React.createElement("div", {
+  }, loading ? "⟳ " + t('refreshing') : "⟳ " + t('fetchAiData')), /*#__PURE__*/React.createElement(LangSelector, null))), /*#__PURE__*/React.createElement("div", {
     style: {
       background: "#070c1a",
       borderBottom: "1px solid rgba(56,189,248,0.08)",
@@ -14611,17 +14611,17 @@ const GMA_PLANS = {
     badge: '3 ANALYSES', badgeKey: 'planFreeBadge', scope: '1 Sector', scopeKey: 'planFreeScope', statsKey: 'planFreeStats'
   },
   explorer: {
-    id: 'explorer', label: 'Explorer', labelKey: 'planExplorerLabel', price: 19.99, period: '/ay', periodKey: 'periodMonth',
+    id: 'explorer', label: 'Explorer', labelKey: 'planExplorerLabel', price: 19.99, period: '/mo', periodKey: 'periodMonth',
     credits: 10, color: '#38bdf8', multiAI: true,
-    badge: 'STARTER', badgeKey: 'planExplorerBadge', scope: '1 Sector · 10 Analiz', scopeKey: 'planExplorerScope', statsKey: 'planExplorerStats'
+    badge: 'STARTER', badgeKey: 'planExplorerBadge', scope: '1 Sector · 10 Analyses', scopeKey: 'planExplorerScope', statsKey: 'planExplorerStats'
   },
   strategist: {
-    id: 'strategist', label: 'Strategist', labelKey: 'planStrategistLabel', price: 49.99, period: '/ay', periodKey: 'periodMonth',
+    id: 'strategist', label: 'Strategist', labelKey: 'planStrategistLabel', price: 49.99, period: '/mo', periodKey: 'periodMonth',
     credits: 999, color: '#a78bfa', multiAI: true,
     badge: 'MOST POPULAR', badgeKey: 'planStrategistBadge', scope: 'Unlimited · All Sectors', scopeKey: 'planStrategistScope', statsKey: 'planStrategistStats'
   },
   pro_architect: {
-    id: 'pro_architect', label: 'Pro-Architect', labelKey: 'planProArchitectLabel', price: 99.99, period: '/ay', periodKey: 'periodMonth',
+    id: 'pro_architect', label: 'Pro-Architect', labelKey: 'planProArchitectLabel', price: 99.99, period: '/mo', periodKey: 'periodMonth',
     credits: 999, color: '#f59e0b', multiAI: true,
     badge: 'SOVEREIGN', badgeKey: 'planProArchitectBadge', scope: 'Global + Signal DNA · 126 Years', scopeKey: 'planProArchitectScope', statsKey: 'planProArchitectStats'
   }
@@ -14855,7 +14855,7 @@ function PricingPage({
         letterSpacing: '0.08em',
         marginBottom: '10px'
       }
-    }, "\uD83D\uDD11 YOUR GMA PLATFORM ACCESS KEY"), /*#__PURE__*/React.createElement("div", {
+    }, "\uD83D\uDD11 " + t('payKey')), /*#__PURE__*/React.createElement("div", {
       style: {
         fontFamily: 'monospace',
         fontSize: '14px',
@@ -14980,14 +14980,14 @@ function PricingPage({
       letterSpacing: '0.08em',
       whiteSpace: 'nowrap'
     }
-  }, plan.badge), /*#__PURE__*/React.createElement("div", {
+  }, getPlanText(t, plan, 'badge')), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '11px',
       color: plan.color,
       letterSpacing: '0.1em',
       marginBottom: '8px'
     }
-  }, plan.label), /*#__PURE__*/React.createElement("div", {
+  }, getPlanText(t, plan, 'label')), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'baseline',
@@ -15005,13 +15005,13 @@ function PricingPage({
       fontSize: '12px',
       color: '#94a3b8'
     }
-  }, plan.period)), /*#__PURE__*/React.createElement("div", {
+  }, getPlanPeriod(t, plan))), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '11px',
       color: plan.color,
       marginBottom: '18px'
     }
-  }, plan.credits, " credits \xB7 ", plan.analyses, " analyses"), /*#__PURE__*/React.createElement("div", {
+  }, t(plan.statsKey)), /*#__PURE__*/React.createElement("div", {
     style: {
       marginBottom: '20px',
       display: 'flex',
@@ -15042,7 +15042,7 @@ function PricingPage({
     },
     onMouseEnter: e => e.currentTarget.style.opacity = '0.85',
     onMouseLeave: e => e.currentTarget.style.opacity = '1'
-  }, plan.id === 'free' ? t('startFreeCheckout') : (plan.label + ' ' + t('plan') + ' →'))))), /*#__PURE__*/React.createElement("div", {
+  }, plan.id === 'free' ? t('startFreeCheckout') : (getPlanText(t, plan, 'label') + ' ' + t('plan') + ' →'))))), /*#__PURE__*/React.createElement("div", {
     style: {
       maxWidth: '880px',
       margin: '0 auto 40px',
@@ -15081,7 +15081,7 @@ function PricingPage({
       fontWeight: 'bold',
       fontSize: '10px'
     }
-  }, p.label)))), /*#__PURE__*/React.createElement("tbody", null, featureRows.map(({
+  }, getPlanText(t, p, 'label')))), /*#__PURE__*/React.createElement("tbody", null, featureRows.map(({
     label,
     vals
   }, i) => /*#__PURE__*/React.createElement("tr", {
