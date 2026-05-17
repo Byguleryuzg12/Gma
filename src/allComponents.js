@@ -16452,7 +16452,7 @@ function UserPanelPage({
           React.createElement("button",{onClick:handleLogout,
             style:{padding:'9px 16px',background:'rgba(248,113,113,0.1)',border:'1px solid rgba(248,113,113,0.3)',
               borderRadius:'9px',color:'#f87171',cursor:'pointer',fontSize:'15px',fontFamily:'inherit',fontWeight:'bold'}},
-            "\ud83d\udead ",t('logout'))
+            t('logout'))
         )
       )
     )
