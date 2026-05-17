@@ -1951,7 +1951,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'AI Analysis Preview',
     demoLayerLabel: 'preview layer',
     demoContentOnly: 'Preview content only. Live model output will be connected later for company-specific scoring.',
-    companyDemoContentOnly: 'preview content only. Live model output will be connected later for company-specific scoring.'
+    companyDemoContentOnly: 'preview content only. Live model output will be connected later for company-specific scoring.',
+    demoAnalysisSummary: 'Apple Inc. demonstrates exceptional financial resilience with consistent revenue growth across its diversified product and services ecosystem. The company transition to recurring services revenue provides stable high-margin income, while premium brand positioning maintains strong pricing power against competitors.',
+    demoPositive1: 'Services segment growing 14% YoY - now 22% of total revenue with 72% gross margins',
+    demoPositive2: 'Strong balance sheet: $162B cash reserves enabling R&D investment and buybacks',
+    demoPositive3: 'Ecosystem lock-in drives 95%+ customer retention and cross-product adoption rates',
+    demoInnovation1: 'Vision Pro spatial computing positions the company for the next computing cycle',
+    demoInnovation2: 'Custom silicon delivers industry-leading performance-per-watt ratios',
+    demoShortTimeframe: 'Strong Q4 earnings forecast and the new iPhone cycle are expected to support near-term price appreciation. Services revenue growth provides a consistent upside catalyst.',
+    demoLongTimeframe: 'Sustained services expansion, Vision Pro ecosystem maturation, and continued buybacks position AAPL for long-term value appreciation through 2027.'
   },
   tr: {
     chart: 'Grafik',
@@ -1960,7 +1968,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'Yapay Zeka Analiz Onizlemesi',
     demoLayerLabel: 'onizleme katmani',
     demoContentOnly: 'Yalnizca onizleme icerigidir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.',
-    companyDemoContentOnly: 'yalnizca onizleme icerigidir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.'
+    companyDemoContentOnly: 'yalnizca onizleme icerigidir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.',
+    demoAnalysisSummary: 'Apple Inc., cesitlendirilmis urun ve servis ekosisteminde istikrarli gelir buyumesiyle guclu finansal dayaniklilik gosterir. Sirketin tekrarlayan servis gelirlerine gecisi yuksek marjli istikrarli gelir saglarken, premium marka konumu rakiplere karsi guclu fiyatlama gucunu korur.',
+    demoPositive1: 'Servis segmenti yillik %14 buyuyor - toplam gelirin %22 si ve %72 brut marj',
+    demoPositive2: 'Guclu bilanco: Ar-Ge yatirimi ve geri alimlara imkan veren 162 milyar dolar nakit rezervi',
+    demoPositive3: 'Ekosistem bagliligi %95 uzeri musteri tutma ve capraz urun kullanimini destekler',
+    demoInnovation1: 'Vision Pro uzamsal bilgisayar alani sirketi yeni nesil bilgisayar dongusune konumlandirir',
+    demoInnovation2: 'Ozel silikon mimarisi watt basina sektorde lider performans sunar',
+    demoShortTimeframe: 'Guclu 4. ceyrek beklentisi ve yeni iPhone dongusunun yakin vadeli fiyat artisini desteklemesi bekleniyor. Servis gelirlerindeki buyume duzenli yukari yonlu katalizor saglar.',
+    demoLongTimeframe: 'Servis segmentinin suren genislemesi, Vision Pro ekosisteminin olgunlasmasi ve geri alim programi AAPL icin 2027 ye kadar uzun vadeli deger artisi zemini olusturur.'
   },
   ru: {
     chart: 'График',
@@ -1969,7 +1985,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'Предпросмотр AI-анализа',
     demoLayerLabel: 'слой предпросмотра',
     demoContentOnly: 'Это только предпросмотр. Живой вывод модели для оценки компании будет подключен позже.',
-    companyDemoContentOnly: 'только предпросмотр. Живой вывод модели для оценки компании будет подключен позже.'
+    companyDemoContentOnly: 'только предпросмотр. Живой вывод модели для оценки компании будет подключен позже.',
+    demoAnalysisSummary: 'Apple Inc. демонстрирует высокую финансовую устойчивость благодаря стабильному росту выручки в диверсифицированной экосистеме продуктов и сервисов. Переход к повторяющейся сервисной выручке обеспечивает стабильный высокомаржинальный доход, а премиальный бренд сохраняет сильную ценовую власть.',
+    demoPositive1: 'Сервисный сегмент растет на 14% г/г - уже 22% выручки при валовой марже 72%',
+    demoPositive2: 'Сильный баланс: $162 млрд денежных резервов для R&D и обратных выкупов',
+    demoPositive3: 'Экосистема удерживает более 95% клиентов и стимулирует использование нескольких продуктов',
+    demoInnovation1: 'Vision Pro позиционирует компанию в следующем цикле вычислений',
+    demoInnovation2: 'Собственные чипы дают лидирующую производительность на ватт',
+    demoShortTimeframe: 'Сильный прогноз на Q4 и новый цикл iPhone могут поддержать краткосрочный рост цены. Рост сервисной выручки остается устойчивым позитивным катализатором.',
+    demoLongTimeframe: 'Расширение сервисов, развитие экосистемы Vision Pro и программа обратного выкупа поддерживают долгосрочный потенциал AAPL до 2027 года.'
   },
   ar: {
     chart: 'الرسم البياني',
@@ -1978,7 +2002,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'معاينة تحليل AI',
     demoLayerLabel: 'طبقة المعاينة',
     demoContentOnly: 'هذا محتوى معاينة فقط. سيتم ربط مخرجات النموذج الحية لاحقا لتقييم كل شركة.',
-    companyDemoContentOnly: 'محتوى معاينة فقط. سيتم ربط مخرجات النموذج الحية لاحقا لتقييم كل شركة.'
+    companyDemoContentOnly: 'محتوى معاينة فقط. سيتم ربط مخرجات النموذج الحية لاحقا لتقييم كل شركة.',
+    demoAnalysisSummary: 'تظهر Apple Inc. مرونة مالية قوية بفضل نمو إيرادات مستقر داخل منظومة منتجات وخدمات متنوعة. انتقال الشركة إلى إيرادات خدمات متكررة يوفر دخلا مستقرا عالي الهامش، بينما يحافظ موقع العلامة الممتاز على قوة التسعير أمام المنافسين.',
+    demoPositive1: 'قطاع الخدمات ينمو 14% سنويا - يمثل الآن 22% من الإيرادات بهامش إجمالي 72%',
+    demoPositive2: 'ميزانية قوية: احتياطي نقدي 162 مليار دولار يدعم البحث والتطوير وإعادة شراء الأسهم',
+    demoPositive3: 'قوة المنظومة تدعم احتفاظا بالعملاء فوق 95% واعتمادا متبادلا للمنتجات',
+    demoInnovation1: 'Vision Pro يضع الشركة في موقع قوي لدورة الحوسبة التالية',
+    demoInnovation2: 'الشرائح المخصصة تقدم أداء رائدا لكل واط',
+    demoShortTimeframe: 'من المتوقع أن يدعم توقع أرباح الربع الرابع القوي ودورة iPhone الجديدة ارتفاع السعر قصير الأجل. نمو إيرادات الخدمات يوفر محفزا إيجابيا مستمرا.',
+    demoLongTimeframe: 'استمرار توسع الخدمات ونضج منظومة Vision Pro وبرنامج إعادة الشراء يدعمون قيمة AAPL على المدى الطويل حتى 2027.'
   },
   zh: {
     chart: '图表',
@@ -1987,7 +2019,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'AI 分析预览',
     demoLayerLabel: '预览层',
     demoContentOnly: '仅为预览内容。稍后将连接实时模型输出以进行公司评分。',
-    companyDemoContentOnly: '仅为预览内容。稍后将连接实时模型输出以进行公司评分。'
+    companyDemoContentOnly: '仅为预览内容。稍后将连接实时模型输出以进行公司评分。',
+    demoAnalysisSummary: 'Apple Inc. 通过多元化产品和服务生态的稳定收入增长，展现出卓越的财务韧性。公司向经常性服务收入转型带来稳定的高利润收入，同时高端品牌定位维持了强劲的定价能力。',
+    demoPositive1: '服务业务同比增长 14% - 已占总收入 22%，毛利率 72%',
+    demoPositive2: '资产负债表强劲：1620 亿美元现金储备支持研发和回购',
+    demoPositive3: '生态锁定推动 95% 以上客户留存和跨产品采用',
+    demoInnovation1: 'Vision Pro 空间计算使公司面向下一代计算周期',
+    demoInnovation2: '自研芯片带来行业领先的每瓦性能',
+    demoShortTimeframe: '强劲的第四季度盈利预期和新 iPhone 周期有望支持短期价格上涨。服务收入增长提供持续的上行催化。',
+    demoLongTimeframe: '服务业务持续扩张、Vision Pro 生态成熟以及持续回购，使 AAPL 到 2027 年具备长期增值潜力。'
   },
   hi: {
     chart: 'चार्ट',
@@ -1996,7 +2036,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'AI विश्लेषण पूर्वावलोकन',
     demoLayerLabel: 'पूर्वावलोकन परत',
     demoContentOnly: 'यह केवल पूर्वावलोकन सामग्री है। कंपनी-विशिष्ट स्कोरिंग के लिए लाइव मॉडल आउटपुट बाद में जोड़ा जाएगा।',
-    companyDemoContentOnly: 'केवल पूर्वावलोकन सामग्री। कंपनी-विशिष्ट स्कोरिंग के लिए लाइव मॉडल आउटपुट बाद में जोड़ा जाएगा।'
+    companyDemoContentOnly: 'केवल पूर्वावलोकन सामग्री। कंपनी-विशिष्ट स्कोरिंग के लिए लाइव मॉडल आउटपुट बाद में जोड़ा जाएगा।',
+    demoAnalysisSummary: 'Apple Inc. अपने विविध उत्पाद और सेवा इकोसिस्टम में लगातार राजस्व वृद्धि के साथ मजबूत वित्तीय लचीलापन दिखाती है। आवर्ती सेवा राजस्व की ओर बदलाव स्थिर उच्च-मार्जिन आय देता है, जबकि प्रीमियम ब्रांड स्थिति प्रतिस्पर्धियों के विरुद्ध मजबूत मूल्य निर्धारण शक्ति बनाए रखती है।',
+    demoPositive1: 'सेवा खंड 14% वार्षिक बढ़ रहा है - कुल राजस्व का 22% और 72% सकल मार्जिन',
+    demoPositive2: 'मजबूत बैलेंस शीट: R&D और बायबैक के लिए $162B नकद भंडार',
+    demoPositive3: 'इकोसिस्टम लॉक-इन 95%+ ग्राहक प्रतिधारण और क्रॉस-प्रोडक्ट अपनाने को बढ़ाता है',
+    demoInnovation1: 'Vision Pro कंपनी को अगली कंप्यूटिंग लहर के लिए स्थापित करता है',
+    demoInnovation2: 'कस्टम सिलिकॉन प्रति-वाट प्रदर्शन में उद्योग-अग्रणी दक्षता देता है',
+    demoShortTimeframe: 'मजबूत Q4 आय पूर्वानुमान और नया iPhone चक्र निकट अवधि में कीमत समर्थन दे सकते हैं। सेवा राजस्व वृद्धि स्थिर सकारात्मक उत्प्रेरक देती है।',
+    demoLongTimeframe: 'सेवाओं का विस्तार, Vision Pro इकोसिस्टम की परिपक्वता और बायबैक कार्यक्रम AAPL को 2027 तक दीर्घकालिक मूल्य वृद्धि के लिए समर्थन देते हैं।'
   },
   de: {
     chart: 'Diagramm',
@@ -2005,7 +2053,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'Vorschau der KI-Analyse',
     demoLayerLabel: 'Vorschau-Ebene',
     demoContentOnly: 'Nur Vorschauinhalt. Live-Modellausgaben fur unternehmensspezifische Bewertungen werden spater verbunden.',
-    companyDemoContentOnly: 'nur Vorschauinhalt. Live-Modellausgaben fur unternehmensspezifische Bewertungen werden spater verbunden.'
+    companyDemoContentOnly: 'nur Vorschauinhalt. Live-Modellausgaben fur unternehmensspezifische Bewertungen werden spater verbunden.',
+    demoAnalysisSummary: 'Apple Inc. zeigt aussergewoehnliche finanzielle Widerstandsfaehigkeit mit konstantem Umsatzwachstum in einem diversifizierten Produkt- und Service-Oekosystem. Der Uebergang zu wiederkehrenden Serviceerloesen schafft stabile margenstarke Einnahmen, waehrend die Premium-Marke starke Preissetzungsmacht sichert.',
+    demoPositive1: 'Services wachsen 14% YoY - nun 22% des Umsatzes mit 72% Bruttomarge',
+    demoPositive2: 'Starke Bilanz: $162 Mrd. Cash fuer F&E-Investitionen und Rueckkaeufe',
+    demoPositive3: 'Oekosystembindung treibt 95%+ Kundenbindung und Cross-Product-Nutzung',
+    demoInnovation1: 'Vision Pro positioniert das Unternehmen fuer den naechsten Computing-Zyklus',
+    demoInnovation2: 'Eigene Chips liefern fuehrende Performance pro Watt',
+    demoShortTimeframe: 'Starke Q4-Erwartungen und der neue iPhone-Zyklus duerften kurzfristige Kurssteigerungen unterstuetzen. Servicewachstum bleibt ein positiver Katalysator.',
+    demoLongTimeframe: 'Anhaltende Serviceexpansion, Reifung des Vision-Pro-Oekosystems und Rueckkaeufe positionieren AAPL fuer langfristige Wertsteigerung bis 2027.'
   },
   es: {
     chart: 'Grafico',
@@ -2014,7 +2070,15 @@ const GMA_CHART_MODAL_I18N_FIXES = {
     aiAnalysisDemo: 'Vista previa del analisis AI',
     demoLayerLabel: 'capa de vista previa',
     demoContentOnly: 'Solo contenido de vista previa. La salida del modelo en vivo para puntuacion por empresa se conectara despues.',
-    companyDemoContentOnly: 'solo contenido de vista previa. La salida del modelo en vivo para puntuacion por empresa se conectara despues.'
+    companyDemoContentOnly: 'solo contenido de vista previa. La salida del modelo en vivo para puntuacion por empresa se conectara despues.',
+    demoAnalysisSummary: 'Apple Inc. demuestra una resiliencia financiera excepcional con crecimiento constante de ingresos en su ecosistema diversificado de productos y servicios. La transicion hacia ingresos recurrentes de servicios aporta ingresos estables de alto margen, mientras la marca premium mantiene poder de precios frente a competidores.',
+    demoPositive1: 'El segmento de servicios crece 14% interanual - ya es 22% de ingresos con 72% de margen bruto',
+    demoPositive2: 'Balance solido: $162B en efectivo para I+D y recompras',
+    demoPositive3: 'El ecosistema impulsa retencion superior al 95% y adopcion cruzada de productos',
+    demoInnovation1: 'Vision Pro posiciona a la empresa para el proximo ciclo de computacion',
+    demoInnovation2: 'El silicio propio ofrece rendimiento por vatio lider en la industria',
+    demoShortTimeframe: 'Una fuerte prevision de Q4 y el nuevo ciclo de iPhone pueden apoyar la apreciacion de corto plazo. El crecimiento de servicios aporta un catalizador positivo constante.',
+    demoLongTimeframe: 'La expansion de servicios, la maduracion de Vision Pro y las recompras posicionan a AAPL para apreciacion de valor a largo plazo hasta 2027.'
   }
 };
 Object.entries(GMA_CHART_MODAL_I18N_FIXES).forEach(([code, values]) => {
@@ -7548,6 +7612,29 @@ const GMA_DEMO_ANALYSIS = {
   _demo: true
 };
 
+function getGmaDemoAnalysis(t) {
+  return {
+    ...GMA_DEMO_ANALYSIS,
+    summary: t('demoAnalysisSummary'),
+    positive: [
+      t('demoPositive1'),
+      t('demoPositive2'),
+      t('demoPositive3')
+    ],
+    negative: [
+      t('demoRisk1'),
+      t('demoRisk2'),
+      t('demoRisk3')
+    ],
+    innovation: [
+      t('demoInnovation1'),
+      t('demoInnovation2')
+    ],
+    kisaTimeframe: t('demoShortTimeframe'),
+    uzunTimeframe: t('demoLongTimeframe')
+  };
+}
+
 const GMA_DEMO_COMPARE = companies => ({
   companyAnalysis: companies.map((c, i) => ({
     ticker: c.ticker,
@@ -7584,7 +7671,7 @@ function AIAnalysisModal({
     color: "#94a3b8",
     label: c.sector
   };
-  const analysis = GMA_DEMO_ANALYSIS;
+  const analysis = getGmaDemoAnalysis(t);
   const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
   return /*#__PURE__*/React.createElement("div", {
     onClick: onClose,
@@ -7867,7 +7954,7 @@ function AIAnalysisInlinePanel({
   c
 }) {
   const { t } = useLang();
-  const analysis = GMA_DEMO_ANALYSIS;
+  const analysis = getGmaDemoAnalysis(t);
   const sentimentColor = s => s === "POZITIF" ? "#34d399" : s === "NEGATIF" ? "#f87171" : "#fbbf24";
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
