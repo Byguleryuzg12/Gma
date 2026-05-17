@@ -27,19 +27,21 @@ function App() {
       return !u || localStorage.getItem('gma_onboarded_' + u.email) === '1';
     } catch { return true; }
   });
-  const [lang, setLangState] = React.useState(() => localStorage.getItem('gma_lang') || 'en');
+  const normalizeLang = code => CORE_LANGS.includes(code) ? code : 'en';
+  const [lang, setLangState] = React.useState(() => normalizeLang(localStorage.getItem('gma_lang') || 'en'));
   const [aiTranslating, setAiTranslating] = React.useState(false);
   const [, forceUpdate] = React.useReducer(x => x + 1, 0);
   const setLang = code => {
-    localStorage.setItem('gma_lang', code);
-    setLangState(code);
-    const info = LANGS.find(l => l.c === code);
+    const nextCode = normalizeLang(code);
+    localStorage.setItem('gma_lang', nextCode);
+    setLangState(nextCode);
+    const info = LANGS.find(l => l.c === nextCode);
     document.documentElement.dir = info && info.r ? 'rtl' : 'ltr';
-    document.documentElement.lang = code;
+    document.documentElement.lang = nextCode;
     // Desteklenmeyen diller icin AI ceviri baslat
-    if (!CORE_LANGS.includes(code) && !getCachedTranslation(code)) {
+    if (!CORE_LANGS.includes(nextCode) && !getCachedTranslation(nextCode)) {
       setAiTranslating(true);
-      translateWithAI(code, info?.n || code, translated => {
+      translateWithAI(nextCode, info?.n || nextCode, translated => {
         setAiTranslating(false);
         forceUpdate(); // yeniden render et
       });

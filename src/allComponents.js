@@ -5,43 +5,90 @@
 // ──  LANGUAGE SELECTOR (8 Languages) ──
 // ═══════════════════════════════════════════════════════
 const LANGS = [
-  {c:'en', n:'English', f:'🇺🇸'},
-  {c:'tr', n:'Turkce', f:'🇹🇷'},
-  {c:'ru', n:'Русский', f:'🇷🇺'},
-  {c:'ar', n:'العربية', f:'🇸🇦', r:1},
-  {c:'zh', n:'简体中文', f:'🇨🇳'},
-  {c:'hi', n:'हिन्दी', f:'🇮🇳'},
-  {c:'de', n:'Deutsch', f:'🇩🇪'},
-  {c:'es', n:'Español', f:'🇪🇸'}
+  {c:'en', n:'English'},
+  {c:'tr', n:'Türkçe'},
+  {c:'ru', n:'Русский'},
+  {c:'ar', n:'العربية', r:1},
+  {c:'zh', n:'简体中文'},
+  {c:'hi', n:'हिन्दी'},
+  {c:'de', n:'Deutsch'},
+  {c:'es', n:'Español'}
 ];
 
-function flagSvgSrc(code) {
-  const svg = {
-    en: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#fff'/><g fill='#b91c1c'><rect y='0' width='28' height='2'/><rect y='4' width='28' height='2'/><rect y='8' width='28' height='2'/><rect y='12' width='28' height='2'/><rect y='16' width='28' height='2'/></g><rect width='12' height='10' fill='#1e3a8a'/><circle cx='3' cy='3' r='1' fill='#fff'/><circle cx='7' cy='3' r='1' fill='#fff'/><circle cx='3' cy='7' r='1' fill='#fff'/><circle cx='7' cy='7' r='1' fill='#fff'/></svg>",
-    tr: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#e30a17'/><circle cx='11' cy='10' r='5' fill='#fff'/><circle cx='13' cy='10' r='4' fill='#e30a17'/><polygon points='19,6.8 20,9 22.3,9 20.4,10.3 21.2,12.6 19,11.2 16.8,12.6 17.6,10.3 15.7,9 18,9' fill='#fff'/></svg>",
-    ru: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#fff'/><rect y='6.67' width='28' height='6.66' fill='#2563eb'/><rect y='13.33' width='28' height='6.67' fill='#dc2626'/></svg>",
-    ar: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#166534'/><text x='14' y='10' text-anchor='middle' font-size='5' font-family='Arial' fill='#fff'>SA</text><rect x='8' y='13' width='12' height='1.2' fill='#fff'/></svg>",
-    zh: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#dc2626'/><polygon points='6,3 7,6 10,6 7.6,7.8 8.5,11 6,9 3.5,11 4.4,7.8 2,6 5,6' fill='#facc15'/><circle cx='13' cy='5' r='1.1' fill='#facc15'/><circle cx='16' cy='8' r='1.1' fill='#facc15'/><circle cx='16' cy='12' r='1.1' fill='#facc15'/><circle cx='13' cy='15' r='1.1' fill='#facc15'/></svg>",
-    hi: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='6.67' fill='#f97316'/><rect y='6.67' width='28' height='6.66' fill='#fff'/><rect y='13.33' width='28' height='6.67' fill='#16a34a'/><circle cx='14' cy='10' r='2.3' fill='none' stroke='#1d4ed8' stroke-width='1'/><circle cx='14' cy='10' r='.5' fill='#1d4ed8'/></svg>",
-    de: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='6.67' fill='#111827'/><rect y='6.67' width='28' height='6.66' fill='#dc2626'/><rect y='13.33' width='28' height='6.67' fill='#facc15'/></svg>",
-    es: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><rect width='28' height='20' fill='#dc2626'/><rect y='5' width='28' height='10' fill='#facc15'/><rect x='7' y='8' width='3' height='4' rx='.4' fill='#dc2626'/></svg>"
-  }[code] || "";
-  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
-}
-
 function LangFlag({ code }) {
-  return /*#__PURE__*/React.createElement("img", {
-    src: flagSvgSrc(code),
-    alt: "",
-    "aria-hidden": true,
-    style: {
-      width: "22px",
-      height: "16px",
-      borderRadius: "2px",
-      objectFit: "cover",
-      boxShadow: "0 0 0 1px rgba(255,255,255,0.18)"
-    }
-  });
+  const base = {
+    width: "22px",
+    height: "16px",
+    borderRadius: "2px",
+    overflow: "hidden",
+    position: "relative",
+    flex: "0 0 22px",
+    display: "inline-block",
+    boxShadow: "0 0 0 1px rgba(255,255,255,0.22)",
+    background: "#111827"
+  };
+  const block = (style, key, children) => /*#__PURE__*/React.createElement("span", {
+    key,
+    style: { position: "absolute", display: "block", ...style }
+  }, children);
+  const star = (style, key) => block({
+    width: 0,
+    height: 0,
+    borderLeft: "3px solid transparent",
+    borderRight: "3px solid transparent",
+    borderBottom: "5px solid #facc15",
+    transform: "rotate(35deg)",
+    ...style
+  }, key);
+  const flags = {
+    en: [
+      block({ inset: 0, background: "#fff" }, "bg"),
+      ...[0, 4, 8, 12].map((top, i) => block({ left: 0, right: 0, top, height: 2, background: "#b91c1c" }, "r" + i)),
+      block({ left: 0, top: 0, width: 10, height: 8, background: "#1e3a8a" }, "c")
+    ],
+    tr: [
+      block({ inset: 0, background: "#e30a17" }, "bg"),
+      block({ left: 6, top: 4, width: 8, height: 8, borderRadius: "50%", background: "#fff" }, "moon1"),
+      block({ left: 8, top: 4, width: 7, height: 8, borderRadius: "50%", background: "#e30a17" }, "moon2"),
+      block({ left: 15, top: 5, width: 0, height: 0, borderLeft: "4px solid #fff", borderTop: "3px solid transparent", borderBottom: "3px solid transparent" }, "star")
+    ],
+    ru: [
+      block({ inset: 0, background: "#fff" }, "w"),
+      block({ left: 0, right: 0, top: 5.33, height: 5.34, background: "#2563eb" }, "b"),
+      block({ left: 0, right: 0, bottom: 0, height: 5.33, background: "#dc2626" }, "r")
+    ],
+    ar: [
+      block({ inset: 0, background: "#166534" }, "bg"),
+      block({ left: 6, right: 6, top: 10, height: 1.5, background: "#fff" }, "sword"),
+      block({ left: 7, top: 4, color: "#fff", fontSize: 6, lineHeight: "8px", fontWeight: 700 }, "SA", "txt")
+    ],
+    zh: [
+      block({ inset: 0, background: "#dc2626" }, "bg"),
+      star({ left: 3, top: 3 }, "s1"),
+      ...[[11, 3], [14, 6], [14, 10], [11, 12]].map(([left, top], i) => block({ left, top, width: 2, height: 2, borderRadius: "50%", background: "#facc15" }, "d" + i))
+    ],
+    hi: [
+      block({ left: 0, right: 0, top: 0, height: 5.33, background: "#f97316" }, "o"),
+      block({ left: 0, right: 0, top: 5.33, height: 5.34, background: "#fff" }, "w"),
+      block({ left: 0, right: 0, bottom: 0, height: 5.33, background: "#16a34a" }, "g"),
+      block({ left: 9, top: 5.5, width: 4, height: 4, borderRadius: "50%", border: "1px solid #1d4ed8" }, "wheel")
+    ],
+    de: [
+      block({ left: 0, right: 0, top: 0, height: 5.33, background: "#111827" }, "b"),
+      block({ left: 0, right: 0, top: 5.33, height: 5.34, background: "#dc2626" }, "r"),
+      block({ left: 0, right: 0, bottom: 0, height: 5.33, background: "#facc15" }, "y")
+    ],
+    es: [
+      block({ inset: 0, background: "#dc2626" }, "r"),
+      block({ left: 0, right: 0, top: 4, height: 8, background: "#facc15" }, "y"),
+      block({ left: 6, top: 6, width: 3, height: 4, borderRadius: 1, background: "#dc2626" }, "crest")
+    ]
+  };
+  return /*#__PURE__*/React.createElement("span", {
+    role: "img",
+    "aria-label": code,
+    style: base
+  }, flags[code] || flags.en);
 }
 
 // ── Platform API Key (Admin tarafindan set edilir, usersdan istenmez) ──
@@ -1204,14 +1251,14 @@ Object.entries(GMA_MARKET_ACTION_FIXES).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
 const GMA_PRICING_LEGAL_FIXES = {
-  en: { pricingManagedLine1:"Pay GMA - we manage GMA Triple Consensus for you.", pricingManagedLine2:"One platform, three AI engines.", detailedComparison:"DETAILED COMPARISON", feature:"FEATURE", integratedAiPartners:"INTEGRATED AI PARTNERS", apiCostsManaged:"GMA manages all API costs on your behalf. One subscription, three AI engines.", pricingLegalWarning:"This platform does not provide investment advice. All decisions remain the responsibility of the investor.", secureCheckoutViaPaddle:"SECURE CHECKOUT via PADDLE", secureCheckoutTitle:"Secure Checkout via Paddle", secureCheckoutBody:"Your payment is securely processed by Paddle.com — our authorized Merchant of Record. GMA never stores your card details. Clicking below opens Paddle's secure hosted checkout.", proceedToCheckout:"Proceed to Checkout", startFreeCheckout:"Start Free", checkoutSecuredNote:"Secured by Paddle.com — card data never stored on GMA servers.", openingPaddle:"Opening Paddle Checkout...", pleaseWait:"Please wait, do not close this page.", planActivatedShort:"plan access activated.", creditsAdded:"credits added to your account.", plan:"Plan", myProfile:"My Profile" },
-  tr: { pricingManagedLine1:"GMA'ya odeme yapin - GMA Triple Consensus'u sizin icin yonetiyoruz.", pricingManagedLine2:"Tek platform, uc AI motoru.", detailedComparison:"DETAYLI KARSILASTIRMA", feature:"OZELLIK", integratedAiPartners:"ENTEGRE AI ORTAKLARI", apiCostsManaged:"GMA tum API maliyetlerini sizin adiniza yonetir. Tek abonelik, uc AI motoru.", pricingLegalWarning:"Bu platform yatirim tavsiyesi vermez. Tum kararlar yatirimcinin sorumlulugundadir.", secureCheckoutViaPaddle:"PADDLE ILE GUVENLI ODEME", secureCheckoutTitle:"Paddle ile Guvenli Odeme", secureCheckoutBody:"Odemeniz yetkili kayitli satici is ortagimiz Paddle.com tarafindan guvenle islenir. GMA kart bilgilerinizi saklamaz. Asagidaki buton Paddle'in guvenli odeme sayfasini acar.", proceedToCheckout:"Odemeye Devam Et", startFreeCheckout:"Ucretsiz Basla", checkoutSecuredNote:"Paddle.com guvencesiyle - kart verileri GMA sunucularinda saklanmaz.", openingPaddle:"Paddle odeme ekrani aciliyor...", pleaseWait:"Lutfen bekleyin, bu sayfayi kapatmayin.", planActivatedShort:"plan erisimi etkinlestirildi.", creditsAdded:"kredi hesabiniza eklendi.", plan:"Plan", myProfile:"Profilim" },
-  ru: { pricingManagedLine1:"Оплатите GMA - мы управляем GMA Triple Consensus за вас.", pricingManagedLine2:"Одна платформа, три AI-движка.", detailedComparison:"ПОДРОБНОЕ СРАВНЕНИЕ", feature:"ФУНКЦИЯ", integratedAiPartners:"ИНТЕГРИРОВАННЫЕ AI-ПАРТНЁРЫ", apiCostsManaged:"GMA управляет всеми API-расходами за вас. Одна подписка, три AI-движка.", pricingLegalWarning:"Платформа не предоставляет инвестиционных рекомендаций. Все решения остаются ответственностью инвестора.", secureCheckoutViaPaddle:"БЕЗОПАСНАЯ ОПЛАТА ЧЕРЕЗ PADDLE", secureCheckoutTitle:"Безопасная оплата через Paddle", secureCheckoutBody:"Платёж безопасно обрабатывается Paddle.com, нашим официальным продавцом. GMA не хранит данные карт. Кнопка ниже откроет безопасную страницу Paddle.", proceedToCheckout:"Перейти к оплате", startFreeCheckout:"Начать бесплатно", checkoutSecuredNote:"Защищено Paddle.com — данные карт не хранятся на серверах GMA.", openingPaddle:"Открывается оплата Paddle...", pleaseWait:"Пожалуйста, подождите и не закрывайте страницу.", planActivatedShort:"доступ плана активирован.", creditsAdded:"кредитов добавлено в аккаунт.", plan:"План", myProfile:"Мой профиль" },
-  ar: { pricingManagedLine1:"ادفع لـ GMA - نحن ندير توافق GMA الثلاثي نيابة عنك.", pricingManagedLine2:"منصة واحدة، ثلاثة محركات AI.", detailedComparison:"مقارنة تفصيلية", feature:"الميزة", integratedAiPartners:"شركاء AI المدمجون", apiCostsManaged:"تدير GMA كل تكاليف API نيابة عنك. اشتراك واحد، ثلاثة محركات AI.", pricingLegalWarning:"هذه المنصة لا تقدم نصائح استثمارية. تبقى كل القرارات مسؤولية المستثمر.", secureCheckoutViaPaddle:"دفع آمن عبر PADDLE", secureCheckoutTitle:"دفع آمن عبر Paddle", secureCheckoutBody:"تتم معالجة دفعتك بأمان عبر Paddle.com، شريكنا المعتمد كسجل تجاري. لا تخزن GMA بيانات بطاقتك. الزر أدناه يفتح صفحة الدفع الآمنة لدى Paddle.", proceedToCheckout:"المتابعة إلى الدفع", startFreeCheckout:"ابدأ مجانًا", checkoutSecuredNote:"محمي بواسطة Paddle.com — لا يتم تخزين بيانات البطاقة على خوادم GMA.", openingPaddle:"جار فتح دفع Paddle...", pleaseWait:"يرجى الانتظار وعدم إغلاق الصفحة.", planActivatedShort:"تم تفعيل وصول الخطة.", creditsAdded:"تمت إضافة الأرصدة إلى حسابك.", plan:"الخطة", myProfile:"ملفي الشخصي", legal:"القانوني", legalNoticeTitle:"إشعار قانوني", legalNotice:"هذه المنصة لا تقدم نصائح استثمارية. تقدم GMA رؤى تحليلية مدعومة بالذكاء الاصطناعي لأغراض معلوماتية فقط. تبقى قرارات الاستثمار النهائية مسؤولية المستثمر بالكامل." },
-  zh: { pricingManagedLine1:"支付 GMA - 我们为您管理 GMA 三重共识。", pricingManagedLine2:"一个平台，三个 AI 引擎。", detailedComparison:"详细比较", feature:"功能", integratedAiPartners:"集成 AI 伙伴", apiCostsManaged:"GMA 代表您管理所有 API 成本。一个订阅，三个 AI 引擎。", pricingLegalWarning:"本平台不提供投资建议。所有决策均由投资者负责。", secureCheckoutViaPaddle:"通过 PADDLE 安全结账", secureCheckoutTitle:"通过 Paddle 安全结账", secureCheckoutBody:"您的付款由授权登记销售方 Paddle.com 安全处理。GMA 永不存储您的银行卡信息。点击下方将打开 Paddle 安全托管结账。", proceedToCheckout:"继续结账", startFreeCheckout:"免费开始", checkoutSecuredNote:"由 Paddle.com 保护 — 银行卡数据不会存储在 GMA 服务器。", openingPaddle:"正在打开 Paddle 结账...", pleaseWait:"请稍候，不要关闭此页面。", planActivatedShort:"计划访问已激活。", creditsAdded:"额度已添加到您的账户。", plan:"计划", myProfile:"我的资料", legal:"法律", legalNoticeTitle:"法律声明", legalNotice:"本平台不提供投资建议。GMA 仅提供用于信息目的的 AI 辅助分析洞察。最终投资决定完全由投资者负责。" },
-  hi: { pricingManagedLine1:"GMA को भुगतान करें - हम आपके लिए GMA Triple Consensus प्रबंधित करते हैं।", pricingManagedLine2:"एक प्लेटफ़ॉर्म, तीन AI इंजन।", detailedComparison:"विस्तृत तुलना", feature:"सुविधा", integratedAiPartners:"एकीकृत AI भागीदार", apiCostsManaged:"GMA आपकी ओर से सभी API लागतों का प्रबंधन करता है। एक सदस्यता, तीन AI इंजन।", pricingLegalWarning:"यह प्लेटफ़ॉर्म निवेश सलाह नहीं देता। सभी निर्णय निवेशक की जिम्मेदारी हैं।", secureCheckoutViaPaddle:"PADDLE द्वारा सुरक्षित भुगतान", secureCheckoutTitle:"Paddle द्वारा सुरक्षित भुगतान", secureCheckoutBody:"आपका भुगतान Paddle.com द्वारा सुरक्षित रूप से संसाधित होता है, जो हमारा अधिकृत आधिकारिक विक्रेता है। GMA आपके कार्ड विवरण संग्रहीत नहीं करता। नीचे क्लिक करने पर Paddle का सुरक्षित चेकआउट खुलेगा।", proceedToCheckout:"चेकआउट जारी रखें", startFreeCheckout:"मुफ्त शुरू करें", checkoutSecuredNote:"Paddle.com द्वारा सुरक्षित — कार्ड डेटा GMA सर्वर पर संग्रहीत नहीं होता।", openingPaddle:"Paddle चेकआउट खुल रहा है...", pleaseWait:"कृपया प्रतीक्षा करें, यह पेज बंद न करें।", planActivatedShort:"योजना एक्सेस सक्रिय हो गया।", creditsAdded:"क्रेडिट आपके खाते में जोड़े गए।", plan:"योजना", myProfile:"मेरी प्रोफ़ाइल", legal:"कानूनी", legalNoticeTitle:"कानूनी सूचना", legalNotice:"यह प्लेटफ़ॉर्म निवेश सलाह नहीं देता। GMA केवल जानकारी के उद्देश्य से AI-सहायित विश्लेषणात्मक अंतर्दृष्टि देता है। अंतिम निवेश निर्णय पूरी तरह निवेशक की जिम्मेदारी हैं।" },
-  de: { pricingManagedLine1:"Zahlen Sie GMA - wir verwalten GMA Triple Consensus fur Sie.", pricingManagedLine2:"Eine Plattform, drei AI-Engines.", detailedComparison:"DETAILLIERTER VERGLEICH", feature:"FUNKTION", integratedAiPartners:"INTEGRIERTE AI-PARTNER", apiCostsManaged:"GMA verwaltet alle API-Kosten in Ihrem Namen. Ein Abo, drei AI-Engines.", pricingLegalWarning:"Diese Plattform bietet keine Anlageberatung. Alle Entscheidungen bleiben Verantwortung des Investors.", secureCheckoutViaPaddle:"SICHERER CHECKOUT UBER PADDLE", secureCheckoutTitle:"Sicherer Checkout uber Paddle", secureCheckoutBody:"Ihre Zahlung wird sicher von Paddle.com verarbeitet, unserem autorisierten offiziellen Verkäufer. GMA speichert keine Kartendaten. Der Button offnet den sicheren Paddle-Checkout.", proceedToCheckout:"Weiter zur Zahlung", startFreeCheckout:"Kostenlos starten", checkoutSecuredNote:"Gesichert durch Paddle.com — Kartendaten werden nicht auf GMA-Servern gespeichert.", openingPaddle:"Paddle Checkout wird geoffnet...", pleaseWait:"Bitte warten, diese Seite nicht schliessen.", planActivatedShort:"Planzugang aktiviert.", creditsAdded:"Credits Ihrem Konto hinzugefugt.", plan:"Plan", myProfile:"Mein Profil" },
-  es: { pricingManagedLine1:"Paga GMA - gestionamos GMA Triple Consensus por ti.", pricingManagedLine2:"Una plataforma, tres motores AI.", detailedComparison:"COMPARACION DETALLADA", feature:"FUNCION", integratedAiPartners:"SOCIOS AI INTEGRADOS", apiCostsManaged:"GMA gestiona todos los costos API por ti. Una suscripcion, tres motores AI.", pricingLegalWarning:"Esta plataforma no ofrece asesoramiento de inversion. Todas las decisiones son responsabilidad del inversor.", secureCheckoutViaPaddle:"PAGO SEGURO via PADDLE", secureCheckoutTitle:"Pago seguro via Paddle", secureCheckoutBody:"Tu pago se procesa de forma segura por Paddle.com, nuestro vendedor oficial autorizado. GMA nunca almacena datos de tarjeta. El boton abre el checkout seguro de Paddle.", proceedToCheckout:"Continuar al pago", startFreeCheckout:"Comenzar gratis", checkoutSecuredNote:"Protegido por Paddle.com — los datos de tarjeta nunca se guardan en servidores GMA.", openingPaddle:"Abriendo checkout de Paddle...", pleaseWait:"Espera, no cierres esta pagina.", planActivatedShort:"acceso del plan activado.", creditsAdded:"creditos agregados a tu cuenta.", plan:"Plan", myProfile:"Mi perfil" }
+  en: { pricingManagedLine1:"Pay GMA - we manage GMA Triple Consensus for you.", pricingManagedLine2:"One platform, three AI engines.", detailedComparison:"DETAILED COMPARISON", feature:"FEATURE", integratedAiPartners:"INTEGRATED AI PARTNERS", apiCostsManaged:"GMA manages all API costs on your behalf. One subscription, three AI engines.", apiCostsManagedShort:"GMA manages all API costs on your behalf.", pricingLegalWarning:"This platform does not provide investment advice. All decisions remain the responsibility of the investor.", pricingLegalWarningShort:"This platform does not provide investment advice. All decisions remain the responsibility of the investor.", secureCheckoutViaPaddle:"SECURE CHECKOUT via PADDLE", secureCheckoutTitle:"Secure Checkout via Paddle", secureCheckoutBody:"Your payment is securely processed by Paddle.com — our authorized Merchant of Record. GMA never stores your card details. Clicking below opens Paddle's secure hosted checkout.", proceedToCheckout:"Proceed to Checkout", startFreeCheckout:"Start Free", checkoutSecuredNote:"Secured by Paddle.com — card data never stored on GMA servers.", openingPaddle:"Opening Paddle Checkout...", pleaseWait:"Please wait, do not close this page.", planActivatedShort:"plan access activated.", creditsAdded:"credits added to your account.", plan:"Plan", myProfile:"My Profile" },
+  tr: { pricingManagedLine1:"GMA'ya odeme yapin - GMA Triple Consensus'u sizin icin yonetiyoruz.", pricingManagedLine2:"Tek platform, uc AI motoru.", detailedComparison:"DETAYLI KARSILASTIRMA", feature:"OZELLIK", integratedAiPartners:"ENTEGRE AI ORTAKLARI", apiCostsManaged:"GMA tum API maliyetlerini sizin adiniza yonetir. Tek abonelik, uc AI motoru.", apiCostsManagedShort:"GMA tüm API maliyetlerini sizin adınıza yönetir.", pricingLegalWarning:"Bu platform yatirim tavsiyesi vermez. Tum kararlar yatirimcinin sorumlulugundadir.", pricingLegalWarningShort:"Bu platform yatırım tavsiyesi vermez. Tüm kararlar yatırımcının sorumluluğundadır.", secureCheckoutViaPaddle:"PADDLE ILE GUVENLI ODEME", secureCheckoutTitle:"Paddle ile Guvenli Odeme", secureCheckoutBody:"Odemeniz yetkili kayitli satici is ortagimiz Paddle.com tarafindan guvenle islenir. GMA kart bilgilerinizi saklamaz. Asagidaki buton Paddle'in guvenli odeme sayfasini acar.", proceedToCheckout:"Odemeye Devam Et", startFreeCheckout:"Ucretsiz Basla", checkoutSecuredNote:"Paddle.com guvencesiyle - kart verileri GMA sunucularinda saklanmaz.", openingPaddle:"Paddle odeme ekrani aciliyor...", pleaseWait:"Lutfen bekleyin, bu sayfayi kapatmayin.", planActivatedShort:"plan erisimi etkinlestirildi.", creditsAdded:"kredi hesabiniza eklendi.", plan:"Plan", myProfile:"Profilim" },
+  ru: { pricingManagedLine1:"Оплатите GMA - мы управляем GMA Triple Consensus за вас.", pricingManagedLine2:"Одна платформа, три AI-движка.", detailedComparison:"ПОДРОБНОЕ СРАВНЕНИЕ", feature:"ФУНКЦИЯ", integratedAiPartners:"ИНТЕГРИРОВАННЫЕ AI-ПАРТНЁРЫ", apiCostsManaged:"GMA управляет всеми API-расходами за вас. Одна подписка, три AI-движка.", apiCostsManagedShort:"GMA управляет всеми API-расходами от вашего имени.", pricingLegalWarning:"Платформа не предоставляет инвестиционных рекомендаций. Все решения остаются ответственностью инвестора.", pricingLegalWarningShort:"Эта платформа не предоставляет инвестиционных рекомендаций. Все решения остаются ответственностью инвестора.", secureCheckoutViaPaddle:"БЕЗОПАСНАЯ ОПЛАТА ЧЕРЕЗ PADDLE", secureCheckoutTitle:"Безопасная оплата через Paddle", secureCheckoutBody:"Платёж безопасно обрабатывается Paddle.com, нашим официальным продавцом. GMA не хранит данные карт. Кнопка ниже откроет безопасную страницу Paddle.", proceedToCheckout:"Перейти к оплате", startFreeCheckout:"Начать бесплатно", checkoutSecuredNote:"Защищено Paddle.com — данные карт не хранятся на серверах GMA.", openingPaddle:"Открывается оплата Paddle...", pleaseWait:"Пожалуйста, подождите и не закрывайте страницу.", planActivatedShort:"доступ плана активирован.", creditsAdded:"кредитов добавлено в аккаунт.", plan:"План", myProfile:"Мой профиль" },
+  ar: { pricingManagedLine1:"ادفع لـ GMA - نحن ندير توافق GMA الثلاثي نيابة عنك.", pricingManagedLine2:"منصة واحدة، ثلاثة محركات AI.", detailedComparison:"مقارنة تفصيلية", feature:"الميزة", integratedAiPartners:"شركاء AI المدمجون", apiCostsManaged:"تدير GMA كل تكاليف API نيابة عنك. اشتراك واحد، ثلاثة محركات AI.", apiCostsManagedShort:"تدير GMA جميع تكاليف API نيابة عنك.", pricingLegalWarning:"هذه المنصة لا تقدم نصائح استثمارية. تبقى كل القرارات مسؤولية المستثمر.", pricingLegalWarningShort:"هذه المنصة لا تقدم نصائح استثمارية. تبقى كل القرارات مسؤولية المستثمر.", secureCheckoutViaPaddle:"دفع آمن عبر PADDLE", secureCheckoutTitle:"دفع آمن عبر Paddle", secureCheckoutBody:"تتم معالجة دفعتك بأمان عبر Paddle.com، شريكنا المعتمد كسجل تجاري. لا تخزن GMA بيانات بطاقتك. الزر أدناه يفتح صفحة الدفع الآمنة لدى Paddle.", proceedToCheckout:"المتابعة إلى الدفع", startFreeCheckout:"ابدأ مجانًا", checkoutSecuredNote:"محمي بواسطة Paddle.com — لا يتم تخزين بيانات البطاقة على خوادم GMA.", openingPaddle:"جار فتح دفع Paddle...", pleaseWait:"يرجى الانتظار وعدم إغلاق الصفحة.", planActivatedShort:"تم تفعيل وصول الخطة.", creditsAdded:"تمت إضافة الأرصدة إلى حسابك.", plan:"الخطة", myProfile:"ملفي الشخصي", legal:"القانوني", legalNoticeTitle:"إشعار قانوني", legalNotice:"هذه المنصة لا تقدم نصائح استثمارية. تقدم GMA رؤى تحليلية مدعومة بالذكاء الاصطناعي لأغراض معلوماتية فقط. تبقى قرارات الاستثمار النهائية مسؤولية المستثمر بالكامل." },
+  zh: { pricingManagedLine1:"支付 GMA - 我们为您管理 GMA 三重共识。", pricingManagedLine2:"一个平台，三个 AI 引擎。", detailedComparison:"详细比较", feature:"功能", integratedAiPartners:"集成 AI 伙伴", apiCostsManaged:"GMA 代表您管理所有 API 成本。一个订阅，三个 AI 引擎。", apiCostsManagedShort:"GMA 代表您管理所有 API 成本。", pricingLegalWarning:"本平台不提供投资建议。所有决策均由投资者负责。", pricingLegalWarningShort:"本平台不提供投资建议。所有决策均由投资者负责。", secureCheckoutViaPaddle:"通过 PADDLE 安全结账", secureCheckoutTitle:"通过 Paddle 安全结账", secureCheckoutBody:"您的付款由授权登记销售方 Paddle.com 安全处理。GMA 永不存储您的银行卡信息。点击下方将打开 Paddle 安全托管结账。", proceedToCheckout:"继续结账", startFreeCheckout:"免费开始", checkoutSecuredNote:"由 Paddle.com 保护 — 银行卡数据不会存储在 GMA 服务器。", openingPaddle:"正在打开 Paddle 结账...", pleaseWait:"请稍候，不要关闭此页面。", planActivatedShort:"计划访问已激活。", creditsAdded:"额度已添加到您的账户。", plan:"计划", myProfile:"我的资料", legal:"法律", legalNoticeTitle:"法律声明", legalNotice:"本平台不提供投资建议。GMA 仅提供用于信息目的的 AI 辅助分析洞察。最终投资决定完全由投资者负责。" },
+  hi: { pricingManagedLine1:"GMA को भुगतान करें - हम आपके लिए GMA Triple Consensus प्रबंधित करते हैं।", pricingManagedLine2:"एक प्लेटफ़ॉर्म, तीन AI इंजन।", detailedComparison:"विस्तृत तुलना", feature:"सुविधा", integratedAiPartners:"एकीकृत AI भागीदार", apiCostsManaged:"GMA आपकी ओर से सभी API लागतों का प्रबंधन करता है। एक सदस्यता, तीन AI इंजन।", apiCostsManagedShort:"GMA आपकी ओर से सभी API लागतों का प्रबंधन करता है।", pricingLegalWarning:"यह प्लेटफ़ॉर्म निवेश सलाह नहीं देता। सभी निर्णय निवेशक की जिम्मेदारी हैं।", pricingLegalWarningShort:"यह प्लेटफ़ॉर्म निवेश सलाह नहीं देता। सभी निर्णय निवेशक की जिम्मेदारी हैं।", secureCheckoutViaPaddle:"PADDLE द्वारा सुरक्षित भुगतान", secureCheckoutTitle:"Paddle द्वारा सुरक्षित भुगतान", secureCheckoutBody:"आपका भुगतान Paddle.com द्वारा सुरक्षित रूप से संसाधित होता है, जो हमारा अधिकृत आधिकारिक विक्रेता है। GMA आपके कार्ड विवरण संग्रहीत नहीं करता। नीचे क्लिक करने पर Paddle का सुरक्षित चेकआउट खुलेगा।", proceedToCheckout:"चेकआउट जारी रखें", startFreeCheckout:"मुफ्त शुरू करें", checkoutSecuredNote:"Paddle.com द्वारा सुरक्षित — कार्ड डेटा GMA सर्वर पर संग्रहीत नहीं होता।", openingPaddle:"Paddle चेकआउट खुल रहा है...", pleaseWait:"कृपया प्रतीक्षा करें, यह पेज बंद न करें।", planActivatedShort:"योजना एक्सेस सक्रिय हो गया।", creditsAdded:"क्रेडिट आपके खाते में जोड़े गए।", plan:"योजना", myProfile:"मेरी प्रोफ़ाइल", legal:"कानूनी", legalNoticeTitle:"कानूनी सूचना", legalNotice:"यह प्लेटफ़ॉर्म निवेश सलाह नहीं देता। GMA केवल जानकारी के उद्देश्य से AI-सहायित विश्लेषणात्मक अंतर्दृष्टि देता है। अंतिम निवेश निर्णय पूरी तरह निवेशक की जिम्मेदारी हैं।" },
+  de: { pricingManagedLine1:"Zahlen Sie GMA - wir verwalten GMA Triple Consensus fur Sie.", pricingManagedLine2:"Eine Plattform, drei AI-Engines.", detailedComparison:"DETAILLIERTER VERGLEICH", feature:"FUNKTION", integratedAiPartners:"INTEGRIERTE AI-PARTNER", apiCostsManaged:"GMA verwaltet alle API-Kosten in Ihrem Namen. Ein Abo, drei AI-Engines.", apiCostsManagedShort:"GMA verwaltet alle API-Kosten in Ihrem Namen.", pricingLegalWarning:"Diese Plattform bietet keine Anlageberatung. Alle Entscheidungen bleiben Verantwortung des Investors.", pricingLegalWarningShort:"Diese Plattform bietet keine Anlageberatung. Alle Entscheidungen bleiben Verantwortung des Investors.", secureCheckoutViaPaddle:"SICHERER CHECKOUT UBER PADDLE", secureCheckoutTitle:"Sicherer Checkout uber Paddle", secureCheckoutBody:"Ihre Zahlung wird sicher von Paddle.com verarbeitet, unserem autorisierten offiziellen Verkäufer. GMA speichert keine Kartendaten. Der Button offnet den sicheren Paddle-Checkout.", proceedToCheckout:"Weiter zur Zahlung", startFreeCheckout:"Kostenlos starten", checkoutSecuredNote:"Gesichert durch Paddle.com — Kartendaten werden nicht auf GMA-Servern gespeichert.", openingPaddle:"Paddle Checkout wird geoffnet...", pleaseWait:"Bitte warten, diese Seite nicht schliessen.", planActivatedShort:"Planzugang aktiviert.", creditsAdded:"Credits Ihrem Konto hinzugefugt.", plan:"Plan", myProfile:"Mein Profil" },
+  es: { pricingManagedLine1:"Paga GMA - gestionamos GMA Triple Consensus por ti.", pricingManagedLine2:"Una plataforma, tres motores AI.", detailedComparison:"COMPARACION DETALLADA", feature:"FUNCION", integratedAiPartners:"SOCIOS AI INTEGRADOS", apiCostsManaged:"GMA gestiona todos los costos API por ti. Una suscripcion, tres motores AI.", apiCostsManagedShort:"GMA gestiona todos los costos API por ti.", pricingLegalWarning:"Esta plataforma no ofrece asesoramiento de inversion. Todas las decisiones son responsabilidad del inversor.", pricingLegalWarningShort:"Esta plataforma no ofrece asesoramiento de inversion. Todas las decisiones son responsabilidad del inversor.", secureCheckoutViaPaddle:"PAGO SEGURO via PADDLE", secureCheckoutTitle:"Pago seguro via Paddle", secureCheckoutBody:"Tu pago se procesa de forma segura por Paddle.com, nuestro vendedor oficial autorizado. GMA nunca almacena datos de tarjeta. El boton abre el checkout seguro de Paddle.", proceedToCheckout:"Continuar al pago", startFreeCheckout:"Comenzar gratis", checkoutSecuredNote:"Protegido por Paddle.com — los datos de tarjeta nunca se guardan en servidores GMA.", openingPaddle:"Abriendo checkout de Paddle...", pleaseWait:"Espera, no cierres esta pagina.", planActivatedShort:"acceso del plan activado.", creditsAdded:"creditos agregados a tu cuenta.", plan:"Plan", myProfile:"Mi perfil" }
 };
 Object.entries(GMA_PRICING_LEGAL_FIXES).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
@@ -1405,11 +1452,11 @@ Object.entries(GMA_AR_LONG_TEXT_FIXES).forEach(([code, values]) => {
 const GMA_LEGAL_STATIC = {
   tr: {
     privacy: [
-      {t:"1. Topladigimiz Bilgiler",b:"GMA istemci tarafli bir web uygulamasi olarak calisir. Yalnizca gerekli minimum verileri toplariz:\n\n• Hesap Bilgileri: e-posta ve gorunen ad, tarayicinizda yerel olarak saklanir (localStorage).\n• API Anahtarlari: yalnizca tarayicinizda saklanir ve dogrudan Anthropic'e iletilir. GMA bu anahtarlari sunucularinda almaz.\n• Odeme Verileri: tamamen Paddle.com tarafindan islenir. GMA kart bilgilerini almaz, saklamaz veya islemez.\n• Analitik: kisisel veri icermeyen anonim ve toplu kullanim verileri."},
+      {t:"1. Topladigimiz Bilgiler",b:"GMA istemci tarafli bir web uygulamasi olarak calisir. Yalnizca gerekli minimum verileri toplariz:\n\n• Hesap Bilgileri: e-posta ve gorunen ad, tarayicinizda yerel olarak saklanir (localStorage).\n• API Anahtarlari: yalnizca tarayicinizda saklanir ve dogrudan GMA'ya iletilir.\n• Odeme Verileri: tamamen Paddle.com tarafindan islenir. GMA kart bilgilerini almaz, saklamaz veya islemez.\n• Analitik: kisisel veri icermeyen anonim ve toplu kullanim verileri."},
       {t:"2. Isleme Hukuki Dayanagi (GDPR)",b:"Genel Veri Koruma Tuzugu (GDPR) kapsaminda su hukuki dayanaklara dayaniriz:\n\n• Sozlesmesel Gereklilik — abone olunan hizmeti sunmak icin e-postanizin islenmesi.\n• Mesru Menfaat — anonim analitiklerle platform performansini iyilestirmek.\n• Riza — istege bagli veri toplama icin. Rizanizi istediginiz zaman geri cekebilirsiniz."},
       {t:"3. Paddle ile Odeme Isleme",b:"Tum odemeler kayitli satici is ortagimiz Paddle.com tarafindan islenir. Abone oldugunuzda:\n\n• Paddle'in PCI-DSS uyumlu guvenli odeme ekranina yonlendirilirsiniz.\n• Kart bilgileri yalnizca Paddle altyapisina girilir. GMA odeme bilgilerinizi gormez.\n• Paddle Gizlilik Politikasi: https://www.paddle.com/legal/privacy\n• Faturalama sorulari: support@globalmarketanalytics.com"},
       {t:"4. Cerezler ve Takip",b:"GMA reklam cerezleri, ucuncu taraf takip pikselleri veya davranissal reklam analitigi kullanmaz. Yalnizca kimlik dogrulama icin zorunlu oturum cerezleri kullanilabilir. Kullanici davranisi reklamverenlere satilmaz."},
-      {t:"5. Ucuncu Taraf Veri Saglayicilari",b:"GMA, kendi gizlilik politikalarina tabi olan saglayicilarla entegre calisir:\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — gercek zamanli piyasa verisi saglayicisi\n• Frankfurter API — doviz kuru verileri\n• Paddle.com — odeme isleme\n\nBu saglayicilar normal operasyonlar sirasinda IP adresinizi isleyebilir."},
+      {t:"5. Ucuncu Taraf Veri Saglayicilari",b:"GMA, kendi gizlilik politikalarina tabi olan saglayicilarla entegre calisir:\n\n• Finnhub.io — gercek zamanli piyasa verisi saglayicisi\n• Frankfurter API — doviz kuru verileri\n• Paddle.com — odeme isleme\n\nBu saglayicilar normal operasyonlar sirasinda IP adresinizi isleyebilir."},
       {t:"6. Haklariniz (GDPR)",b:"AEA veya Birlesik Krallik'taysanız su haklara sahipsiniz:\n\n• Erisim Hakki — kisisel verilerinizin bir kopyasini talep etme.\n• Duzeltme Hakki — hatali verileri duzeltme.\n• Silme Hakki — verilerinizin silinmesini talep etme.\n• Islemeyi Kisitlama Hakki — verilerinizin nasil islendigini sinirlama.\n• Veri Tasinabilirligi Hakki — makine tarafindan okunabilir formatta veri alma.\n• Itiraz Hakki — mesru menfaate dayali islemeye itiraz etme.\n\nIletisim: support@globalmarketanalytics.com. 30 gun icinde yanit veririz."},
       {t:"7. Veri Saklama",b:"Tarayici localStorage verileri, tarayicinizi temizleyene veya hesabinizi silene kadar saklanir. Faturalama ve yasal uyum icin gerekli olanlar disinda sunucularimizda kisisel veri tutmayiz."},
       {t:"8. Veri Guvenligi",b:"Aktarimdaki tum veriler icin HTTPS/TLS sifreleme kullaniriz. Odeme islemleri tamamen PCI-DSS uyumlu Paddle altyapisina devredilir. Guvenlik uygulamalari duzenli olarak gozden gecirilir."},
@@ -1448,7 +1495,7 @@ GMA_LEGAL_STATIC.ar = {
     {t:"2. الأساس القانوني للمعالجة (GDPR)",b:"وفقاً للائحة العامة لحماية البيانات (GDPR)، نعتمد على الأسس التالية:\n\n• الضرورة التعاقدية — معالجة البريد الإلكتروني لتقديم الخدمة المشتركة.\n• المصالح المشروعة — تحسين أداء المنصة عبر تحليلات مجهولة ومجمعة.\n• الموافقة — لأي جمع بيانات اختياري. يمكنك سحب موافقتك في أي وقت."},
     {t:"3. معالجة الدفع عبر Paddle",b:"تتم جميع المدفوعات عبر Paddle.com، شريكنا المعتمد كبائع مسجل. عند الاشتراك:\n\n• يتم توجيهك إلى صفحة دفع آمنة ومتوافقة مع PCI-DSS لدى Paddle.\n• تُدخل بيانات البطاقة داخل بنية Paddle فقط. لا ترى GMA بيانات الدفع الخاصة بك.\n• سياسة خصوصية Paddle: https://www.paddle.com/legal/privacy\n• لاستفسارات الفوترة: support@globalmarketanalytics.com"},
     {t:"4. ملفات تعريف الارتباط والتتبع",b:"لا تستخدم GMA ملفات تعريف ارتباط إعلانية، أو بكسلات تتبع خارجية، أو تحليلات إعلانية سلوكية. قد تُستخدم ملفات جلسة ضرورية فقط للمصادقة وتشغيل الحساب. لا نبيع سلوك المستخدمين للمعلنين."},
-    {t:"5. مزودو البيانات الخارجيون",b:"تتكامل GMA مع مزودين خارجيين يخضع كل منهم لسياسة خصوصيته الخاصة:\n\n• مزودو GMA AI — https://www.anthropic.com/privacy\n• Finnhub.io — مزود بيانات سوق لحظية\n• Frankfurter API — أسعار صرف العملات\n• Paddle.com — معالجة المدفوعات\n\nقد يعالج هؤلاء المزودون عنوان IP الخاص بك أثناء التشغيل الطبيعي للخدمة."},
+    {t:"5. مزودو البيانات الخارجيون",b:"تتكامل GMA مع مزودين خارجيين يخضع كل منهم لسياسة خصوصيته الخاصة:\n\n• Finnhub.io — مزود بيانات سوق لحظية\n• Frankfurter API — أسعار صرف العملات\n• Paddle.com — معالجة المدفوعات\n\nقد يعالج هؤلاء المزودون عنوان IP الخاص بك أثناء التشغيل الطبيعي للخدمة."},
     {t:"6. حقوقك (GDPR)",b:"إذا كنت داخل المنطقة الاقتصادية الأوروبية أو المملكة المتحدة، فلديك الحقوق التالية:\n\n• حق الوصول — طلب نسخة من بياناتك الشخصية.\n• حق التصحيح — تصحيح البيانات غير الدقيقة.\n• حق المحو — طلب حذف بياناتك.\n• حق تقييد المعالجة — الحد من كيفية معالجة بياناتك.\n• حق نقل البيانات — استلام البيانات بصيغة قابلة للقراءة آلياً.\n• حق الاعتراض — الاعتراض على المعالجة القائمة على المصالح المشروعة.\n\nللتواصل: support@globalmarketanalytics.com. نرد خلال 30 يوماً."},
     {t:"7. الاحتفاظ بالبيانات",b:"تبقى بيانات localStorage في المتصفح إلى أن تقوم بمسحها أو حذف حسابك. لا نحتفظ ببيانات شخصية على خوادمنا إلا بالقدر المطلوب للفوترة والامتثال القانوني."},
     {t:"8. أمن البيانات",b:"نستخدم تشفير HTTPS/TLS لجميع البيانات أثناء النقل. تتم عمليات الدفع بالكامل عبر بنية Paddle المتوافقة مع PCI-DSS. تتم مراجعة ممارسات الأمان بشكل منتظم."},
@@ -1487,7 +1534,7 @@ Object.assign(GMA_LEGAL_STATIC, {
       {t:"2. Правовое основание обработки (GDPR)",b:"В рамках GDPR мы опираемся на следующие основания:\n\n• Договорная необходимость — обработка email для предоставления подписанного сервиса.\n• Законные интересы — улучшение производительности платформы через обезличенную аналитику.\n• Согласие — для любого необязательного сбора данных. Вы можете отозвать согласие в любое время."},
       {t:"3. Обработка платежей через Paddle",b:"Все платежи обрабатываются нашим официальным продавцом Paddle.com. При подписке:\n\n• Вы перенаправляетесь на безопасную страницу оплаты Paddle, соответствующую PCI-DSS.\n• Данные карты вводятся только в инфраструктуре Paddle. GMA не видит ваши платежные реквизиты.\n• Политика конфиденциальности Paddle: https://www.paddle.com/legal/privacy\n• Вопросы по оплате: support@globalmarketanalytics.com"},
       {t:"4. Cookie и отслеживание",b:"GMA не использует рекламные cookie, сторонние пиксели отслеживания или поведенческую рекламную аналитику. Строго необходимые сессионные cookie могут использоваться только для аутентификации. Поведение пользователей не продается рекламодателям."},
-      {t:"5. Сторонние поставщики данных",b:"GMA интегрируется с поставщиками, каждый из которых регулируется собственной политикой конфиденциальности:\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — поставщик рыночных данных в реальном времени\n• Frankfurter API — курсы валют\n• Paddle.com — обработка платежей\n\nЭти поставщики могут обрабатывать ваш IP-адрес в ходе нормальной работы сервиса."},
+      {t:"5. Сторонние поставщики данных",b:"GMA интегрируется с поставщиками, каждый из которых регулируется собственной политикой конфиденциальности:\n\n• Finnhub.io — поставщик рыночных данных в реальном времени\n• Frankfurter API — курсы валют\n• Paddle.com — обработка платежей\n\nЭти поставщики могут обрабатывать ваш IP-адрес в ходе нормальной работы сервиса."},
       {t:"6. Ваши права (GDPR)",b:"Если вы находитесь в ЕЭЗ или Великобритании, у вас есть следующие права:\n\n• Право доступа — запросить копию персональных данных.\n• Право на исправление — исправить неточные данные.\n• Право на удаление — запросить удаление данных.\n• Право на ограничение обработки — ограничить способ обработки данных.\n• Право на переносимость — получить данные в машиночитаемом формате.\n• Право на возражение — возражать против обработки на основании законных интересов.\n\nКонтакт: support@globalmarketanalytics.com. Мы отвечаем в течение 30 дней."},
       {t:"7. Хранение данных",b:"Данные localStorage в браузере сохраняются до тех пор, пока вы не очистите браузер или не удалите аккаунт. Мы не храним персональные данные на серверах сверх того, что требуется для биллинга и юридического соответствия."},
       {t:"8. Безопасность данных",b:"Мы используем HTTPS/TLS-шифрование для всех данных при передаче. Платежные операции полностью переданы инфраструктуре Paddle, соответствующей PCI-DSS. Практики безопасности регулярно пересматриваются."},
@@ -1525,7 +1572,7 @@ Object.assign(GMA_LEGAL_STATIC, {
       {t:"2. 处理的法律依据 (GDPR)",b:"根据《通用数据保护条例》(GDPR)，我们依赖以下法律依据：\n\n• 合同必要性 — 处理您的电子邮箱以提供订阅服务。\n• 合法利益 — 通过匿名分析改进平台性能。\n• 同意 — 用于任何可选数据收集。您可以随时撤回同意。"},
       {t:"3. 通过 Paddle 处理付款",b:"所有付款均由我们的登记销售方合作伙伴 Paddle.com 处理。订阅时：\n\n• 您会被重定向至 Paddle 符合 PCI-DSS 的安全结账页面。\n• 银行卡信息只输入 Paddle 的基础设施。GMA 不会看到您的支付凭证。\n• Paddle 隐私政策：https://www.paddle.com/legal/privacy\n• 账单咨询：support@globalmarketanalytics.com"},
       {t:"4. Cookie 与跟踪",b:"GMA 不使用广告 Cookie、第三方跟踪像素或行为广告分析。仅可能为身份验证使用严格必要的会话 Cookie。用户行为不会出售给广告商。"},
-      {t:"5. 第三方数据提供商",b:"GMA 与后端提供商集成，每个提供商均受其自身隐私政策约束：\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — 实时市场数据提供商\n• Frankfurter API — 汇率数据\n• Paddle.com — 付款处理\n\n这些提供商可能在正常服务过程中处理您的 IP 地址。"},
+      {t:"5. 第三方数据提供商",b:"GMA 与后端提供商集成，每个提供商均受其自身隐私政策约束：\n\n• Finnhub.io — 实时市场数据提供商\n• Frankfurter API — 汇率数据\n• Paddle.com — 付款处理\n\n这些提供商可能在正常服务过程中处理您的 IP 地址。"},
       {t:"6. 您的权利 (GDPR)",b:"如果您位于欧洲经济区或英国，您拥有以下权利：\n\n• 访问权 — 请求您的个人数据副本。\n• 更正权 — 更正不准确的数据。\n• 删除权 — 请求删除您的数据。\n• 限制处理权 — 限制我们处理数据的方式。\n• 数据可携权 — 以机器可读格式接收数据。\n• 反对权 — 反对基于合法利益的处理。\n\n联系：support@globalmarketanalytics.com。我们将在 30 天内回复。"},
       {t:"7. 数据保留",b:"浏览器 localStorage 数据会保留到您清理浏览器或删除账户为止。除账单和法律合规所需外，我们不会在服务器上保留个人数据。"},
       {t:"8. 数据安全",b:"我们对传输中的所有数据使用 HTTPS/TLS 加密。付款操作完全交由符合 PCI-DSS 的 Paddle 基础设施处理。安全实践会定期审查。"},
@@ -1563,7 +1610,7 @@ Object.assign(GMA_LEGAL_STATIC, {
       {t:"2. प्रसंस्करण का कानूनी आधार (GDPR)",b:"GDPR के अंतर्गत हम निम्न आधारों पर निर्भर करते हैं:\n\n• संविदात्मक आवश्यकता — सदस्यता सेवा देने के लिए आपका ईमेल संसाधित करना।\n• वैध हित — अज्ञात एनालिटिक्स द्वारा प्लेटफ़ॉर्म प्रदर्शन सुधारना।\n• सहमति — किसी भी वैकल्पिक डेटा संग्रह के लिए। आप किसी भी समय सहमति वापस ले सकते हैं।"},
       {t:"3. Paddle द्वारा भुगतान प्रसंस्करण",b:"सभी भुगतान हमारे आधिकारिक विक्रेता Paddle.com द्वारा संसाधित होते हैं। सदस्यता लेते समय:\n\n• आपको Paddle के PCI-DSS-अनुरूप सुरक्षित भुगतान पृष्ठ पर भेजा जाता है।\n• कार्ड विवरण केवल Paddle की संरचना में दर्ज होते हैं। GMA आपके भुगतान विवरण नहीं देखता।\n• Paddle गोपनीयता नीति: https://www.paddle.com/legal/privacy\n• बिलिंग प्रश्न: support@globalmarketanalytics.com"},
       {t:"4. कुकी और ट्रैकिंग",b:"GMA विज्ञापन कुकी, तृतीय-पक्ष ट्रैकिंग पिक्सेल या व्यवहारिक विज्ञापन एनालिटिक्स का उपयोग नहीं करता। केवल प्रमाणीकरण के लिए आवश्यक सत्र कुकी उपयोग हो सकती हैं। उपयोगकर्ता व्यवहार विज्ञापनदाताओं को नहीं बेचा जाता।"},
-      {t:"5. तृतीय-पक्ष डेटा प्रदाता",b:"GMA ऐसे प्रदाताओं से जुड़ता है जिनकी अपनी गोपनीयता नीतियाँ होती हैं:\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — रीयल-टाइम बाज़ार डेटा प्रदाता\n• Frankfurter API — मुद्रा विनिमय दरें\n• Paddle.com — भुगतान प्रसंस्करण\n\nये प्रदाता सामान्य संचालन में आपका IP पता संसाधित कर सकते हैं।"},
+      {t:"5. तृतीय-पक्ष डेटा प्रदाता",b:"GMA ऐसे प्रदाताओं से जुड़ता है जिनकी अपनी गोपनीयता नीतियाँ होती हैं:\n\n• Finnhub.io — रीयल-टाइम बाज़ार डेटा प्रदाता\n• Frankfurter API — मुद्रा विनिमय दरें\n• Paddle.com — भुगतान प्रसंस्करण\n\nये प्रदाता सामान्य संचालन में आपका IP पता संसाधित कर सकते हैं।"},
       {t:"6. आपके अधिकार (GDPR)",b:"यदि आप EEA या UK में हैं, तो आपके पास ये अधिकार हैं:\n\n• पहुँच का अधिकार — अपने व्यक्तिगत डेटा की प्रति माँगना।\n• संशोधन का अधिकार — गलत डेटा ठीक कराना।\n• मिटाने का अधिकार — डेटा हटाने का अनुरोध।\n• प्रसंस्करण सीमित करने का अधिकार — डेटा के उपयोग को सीमित करना।\n• डेटा पोर्टेबिलिटी — मशीन-पठनीय प्रारूप में डेटा प्राप्त करना।\n• आपत्ति का अधिकार — वैध हित पर आधारित प्रसंस्करण का विरोध।\n\nसंपर्क: support@globalmarketanalytics.com. हम 30 दिनों में उत्तर देते हैं।"},
       {t:"7. डेटा प्रतिधारण",b:"ब्राउज़र localStorage डेटा तब तक रहता है जब तक आप ब्राउज़र साफ़ नहीं करते या खाता नहीं हटाते। बिलिंग और कानूनी अनुपालन की आवश्यकता से अधिक व्यक्तिगत डेटा हम सर्वर पर नहीं रखते।"},
       {t:"8. डेटा सुरक्षा",b:"हम ट्रांज़िट में सभी डेटा के लिए HTTPS/TLS एन्क्रिप्शन उपयोग करते हैं। भुगतान संचालन पूरी तरह PCI-DSS-अनुरूप Paddle संरचना को सौंपा गया है। सुरक्षा अभ्यास नियमित रूप से समीक्षा किए जाते हैं।"},
@@ -1601,7 +1648,7 @@ Object.assign(GMA_LEGAL_STATIC, {
       {t:"2. Rechtsgrundlage der Verarbeitung (GDPR)",b:"Nach der Datenschutz-Grundverordnung (GDPR/DSGVO) stützen wir uns auf:\n\n• Vertragliche Notwendigkeit — Verarbeitung Ihrer E-Mail zur Bereitstellung des abonnierten Dienstes.\n• Berechtigte Interessen — Verbesserung der Plattformleistung durch anonymisierte Analytik.\n• Einwilligung — für optionale Datenerhebung. Sie können Ihre Einwilligung jederzeit widerrufen."},
       {t:"3. Zahlungsabwicklung über Paddle",b:"Alle Zahlungen werden durch unseren offiziellen Verkäufer Paddle.com verarbeitet. Bei einer Anmeldung:\n\n• Sie werden zur PCI-DSS-konformen sicheren Paddle-Zahlungsseite weitergeleitet.\n• Kartendaten werden nur in der Paddle-Infrastruktur eingegeben. GMA sieht Ihre Zahlungsdaten nicht.\n• Paddle Datenschutzrichtlinie: https://www.paddle.com/legal/privacy\n• Fragen zur Abrechnung: support@globalmarketanalytics.com"},
       {t:"4. Cookies und Tracking",b:"GMA verwendet keine Werbe-Cookies, Tracking-Pixel von Dritten oder verhaltensbasierte Werbeanalytik. Strikt notwendige Session-Cookies können nur zur Authentifizierung genutzt werden. Nutzerverhalten wird nicht an Werbetreibende verkauft."},
-      {t:"5. Drittanbieter für Daten",b:"GMA integriert Backend-Anbieter, die jeweils eigenen Datenschutzrichtlinien unterliegen:\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — Echtzeit-Marktdatenanbieter\n• Frankfurter API — Wechselkurse\n• Paddle.com — Zahlungsabwicklung\n\nDiese Anbieter können Ihre IP-Adresse im normalen Betrieb verarbeiten."},
+      {t:"5. Drittanbieter für Daten",b:"GMA integriert Backend-Anbieter, die jeweils eigenen Datenschutzrichtlinien unterliegen:\n\n• Finnhub.io — Echtzeit-Marktdatenanbieter\n• Frankfurter API — Wechselkurse\n• Paddle.com — Zahlungsabwicklung\n\nDiese Anbieter können Ihre IP-Adresse im normalen Betrieb verarbeiten."},
       {t:"6. Ihre Rechte (GDPR)",b:"Wenn Sie im EWR oder Vereinigten Königreich sind, haben Sie folgende Rechte:\n\n• Auskunftsrecht — Kopie Ihrer personenbezogenen Daten anfordern.\n• Recht auf Berichtigung — unrichtige Daten korrigieren.\n• Recht auf Löschung — Löschung Ihrer Daten verlangen.\n• Recht auf Einschränkung — Verarbeitung begrenzen.\n• Recht auf Datenübertragbarkeit — Daten in maschinenlesbarem Format erhalten.\n• Widerspruchsrecht — Verarbeitung auf Basis berechtigter Interessen widersprechen.\n\nKontakt: support@globalmarketanalytics.com. Wir antworten innerhalb von 30 Tagen."},
       {t:"7. Datenspeicherung",b:"Browser-localStorage-Daten bleiben erhalten, bis Sie Ihren Browser leeren oder Ihr Konto löschen. Wir speichern personenbezogene Daten nicht auf unseren Servern, außer soweit für Abrechnung und rechtliche Pflichten erforderlich."},
       {t:"8. Datensicherheit",b:"Wir verwenden HTTPS/TLS-Verschlüsselung für alle Daten während der Übertragung. Zahlungsprozesse sind vollständig an die PCI-DSS-konforme Paddle-Infrastruktur ausgelagert. Sicherheitspraktiken werden regelmäßig überprüft."},
@@ -1639,7 +1686,7 @@ Object.assign(GMA_LEGAL_STATIC, {
       {t:"2. Base legal del tratamiento (GDPR)",b:"Bajo el Reglamento General de Protección de Datos (GDPR), nos basamos en:\n\n• Necesidad contractual — procesar tu email para entregar el servicio suscrito.\n• Intereses legítimos — mejorar el rendimiento de la plataforma mediante analítica anónima.\n• Consentimiento — para cualquier recopilación opcional de datos. Puedes retirar el consentimiento en cualquier momento."},
       {t:"3. Procesamiento de pagos vía Paddle",b:"Todos los pagos son procesados por nuestro vendedor oficial Paddle.com. Al suscribirte:\n\n• Serás redirigido al pago seguro de Paddle compatible con PCI-DSS.\n• Los datos de tarjeta se introducen solo en la infraestructura de Paddle. GMA nunca ve tus credenciales de pago.\n• Política de privacidad de Paddle: https://www.paddle.com/legal/privacy\n• Consultas de facturación: support@globalmarketanalytics.com"},
       {t:"4. Cookies y seguimiento",b:"GMA no utiliza cookies publicitarias, píxeles de seguimiento de terceros ni analítica publicitaria conductual. Solo pueden usarse cookies de sesión estrictamente necesarias para autenticación. El comportamiento de usuarios no se vende a anunciantes."},
-      {t:"5. Proveedores de datos externos",b:"GMA se integra con proveedores externos, cada uno sujeto a sus propias políticas de privacidad:\n\n• GMA Providers (GMA AI) — https://www.anthropic.com/privacy\n• Finnhub.io — proveedor de datos de mercado en tiempo real\n• Frankfurter API — tipos de cambio\n• Paddle.com — procesamiento de pagos\n\nEstos proveedores pueden procesar tu dirección IP durante operaciones normales."},
+      {t:"5. Proveedores de datos externos",b:"GMA se integra con proveedores externos, cada uno sujeto a sus propias políticas de privacidad:\n\n• Finnhub.io — proveedor de datos de mercado en tiempo real\n• Frankfurter API — tipos de cambio\n• Paddle.com — procesamiento de pagos\n\nEstos proveedores pueden procesar tu dirección IP durante operaciones normales."},
       {t:"6. Tus derechos (GDPR)",b:"Si estás en el EEE o Reino Unido, tienes los siguientes derechos:\n\n• Derecho de acceso — solicitar una copia de tus datos personales.\n• Derecho de rectificación — corregir datos inexactos.\n• Derecho de supresión — solicitar eliminación de datos.\n• Derecho de limitación — limitar cómo procesamos tus datos.\n• Derecho de portabilidad — recibir datos en formato legible por máquina.\n• Derecho de oposición — oponerte al tratamiento basado en intereses legítimos.\n\nContacto: support@globalmarketanalytics.com. Respondemos en un plazo de 30 días."},
       {t:"7. Retención de datos",b:"Los datos de localStorage del navegador se conservan hasta que limpies tu navegador o elimines tu cuenta. No conservamos datos personales en nuestros servidores más allá de lo requerido para facturación y cumplimiento legal."},
       {t:"8. Seguridad de datos",b:"Implementamos cifrado HTTPS/TLS para todos los datos en tránsito. Las operaciones de pago se delegan completamente a la infraestructura de Paddle compatible con PCI-DSS. Las prácticas de seguridad se revisan periódicamente."},
@@ -1672,6 +1719,216 @@ Object.assign(GMA_LEGAL_STATIC, {
     ]
   }
 });
+
+const GMA_TR_FINAL_REPAIR = {
+  home: "ANA SAYFA",
+  markets: "PİYASALAR",
+  about: "HAKKINDA",
+  contact: "İLETİŞİM",
+  privacy: "GİZLİLİK",
+  pricing: "FİYATLAR",
+  login: "GİRİŞ YAP",
+  register: "KAYIT OL",
+  logout: "ÇIKIŞ YAP",
+  loginTitle: "Hesabınıza giriş yapın",
+  registerTitle: "Ücretsiz hesabınızı oluşturun",
+  viewMarkets: "PİYASALARI GÖR",
+  loginRegister: "GİRİŞ / KAYIT",
+  googleContinue: "Google ile devam et",
+  heroTitle: "Küresel Piyasaları\nDaha Net Görün",
+  heroSub: "600+ küresel kuruluş, gerçek zamanlı piyasa verisi ve GMA Consensus Engine ile yapılandırılmış finansal zeka.",
+  heroSubtitle: "Yapılandırılmış analiz ve daha net karar çerçevesiyle belirsizliği azaltın.",
+  heroBtn1: "PİYASALARI GÖR",
+  heroBtn2: "FİYATLARI GÖR",
+  heroBtn3: "KAYIT OL",
+  howTitle: "Nasıl Çalışır",
+  howSub: "4 Adımda Küresel Yatırım",
+  step1t: "Kayıt Ol",
+  step1d: "E-posta veya Google ile 30 saniyede hesap oluşturun",
+  step2t: "Plan Seç",
+  step2d: "Günlük 2.99$'dan başlayan planlardan seçin",
+  step3t: "Analiz Et",
+  step3d: "GMA Consensus Engine ile stratejik netlik kazanın",
+  step4t: "Karar Ver",
+  step4d: "Güvenilir veri ve analitik netlikle kendi karar çerçevenizi kurun",
+  featTitle: "Platform Özellikleri",
+  featSub: "Her şey tek yerde",
+  feat1t: "Canlı Piyasa Akışı",
+  feat1d: "600+ şirketi, kriptoyu, emtiayı ve para birimlerini gerçek zamanlı takip edin",
+  feat2t: "GMA Triumvirate Analizi",
+  feat2d: "GMA Consensus Engine üzerinden kurumsal seviye sinyal uyumunu inceleyin",
+  feat3t: "Tarihsel Grafikler",
+  feat3d: "Kuruluş yılından itibaren grafikler, kriz analizleri ve uzun vadeli trendler",
+  feat4t: "Şirket Karşılaştırma",
+  feat4d: "5 şirkete kadar AI destekli karşılaştırma yapın ve risk çerçevesini daha net görün",
+  feat5t: "Akıllı Uyarılar",
+  feat5d: "Fiyat hedefi uyarıları kurun; yükseliş ve düşüşleri anında takip edin",
+  feat6t: "8 Dil",
+  feat6d: "İngilizce, Türkçe, Rusça, Arapça, Çince, Hintçe, Almanca ve İspanyolca için yerelleştirilmiş deneyim",
+  ctaTitle: "Karar Netliğini Kurumsal Seviyeye Taşıyın",
+  ctaSub: "Günlük 2.99$'dan başlayan planlarla küresel piyasaları profesyonel düzeyde analiz edin.",
+  ctaBtn1: "Plan Seç →",
+  ctaBtn2: "Önce Keşfet",
+  ctaFree: "Ücretsiz Başla",
+  ctaFreeSub: "Giriş yapmadan piyasaları keşfedin.",
+  sector: "Sektör",
+  sectors: "SEKTÖR",
+  allSectors: "TÜMÜ",
+  gainers: "YÜKSELENLER",
+  losers: "DÜŞENLER",
+  live: "CANLI",
+  autoRefresh: "OTOMATİK YENİLE",
+  loadMore: "DAHA FAZLA YÜKLE",
+  allShown: "TÜM KURULUŞLAR GÖSTERİLDİ",
+  compare: "KARŞILAŞTIR",
+  analyzeAI: "AI ANALİZ",
+  chart: "GRAFİK",
+  add: "EKLE",
+  watch: "İZLE",
+  alert: "UYARI",
+  aiAnalysis: "AI ANALİZ",
+  riskOpportunity: "RİSK & FIRSAT",
+  historicalChart: "TARİHSEL GRAFİK",
+  priceRiseAlert: "FİYAT YÜKSELİŞ UYARISI",
+  riseThreshold: "YÜKSELİŞ EŞİĞİ",
+  target: "HEDEF",
+  setAlert: "UYARI KUR",
+  cart: "SEPET",
+  watchlist: "İZLEME",
+  cartEmpty: "Sepet boş",
+  watchlistEmpty: "İzleme listesi boş",
+  noPurchasesYet: "Henüz alım yok",
+  remove: "kaldır",
+  units: "adet",
+  buyIn: "alış",
+  currentValue: "Güncel Değer",
+  cost: "Maliyet",
+  profitLoss: "Kâr / Zarar",
+  noApiKey: "API anahtarı yok — Ayarlar'dan ekleyin",
+  liveDataUpdated: "Canlı veri güncellendi",
+  simulationRunning: "Simülasyon çalışıyor",
+  cartRemoved: "sepetten çıkarıldı",
+  basketAdded: "sepete eklendi",
+  watchRemoved: "izleme listesinden çıkarıldı",
+  watchAdded: "izleme listesine eklendi",
+  alertCreated: "uyarı oluşturuldu",
+  maxCompare: "En fazla 5 şirket seçilebilir",
+  addedToComparison: "karşılaştırmaya eklendi",
+  contactTitle: "Bize Ulaşın",
+  contactSub: "Sorularınız ve geri bildirimleriniz için buradayız.",
+  contactInfo: "İletişim Bilgileri",
+  formName: "AD SOYAD",
+  formEmail: "E-POSTA",
+  formSubject: "KONU",
+  formMsg: "MESAJ",
+  formSend: "GÖNDER",
+  formSending: "GÖNDERİLİYOR...",
+  formSent: "Mesajınız gönderildi!",
+  namePlaceholder: "Adınız",
+  subjectPlaceholder: "Konu",
+  messagePlaceholder: "Mesajınız...",
+  aboutTitle: "Global Market Analytics Hakkında",
+  aboutSub: "Küresel piyasalarda yapılandırılmış analiz, netlik ve karar desteği sunan finansal zeka platformu.",
+  aboutMission: "Misyonumuz",
+  aboutMissionText: "Yatırım tavsiyesi sınırını aşmadan yapılandırılmış analizle belirsizliği azaltan finansal karar altyapısı kurmak.",
+  aboutVision: "Vizyonumuz",
+  aboutVisionText: "Daha net anlayışın, düşük belirsizliğin ve güçlü karar disiplininin küresel piyasalarda erişilebilir olduğu bir dünya.",
+  aboutCardPlatformT: "Platform",
+  aboutCardPlatformB: "Global Market Analytics; 600+ küresel kuruluşun hisse verisini, IPO durumunu ve piyasa metriklerini tek arayüzde sunmak için tasarlanmış finansal bilgi platformudur.",
+  aboutCardAIT: "AI Entegrasyonu",
+  aboutCardAIB: "GMA Consensus Engine tarafından desteklenen platform; yapılandırılmış şirket analizi, risk çerçevesi ve stratejik görünüm sunar. Tüm çıktılar yalnızca bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.",
+  aboutCardDataT: "Tarihsel Veri",
+  aboutCardDataB: "Altın için 1900'den, başlıca para birimleri için 1930'dan ve diğer emtialar için kayıtlı en erken tarihlerden 2026'ya uzanan tarihsel grafik endeksleri.",
+  aboutCardSourcesT: "Veri Kaynakları",
+  aboutCardSourcesB: "Canlı veriler Finnhub API ile sağlanır. Forex oranları open.er-api.com kaynaklıdır. Harici proxy kullanılmaz.",
+  aboutCardPrivacyT: "Gizlilik",
+  aboutCardPrivacyB: "Kullanıcı verileri harici sunuculara gönderilmez. Tercihler, API anahtarları ve portföy bilgileri yalnızca tarayıcınızın localStorage alanında saklanır.",
+  pricingTitle: "Küresel Yatırım İçin AI Gücü",
+  pricingSub: "GMA Consensus Engine'e tek bir kurumsal abonelikle erişin.",
+  pricingManagedLine1: "GMA'ya ödeme yapın - GMA Triple Consensus'u sizin için yönetiyoruz.",
+  pricingManagedLine2: "Tek platform, üç AI motoru.",
+  detailedComparison: "DETAYLI KARŞILAŞTIRMA",
+  feature: "ÖZELLİK",
+  integratedAiPartners: "ENTEGRE AI ORTAKLARI",
+  apiCostsManaged: "GMA tüm API maliyetlerini sizin adınıza yönetir. Tek abonelik, üç AI motoru.",
+  pricingLegalWarning: "Bu platform yatırım tavsiyesi vermez. Tüm kararlar yatırımcının sorumluluğundadır.",
+  secureCheckoutViaPaddle: "PADDLE İLE GÜVENLİ ÖDEME",
+  secureCheckoutTitle: "Paddle ile Güvenli Ödeme",
+  secureCheckoutBody: "Ödemeniz yetkili kayıtlı satıcı iş ortağımız Paddle.com tarafından güvenle işlenir. GMA kart bilgilerinizi saklamaz. Aşağıdaki buton Paddle'ın güvenli ödeme sayfasını açar.",
+  proceedToCheckout: "Ödemeye Devam Et",
+  startFreeCheckout: "Ücretsiz Başla",
+  checkoutSecuredNote: "Paddle.com güvencesiyle - kart verileri GMA sunucularında saklanmaz.",
+  openingPaddle: "Paddle ödeme ekranı açılıyor...",
+  pleaseWait: "Lütfen bekleyin, bu sayfayı kapatmayın.",
+  planActivatedShort: "plan erişimi etkinleştirildi.",
+  creditsAdded: "kredi hesabınıza eklendi.",
+  plan: "Plan",
+  myProfile: "Profilim",
+  legal: "YASAL",
+  legalNoticeTitle: "YASAL BİLDİRİM",
+  legalNoticeNotAdvice: "YASAL BİLDİRİM - YATIRIM TAVSİYESİ DEĞİLDİR",
+  legalNotice: "Bu platform yatırım tavsiyesi vermez. GMA yalnızca bilgilendirme amacıyla AI destekli analitik içgörüler sunar. Nihai yatırım kararları tamamen yatırımcının sorumluluğundadır.",
+  legalEffectiveDate: "Yürürlük Tarihi: Nisan 2026",
+  legalGdprDate: "Yürürlük Tarihi: Nisan 2026 — GDPR Uyumlu",
+  legalTranslating: "İçerik dilinize çevriliyor...",
+  legalNoAdvice: "YATIRIM TAVSİYESİ DEĞİLDİR",
+  privacyPolicyTitle: "Gizlilik Politikası",
+  termsTitle: "Hizmet Şartları",
+  refundTitle: "İade Politikası",
+  privacyWarning: "Global Market Analytics (GMA) bir veri görselleştirme platformudur. GMA kayıtlı bir yatırım danışmanı değildir; finansal, yatırım, hukuki veya vergi tavsiyesi sunmaz. Tüm içerik ve AI analizleri yalnızca bilgilendirme amaçlıdır. Yatırım kararları tamamen kullanıcının kendi sorumluluğundadır.",
+  termsWarning: "GMA kayıtlı bir yatırım danışmanı değildir. Tüm içerik yalnızca bilgilendirme amaçlıdır. Yatırım kararı almadan önce bağımsız profesyonel finansal danışmanlık alın.",
+  refundHeroTitle: "7 Gün Para İade Garantisi",
+  refundHeroText: "Memnun kalmadınız mı? İlk 7 gün içinde koşulsuz tam iade talep edin. support@globalmarketanalytics.com adresine yazın; 5-7 iş günü içinde işleme alalım.",
+  paddleSecured: "Paddle Güvenceli",
+  oneClickCancel: "Tek Tıkla İptal",
+  noLockIn: "Bağlayıcılık Yok",
+  sevenDayGuarantee: "7 Gün Garanti",
+  footerDesc: "Küresel piyasalarda netlik sağlamak için tasarlanmış finansal zeka platformu.",
+  footerBrandLine: "Global Market Analytics · 2026 · Bağımsız Zeka",
+  footerCompliance: "Global Market Analytics (GMA), AI destekli piyasa verisi görselleştirmesi sunan dijital bir platformdur. GMA kayıtlı bir yatırım danışmanı değildir. Tüm ödemeler iş ortağımız Paddle.com tarafından güvenli şekilde işlenir.",
+  platform: "PLATFORM",
+  addToPortfolio: "PORTFÖYE EKLE",
+  currentPrice: "GÜNCEL FİYAT",
+  exchange: "BORSA",
+  quantity: "ADET",
+  unitPrice: "Birim Fiyat",
+  totalLabel: "TOPLAM",
+  simulatedTransaction: "Bu simüle edilmiş bir işlemdir - gerçek alım yapılmaz"
+};
+
+const GMA_TR_TEXT_REPAIRS = [
+  ["Yururluk", "Yürürlük"], ["Icerik", "İçerik"], ["cevriliyor", "çevriliyor"], ["TAVSIYESI", "TAVSİYESİ"], ["DEGILDIR", "DEĞİLDİR"],
+  ["Gizlilik Politikasi", "Gizlilik Politikası"], ["Hizmet Sartlari", "Hizmet Şartları"], ["Iade Politikasi", "İade Politikası"],
+  ["kayitli", "kayıtlı"], ["yatirim", "yatırım"], ["danismani", "danışmanı"], ["gorsellestirme", "görselleştirme"], ["Tum", "Tüm"], ["tum", "tüm"],
+  ["yalnizca", "yalnızca"], ["bilgilendirme amaclidir", "bilgilendirme amaçlıdır"], ["kullanicinin", "kullanıcının"], ["sorumlulugundadir", "sorumluluğundadır"],
+  ["Gun", "Gün"], ["Iade", "İade"], ["kosulsuz", "koşulsuz"], ["is gunu", "iş günü"], ["isleme", "işleme"], ["Guvenceli", "Güvenceli"],
+  ["Tikla", "Tıkla"], ["Iptal", "İptal"], ["Baglayicilik", "Bağlayıcılık"], ["Canli", "Canlı"], ["Akisi", "Akışı"], ["sirket", "şirket"],
+  ["gercek", "gerçek"], ["zamanli", "zamanlı"], ["Sirket", "Şirket"], ["Karsilastirma", "Karşılaştırma"], ["yukselis", "yükseliş"], ["dusus", "düşüş"],
+  ["aninda", "anında"], ["Ingilizce", "İngilizce"], ["Turkce", "Türkçe"], ["Rusca", "Rusça"], ["Arapca", "Arapça"], ["Cince", "Çince"],
+  ["Hintce", "Hintçe"], ["Ispanyolca", "İspanyolca"], ["Kuresel", "Küresel"], ["Piyasalari", "Piyasaları"], ["Gorun", "Görün"],
+  ["kurulus", "kuruluş"], ["yapilandirilmis", "yapılandırılmış"], ["cercevesi", "çerçevesi"], ["belirsizligi", "belirsizliği"],
+  ["Nasil", "Nasıl"], ["Calisir", "Çalışır"], ["Ozellikleri", "Özellikleri"], ["Ucretsiz", "Ücretsiz"], ["Basla", "Başla"],
+  ["Giris", "Giriş"], ["Sektor", "Sektör"], ["TUMU", "TÜMÜ"], ["YUKSELENLER", "YÜKSELENLER"], ["DUSENLER", "DÜŞENLER"],
+  ["YUKLE", "YÜKLE"], ["GRAFIK", "GRAFİK"], ["ANALIZ", "ANALİZ"], ["TARIHSEL", "TARİHSEL"], ["FIYAT", "FİYAT"],
+  ["YUKSELIS", "YÜKSELİŞ"], ["ESIGI", "EŞİĞİ"], ["Guncel", "Güncel"], ["Deger", "Değer"], ["Kar / Zarar", "Kâr / Zarar"],
+  ["PORTFOY", "PORTFÖY"], ["PORTFOYE", "PORTFÖYE"], ["ODEME", "ÖDEME"], ["Odeme", "Ödeme"], ["Erisim", "Erişim"],
+  ["Guvenli", "Güvenli"], ["guvenli", "güvenli"], ["guvencesiyle", "güvencesiyle"], ["Lutfen", "Lütfen"], ["erisim", "erişim"],
+  ["etkinlestirildi", "etkinleştirildi"], ["hesabiniza", "hesabınıza"], ["eklendi", "eklendi"], ["Bagimsiz", "Bağımsız"], ["Zeka", "Zeka"]
+];
+
+function repairTurkishText(value) {
+  if (typeof value === "string") {
+    return GMA_TR_TEXT_REPAIRS.reduce((text, pair) => text.split(pair[0]).join(pair[1]), value);
+  }
+  if (Array.isArray(value)) return value.map(repairTurkishText);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, repairTurkishText(item)]));
+  }
+  return value;
+}
+
+T.tr = repairTurkishText({ ...(T.tr || EN), ...GMA_TR_FINAL_REPAIR });
+if (GMA_LEGAL_STATIC.tr) GMA_LEGAL_STATIC.tr = repairTurkishText(GMA_LEGAL_STATIC.tr);
 const GMA_AI_LAYER_I18N = {
   en: { aiLayerAnalytic:'Analytic Layer', aiLayerStrategy:'Deep Strategy', aiLayerHistorical:'Historical Filter' },
   tr: { aiLayerAnalytic:'Analitik Katman', aiLayerStrategy:'Derin Strateji', aiLayerHistorical:'Tarihsel Filtre' },
@@ -1691,6 +1948,8 @@ Object.keys(T).forEach(code => {
     if (!T[code][key]) T[code][key] = T.en[key];
   });
 });
+T.tr = repairTurkishText({ ...(T.tr || EN), ...GMA_TR_FINAL_REPAIR });
+if (GMA_LEGAL_STATIC.tr) GMA_LEGAL_STATIC.tr = repairTurkishText(GMA_LEGAL_STATIC.tr);
 const CORE_LANGS = ['en', 'tr', 'ru', 'ar', 'zh', 'hi', 'de', 'es'];
 Object.keys(T).forEach(lang => {
   Object.keys(EN).forEach(k => {
@@ -14796,6 +15055,7 @@ function PricingPage({
   const [payDone, setPayDone] = React.useState(false);
   const [activePlanId, setActivePlanId] = React.useState(null);
   const plans = Object.values(GMA_PLANS);
+  const comparisonGrid = 'minmax(260px, 1.45fr) repeat(4, minmax(120px, 0.7fr))';
   const featureRows = [{
     label: t('marketDataPlan'),
     vals: [true, true, true, true]
@@ -15091,8 +15351,8 @@ function PricingPage({
     onMouseLeave: e => e.currentTarget.style.opacity = '1'
   }, plan.id === 'free' ? t('startFreeCheckout') : (getPlanText(t, plan, 'label') + ' ' + t('plan') + ' →'))))), /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: '880px',
-      margin: '0 auto 40px',
+      maxWidth: '1040px',
+      margin: '0 auto 8px',
       overflowX: 'auto'
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -15103,56 +15363,109 @@ function PricingPage({
       textAlign: 'center',
       marginBottom: '16px'
     }
-  }, t('detailedComparison')), /*#__PURE__*/React.createElement("table", {
+  }, t('detailedComparison')), /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100%',
-      borderCollapse: 'collapse',
-      fontSize: '12px'
+      fontSize: '12px',
+      minWidth: '860px'
     }
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: comparisonGrid,
+      alignItems: 'center',
+      columnGap: '0',
+      borderBottom: '1px solid #1e293b',
+      marginBottom: '10px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: 'left',
-      padding: '10px 12px',
+      padding: '10px 14px',
       color: '#94a3b8',
-      borderBottom: '1px solid #1e293b',
       fontWeight: 'bold',
       fontSize: '11px'
     }
-  }, t('feature')), plans.map(p => /*#__PURE__*/React.createElement("th", {
+  }, t('feature')), plans.map(p => /*#__PURE__*/React.createElement("div", {
     key: p.id,
     style: {
       textAlign: 'center',
       padding: '10px 6px',
       color: p.color,
-      borderBottom: '1px solid #1e293b',
       fontWeight: 'bold',
       fontSize: '10px'
     }
-  }, getPlanText(t, p, 'label')))), /*#__PURE__*/React.createElement("tbody", null, featureRows.map(({
+  }, getPlanText(t, p, 'label')))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '7px'
+    }
+  }, featureRows.map(({
     label,
     vals
-  }, i) => /*#__PURE__*/React.createElement("tr", {
+  }, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
-      borderBottom: '1px solid #0a1220',
-      background: i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.01)'
+      display: 'grid',
+      gridTemplateColumns: comparisonGrid,
+      alignItems: 'center',
+      minHeight: '56px',
+      background: i % 2 === 0 ? 'rgba(15,23,42,0.42)' : 'rgba(255,255,255,0.04)',
+      border: '1px solid rgba(148,163,184,0.06)',
+      borderRadius: '8px',
+      overflow: 'hidden'
     }
-  }, /*#__PURE__*/React.createElement("td", {
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '9px 12px',
+      padding: '12px 14px',
       color: '#94a3b8',
       fontSize: '12px'
     }
-  }, label), vals.map((v, j) => /*#__PURE__*/React.createElement("td", {
+  }, label), vals.map((v, j) => /*#__PURE__*/React.createElement("div", {
     key: j,
     style: {
-      textAlign: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '56px',
       padding: '9px 6px',
       fontSize: '12px',
       fontWeight: 'bold',
-      color: v === true ? '#34d399' : v === false ? '#1e293b' : '#fbbf24'
+      color: v === true ? '#34d399' : v === false ? '#334155' : '#fbbf24',
+      borderLeft: '1px solid rgba(148,163,184,0.035)'
     }
-  }, v === true ? '✓' : v === false ? '–' : v))))))), payModal && /*#__PURE__*/React.createElement(PaddlePaymentModal, {
+  }, v === true ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '24px',
+      height: '24px',
+      lineHeight: 1,
+      borderRadius: '999px',
+      background: 'rgba(52,211,153,0.1)',
+      boxShadow: '0 0 0 1px rgba(52,211,153,0.18)'
+    }
+  }, '✓') : v === false ? '–' : v)))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: '1040px',
+      margin: '30px auto 80px',
+      textAlign: 'center',
+      color: '#94a3b8',
+      fontSize: '13px',
+      lineHeight: 1.8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: '#cbd5e1',
+      fontWeight: 'bold'
+    }
+  }, t('apiCostsManagedShort')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: '#fbbf24'
+    }
+  }, "\u26A0 ", t('pricingLegalWarningShort'))), payModal && /*#__PURE__*/React.createElement(PaddlePaymentModal, {
     plan: payModal,
     user: user,
     onClose: () => setPayModal(null),
@@ -16283,11 +16596,11 @@ function PrivacyPage({onNavigate}) {
     bg:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'10px',color:'#34d399',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
   };
   var EN_SECS = [
-    {t:"1. Information We Collect",b:"GMA operates as a client-side web application. We collect only the minimum data necessary:\n\n\u2022 Account Information: email and display name, stored locally in your browser (localStorage).\n\u2022 API Keys: stored only in your browser. Transmitted directly to Anthropic. GMA never receives your API key on our servers.\n\u2022 Payment Data: processed entirely by Paddle.com. GMA does not receive, store, or process card information.\n\u2022 Analytics: anonymised, aggregated usage data with no personally identifiable information."},
+    {t:"1. Information We Collect",b:"GMA operates as a client-side web application. We collect only the minimum data necessary:\n\n\u2022 Account Information: email and display name, stored locally in your browser (localStorage).\n\u2022 API Keys: stored only in your browser and transmitted directly to GMA.\n\u2022 Payment Data: processed entirely by Paddle.com. GMA does not receive, store, or process card information.\n\u2022 Analytics: anonymised, aggregated usage data with no personally identifiable information."},
     {t:"2. Legal Basis for Processing (GDPR)",b:"Under the General Data Protection Regulation (GDPR), we rely on:\n\n\u2022 Contractual Necessity \u2014 processing your email to deliver the subscribed service.\n\u2022 Legitimate Interests \u2014 improving platform performance via anonymised analytics.\n\u2022 Consent \u2014 for any optional data collection. You may withdraw consent at any time."},
     {t:"3. Payment Processing via Paddle",b:"All payments are processed by our Merchant of Record, Paddle.com. When you subscribe:\n\n\u2022 You are redirected to Paddle's PCI-DSS-compliant secure checkout.\n\u2022 Card details are entered only on Paddle's infrastructure. GMA never sees your payment credentials.\n\u2022 Paddle Privacy Policy: https://www.paddle.com/legal/privacy\n\u2022 For billing enquiries: support@globalmarketanalytics.com"},
     {t:"4. Cookies & Tracking",b:"GMA does not use advertising cookies, third-party tracking pixels, or behavioural analytics. Strictly necessary session cookies may be used for authentication only. No user behaviour is sold to advertisers."},
-    {t:"5. Third-Party Data Providers",b:"GMA integrates with backend providers, each subject to their own privacy policies:\n\n\u2022 GMA Providers (GMA AI) \u2014 https://www.anthropic.com/privacy\n\u2022 Finnhub.io \u2014 real-time market data provider\n\u2022 Frankfurter API \u2014 currency exchange rates\n\u2022 Paddle.com \u2014 payment processing\n\nThese providers may process your IP address in the course of normal operations."},
+    {t:"5. Third-Party Data Providers",b:"GMA integrates with backend providers, each subject to their own privacy policies:\n\n\u2022 Finnhub.io \u2014 real-time market data provider\n\u2022 Frankfurter API \u2014 currency exchange rates\n\u2022 Paddle.com \u2014 payment processing\n\nThese providers may process your IP address in the course of normal operations."},
     {t:"6. Your Rights (GDPR)",b:"If you are in the EEA or UK, you have the following rights:\n\n\u2022 Right of Access \u2014 request a copy of your personal data.\n\u2022 Right to Rectification \u2014 correct inaccurate data.\n\u2022 Right to Erasure \u2014 request deletion of your data.\n\u2022 Right to Restriction \u2014 limit how we process your data.\n\u2022 Right to Data Portability \u2014 receive data in machine-readable format.\n\u2022 Right to Object \u2014 object to processing based on legitimate interests.\n\nContact: support@globalmarketanalytics.com. We respond within 30 days."},
     {t:"7. Data Retention",b:"Browser localStorage data is retained until you clear your browser or delete your account. We do not retain personal data on our servers beyond what is required for billing and legal compliance."},
     {t:"8. Data Security",b:"We implement HTTPS/TLS encryption for all data in transit. Payment operations are delegated entirely to PCI-DSS-compliant Paddle infrastructure. Security practices are reviewed regularly."},
@@ -16469,8 +16782,7 @@ function ContactPage({onNavigate}) {
           React.createElement("span",{style:{fontSize:'20px'}},"\uD83D\uDCAC"),
           React.createElement("div",null,
             React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'4px'}},"WHATSAPP"),
-            React.createElement("a",{href:"https://wa.me/998943931121",target:"_blank",rel:"noopener noreferrer",style:{color:'#34d399',textDecoration:'none',fontSize:'13px',display:'block'}},"+998 94 393 11 21"),
-            React.createElement("a",{href:"https://wa.me/905428470735",target:"_blank",rel:"noopener noreferrer",style:{color:'#34d399',textDecoration:'none',fontSize:'13px',display:'block'}},"+90 542 847 07 35")
+            React.createElement("a",{href:"https://wa.me/998935291121",target:"_blank",rel:"noopener noreferrer",style:{color:'#34d399',textDecoration:'none',fontSize:'13px',display:'block'}},"+998 93 529 11 21")
           )
         ),
 
@@ -16478,7 +16790,7 @@ function ContactPage({onNavigate}) {
           React.createElement("span",{style:{fontSize:'20px'}},"\uD83D\uDCE8"),
           React.createElement("div",null,
             React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'4px'}},"TELEGRAM"),
-            React.createElement("a",{href:"https://t.me/+998943931121",target:"_blank",rel:"noopener noreferrer",style:{color:'#38bdf8',textDecoration:'none',fontSize:'13px'}},"Global Market Analytics Support")
+            React.createElement("a",{href:"https://t.me/+998935291121",target:"_blank",rel:"noopener noreferrer",style:{color:'#38bdf8',textDecoration:'none',fontSize:'13px'}},"Global Market Analytics Support")
           )
         )
       ),
@@ -16661,12 +16973,12 @@ function GlobalFooter({
   }, {
     icon: null,
     label: 'Telegram',
-    url: 'https://t.me/+998943931121',
+    url: 'https://t.me/+998935291121',
     svg: '<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" width=\"16\" height=\"16\"><path d=\"M11.944 0A12 12 0 1 0 24 12 12 12 0 0 0 11.944 0zm5.98 8.347L16 16.5c-.162.655-.59.816-1.195.508l-3.3-2.432-1.593 1.534c-.176.176-.323.323-.662.323l.236-3.342 6.095-5.504c.265-.235-.058-.366-.41-.13L5.84 12.977 2.587 11.96c-.69-.215-.704-.69.144-.9L17.27 7.528c.575-.207 1.077.13.654.82z\"/></svg>'
   }, {
     icon: null,
     label: 'WhatsApp',
-    url: 'https://wa.me/998943931121',
+    url: 'https://wa.me/998935291121',
     svg: '<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" width=\"16\" height=\"16\"><path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z\"/></svg>'
   }]
   return /*#__PURE__*/React.createElement("div", {
