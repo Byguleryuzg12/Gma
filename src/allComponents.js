@@ -1943,6 +1943,84 @@ Object.entries(GMA_AI_LAYER_I18N).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
 
+const GMA_CHART_MODAL_I18N_FIXES = {
+  en: {
+    chart: 'Chart',
+    historicalChart: 'Historical Chart',
+    aiAnalysis: 'AI Analysis',
+    aiAnalysisDemo: 'AI Analysis Preview',
+    demoLayerLabel: 'preview layer',
+    demoContentOnly: 'Preview content only. Live model output will be connected later for company-specific scoring.',
+    companyDemoContentOnly: 'preview content only. Live model output will be connected later for company-specific scoring.'
+  },
+  tr: {
+    chart: 'Grafik',
+    historicalChart: 'Tarihsel Grafik',
+    aiAnalysis: 'Yapay Zeka Analizi',
+    aiAnalysisDemo: 'Yapay Zeka Analiz Onizlemesi',
+    demoLayerLabel: 'onizleme katmani',
+    demoContentOnly: 'Yalnizca onizleme icerigidir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.',
+    companyDemoContentOnly: 'yalnizca onizleme icerigidir. Sirkete ozel skor icin canli model ciktisi daha sonra baglanacak.'
+  },
+  ru: {
+    chart: 'График',
+    historicalChart: 'Исторический график',
+    aiAnalysis: 'AI-анализ',
+    aiAnalysisDemo: 'Предпросмотр AI-анализа',
+    demoLayerLabel: 'слой предпросмотра',
+    demoContentOnly: 'Это только предпросмотр. Живой вывод модели для оценки компании будет подключен позже.',
+    companyDemoContentOnly: 'только предпросмотр. Живой вывод модели для оценки компании будет подключен позже.'
+  },
+  ar: {
+    chart: 'الرسم البياني',
+    historicalChart: 'الرسم التاريخي',
+    aiAnalysis: 'تحليل AI',
+    aiAnalysisDemo: 'معاينة تحليل AI',
+    demoLayerLabel: 'طبقة المعاينة',
+    demoContentOnly: 'هذا محتوى معاينة فقط. سيتم ربط مخرجات النموذج الحية لاحقا لتقييم كل شركة.',
+    companyDemoContentOnly: 'محتوى معاينة فقط. سيتم ربط مخرجات النموذج الحية لاحقا لتقييم كل شركة.'
+  },
+  zh: {
+    chart: '图表',
+    historicalChart: '历史图表',
+    aiAnalysis: 'AI 分析',
+    aiAnalysisDemo: 'AI 分析预览',
+    demoLayerLabel: '预览层',
+    demoContentOnly: '仅为预览内容。稍后将连接实时模型输出以进行公司评分。',
+    companyDemoContentOnly: '仅为预览内容。稍后将连接实时模型输出以进行公司评分。'
+  },
+  hi: {
+    chart: 'चार्ट',
+    historicalChart: 'ऐतिहासिक चार्ट',
+    aiAnalysis: 'AI विश्लेषण',
+    aiAnalysisDemo: 'AI विश्लेषण पूर्वावलोकन',
+    demoLayerLabel: 'पूर्वावलोकन परत',
+    demoContentOnly: 'यह केवल पूर्वावलोकन सामग्री है। कंपनी-विशिष्ट स्कोरिंग के लिए लाइव मॉडल आउटपुट बाद में जोड़ा जाएगा।',
+    companyDemoContentOnly: 'केवल पूर्वावलोकन सामग्री। कंपनी-विशिष्ट स्कोरिंग के लिए लाइव मॉडल आउटपुट बाद में जोड़ा जाएगा।'
+  },
+  de: {
+    chart: 'Diagramm',
+    historicalChart: 'Historisches Diagramm',
+    aiAnalysis: 'KI-Analyse',
+    aiAnalysisDemo: 'Vorschau der KI-Analyse',
+    demoLayerLabel: 'Vorschau-Ebene',
+    demoContentOnly: 'Nur Vorschauinhalt. Live-Modellausgaben fur unternehmensspezifische Bewertungen werden spater verbunden.',
+    companyDemoContentOnly: 'nur Vorschauinhalt. Live-Modellausgaben fur unternehmensspezifische Bewertungen werden spater verbunden.'
+  },
+  es: {
+    chart: 'Grafico',
+    historicalChart: 'Grafico historico',
+    aiAnalysis: 'Analisis AI',
+    aiAnalysisDemo: 'Vista previa del analisis AI',
+    demoLayerLabel: 'capa de vista previa',
+    demoContentOnly: 'Solo contenido de vista previa. La salida del modelo en vivo para puntuacion por empresa se conectara despues.',
+    companyDemoContentOnly: 'solo contenido de vista previa. La salida del modelo en vivo para puntuacion por empresa se conectara despues.'
+  }
+};
+Object.entries(GMA_CHART_MODAL_I18N_FIXES).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
+
 Object.keys(T).forEach(code => {
   Object.keys(T.en).forEach(key => {
     if (!T[code][key]) T[code][key] = T.en[key];
@@ -1955,6 +2033,9 @@ Object.keys(T).forEach(lang => {
   Object.keys(EN).forEach(k => {
     if (!T[lang][k]) T[lang][k] = EN[k];
   });
+});
+Object.entries(GMA_CHART_MODAL_I18N_FIXES).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
 });
 
 // ── Dinamik AI Ceviri Sistemi (80 dil icin) ──
@@ -7817,7 +7898,7 @@ function AIAnalysisInlinePanel({
       fontSize: "14px",
       lineHeight: 1.6
     }
-  }, c.name, " demo layer: ", analysis.summary)), /*#__PURE__*/React.createElement("div", {
+  }, c.name, " ", t('demoLayerLabel'), ": ", analysis.summary)), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
