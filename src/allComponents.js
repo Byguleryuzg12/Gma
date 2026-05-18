@@ -15181,17 +15181,17 @@ const GMA_PLANS = {
   },
   explorer: {
     id: 'explorer', label: 'Explorer', labelKey: 'planExplorerLabel', price: 19.99, period: '/mo', periodKey: 'periodMonth',
-    credits: 10, color: '#38bdf8', multiAI: true,
+    credits: 10, color: '#8fa3bd', multiAI: true,
     badge: 'STARTER', badgeKey: 'planExplorerBadge', scope: '1 Sector · 10 Analyses', scopeKey: 'planExplorerScope', statsKey: 'planExplorerStats'
   },
   strategist: {
     id: 'strategist', label: 'Strategist', labelKey: 'planStrategistLabel', price: 49.99, period: '/mo', periodKey: 'periodMonth',
-    credits: 999, color: '#a78bfa', multiAI: true,
+    credits: 999, color: '#b6c2d0', multiAI: true,
     badge: 'MOST POPULAR', badgeKey: 'planStrategistBadge', scope: 'Unlimited · All Sectors', scopeKey: 'planStrategistScope', statsKey: 'planStrategistStats'
   },
   pro_architect: {
     id: 'pro_architect', label: 'Pro-Architect', labelKey: 'planProArchitectLabel', price: 99.99, period: '/mo', periodKey: 'periodMonth',
-    credits: 999, color: '#f59e0b', multiAI: true,
+    credits: 999, color: '#c2a15a', multiAI: true,
     badge: 'SOVEREIGN', badgeKey: 'planProArchitectBadge', scope: 'Global + Signal DNA · 126 Years', scopeKey: 'planProArchitectScope', statsKey: 'planProArchitectStats'
   }
 };
@@ -15480,6 +15480,7 @@ function PricingPage({
     }, "\uD83D\uDC64 ", t('myProfile')))));
   }
   return /*#__PURE__*/React.createElement("div", {
+    className: 'gma-pricing-page',
     style: {
       minHeight: '100vh',
       background: '#060912',
@@ -15519,6 +15520,7 @@ function PricingPage({
     }
   }, plans.map(plan => /*#__PURE__*/React.createElement("div", {
     key: plan.id,
+    className: `gma-pricing-card gma-pricing-card-${plan.id}`,
     style: {
       background: plan.badge ? `linear-gradient(145deg,${plan.color}12,#080d18)` : 'linear-gradient(145deg,#0c1220,#080d18)',
       border: `1px solid ${plan.badge ? plan.color + '44' : '#1e293b'}`,
@@ -15536,6 +15538,7 @@ function PricingPage({
       if (plan.id !== 'monthly') e.currentTarget.style.transform = 'scale(1)';
     }
   }, plan.badge && /*#__PURE__*/React.createElement("div", {
+    className: 'gma-pricing-badge',
     style: {
       position: 'absolute',
       top: '-12px',
@@ -15551,6 +15554,7 @@ function PricingPage({
       whiteSpace: 'nowrap'
     }
   }, getPlanText(t, plan, 'badge')), /*#__PURE__*/React.createElement("div", {
+    className: 'gma-pricing-plan-label',
     style: {
       fontSize: '11px',
       color: plan.color,
@@ -15582,6 +15586,7 @@ function PricingPage({
       marginBottom: '18px'
     }
   }, t(plan.statsKey)), /*#__PURE__*/React.createElement("div", {
+    className: 'gma-pricing-features',
     style: {
       marginBottom: '20px',
       display: 'flex',
@@ -15595,6 +15600,7 @@ function PricingPage({
       color: f.startsWith('✓') ? '#94a3b8' : '#94a3b8'
     }
   }, f))), /*#__PURE__*/React.createElement("button", {
+    className: `gma-pricing-button gma-pricing-button-${plan.id}`,
     onClick: () => handleSelect(plan),
     style: {
       width: '100%',
@@ -15613,6 +15619,7 @@ function PricingPage({
     onMouseEnter: e => e.currentTarget.style.opacity = '0.85',
     onMouseLeave: e => e.currentTarget.style.opacity = '1'
   }, plan.id === 'free' ? t('startFreeCheckout') : (getPlanText(t, plan, 'label') + ' ' + t('plan') + ' →'))))), /*#__PURE__*/React.createElement("div", {
+    className: 'gma-pricing-comparison',
     style: {
       maxWidth: '1040px',
       margin: '0 auto 8px',
@@ -15822,13 +15829,13 @@ function HomePage({
     style: {
       position: 'absolute',
       inset: 0,
-      background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56,189,248,0.08) 0%, transparent 60%)',
+      background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(214,180,111,0.07) 0%, transparent 60%)',
       pointerEvents: 'none'
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '17px',
-      color: '#38bdf8',
+      color: '#d6b46f',
       letterSpacing: '0.12em',
       marginBottom: '18px'
     }
@@ -15838,7 +15845,7 @@ function HomePage({
       fontWeight: 'bold',
       lineHeight: 1.15,
       marginBottom: '20px',
-      background: 'linear-gradient(135deg,#f1f5f9,#38bdf8,#818cf8)',
+      background: 'linear-gradient(135deg,#fff7df,#d6b46f,#b87c63)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent'
     }
@@ -16735,17 +16742,17 @@ function AboutPage({onNavigate}) {
     {title: t('aboutCardSourcesT'),  text: t('aboutCardSourcesB')},
     {title: t('aboutCardPrivacyT'),  text: t('aboutCardPrivacyB')}
   ];
-  return React.createElement("div",{style:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'}},
+  return React.createElement("div",{style:{minHeight:'100vh',background:'#02040a',color:'#eef2f6',fontFamily:"Inter,system-ui,sans-serif",padding:'40px 24px'}},
     React.createElement("div",{style:{maxWidth:'720px',margin:'0 auto'}},
-      React.createElement("h1",{style:{fontSize:'30px',fontWeight:'bold',color:'#f1f5f9',marginBottom:'24px',lineHeight:1.3}},t('aboutTitle')),
+      React.createElement("h1",{style:{fontSize:'30px',fontWeight:650,color:'#eef2f6',marginBottom:'24px',lineHeight:1.3}},t('aboutTitle')),
       React.createElement("div",{style:{display:'grid',gap:'20px'}},
-        cards.map(function(c,i){return React.createElement("div",{key:i,style:{background:'linear-gradient(145deg,#0c1220,#080d18)',border:'1px solid #0f172a',borderRadius:'12px',padding:'20px'}},
-          React.createElement("div",{style:{fontSize:'17px',color:'#38bdf8',fontWeight:'bold',letterSpacing:'0.06em',marginBottom:'8px'}},c.title),
-          React.createElement("div",{style:{fontSize:'17px',color:'#64748b',lineHeight:1.7}},c.text)
+        cards.map(function(c,i){return React.createElement("div",{key:i,style:{background:'linear-gradient(180deg,rgba(17,23,34,0.94),rgba(7,11,18,0.96))',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'10px',padding:'20px'}},
+          React.createElement("div",{style:{fontSize:'16px',color:'#c8d0d8',fontWeight:650,letterSpacing:'0.02em',marginBottom:'8px'}},c.title),
+          React.createElement("div",{style:{fontSize:'16px',color:'#a2acba',lineHeight:1.7}},c.text)
         );})
       ),
       React.createElement("div",{style:{marginTop:'28px'}},
-        React.createElement("button",{onClick:function(){onNavigate('home');},style:{padding:'11px 24px',background:'transparent',border:'1px solid #1e293b',borderRadius:'10px',color:'#475569',cursor:'pointer',fontSize:'17px',fontFamily:'inherit'}},"\u2190 "+t('home'))
+        React.createElement("button",{onClick:function(){onNavigate('home');},style:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.16)',borderRadius:'8px',color:'#a2acba',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}},"\u2190 "+t('home'))
       )
     )
   );
@@ -16842,21 +16849,21 @@ function useLegalTranslate(sections, pageKey) {
 function PrivacyPage({onNavigate}) {
   var t = useLang().t;
   var S = {
-    wrap:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'},
+    wrap:{minHeight:'100vh',background:'#02040a',color:'#eef2f6',fontFamily:"Inter,system-ui,sans-serif",padding:'40px 24px'},
     inner:{maxWidth:'760px',margin:'0 auto'},
-    badge:{fontSize:'13px',color:'#38bdf8',letterSpacing:'0.08em',marginBottom:'8px'},
+    badge:{fontSize:'12px',color:'#bfa46c',letterSpacing:'0.08em',marginBottom:'8px'},
     h1:{fontSize:'26px',fontWeight:'bold',color:'#f1f5f9',marginBottom:'6px'},
     sub:{fontSize:'13px',color:'#64748b',marginBottom:'32px'},
-    card:{background:'linear-gradient(145deg,#0c1220,#080d18)',border:'1px solid #0f172a',borderRadius:'12px',padding:'20px 22px',marginBottom:'16px'},
-    ct:{fontSize:'15px',color:'#34d399',fontWeight:'bold',letterSpacing:'0.06em',marginBottom:'10px'},
-    cb:{fontSize:'15px',color:'#64748b',lineHeight:1.8,whiteSpace:'pre-line'},
-    warn:{background:'rgba(248,113,113,0.07)',border:'1px solid rgba(248,113,113,0.25)',borderRadius:'12px',padding:'16px 20px',marginBottom:'20px'},
-    wt:{fontSize:'15px',color:'#f87171',fontWeight:'bold',marginBottom:'8px'},
-    wb:{fontSize:'14px',color:'#94a3b8',lineHeight:1.8},
-    tip:{textAlign:'center',padding:'8px 16px',marginBottom:'16px',background:'rgba(56,189,248,0.05)',border:'1px solid rgba(56,189,248,0.15)',borderRadius:'8px',fontSize:'12px',color:'#38bdf8'},
-    btn:{padding:'11px 24px',background:'transparent',border:'1px solid #1e293b',borderRadius:'10px',color:'#475569',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
-    bb:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(56,189,248,0.3)',borderRadius:'10px',color:'#38bdf8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
-    bg:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'10px',color:'#34d399',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
+    card:{background:'linear-gradient(180deg,rgba(17,23,34,0.94),rgba(7,11,18,0.96))',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'10px',padding:'20px 22px',marginBottom:'16px'},
+    ct:{fontSize:'15px',color:'#c8d0d8',fontWeight:650,letterSpacing:'0.02em',marginBottom:'10px'},
+    cb:{fontSize:'15px',color:'#a2acba',lineHeight:1.8,whiteSpace:'pre-line'},
+    warn:{background:'rgba(191,164,108,0.055)',border:'1px solid rgba(191,164,108,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'},
+    wt:{fontSize:'15px',color:'#bfa46c',fontWeight:650,marginBottom:'8px'},
+    wb:{fontSize:'14px',color:'#a2acba',lineHeight:1.8},
+    tip:{textAlign:'center',padding:'8px 16px',marginBottom:'16px',background:'rgba(200,208,216,0.04)',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'8px',fontSize:'12px',color:'#c8d0d8'},
+    btn:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.16)',borderRadius:'8px',color:'#a2acba',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
+    bb:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.18)',borderRadius:'8px',color:'#c8d0d8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
+    bg:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(191,164,108,0.24)',borderRadius:'8px',color:'#bfa46c',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
   };
   var EN_SECS = [
     {t:"1. Information We Collect",b:"GMA operates as a client-side web application. We collect only the minimum data necessary:\n\n\u2022 Account Information: email and display name, stored locally in your browser (localStorage).\n\u2022 API Keys: stored only in your browser and transmitted directly to GMA.\n\u2022 Payment Data: processed entirely by Paddle.com. GMA does not receive, store, or process card information.\n\u2022 Analytics: anonymised, aggregated usage data with no personally identifiable information."},
@@ -16896,21 +16903,21 @@ function PrivacyPage({onNavigate}) {
 function TermsPage({onNavigate}) {
   var t = useLang().t;
   var S = {
-    wrap:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'},
+    wrap:{minHeight:'100vh',background:'#02040a',color:'#eef2f6',fontFamily:"Inter,system-ui,sans-serif",padding:'40px 24px'},
     inner:{maxWidth:'760px',margin:'0 auto'},
-    badge:{fontSize:'13px',color:'#38bdf8',letterSpacing:'0.08em',marginBottom:'8px'},
+    badge:{fontSize:'12px',color:'#bfa46c',letterSpacing:'0.08em',marginBottom:'8px'},
     h1:{fontSize:'26px',fontWeight:'bold',color:'#f1f5f9',marginBottom:'6px'},
     sub:{fontSize:'13px',color:'#64748b',marginBottom:'32px'},
-    card:{background:'linear-gradient(145deg,#0c1220,#080d18)',border:'1px solid #0f172a',borderRadius:'12px',padding:'20px 22px',marginBottom:'16px'},
-    ct:{fontSize:'15px',color:'#34d399',fontWeight:'bold',letterSpacing:'0.06em',marginBottom:'10px'},
-    cb:{fontSize:'15px',color:'#64748b',lineHeight:1.8,whiteSpace:'pre-line'},
-    warn:{background:'rgba(248,113,113,0.07)',border:'1px solid rgba(248,113,113,0.25)',borderRadius:'12px',padding:'16px 20px',marginBottom:'20px'},
-    wt:{fontSize:'15px',color:'#f87171',fontWeight:'bold',marginBottom:'8px'},
-    wb:{fontSize:'14px',color:'#94a3b8',lineHeight:1.8},
-    tip:{textAlign:'center',padding:'8px 16px',marginBottom:'16px',background:'rgba(56,189,248,0.05)',border:'1px solid rgba(56,189,248,0.15)',borderRadius:'8px',fontSize:'12px',color:'#38bdf8'},
-    btn:{padding:'11px 24px',background:'transparent',border:'1px solid #1e293b',borderRadius:'10px',color:'#475569',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
-    bb:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(56,189,248,0.3)',borderRadius:'10px',color:'#38bdf8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
-    bg:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'10px',color:'#34d399',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
+    card:{background:'linear-gradient(180deg,rgba(17,23,34,0.94),rgba(7,11,18,0.96))',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'10px',padding:'20px 22px',marginBottom:'16px'},
+    ct:{fontSize:'15px',color:'#c8d0d8',fontWeight:650,letterSpacing:'0.02em',marginBottom:'10px'},
+    cb:{fontSize:'15px',color:'#a2acba',lineHeight:1.8,whiteSpace:'pre-line'},
+    warn:{background:'rgba(191,164,108,0.055)',border:'1px solid rgba(191,164,108,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'},
+    wt:{fontSize:'15px',color:'#bfa46c',fontWeight:650,marginBottom:'8px'},
+    wb:{fontSize:'14px',color:'#a2acba',lineHeight:1.8},
+    tip:{textAlign:'center',padding:'8px 16px',marginBottom:'16px',background:'rgba(200,208,216,0.04)',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'8px',fontSize:'12px',color:'#c8d0d8'},
+    btn:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.16)',borderRadius:'8px',color:'#a2acba',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
+    bb:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.18)',borderRadius:'8px',color:'#c8d0d8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
+    bg:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(191,164,108,0.24)',borderRadius:'8px',color:'#bfa46c',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
   };
   var EN_SECS = [
     {t:"1. Acceptance of Terms",b:"By accessing or using the Global Market Analytics (GMA) platform, you agree to these Terms of Service and all applicable laws. If you disagree with any part, discontinue use immediately."},
@@ -16952,18 +16959,18 @@ function TermsPage({onNavigate}) {
 function RefundPage({onNavigate}) {
   var t = useLang().t;
   var S = {
-    wrap:{minHeight:'100vh',background:'#060912',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'40px 24px'},
+    wrap:{minHeight:'100vh',background:'#02040a',color:'#eef2f6',fontFamily:"Inter,system-ui,sans-serif",padding:'40px 24px'},
     inner:{maxWidth:'760px',margin:'0 auto'},
     badge:{fontSize:'13px',color:'#34d399',letterSpacing:'0.08em',marginBottom:'8px'},
     h1:{fontSize:'26px',fontWeight:'bold',color:'#f1f5f9',marginBottom:'6px'},
     sub:{fontSize:'13px',color:'#64748b',marginBottom:'32px'},
-    hi:{background:'linear-gradient(135deg,rgba(52,211,153,0.08),rgba(56,189,248,0.08))',border:'1px solid rgba(52,211,153,0.25)',borderRadius:'14px',padding:'22px 24px',marginBottom:'20px'},
-    card:{background:'linear-gradient(145deg,#0c1220,#080d18)',border:'1px solid #0f172a',borderRadius:'12px',padding:'20px 22px',marginBottom:'16px'},
-    ct:{fontSize:'15px',color:'#34d399',fontWeight:'bold',letterSpacing:'0.06em',marginBottom:'10px'},
-    cb:{fontSize:'15px',color:'#64748b',lineHeight:1.8,whiteSpace:'pre-line'},
-    tip:{textAlign:'center',padding:'8px 16px',marginBottom:'16px',background:'rgba(56,189,248,0.05)',border:'1px solid rgba(56,189,248,0.15)',borderRadius:'8px',fontSize:'12px',color:'#38bdf8'},
-    btn:{padding:'11px 24px',background:'transparent',border:'1px solid #1e293b',borderRadius:'10px',color:'#475569',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
-    bb:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(56,189,248,0.3)',borderRadius:'10px',color:'#38bdf8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
+    hi:{background:'rgba(191,164,108,0.055)',border:'1px solid rgba(191,164,108,0.18)',borderRadius:'10px',padding:'22px 24px',marginBottom:'20px'},
+    card:{background:'linear-gradient(180deg,rgba(17,23,34,0.94),rgba(7,11,18,0.96))',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'10px',padding:'20px 22px',marginBottom:'16px'},
+    ct:{fontSize:'15px',color:'#c8d0d8',fontWeight:650,letterSpacing:'0.02em',marginBottom:'10px'},
+    cb:{fontSize:'15px',color:'#a2acba',lineHeight:1.8,whiteSpace:'pre-line'},
+    tip:{textAlign:'center',padding:'8px 16px',marginBottom:'16px',background:'rgba(200,208,216,0.04)',border:'1px solid rgba(200,208,216,0.12)',borderRadius:'8px',fontSize:'12px',color:'#c8d0d8'},
+    btn:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.16)',borderRadius:'8px',color:'#a2acba',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'},
+    bb:{padding:'11px 24px',background:'transparent',border:'1px solid rgba(200,208,216,0.18)',borderRadius:'8px',color:'#c8d0d8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}
   };
   var EN_SECS = [
     {t:"1. 7-Day Money-Back Guarantee",b:"GMA offers a full 7-day money-back guarantee on all paid plans (Daily, Monthly, Yearly). If you are not satisfied for any reason, request a full refund within 7 days of your initial purchase.\n\nThis guarantee applies to your first purchase per plan tier and does not apply to subsequent renewals."},
