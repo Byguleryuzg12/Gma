@@ -1148,6 +1148,83 @@ const GMA_STATIC_UI_I18N = {
 Object.entries(GMA_STATIC_UI_I18N).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
+const GMA_COMPARE_DEMO_I18N = {
+  en: {
+    demoCompareCompanySummary: "{name} shows solid market positioning with consistent fundamentals and strong competitive moat in its core segments.",
+    demoCompareStrength1: "Dominant market share in core segments", demoCompareStrength2: "Strong recurring revenue streams", demoCompareStrength3: "Proven management execution track record",
+    demoCompareRisk1: "Market concentration exposure", demoCompareRisk2: "Macro sensitivity in key geographies",
+    demoCompareNearFuture: "AI integration and product expansion are expected to sustain the growth trajectory through 2026-2027.",
+    demoCompareRationale: "Superior financial metrics combined with the innovation pipeline make this the preferred allocation under current market conditions.",
+    demoCompareAlternativeNote: "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as a secondary allocation.",
+    demoCompareOverall: "The portfolio demonstrates solid diversification across market leaders with complementary business models. The current macro environment favors quality over growth, supporting this allocation strategy."
+  },
+  tr: {
+    demoCompareCompanySummary: "{name}, temel verileri istikrarlı ve ana segmentlerinde rekabet avantajı güçlü bir piyasa konumu gösteriyor.",
+    demoCompareStrength1: "Ana segmentlerde baskın pazar payı", demoCompareStrength2: "Güçlü tekrarlayan gelir akışları", demoCompareStrength3: "Kanıtlanmış yönetim uygulama başarısı",
+    demoCompareRisk1: "Pazar yoğunlaşması riski", demoCompareRisk2: "Önemli bölgelerde makro hassasiyet",
+    demoCompareNearFuture: "AI entegrasyonu ve ürün genişlemesinin 2026-2027 boyunca büyüme çizgisini desteklemesi bekleniyor.",
+    demoCompareRationale: "Güçlü finansal göstergeler ve inovasyon hattı, mevcut piyasa koşullarında bu seçimi öne çıkarıyor.",
+    demoCompareAlternativeNote: "Güçlü kurumsal konum ve bulut altyapısı, ikincil tercih için cazip risk-getiri dengesi sunuyor.",
+    demoCompareOverall: "Portföy, birbirini tamamlayan iş modellerine sahip piyasa liderleri arasında sağlam bir çeşitlendirme gösteriyor. Mevcut makro ortam büyümeden çok kaliteyi destekliyor."
+  },
+  ru: {
+    demoCompareCompanySummary: "{name} демонстрирует устойчивую рыночную позицию, стабильные фундаментальные показатели и сильное конкурентное преимущество в ключевых сегментах.",
+    demoCompareStrength1: "Доминирующая доля в ключевых сегментах", demoCompareStrength2: "Сильные повторяющиеся доходы", demoCompareStrength3: "Подтверждённая эффективность управления",
+    demoCompareRisk1: "Риск концентрации рынка", demoCompareRisk2: "Макроэкономическая чувствительность в ключевых регионах",
+    demoCompareNearFuture: "Интеграция AI и расширение продуктов могут поддержать траекторию роста в 2026-2027 годах.",
+    demoCompareRationale: "Сильные финансовые показатели и инновационная дорожная карта делают этот актив предпочтительным в текущих рыночных условиях.",
+    demoCompareAlternativeNote: "Сильная корпоративная позиция и облачная инфраструктура дают привлекательную доходность с учётом риска как вторичный вариант.",
+    demoCompareOverall: "Портфель показывает хорошую диверсификацию среди лидеров рынка с взаимодополняющими бизнес-моделями. Текущая макросреда поддерживает качество сильнее, чем рост."
+  },
+  ar: {
+    demoCompareCompanySummary: "{name} يظهر تمركزاً سوقياً قوياً مع أساسيات مستقرة وميزة تنافسية واضحة في قطاعاته الأساسية.",
+    demoCompareStrength1: "حصة سوقية مهيمنة في القطاعات الأساسية", demoCompareStrength2: "تدفقات إيرادات متكررة قوية", demoCompareStrength3: "سجل تنفيذ إداري مثبت",
+    demoCompareRisk1: "تعرض لمخاطر تركّز السوق", demoCompareRisk2: "حساسية ماكرو في مناطق رئيسية",
+    demoCompareNearFuture: "من المتوقع أن يدعم تكامل AI وتوسع المنتجات مسار النمو خلال 2026-2027.",
+    demoCompareRationale: "المؤشرات المالية القوية مع مسار الابتكار تجعل هذا الخيار مفضلاً في ظروف السوق الحالية.",
+    demoCompareAlternativeNote: "الموقع المؤسسي القوي والبنية السحابية يوفران عائداً جذاباً معدلاً بالمخاطر كخيار ثانوي.",
+    demoCompareOverall: "تُظهر المحفظة تنويعاً جيداً بين قادة السوق ذوي نماذج أعمال متكاملة. البيئة الكلية الحالية تفضل الجودة على النمو."
+  },
+  zh: {
+    demoCompareCompanySummary: "{name} 展现出稳健的市场定位，基本面稳定，并在核心业务板块具备较强竞争壁垒。",
+    demoCompareStrength1: "核心板块市场份额领先", demoCompareStrength2: "经常性收入来源稳健", demoCompareStrength3: "管理层执行记录可靠",
+    demoCompareRisk1: "市场集中度风险", demoCompareRisk2: "关键地区的宏观敏感性",
+    demoCompareNearFuture: "AI 整合与产品扩展预计将在 2026-2027 年继续支撑增长轨迹。",
+    demoCompareRationale: "更强的财务指标叠加创新管线，使其在当前市场环境下成为优先配置。",
+    demoCompareAlternativeNote: "稳固的企业级定位与云基础设施，使其作为次优配置具备有吸引力的风险调整回报。",
+    demoCompareOverall: "该组合在商业模式互补的市场领导者之间形成了较好的分散配置。当前宏观环境更偏好质量而非单纯增长。"
+  },
+  hi: {
+    demoCompareCompanySummary: "{name} स्थिर मूलभूत आधार और मुख्य क्षेत्रों में मजबूत प्रतिस्पर्धी बढ़त के साथ ठोस बाज़ार स्थिति दिखाता है।",
+    demoCompareStrength1: "मुख्य क्षेत्रों में प्रमुख बाज़ार हिस्सेदारी", demoCompareStrength2: "मजबूत आवर्ती राजस्व प्रवाह", demoCompareStrength3: "प्रबंधन के निष्पादन का सिद्ध रिकॉर्ड",
+    demoCompareRisk1: "बाज़ार एकाग्रता का जोखिम", demoCompareRisk2: "मुख्य क्षेत्रों में मैक्रो संवेदनशीलता",
+    demoCompareNearFuture: "AI एकीकरण और उत्पाद विस्तार से 2026-2027 तक वृद्धि की दिशा को समर्थन मिलने की उम्मीद है।",
+    demoCompareRationale: "मजबूत वित्तीय संकेतक और नवाचार पाइपलाइन मौजूदा बाज़ार परिस्थितियों में इसे पसंदीदा आवंटन बनाते हैं।",
+    demoCompareAlternativeNote: "मजबूत एंटरप्राइज स्थिति और क्लाउड संरचना द्वितीयक आवंटन के रूप में आकर्षक जोखिम-समायोजित रिटर्न देती है।",
+    demoCompareOverall: "यह पोर्टफोलियो पूरक व्यवसाय मॉडल वाले बाज़ार नेताओं में ठोस विविधीकरण दिखाता है। मौजूदा मैक्रो माहौल वृद्धि से अधिक गुणवत्ता को समर्थन देता है।"
+  },
+  de: {
+    demoCompareCompanySummary: "{name} zeigt eine solide Marktposition mit stabilen Fundamentaldaten und starkem Wettbewerbsvorteil in den Kernsegmenten.",
+    demoCompareStrength1: "Dominanter Marktanteil in Kernsegmenten", demoCompareStrength2: "Starke wiederkehrende Umsätze", demoCompareStrength3: "Nachgewiesene Umsetzungskraft des Managements",
+    demoCompareRisk1: "Risiko durch Marktkonzentration", demoCompareRisk2: "Makro-Sensitivität in wichtigen Regionen",
+    demoCompareNearFuture: "AI-Integration und Produktausbau dürften die Wachstumsbahn bis 2026-2027 stützen.",
+    demoCompareRationale: "Starke Finanzkennzahlen zusammen mit der Innovationspipeline machen diese Auswahl unter aktuellen Marktbedingungen bevorzugt.",
+    demoCompareAlternativeNote: "Starke Unternehmenspositionierung und Cloud-Infrastruktur bieten als Zweitwahl attraktive risikobereinigte Renditen.",
+    demoCompareOverall: "Das Portfolio zeigt solide Diversifikation über Marktführer mit ergänzenden Geschäftsmodellen. Das aktuelle Makroumfeld begünstigt Qualität stärker als Wachstum."
+  },
+  es: {
+    demoCompareCompanySummary: "{name} muestra una posición de mercado sólida, fundamentos consistentes y una ventaja competitiva fuerte en sus segmentos principales.",
+    demoCompareStrength1: "Cuota de mercado dominante en segmentos clave", demoCompareStrength2: "Flujos sólidos de ingresos recurrentes", demoCompareStrength3: "Historial probado de ejecución directiva",
+    demoCompareRisk1: "Exposición a concentración de mercado", demoCompareRisk2: "Sensibilidad macro en geografías clave",
+    demoCompareNearFuture: "La integración de AI y la expansión de productos deberían sostener la trayectoria de crecimiento durante 2026-2027.",
+    demoCompareRationale: "Las métricas financieras superiores junto con la cartera de innovación hacen que esta sea la asignación preferida en las condiciones actuales.",
+    demoCompareAlternativeNote: "Una posición empresarial fuerte y la infraestructura cloud ofrecen retornos ajustados por riesgo atractivos como asignación secundaria.",
+    demoCompareOverall: "La cartera muestra una diversificación sólida entre líderes de mercado con modelos de negocio complementarios. El entorno macro actual favorece la calidad sobre el crecimiento."
+  }
+};
+Object.entries(GMA_COMPARE_DEMO_I18N).forEach(([code, values]) => {
+  T[code] = { ...(T[code] || EN), ...values };
+});
 const GMA_MARKET_EXTRA_I18N = {
   en: {
     aiAnalysisDemo: "AI ANALYSIS DEMO", positiveFactors: "POSITIVE FACTORS", negativeFactors: "NEGATIVE FACTORS", riskFactors: "RISK FACTORS", riskOpportunityDemo: "RISK & OPPORTUNITY DEMO", riskSignals: "RISK SIGNALS", opportunitySignals: "OPPORTUNITY SIGNALS", demoContentOnly: "Demo content only. Connect live model output later for company-specific scoring.", companyDemoContentOnly: "demo content only. Connect live model output later for company-specific scoring.", riskAnalysisLoading: "Risk analysis is loading...", aiFeatureLoginRequired: "To use AI analysis features, you need to sign in to your account first.", error: "Error", noAiKey: "GMA AI key configuration required. Contact support.", noCredits: "Your analysis credits are used up. Choose a plan to continue.", loadRiskAnalysis: "Load Risk Analysis", riskAnalysisIntro: "GMA Intelligence Layer analyzes positive and negative factors",
@@ -7635,7 +7712,13 @@ function getGmaDemoAnalysis(t) {
   };
 }
 
-const GMA_DEMO_COMPARE = companies => ({
+const GMA_DEMO_COMPARE = (companies, t) => {
+  const txt = (key, fallback) => {
+    const value = typeof t === "function" ? t(key) : key;
+    return value && value !== key ? value : fallback;
+  };
+  const withName = (key, fallback, name) => txt(key, fallback).replace("{name}", name);
+  return {
   companyAnalysis: companies.map((c, i) => ({
     ticker: c.ticker,
     totalScore: [87, 83, 79, 74][i] || 74,
@@ -7644,22 +7727,23 @@ const GMA_DEMO_COMPARE = companies => ({
     innovationScore: [91, 88, 80, 75][i] || 75,
     financialStrength: [89, 85, 78, 72][i] || 72,
     marketPosition: [94, 87, 81, 76][i] || 76,
-    summary: `${c.name} shows solid market positioning with consistent fundamentals and strong competitive moat in its core segments.`,
-    strengths: ["Dominant market share in core segments", "Strong recurring revenue streams", "Proven management execution track record"],
-    risks: ["Market concentration exposure", "Macro sensitivity in key geographies"],
-    nearFuture: "AI integration and product expansion expected to sustain growth trajectory through 2026-2027."
+    summary: withName("demoCompareCompanySummary", "{name} shows solid market positioning with consistent fundamentals and strong competitive moat in its core segments.", c.name),
+    strengths: [txt("demoCompareStrength1", "Dominant market share in core segments"), txt("demoCompareStrength2", "Strong recurring revenue streams"), txt("demoCompareStrength3", "Proven management execution track record")],
+    risks: [txt("demoCompareRisk1", "Market concentration exposure"), txt("demoCompareRisk2", "Macro sensitivity in key geographies")],
+    nearFuture: txt("demoCompareNearFuture", "AI integration and product expansion are expected to sustain the growth trajectory through 2026-2027.")
   })),
   recommendation: {
     bestTicker: companies[0]?.ticker || "AAPL",
     confidenceRate: 84,
     globalRiskShare: 4.2,
-    rationale: "Superior financial metrics combined with innovation pipeline makes this the preferred allocation under current market conditions.",
+    rationale: txt("demoCompareRationale", "Superior financial metrics combined with the innovation pipeline make this the preferred allocation under current market conditions."),
     alternatif: companies[1]?.ticker || "MSFT",
-    alternativeNote: "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as secondary allocation."
+    alternativeNote: txt("demoCompareAlternativeNote", "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as a secondary allocation.")
   },
-  overallAssessment: "Portfolio demonstrates solid diversification across market leaders with complementary business models. Current macro environment favors quality over growth, supporting this allocation strategy.",
+  overallAssessment: txt("demoCompareOverall", "The portfolio demonstrates solid diversification across market leaders with complementary business models. The current macro environment favors quality over growth, supporting this allocation strategy."),
   _demo: true
-});
+};
+};
 
 // ── HISTORY MODAL ──
 function AIAnalysisModal({
@@ -8487,7 +8571,7 @@ function HistoryModal({
       fontWeight: "bold",
       letterSpacing: "0.06em"
     }
-  }, "SIGN IN / SIGN UP \u2192")) : /*#__PURE__*/React.createElement("div", {
+  }, t('loginRegister'), " \u2192")) : /*#__PURE__*/React.createElement("div", {
     style: {
       background: "rgba(248,113,113,0.08)",
       border: "1px solid rgba(248,113,113,0.3)",
@@ -8849,7 +8933,7 @@ function CompareModal({
   companies,
   onClose
 }) {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false); // false — users baslatir
   const [error, setError] = useState(null);
@@ -8863,7 +8947,7 @@ function CompareModal({
     setRawLog(raw ? raw.slice(0, 800) : "");
     setError(null);
     setTab("overview");
-    setResult(GMA_DEMO_COMPARE(co));
+    setResult(GMA_DEMO_COMPARE(co, t));
   };
 
   // Analiz fonksiyonu — companiesRef uzerinden calisir, bagimlilik problemi yok
@@ -8898,7 +8982,8 @@ function CompareModal({
 
       // Acili parantez (<>) kullanmadan temiz prompt
       const companySchema = co.map(c => `{"ticker":"${c.ticker}","totalScore":0,"growthPotential":0,"riskLevel":0,"innovationScore":0,"financialStrength":0,"marketPosition":0,"summary":"","strengths":["",""],"risks":["",""],"nearFuture":""}`).join(",");
-      const promptContent = `${co.length} compare companies and create an English investment analysis: ${companyDetails}
+      const outputLanguage = LANGS.find(l => l.c === lang)?.n || "English";
+      const promptContent = `${co.length} compare companies and create an investment analysis in ${outputLanguage}: ${companyDetails}
 
 Fill only the JSON template below. Do not write any extra explanation. Make all scores whole numbers from 0 to 100:
 
@@ -9228,7 +9313,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontFamily: "inherit",
       fontWeight: "bold"
     }
-  }, "SIGN IN / SIGN UP \u2192")) : /*#__PURE__*/React.createElement("div", {
+  }, t('loginRegister'), " \u2192")) : /*#__PURE__*/React.createElement("div", {
     style: {
       background: "rgba(248,113,113,0.06)",
       border: "1px solid rgba(248,113,113,0.3)",
