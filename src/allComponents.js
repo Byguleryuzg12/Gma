@@ -8859,10 +8859,20 @@ function CompareModal({
 
   // companies prop'u ref'e al — sonsuz donguyu engeller
   const companiesRef = useRef(companies);
+  const showDemoCompare = (co, raw = "") => {
+    setRawLog(raw ? raw.slice(0, 800) : "");
+    setError(null);
+    setTab("overview");
+    setResult(GMA_DEMO_COMPARE(co));
+  };
 
   // Analiz fonksiyonu — companiesRef uzerinden calisir, bagimlilik problemi yok
   const runAnalysis = async () => {
-    const co = companiesRef.current;
+    const co = companiesRef.current || companies || [];
+    if (co.length < 2) {
+      setError("En az 2 şirket seçilmelidir.");
+      return;
+    }
     // ── Giris kontrolu ──
     const _cu = (() => {
       try {
@@ -8874,7 +8884,7 @@ function CompareModal({
     if (!_cu) {
       setLoading(true);
       await new Promise(r => setTimeout(r, 1500));
-      setResult(GMA_DEMO_COMPARE(co));
+      showDemoCompare(co);
       setLoading(false);
       return;
     }
@@ -8898,7 +8908,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       const apiKey2 = localStorage.getItem('gma_platform_key') || '';
       if (!apiKey2) {
         await new Promise(r => setTimeout(r, 1500));
-        setResult(GMA_DEMO_COMPARE(co));
+        showDemoCompare(co);
         setLoading(false);
         return;
       }
@@ -8927,42 +8937,42 @@ CRITICAL: Return only JSON. The first character must be { and the last character
           const errJson = JSON.parse(rawText);
           errMsg = errJson?.error?.message || errMsg;
         } catch {}
-        setError(`API Hatasi ${res.status}: ${errMsg}`);
-        setRawLog(rawText.slice(0, 500));
+        showDemoCompare(co, `API Hatasi ${res.status}: ${errMsg}\n${rawText}`);
         return;
       }
       let apiResponse;
       try {
         apiResponse = JSON.parse(rawText);
       } catch {
-        setError("API yaniti parse edilemedi: " + rawText.slice(0, 200));
+        showDemoCompare(co, "API yaniti parse edilemedi: " + rawText);
         return;
       }
       const txt = (apiResponse.content || []).filter(b => b.type === "text").map(b => b.text).join("");
       setRawLog(txt.slice(0, 800));
       if (!txt) {
-        setError("Bos yanit. Tipler: " + (apiResponse.content || []).map(b => b.type).join(", "));
+        showDemoCompare(co, "Bos yanit. Tipler: " + (apiResponse.content || []).map(b => b.type).join(", "));
         return;
       }
       const cleaned = txt.replace(/```json\s*/gi, "").replace(/```\s*/g, "").trim();
       const start = cleaned.indexOf("{");
       const end = cleaned.lastIndexOf("}");
       if (start === -1 || end === -1 || end <= start) {
-        setError("JSON bulunamadi: " + cleaned.slice(0, 300));
+        showDemoCompare(co, "JSON bulunamadi: " + cleaned);
         return;
       }
       try {
         const data = JSON.parse(cleaned.slice(start, end + 1));
         if (!data.companyAnalysis || !Array.isArray(data.companyAnalysis)) {
-          setError("Invalid JSON structure: companyAnalysis array is missing.");
+          showDemoCompare(co, "Invalid JSON structure: companyAnalysis array is missing.");
           return;
         }
+        setError(null);
         setResult(data);
       } catch (pe) {
-        setError("JSON parse hatasi: " + pe.message + " — " + cleaned.slice(start, start + 200));
+        showDemoCompare(co, "JSON parse hatasi: " + pe.message + " — " + cleaned);
       }
     } catch (e) {
-      setError("Ag hatasi: " + e.message);
+      showDemoCompare(co, "Ag hatasi: " + e.message);
     } finally {
       setLoading(false);
     }
