@@ -9162,7 +9162,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#94a3b8",
       marginTop: "10px"
     }
-  }, t('comparisonIntro')), loading && /*#__PURE__*/React.createElement("div", {
+  }, t('comparisonIntro'))), loading && /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "60px 0"
@@ -9183,7 +9183,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       fontSize: "14px",
       color: "#94a3b8"
     }
-  }, companies.map(c => c.name).join(" · "), " ", t('companiesBeingCompared')), error && !loading && /*#__PURE__*/React.createElement("div", null, error === '__LOGIN_REQUIRED__' ? /*#__PURE__*/React.createElement("div", {
+  }, companies.map(c => c.name).join(" · "), " ", t('companiesBeingCompared'))), error && !loading && /*#__PURE__*/React.createElement("div", null, error === '__LOGIN_REQUIRED__' ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: "40px 20px",
@@ -9766,7 +9766,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
       color: "#94a3b8",
       lineHeight: 1.5
     }
-  }, item)))))))));
+  }, item)))))));
 }
 
 // ── TOAST BILDIRIM ──
