@@ -29,7 +29,7 @@
     step4t: "Decide",
     step4d: "Build your own decision framework with reliable data and analytical clarity",
     howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
+    howSub: "Global Market Data in 4 Steps",
     featTitle: "Platform Features",
     featSub: "Everything in one place",
     feat1t: "Live Market Feed",
@@ -41,7 +41,7 @@
     feat4t: "Company Comparison",
     feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
     feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
     feat6t: "80 Languages",
     feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
     ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
@@ -86,10 +86,10 @@
     aboutTitle: "About Global Market Analytics",
     aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
     aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
     aboutVision: "Our Vision",
     aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
+    legalNotice: "This platform does not provide financial advice. GMA delivers AI-supported analytical insights for informational purposes only. Users remain responsible for their own decisions.",
     footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
     copyright: "All rights reserved.",
     email: "EMAIL",
@@ -102,7 +102,7 @@
     send: "SEND",
     processing: "PROCESSING...",
     or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
+    pricingTitle: "AI Market Intelligence for Global Data",
     pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
     selectPlan: "Select Plan →",
     freePlan: "Start Free",
@@ -117,7 +117,7 @@
     aboutCardPlatformT: "Platform",
     aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
     aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
     aboutCardDataT: "Historical Data",
     aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
     aboutCardSourcesT: "Data Sources",
@@ -155,7 +155,7 @@
     step4t: "Decide",
     step4d: "Build your own decision framework with reliable data and analytical clarity",
     howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
+    howSub: "Global Market Data in 4 Steps",
     featTitle: "Platform Features",
     featSub: "Everything in one place",
     feat1t: "Live Market Feed",
@@ -167,7 +167,7 @@
     feat4t: "Company Comparison",
     feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
     feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
     feat6t: "80 Languages",
     feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
     ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
@@ -212,10 +212,10 @@
     aboutTitle: "About Global Market Analytics",
     aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
     aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
     aboutVision: "Our Vision",
     aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
+    legalNotice: "This platform does not provide financial advice. GMA delivers AI-supported analytical insights for informational purposes only. Users remain responsible for their own decisions.",
     footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
     copyright: "All rights reserved.",
     email: "EMAIL",
@@ -228,7 +228,7 @@
     send: "SEND",
     processing: "PROCESSING...",
     or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
+    pricingTitle: "AI Market Intelligence for Global Data",
     pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
     selectPlan: "Select Plan →",
     freePlan: "Start Free",
@@ -243,7 +243,7 @@
     aboutCardPlatformT: "Platform",
     aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
     aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
     aboutCardDataT: "Historical Data",
     aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
     aboutCardSourcesT: "Data Sources",
@@ -281,7 +281,7 @@
     step4t: "Decide",
     step4d: "Build your own decision framework with reliable data and analytical clarity",
     howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
+    howSub: "Global Market Data in 4 Steps",
     featTitle: "Platform Features",
     featSub: "Everything in one place",
     feat1t: "Live Market Feed",
@@ -293,7 +293,7 @@
     feat4t: "Company Comparison",
     feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
     feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
     feat6t: "80 Languages",
     feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
     ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
@@ -338,10 +338,10 @@
     aboutTitle: "About Global Market Analytics",
     aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
     aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
     aboutVision: "Our Vision",
     aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
+    legalNotice: "This platform does not provide financial advice. GMA delivers AI-supported analytical insights for informational purposes only. Users remain responsible for their own decisions.",
     footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
     copyright: "All rights reserved.",
     email: "EMAIL",
@@ -354,7 +354,7 @@
     send: "SEND",
     processing: "PROCESSING...",
     or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
+    pricingTitle: "AI Market Intelligence for Global Data",
     pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
     selectPlan: "Select Plan →",
     freePlan: "Start Free",
@@ -369,7 +369,7 @@
     aboutCardPlatformT: "Platform",
     aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
     aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
     aboutCardDataT: "Historical Data",
     aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
     aboutCardSourcesT: "Data Sources",
@@ -407,7 +407,7 @@
     step4t: "Decide",
     step4d: "Build your own decision framework with reliable data and analytical clarity",
     howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
+    howSub: "Global Market Data in 4 Steps",
     featTitle: "Platform Features",
     featSub: "Everything in one place",
     feat1t: "Live Market Feed",
@@ -419,7 +419,7 @@
     feat4t: "Company Comparison",
     feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
     feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
     feat6t: "80 Languages",
     feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
     ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
@@ -464,10 +464,10 @@
     aboutTitle: "About Global Market Analytics",
     aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
     aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
     aboutVision: "Our Vision",
     aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
+    legalNotice: "This platform does not provide financial advice. GMA delivers AI-supported analytical insights for informational purposes only. Users remain responsible for their own decisions.",
     footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
     copyright: "All rights reserved.",
     email: "EMAIL",
@@ -480,7 +480,7 @@
     send: "SEND",
     processing: "PROCESSING...",
     or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
+    pricingTitle: "AI Market Intelligence for Global Data",
     pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
     selectPlan: "Select Plan →",
     freePlan: "Start Free",
@@ -495,7 +495,7 @@
     aboutCardPlatformT: "Platform",
     aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
     aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
     aboutCardDataT: "Historical Data",
     aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
     aboutCardSourcesT: "Data Sources",
@@ -533,7 +533,7 @@
     step4t: "Decide",
     step4d: "Build your own decision framework with reliable data and analytical clarity",
     howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
+    howSub: "Global Market Data in 4 Steps",
     featTitle: "Platform Features",
     featSub: "Everything in one place",
     feat1t: "Live Market Feed",
@@ -545,7 +545,7 @@
     feat4t: "Company Comparison",
     feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
     feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
     feat6t: "80 Languages",
     feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
     ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
@@ -590,10 +590,10 @@
     aboutTitle: "About Global Market Analytics",
     aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
     aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
     aboutVision: "Our Vision",
     aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
+    legalNotice: "This platform does not provide financial advice. GMA delivers AI-supported analytical insights for informational purposes only. Users remain responsible for their own decisions.",
     footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
     copyright: "All rights reserved.",
     email: "EMAIL",
@@ -606,7 +606,7 @@
     send: "SEND",
     processing: "PROCESSING...",
     or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
+    pricingTitle: "AI Market Intelligence for Global Data",
     pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
     selectPlan: "Select Plan →",
     freePlan: "Start Free",
@@ -621,7 +621,7 @@
     aboutCardPlatformT: "Platform",
     aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
     aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
     aboutCardDataT: "Historical Data",
     aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
     aboutCardSourcesT: "Data Sources",
@@ -659,7 +659,7 @@
     step4t: "Decide",
     step4d: "Build your own decision framework with reliable data and analytical clarity",
     howTitle: "How It Works",
-    howSub: "Global Investment in 4 Steps",
+    howSub: "Global Market Data in 4 Steps",
     featTitle: "Platform Features",
     featSub: "Everything in one place",
     feat1t: "Live Market Feed",
@@ -671,7 +671,7 @@
     feat4t: "Company Comparison",
     feat4d: "Compare up to 5 companies with AI and review consensus alignment with a clearer risk frame",
     feat5t: "Smart Alerts",
-    feat5d: "Set price target alerts, get instant notifications on rises and falls",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
     feat6t: "80 Languages",
     feat6d: "Platform experience in 80 languages including Turkish, English, Russian, Arabic",
     ctaTitle: "Upgrade Decision Clarity to Institutional Grade",
@@ -716,10 +716,10 @@
     aboutTitle: "About Global Market Analytics",
     aboutSub: "A financial intelligence platform delivering structured analysis, clarity and decision support across global markets.",
     aboutMission: "Our Mission",
-    aboutMissionText: "To build financial decision infrastructure that reduces uncertainty through structured analysis without crossing into investment advice.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
     aboutVision: "Our Vision",
     aboutVisionText: "A world where clearer understanding, lower uncertainty and stronger decision discipline are accessible across global markets.",
-    legalNotice: "This platform does not provide investment advice. GMA delivers AI-supported analytical insights for informational purposes only. Final investment decisions remain entirely the responsibility of the investor.",
+    legalNotice: "This platform does not provide financial advice. GMA delivers AI-supported analytical insights for informational purposes only. Users remain responsible for their own decisions.",
     footerDesc: "A financial intelligence platform built to deliver clarity across global markets.",
     copyright: "All rights reserved.",
     email: "EMAIL",
@@ -732,7 +732,7 @@
     send: "SEND",
     processing: "PROCESSING...",
     or: "OR WITH EMAIL",
-    pricingTitle: "AI Power for Global Investment",
+    pricingTitle: "AI Market Intelligence for Global Data",
     pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
     selectPlan: "Select Plan →",
     freePlan: "Start Free",
@@ -747,7 +747,7 @@
     aboutCardPlatformT: "Platform",
     aboutCardPlatformB: "Global Market Analytics is a financial information platform built to deliver stock data, IPO status, and market metrics for 600+ global organizations in a single interface.",
     aboutCardAIT: "AI Integration",
-    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analysis, risk framing and strategic outlooks. All outputs are informational only and do not constitute investment advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
     aboutCardDataT: "Historical Data",
     aboutCardDataB: "Historical chart indices spanning from 1900 for Gold, from 1930 for major currencies, and from the earliest recorded dates for other commodities up to 2026.",
     aboutCardSourcesT: "Data Sources",
@@ -782,7 +782,7 @@ Object.entries(GMA_I18N_OVERRIDES).forEach(([code, values]) => {
 const GMA_EXTRA_I18N = {
   en: {
     organizationsLabel: "Organizations", sectorsLabel: "Sectors", realTimeLabel: "Real-Time", liveDataLabel: "Live Data", intelligenceLayerLabel: "GMA Intelligence Layer",
-    liveMarketsTitle: "Live Markets", liveMarketsDesc: "Track stock, commodity and forex prices in real time", aiAnalysisTitle: "AI Analysis", aiAnalysisDesc: "Get in-depth company and risk analysis with GMA Intelligence Layer", comparisonTitle: "Comparison", comparisonDesc: "AI-assisted side-by-side comparison of up to 5 companies", portfolioTrackingTitle: "Portfolio Tracking", portfolioTrackingDesc: "Record purchases and calculate profit/loss", platformFeaturesLabel: "PLATFORM FEATURES", startFreeTitle: "Start for Free", startFreeDesc: "Explore all market data without signing in.", back: "Back", messagePlaceholder: "Your message...", subjectPlaceholder: "Subject", namePlaceholder: "Your name", paymentSuccessful: "PAYMENT SUCCESSFUL", goToMarkets: "Go to Markets", myProfile: "My Profile", marketDataPlan: "Market Data (600+ Organizations)", gmaStructuredAnalysis: "GMA Structured Analysis", gmaConsensus: "GMA Triumvirate Consensus", monthlyAiAnalyses: "Monthly AI Analyses", alertsWatchlist: "Alerts & Watchlist", portfolioManagement: "Portfolio Management", prioritySupport: "Priority Support", unlimited: "Unlimited"
+    liveMarketsTitle: "Live Markets", liveMarketsDesc: "Track stock, commodity and forex prices in real time", aiAnalysisTitle: "AI Market Review", aiAnalysisDesc: "Review company data, risk context and structured market notes with GMA Intelligence Layer", comparisonTitle: "Comparison", comparisonDesc: "AI-assisted side-by-side comparison of up to 5 companies", portfolioTrackingTitle: "Personal Workspace", portfolioTrackingDesc: "Save simulated entries and monitor reference values in one place", platformFeaturesLabel: "PLATFORM FEATURES", startFreeTitle: "Start for Free", startFreeDesc: "Explore all market data without signing in.", back: "Back", messagePlaceholder: "Your message...", subjectPlaceholder: "Subject", namePlaceholder: "Your name", paymentSuccessful: "PAYMENT SUCCESSFUL", goToMarkets: "Go to Markets", myProfile: "My Profile", marketDataPlan: "Market Data (600+ Organizations)", gmaStructuredAnalysis: "GMA Structured Analysis", gmaConsensus: "GMA Triumvirate Consensus", monthlyAiAnalyses: "Monthly AI Analyses", alertsWatchlist: "Alerts & Watchlist", portfolioManagement: "Portfolio Management", prioritySupport: "Priority Support", unlimited: "Unlimited"
   },
   tr: {
     organizationsLabel: "Kurulus", sectorsLabel: "Sektor", realTimeLabel: "Gercek Zamanli", liveDataLabel: "Canli Veri", intelligenceLayerLabel: "GMA Zeka Katmani",
@@ -828,8 +828,8 @@ const GMA_DEEP_I18N = {
     dnaQ_timeframe: "Your Investment Timeframe?", dnaOpt_timeframe_short: "Short", dnaOpt_timeframe_medium: "Medium", dnaOpt_timeframe_long: "Long", dnaDetail_timeframe_short: "0-1 Year", dnaDetail_timeframe_medium: "1-3 Years", dnaDetail_timeframe_long: "3+ Years",
     dnaQ_tone: "Analysis Style?", dnaOpt_tone_clear: "Clear", dnaOpt_tone_technical: "Technical", dnaDetail_tone_clear: "Simple and concise", dnaDetail_tone_technical: "Deep and data-driven",
     dnaQ_budget: "Your Volume Scale?", dnaOpt_budget_micro: "Micro", dnaOpt_budget_macro: "Macro", dnaOpt_budget_corporate: "Corporate",
-    legalEffectiveDate: "Effective Date: April 2026", legalGdprDate: "Effective Date: April 2026 — GDPR Compliant", legalTranslating: "Translating content to your language...", legalNoAdvice: "NO FINANCIAL ADVICE", privacyPolicyTitle: "Privacy Policy", termsTitle: "Terms of Service", refundTitle: "Refund Policy", privacyWarning: "Global Market Analytics (GMA) is a data visualisation platform. GMA is not a registered investment advisor and does not provide financial, investment, legal, or tax advice. All content and AI-generated analyses are for informational purposes only. Investment decisions are made solely at the user's own risk.", termsWarning: "GMA is not a registered investment advisor. All content is for informational purposes only. Always seek independent professional financial advice before making investment decisions.", refundHeroTitle: "7-Day Money-Back Guarantee", refundHeroText: "Not satisfied? Get a full refund within 7 days — no questions asked. Email support@globalmarketanalytics.com and we'll process it within 5–7 business days.", paddleSecured: "Paddle Secured", oneClickCancel: "One-Click Cancel", noLockIn: "No Lock-in", sevenDayGuarantee: "7-Day Guarantee",
-    noApiKey: "No API key — add it from Settings", liveDataUpdated: "Live data updated", simulationRunning: "Simulation is running", cartRemoved: "removed from cart", basketAdded: "added to basket", watchRemoved: "removed from watchlist", watchAdded: "added to watchlist", alertCreated: "alert created", maxCompare: "A maximum of 5 companies can be selected", addedToComparison: "added to comparison", chart: "CHART", compare: "COMPARE", add: "ADD", watch: "WATCH", alert: "ALERT", aiAnalysis: "AI ANALYSIS", riskOpportunity: "RISK & OPPORTUNITY", historicalChart: "HISTORICAL CHART", priceRiseAlert: "PRICE RISE ALERT", riseThreshold: "RISE THRESHOLD", target: "TARGET", setAlert: "SET ALERT", cart: "CART", watchlist: "WATCHLIST", cartEmpty: "Cart is empty", watchlistEmpty: "Watchlist is empty", noPurchasesYet: "No purchases yet", remove: "remove", units: "units", buyIn: "buy-in", currentValue: "Current Value", cost: "Cost", profitLoss: "Profit / Loss", legal: "LEGAL", legalNoticeTitle: "LEGAL NOTICE", legalNoticeNotAdvice: "LEGAL NOTICE - NOT INVESTMENT ADVICE", signInLegalPrefix: "By signing in", signInLegalSuffix: "by continuing.", disclaimer1: "This platform is for digital informational purposes only.", disclaimer2: "No content or AI output is investment advice.", disclaimer3: "All investment decisions are the investor's own responsibility.", disclaimer4: "Past performance does not guarantee future results.", disclaimer5: "Consult a licensed financial advisor before trading.", disclaimer6: "Data may be simulated and may not represent live exchange data."
+    legalEffectiveDate: "Effective Date: April 2026", legalGdprDate: "Effective Date: April 2026 — GDPR Compliant", legalTranslating: "Translating content to your language...", legalNoAdvice: "NO FINANCIAL ADVICE", privacyPolicyTitle: "Privacy Policy", termsTitle: "Terms of Service", refundTitle: "Refund Policy", privacyWarning: "Global Market Analytics (GMA) is a data visualisation platform. GMA is not a registered financial adviser and does not provide financial, investment, legal, or tax advice. All content and AI-generated analyses are for informational purposes only. Users remain solely responsible for their own decisions.", termsWarning: "GMA is not a registered financial adviser. All content is for informational purposes only. Seek independent professional financial advice where appropriate.", refundHeroTitle: "7-Day Money-Back Guarantee", refundHeroText: "Not satisfied? Get a full refund within 7 days — no questions asked. Email support@globalmarketanalytics.com and we'll process it within 5–7 business days.", paddleSecured: "Paddle Secured", oneClickCancel: "One-Click Cancel", noLockIn: "No Lock-in", sevenDayGuarantee: "7-Day Guarantee",
+    noApiKey: "No API key — add it from Settings", liveDataUpdated: "Live data updated", simulationRunning: "Simulation is running", cartRemoved: "removed from cart", basketAdded: "added to basket", watchRemoved: "removed from watchlist", watchAdded: "added to watchlist", alertCreated: "alert created", maxCompare: "A maximum of 5 companies can be selected", addedToComparison: "added to comparison", chart: "CHART", compare: "COMPARE", add: "ADD", watch: "WATCH", alert: "ALERT", aiAnalysis: "AI ANALYSIS", riskOpportunity: "RISK & OPPORTUNITY", historicalChart: "HISTORICAL CHART", priceRiseAlert: "PRICE MOVEMENT ALERT", riseThreshold: "MOVEMENT THRESHOLD", target: "REFERENCE LEVEL", setAlert: "SET ALERT", cart: "CART", watchlist: "WATCHLIST", cartEmpty: "Cart is empty", watchlistEmpty: "Watchlist is empty", noPurchasesYet: "No purchases yet", remove: "remove", units: "units", buyIn: "buy-in", currentValue: "Current Value", cost: "Cost", profitLoss: "Profit / Loss", legal: "LEGAL", legalNoticeTitle: "LEGAL NOTICE", legalNoticeNotAdvice: "LEGAL NOTICE - NOT FINANCIAL ADVICE", signInLegalPrefix: "By signing in", signInLegalSuffix: "by continuing.", disclaimer1: "This platform is for digital informational purposes only.", disclaimer2: "No content or AI output is financial advice.", disclaimer3: "All user decisions are the investor's own responsibility.", disclaimer4: "Past performance does not guarantee future results.", disclaimer5: "Consult a qualified professional for financial advice.", disclaimer6: "Data may be simulated and may not represent live exchange data."
   },
   tr: {
     dashboardTitle: "PIYASA PANELI", dashboardSub: "KURULUS · CANLI SIMULASYON + AI YENILEME", decliners: "DUSENLER", avgChange: "ORT. DEGISIM", myPanel: "PANELIM", fetchAiData: "AI VERI CEK", refreshing: "YENILENIYOR...", searchPlaceholder: "Ticker, sirket adi veya tam ad ile ara... (orn. AAPL, Apple, Tesla)", results: "sonuc", marketStatus: "PIYASA DURUMU", allStatus: "TUMU", listedStatus: "LISTELI", privateStatus: "OZEL", ipoRadarStatus: "IPO RADARI", ipoSoonStatus: "IPO YAKIN", ipoPrepStatus: "IPO HAZIRLIK", rumorStatus: "SOYLENTI", liveAutoLabel: "CANLI", autoRefreshShort: "2.5 sn OTOMATIK", prepStatus: "HAZIRLIK", allOrganizationsShownPrefix: "TUM", allOrganizationsShownSuffix: "KURULUS GOSTERILDI",
@@ -857,7 +857,7 @@ Object.entries(GMA_DEEP_I18N).forEach(([code, values]) => {
 });
 const GMA_CONTENT_I18N = {
   en: {
-    platform: "PLATFORM", planActivated: "Plan Activated!", payKeyLinkedNote: "This key is linked to your account. Do not share it with anyone.", sovereignAutoNote: "GMA Sovereign Intelligence · All models are managed automatically. You do not need anything else.", footerBrandLine: "Global Market Analytics · 2026 · Sovereign Intelligence", footerCompliance: "Global Market Analytics (GMA) is a digital platform providing AI-driven market data visualization. GMA is not a registered investment advisor. All payments are securely processed by our partner, Paddle.com.", addToPortfolio: "ADD TO PORTFOLIO", currentPrice: "CURRENT PRICE", exchange: "EXCHANGE", quantity: "QUANTITY", unitPrice: "Unit Price", totalLabel: "TOTAL", simulatedTransaction: "This is a simulated transaction - no real purchase is made"
+    platform: "PLATFORM", planActivated: "Plan Activated!", payKeyLinkedNote: "This key is linked to your account. Do not share it with anyone.", sovereignAutoNote: "GMA Sovereign Intelligence · All models are managed automatically. You do not need anything else.", footerBrandLine: "Global Market Analytics · 2026 · Sovereign Intelligence", footerCompliance: "Global Market Analytics (GMA) is a digital platform providing AI-driven market data visualization. GMA is not a registered financial adviser. All payments are securely processed by our partner, Paddle.com.", addToPortfolio: "ADD TO PORTFOLIO", currentPrice: "CURRENT PRICE", exchange: "EXCHANGE", quantity: "QUANTITY", unitPrice: "Unit Price", totalLabel: "TOTAL", simulatedTransaction: "This is a simulated transaction - no real purchase is made"
   },
   tr: {
     feat1t: "Canli Piyasa Akisi", feat1d: "600+ sirket, kripto, emtia ve para birimini gercek zamanli takip edin", feat2t: "GMA Triumvirate Analizi", feat2d: "GMA Consensus Engine uzerinden kurumsal sinyal uyumunu inceleyin", feat3t: "Tarihsel Grafikler", feat3d: "Kurulus yilindan itibaren tarihsel grafikler, kriz analizi ve uzun vadeli trendler", feat4t: "Sirket Karsilastirma", feat4d: "5 sirkete kadar AI destekli karsilastirma ve daha net risk cercevesi", feat5t: "Akilli Uyarilar", feat5d: "Fiyat hedefi uyarilari kurun; yukselis ve dususlerde aninda bildirim alin", feat6t: "8 Dil", feat6d: "Ingilizce, Turkce, Rusca, Arapca, Cince, Hintce, Almanca ve Ispanyolca deneyimi",
@@ -902,10 +902,10 @@ Object.entries(GMA_CONTENT_I18N).forEach(([code, values]) => {
 const GMA_STATIC_UI_I18N = {
   en: {
     founded: "Founded", sectorMeta: "Sector", livePrice: "Live", yearsOfMarketHistory: "years of market history", simulatedHistoricalData: "Simulated historical data · Based on the current live price", keyEvents: "KEY EVENTS", today: "today",
-    yearHistoricalChart: "Year Historical Chart", starter: "STARTER", current: "CURRENT", historicalHigh: "HISTORICAL HIGH", historicalLow: "HISTORICAL LOW", totalReturn: "TOTAL RETURN", historicalDataNotice: "Historical data is for reference only and is not investment advice",
+    yearHistoricalChart: "Year Historical Chart", starter: "STARTER", current: "CURRENT", historicalHigh: "HISTORICAL HIGH", historicalLow: "HISTORICAL LOW", totalReturn: "TOTAL RETURN", historicalDataNotice: "Historical data is for reference only and is not financial advice",
     liveCommoditiesForex: "LIVE COMMODITIES & FOREX", metals: "METALS", energy: "ENERGY", forex: "FOREX", fetchingData: "Fetching data...", liveDataStatus: "LIVE DATA", simulated: "SIMULATED", refresh: "REFRESH", refreshTitle: "Refresh", forexSourceNote: "Frankfurter API · ECB data · 1 USD = X units · Change versus previous day", commoditySourceNote: "Finnhub API · Real-time · Live data",
-    companyComparisonAnalysis: "COMPANY COMPARISON ANALYSIS", companiesAiComparison: "companies · AI-powered comparison", overview: "OVERVIEW", scoreAnalysis: "SCORE ANALYSIS", recommendation: "RECOMMENDATION", companiesReady: "Companies Ready", startAiComparisonAnalysis: "Start AI Comparison Analysis", comparisonIntro: "GMA Intelligence Layer generates detailed scores and recommendations for each company", aiAnalysisRunning: "AI analysis is running...", companiesBeingCompared: "are being compared", signInRequired: "Sign-in Required", comparisonLoginRequired: "You need to sign in to your account for company comparison analysis.", analysisError: "Analysis Error", tryAgain: "Try Again", previewModeSampleData: "PREVIEW MODE · SAMPLE DATA", recommended: "RECOMMENDED", totalScore: "TOTAL SCORE", growth: "GROWTH", risk: "RISK", growthPotential: "Growth Potential", financialStrength: "Financial Strength", innovationScore: "Innovation Score", marketPosition: "Market Position", riskLevel: "Risk Level", strengths: "STRENGTHS", risks: "RISKS", aiRecommendation: "AI RECOMMENDATION", aiConfidenceRate: "AI CONFIDENCE RATE", globalRiskShare: "GLOBAL RISK SHARE", globalRisk: "Global Risk", aiConfidence: "AI Confidence", alternativeChoice: "ALTERNATIVE CHOICE", scoreRanking: "SCORE RANKING", finalDecisionNotice: "FINAL DECISION BELONGS TO THE INVESTOR - NOT INVESTMENT ADVICE",
-    finalBullet1: "This analysis is only an AI-based digital assessment.", finalBullet2: "No recommendation replaces a final investment decision.", finalBullet3: "A 5% global risk allowance is included in the calculations.", finalBullet4: "All trading decisions are the investor's responsibility.", finalBullet5: "Past performance does not guarantee future returns.", finalBullet6: "Consult a licensed financial advisor."
+    companyComparisonAnalysis: "COMPANY COMPARISON ANALYSIS", companiesAiComparison: "companies · AI-assisted market comparison", overview: "OVERVIEW", scoreAnalysis: "SCORE ANALYSIS", recommendation: "SCORING", companiesReady: "Companies Ready", startAiComparisonAnalysis: "Start AI Comparison Review", comparisonIntro: "GMA Intelligence Layer generates educational scores and context for each company", aiAnalysisRunning: "AI analysis is running...", companiesBeingCompared: "are being compared", signInRequired: "Sign-in Required", comparisonLoginRequired: "You need to sign in to your account for company comparison analysis.", analysisError: "Analysis Error", tryAgain: "Try Again", previewModeSampleData: "PREVIEW MODE · SAMPLE DATA", recommended: "TOP SCORE", totalScore: "TOTAL SCORE", growth: "GROWTH", risk: "RISK", growthPotential: "Growth Potential", financialStrength: "Financial Strength", innovationScore: "Innovation Score", marketPosition: "Market Position", riskLevel: "Risk Level", strengths: "STRENGTHS", risks: "RISKS", aiRecommendation: "COMPOSITE SCORE HIGHLIGHT", aiConfidenceRate: "AI CONFIDENCE RATE", globalRiskShare: "GLOBAL RISK SHARE", globalRisk: "Global Risk", aiConfidence: "AI Confidence", alternativeChoice: "SECONDARY DATA HIGHLIGHT", scoreRanking: "SCORE RANKING", finalDecisionNotice: "FOR INFORMATION ONLY - NOT FINANCIAL ADVICE",
+    finalBullet1: "This analysis is only an AI-based digital assessment.", finalBullet2: "No output is a buy, sell or hold recommendation.", finalBullet3: "A 5% global risk allowance is included in the calculations.", finalBullet4: "Users remain responsible for their own decisions.", finalBullet5: "Past performance does not guarantee future returns.", finalBullet6: "Consult a qualified professional for financial advice."
   },
   tr: {
     founded: "Kurulus", sectorMeta: "Sektor", livePrice: "Canli", yearsOfMarketHistory: "yillik piyasa gecmisi", simulatedHistoricalData: "Simule tarihsel veri · Mevcut canli fiyata dayalidir", keyEvents: "ONEMLI OLAYLAR", today: "bugun",
@@ -966,9 +966,9 @@ const GMA_COMPARE_DEMO_I18N = {
     demoCompareStrength1: "Dominant market share in core segments", demoCompareStrength2: "Strong recurring revenue streams", demoCompareStrength3: "Proven management execution track record",
     demoCompareRisk1: "Market concentration exposure", demoCompareRisk2: "Macro sensitivity in key geographies",
     demoCompareNearFuture: "AI integration and product expansion are expected to sustain the growth trajectory through 2026-2027.",
-    demoCompareRationale: "Superior financial metrics combined with the innovation pipeline make this the preferred allocation under current market conditions.",
-    demoCompareAlternativeNote: "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as a secondary allocation.",
-    demoCompareOverall: "The portfolio demonstrates solid diversification across market leaders with complementary business models. The current macro environment favors quality over growth, supporting this allocation strategy."
+    demoCompareRationale: "Superior financial metrics combined with the innovation pipeline make this the highest composite score under current market conditions.",
+    demoCompareAlternativeNote: "Strong enterprise positioning and cloud infrastructure provide a notable secondary data highlight.",
+    demoCompareOverall: "The portfolio demonstrates solid diversification across market leaders with complementary business models. The current macro environment favors quality over growth, supporting this data review."
   },
   tr: {
     demoCompareCompanySummary: "{name}, temel verileri istikrarlı ve ana segmentlerinde rekabet avantajı güçlü bir piyasa konumu gösteriyor.",
@@ -1062,7 +1062,7 @@ const GMA_TRANSLATION_FIXES = {
     dnaQ_market_scope:"Analiz kapsaminiz?", dnaOpt_market_scope_global:"Kuresel Piyasalar", dnaOpt_market_scope_emerging:"Gelisen Piyasalar", dnaDetail_market_scope_global:"NASDAQ, NYSE, Avrupa, Asya", dnaDetail_market_scope_emerging:"BIST ve benzer piyasalar", dnaQ_country:"Odak Ulke / Bolge?", dnaOpt_country_na:"Kuzey Amerika", dnaOpt_country_eu:"Avrupa", dnaOpt_country_apac:"Asya & Pasifik", dnaOpt_country_me:"Orta Dogu", dnaQ_sectors:"Oncelikli Ekosistemler (En fazla 3)"
   },
   ru: {
-    register:"РЕГИСТРАЦИЯ", logout:"ВЫЙТИ", loginTitle:"Войдите в аккаунт", registerTitle:"Создайте бесплатный аккаунт", viewMarkets:"СМОТРЕТЬ РЫНКИ", loginRegister:"ВХОД / РЕГИСТРАЦИЯ", googleContinue:"Продолжить с Google", heroBtn1:"СМОТРЕТЬ РЫНКИ", heroBtn2:"СМОТРЕТЬ ТАРИФЫ", heroBtn3:"РЕГИСТРАЦИЯ", heroSubtitle:"Снижайте неопределённость с помощью структурированного анализа и более ясной рамки решений", step1t:"Регистрация", step1d:"Создайте аккаунт за 30 секунд через email или Google", step2t:"Выберите план", step2d:"Выберите план от $2.99 в день", step3t:"Анализируйте", step3d:"Стратегическая ясность через GMA Consensus Engine", step4t:"Принимайте решение", step4d:"Стройте собственную рамку решений на надёжных данных", howTitle:"Как это работает", howSub:"Глобальные инвестиции за 4 шага", featTitle:"Возможности платформы", featSub:"Всё в одном месте", ctaTitle:"Поднимите ясность решений до институционального уровня", ctaSub:"Анализируйте глобальные рынки профессионально с планами от $2.99 в день.", ctaBtn1:"Выбрать план →", ctaBtn2:"Сначала изучить", ctaFree:"Начать бесплатно", ctaFreeSub:"Изучайте рынки без входа.", sector:"Сектор", sectors:"СЕКТОРЫ", allSectors:"ВСЕ", gainers:"РОСТ", losers:"ПАДЕНИЕ", live:"LIVE", autoRefresh:"АВТО-ОБНОВЛЕНИЕ", loadMore:"ПОКАЗАТЬ ЕЩЁ", allShown:"ВСЕ ОРГАНИЗАЦИИ ПОКАЗАНЫ", clear:"Очистить", accountMgmt:"Управление аккаунтом", profileInfo:"ДАННЫЕ ПРОФИЛЯ", accountOps:"ДЕЙСТВИЯ АККАУНТА", apiKeyLabel:"КЛЮЧ ДОСТУПА GMA", backToMarkets:"Назад к рынкам", editProfile:"ИЗМЕНИТЬ", saveProfile:"СОХРАНИТЬ ПРОФИЛЬ", cancel:"ОТМЕНА", myPlan:"Мой активный план", credits:"Кредиты", upgrade:"Увеличить план", contactTitle:"Свяжитесь с нами", footerDesc:"Финансовая аналитическая платформа для ясности на глобальных рынках.", copyright:"Все права защищены.", password:"ПАРОЛЬ", fullname:"ПОЛНОЕ ИМЯ", city:"ГОРОД", phone:"ТЕЛЕФОН", bio:"БИО", socialMedia:"СОЦИАЛЬНЫЕ СЕТИ", send:"ОТПРАВИТЬ", processing:"ОБРАБОТКА...", or:"ИЛИ ПО EMAIL", pricingTitle:"AI-сила для глобальных инвестиций", selectPlan:"Выбрать план →", freePlan:"Начать бесплатно", termsNav:"УСЛОВИЯ", refundNav:"ВОЗВРАТ",
+    register:"РЕГИСТРАЦИЯ", logout:"ВЫЙТИ", loginTitle:"Войдите в аккаунт", registerTitle:"Создайте бесплатный аккаунт", viewMarkets:"СМОТРЕТЬ РЫНКИ", loginRegister:"ВХОД / РЕГИСТРАЦИЯ", googleContinue:"Продолжить с Google", heroBtn1:"СМОТРЕТЬ РЫНКИ", heroBtn2:"СМОТРЕТЬ ТАРИФЫ", heroBtn3:"РЕГИСТРАЦИЯ", heroSubtitle:"Снижайте неопределённость с помощью структурированного анализа и более ясной рамки решений", step1t:"Регистрация", step1d:"Создайте аккаунт за 30 секунд через email или Google", step2t:"Выберите план", step2d:"Выберите план от $2.99 в день", step3t:"Анализируйте", step3d:"Профессиональныйическая ясность через GMA Consensus Engine", step4t:"Принимайте решение", step4d:"Стройте собственную рамку решений на надёжных данных", howTitle:"Как это работает", howSub:"Глобальные инвестиции за 4 шага", featTitle:"Возможности платформы", featSub:"Всё в одном месте", ctaTitle:"Поднимите ясность решений до институционального уровня", ctaSub:"Анализируйте глобальные рынки профессионально с планами от $2.99 в день.", ctaBtn1:"Выбрать план →", ctaBtn2:"Сначала изучить", ctaFree:"Начать бесплатно", ctaFreeSub:"Изучайте рынки без входа.", sector:"Сектор", sectors:"СЕКТОРЫ", allSectors:"ВСЕ", gainers:"РОСТ", losers:"ПАДЕНИЕ", live:"LIVE", autoRefresh:"АВТО-ОБНОВЛЕНИЕ", loadMore:"ПОКАЗАТЬ ЕЩЁ", allShown:"ВСЕ ОРГАНИЗАЦИИ ПОКАЗАНЫ", clear:"Очистить", accountMgmt:"Управление аккаунтом", profileInfo:"ДАННЫЕ ПРОФИЛЯ", accountOps:"ДЕЙСТВИЯ АККАУНТА", apiKeyLabel:"КЛЮЧ ДОСТУПА GMA", backToMarkets:"Назад к рынкам", editProfile:"ИЗМЕНИТЬ", saveProfile:"СОХРАНИТЬ ПРОФИЛЬ", cancel:"ОТМЕНА", myPlan:"Мой активный план", credits:"Кредиты", upgrade:"Увеличить план", contactTitle:"Свяжитесь с нами", footerDesc:"Финансовая аналитическая платформа для ясности на глобальных рынках.", copyright:"Все права защищены.", password:"ПАРОЛЬ", fullname:"ПОЛНОЕ ИМЯ", city:"ГОРОД", phone:"ТЕЛЕФОН", bio:"БИО", socialMedia:"СОЦИАЛЬНЫЕ СЕТИ", send:"ОТПРАВИТЬ", processing:"ОБРАБОТКА...", or:"ИЛИ ПО EMAIL", pricingTitle:"AI-сила для глобальных инвестиций", selectPlan:"Выбрать план →", freePlan:"Начать бесплатно", termsNav:"УСЛОВИЯ", refundNav:"ВОЗВРАТ",
     aiAnalysisDemo:"ДЕМО AI-АНАЛИЗА", negativeFactors:"ОТРИЦАТЕЛЬНЫЕ ФАКТОРЫ", demoContentOnly:"Только демо-контент. Живой вывод модели для оценки компании будет подключён позже.", companyDemoContentOnly:"только демо-контент. Живой вывод модели для оценки компании будет подключён позже.", riskAnalysisLoading:"Анализ риска загружается...", aiFeatureLoginRequired:"Для функций AI-анализа нужно сначала войти в аккаунт.", error:"Ошибка", noAiKey:"Нужна конфигурация ключа GMA AI. Обратитесь в поддержку.", noCredits:"Кредиты анализа исчерпаны. Выберите план для продолжения.", riskAnalysisIntro:"GMA Intelligence Layer анализирует положительные и отрицательные факторы", demoRisk1:"Концентрация выручки и макрочувствительность могут повысить волатильность снижения.", demoRisk2:"Регуляторное, маржинальное или исполнительное давление может ослабить ближайший фон.", demoRisk3:"Риски оценки растут, когда ценовой импульс опережает фундамент.", demoOpp1:"Сильная рыночная позиция может поддержать ценовую силу и денежный поток.", demoOpp2:"AI, автоматизация или расширение продукта могут создать новые каналы роста.", demoOpp3:"Операционный масштаб может превратить восстановление спроса в улучшение маржи.",
     dnaQ_market_scope:"Область анализа?", dnaOpt_market_scope_global:"Глобальные рынки", dnaOpt_market_scope_emerging:"Развивающиеся рынки", dnaDetail_market_scope_global:"NASDAQ, NYSE, Европа, Азия", dnaDetail_market_scope_emerging:"BIST и подобные рынки", dnaQ_country:"Фокус-страна / регион?", dnaOpt_country_na:"Северная Америка", dnaOpt_country_eu:"Европа", dnaOpt_country_apac:"Азия и Тихоокеанский регион", dnaOpt_country_me:"Ближний Восток", dnaQ_sectors:"Приоритетные экосистемы (макс. 3)"
   },
@@ -1140,7 +1140,7 @@ Object.entries(GMA_MARKET_ACTION_FIXES).forEach(([code, values]) => {
   T[code] = { ...(T[code] || EN), ...values };
 });
 const GMA_PRICING_LEGAL_FIXES = {
-  en: { pricingManagedLine1:"Pay GMA - we manage GMA Triple Consensus for you.", pricingManagedLine2:"One platform, three AI engines.", detailedComparison:"DETAILED COMPARISON", feature:"FEATURE", integratedAiPartners:"INTEGRATED AI PARTNERS", apiCostsManaged:"GMA manages all API costs on your behalf. One subscription, three AI engines.", apiCostsManagedShort:"GMA manages all API costs on your behalf.", pricingLegalWarning:"This platform does not provide investment advice. All decisions remain the responsibility of the investor.", pricingLegalWarningShort:"This platform does not provide investment advice. All decisions remain the responsibility of the investor.", secureCheckoutViaPaddle:"SECURE CHECKOUT via PADDLE", secureCheckoutTitle:"Secure Checkout via Paddle", secureCheckoutBody:"Your payment is securely processed by Paddle.com — our authorized Merchant of Record. GMA never stores your card details. Clicking below opens Paddle's secure hosted checkout.", proceedToCheckout:"Proceed to Checkout", startFreeCheckout:"Start Free", checkoutSecuredNote:"Secured by Paddle.com — card data never stored on GMA servers.", openingPaddle:"Opening Paddle Checkout...", pleaseWait:"Please wait, do not close this page.", planActivatedShort:"plan access activated.", creditsAdded:"credits added to your account.", plan:"Plan", myProfile:"My Profile" },
+  en: { pricingManagedLine1:"Pay GMA - we manage GMA Triple Consensus for you.", pricingManagedLine2:"One platform, three AI engines.", detailedComparison:"DETAILED COMPARISON", feature:"FEATURE", integratedAiPartners:"INTEGRATED AI PARTNERS", apiCostsManaged:"GMA manages all API costs on your behalf. One subscription, three AI engines.", apiCostsManagedShort:"GMA manages all API costs on your behalf.", pricingLegalWarning:"This platform does not provide financial advice. Users remain responsible for their own decisions.", pricingLegalWarningShort:"This platform does not provide financial advice. Users remain responsible for their own decisions.", secureCheckoutViaPaddle:"SECURE CHECKOUT via PADDLE", secureCheckoutTitle:"Secure Checkout via Paddle", secureCheckoutBody:"Your payment is securely processed by Paddle.com — our authorized Merchant of Record. GMA never stores your card details. Clicking below opens Paddle's secure hosted checkout.", proceedToCheckout:"Proceed to Checkout", startFreeCheckout:"Start Free", checkoutSecuredNote:"Secured by Paddle.com — card data never stored on GMA servers.", openingPaddle:"Opening Paddle Checkout...", pleaseWait:"Please wait, do not close this page.", planActivatedShort:"plan access activated.", creditsAdded:"credits added to your account.", plan:"Plan", myProfile:"My Profile" },
   tr: { pricingManagedLine1:"GMA'ya odeme yapin - GMA Triple Consensus'u sizin icin yonetiyoruz.", pricingManagedLine2:"Tek platform, uc AI motoru.", detailedComparison:"DETAYLI KARSILASTIRMA", feature:"OZELLIK", integratedAiPartners:"ENTEGRE AI ORTAKLARI", apiCostsManaged:"GMA tum API maliyetlerini sizin adiniza yonetir. Tek abonelik, uc AI motoru.", apiCostsManagedShort:"GMA tüm API maliyetlerini sizin adınıza yönetir.", pricingLegalWarning:"Bu platform yatirim tavsiyesi vermez. Tum kararlar yatirimcinin sorumlulugundadir.", pricingLegalWarningShort:"Bu platform yatırım tavsiyesi vermez. Tüm kararlar yatırımcının sorumluluğundadır.", secureCheckoutViaPaddle:"PADDLE ILE GUVENLI ODEME", secureCheckoutTitle:"Paddle ile Guvenli Odeme", secureCheckoutBody:"Odemeniz yetkili kayitli satici is ortagimiz Paddle.com tarafindan guvenle islenir. GMA kart bilgilerinizi saklamaz. Asagidaki buton Paddle'in guvenli odeme sayfasini acar.", proceedToCheckout:"Odemeye Devam Et", startFreeCheckout:"Ucretsiz Basla", checkoutSecuredNote:"Paddle.com guvencesiyle - kart verileri GMA sunucularinda saklanmaz.", openingPaddle:"Paddle odeme ekrani aciliyor...", pleaseWait:"Lutfen bekleyin, bu sayfayi kapatmayin.", planActivatedShort:"plan erisimi etkinlestirildi.", creditsAdded:"kredi hesabiniza eklendi.", plan:"Plan", myProfile:"Profilim" },
   ru: { pricingManagedLine1:"Оплатите GMA - мы управляем GMA Triple Consensus за вас.", pricingManagedLine2:"Одна платформа, три AI-движка.", detailedComparison:"ПОДРОБНОЕ СРАВНЕНИЕ", feature:"ФУНКЦИЯ", integratedAiPartners:"ИНТЕГРИРОВАННЫЕ AI-ПАРТНЁРЫ", apiCostsManaged:"GMA управляет всеми API-расходами за вас. Одна подписка, три AI-движка.", apiCostsManagedShort:"GMA управляет всеми API-расходами от вашего имени.", pricingLegalWarning:"Платформа не предоставляет инвестиционных рекомендаций. Все решения остаются ответственностью инвестора.", pricingLegalWarningShort:"Эта платформа не предоставляет инвестиционных рекомендаций. Все решения остаются ответственностью инвестора.", secureCheckoutViaPaddle:"БЕЗОПАСНАЯ ОПЛАТА ЧЕРЕЗ PADDLE", secureCheckoutTitle:"Безопасная оплата через Paddle", secureCheckoutBody:"Платёж безопасно обрабатывается Paddle.com, нашим официальным продавцом. GMA не хранит данные карт. Кнопка ниже откроет безопасную страницу Paddle.", proceedToCheckout:"Перейти к оплате", startFreeCheckout:"Начать бесплатно", checkoutSecuredNote:"Защищено Paddle.com — данные карт не хранятся на серверах GMA.", openingPaddle:"Открывается оплата Paddle...", pleaseWait:"Пожалуйста, подождите и не закрывайте страницу.", planActivatedShort:"доступ плана активирован.", creditsAdded:"кредитов добавлено в аккаунт.", plan:"План", myProfile:"Мой профиль" },
   ar: { pricingManagedLine1:"ادفع لـ GMA - نحن ندير توافق GMA الثلاثي نيابة عنك.", pricingManagedLine2:"منصة واحدة، ثلاثة محركات AI.", detailedComparison:"مقارنة تفصيلية", feature:"الميزة", integratedAiPartners:"شركاء AI المدمجون", apiCostsManaged:"تدير GMA كل تكاليف API نيابة عنك. اشتراك واحد، ثلاثة محركات AI.", apiCostsManagedShort:"تدير GMA جميع تكاليف API نيابة عنك.", pricingLegalWarning:"هذه المنصة لا تقدم نصائح استثمارية. تبقى كل القرارات مسؤولية المستثمر.", pricingLegalWarningShort:"هذه المنصة لا تقدم نصائح استثمارية. تبقى كل القرارات مسؤولية المستثمر.", secureCheckoutViaPaddle:"دفع آمن عبر PADDLE", secureCheckoutTitle:"دفع آمن عبر Paddle", secureCheckoutBody:"تتم معالجة دفعتك بأمان عبر Paddle.com، شريكنا المعتمد كسجل تجاري. لا تخزن GMA بيانات بطاقتك. الزر أدناه يفتح صفحة الدفع الآمنة لدى Paddle.", proceedToCheckout:"المتابعة إلى الدفع", startFreeCheckout:"ابدأ مجانًا", checkoutSecuredNote:"محمي بواسطة Paddle.com — لا يتم تخزين بيانات البطاقة على خوادم GMA.", openingPaddle:"جار فتح دفع Paddle...", pleaseWait:"يرجى الانتظار وعدم إغلاق الصفحة.", planActivatedShort:"تم تفعيل وصول الخطة.", creditsAdded:"تمت إضافة الأرصدة إلى حسابك.", plan:"الخطة", myProfile:"ملفي الشخصي", legal:"القانوني", legalNoticeTitle:"إشعار قانوني", legalNotice:"هذه المنصة لا تقدم نصائح استثمارية. تقدم GMA رؤى تحليلية مدعومة بالذكاء الاصطناعي لأغراض معلوماتية فقط. تبقى قرارات الاستثمار النهائية مسؤولية المستثمر بالكامل." },
@@ -1167,52 +1167,52 @@ Object.entries(GMA_SECTOR_I18N).forEach(([code, values]) => {
 });
 const GMA_PLAN_I18N_FIXES = {
   en: {
-    planFreeLabel:"Free Trial", planExplorerLabel:"Explorer", planStrategistLabel:"Strategist", planProArchitectLabel:"Pro-Architect",
-    planFreeBadge:"3 ANALYSES", planExplorerBadge:"STARTER", planStrategistBadge:"MOST POPULAR", planProArchitectBadge:"SOVEREIGN",
-    planFreeScope:"1 Sector", planExplorerScope:"1 Sector · 10 Analyses", planStrategistScope:"Unlimited · All Sectors", planProArchitectScope:"Global + Signal DNA · 126 Years",
-    planFreeStats:"3 credits · 3 analyses", planExplorerStats:"10 credits · 10 analyses", planStrategistStats:"Unlimited credits · all sectors", planProArchitectStats:"Global access · 126 years", periodMonth:"/mo", accessActivated:"Access Activated"
+    planFreeLabel:"Free Trial", planExplorerLabel:"Explorer", planProfessionalLabel:"Professional", planProArchitectLabel:"Pro-Architect",
+    planFreeBadge:"3 ANALYSES", planExplorerBadge:"STARTER", planProfessionalBadge:"MOST POPULAR", planProArchitectBadge:"SOVEREIGN",
+    planFreeScope:"1 Sector", planExplorerScope:"1 Sector · 10 Analyses", planProfessionalScope:"Unlimited · All Sectors", planProArchitectScope:"Global + Analytics DNA · 126 Years",
+    planFreeStats:"3 credits · 3 analyses", planExplorerStats:"10 credits · 10 analyses", planProfessionalStats:"Unlimited credits · all sectors", planProArchitectStats:"Global access · 126 years", periodMonth:"/mo", accessActivated:"Access Activated"
   },
   tr: {
-    planFreeLabel:"Ücretsiz Deneme", planExplorerLabel:"Kaşif", planStrategistLabel:"Stratejist", planProArchitectLabel:"Pro-Mimar",
-    planFreeBadge:"3 ANALİZ", planExplorerBadge:"BAŞLANGIÇ", planStrategistBadge:"EN POPÜLER", planProArchitectBadge:"BAĞIMSIZ",
-    planFreeScope:"1 Sektör", planExplorerScope:"1 Sektör · 10 Analiz", planStrategistScope:"Sınırsız · Tüm Sektörler", planProArchitectScope:"Küresel + Sinyal DNA · 126 Yıl",
-    planFreeStats:"3 kredi · 3 analiz", planExplorerStats:"10 kredi · 10 analiz", planStrategistStats:"Sınırsız kredi · tüm sektörler", planProArchitectStats:"Küresel erişim · 126 yıl", periodMonth:"/ay", accessActivated:"Erişim Aktif"
+    planFreeLabel:"Ücretsiz Deneme", planExplorerLabel:"Kaşif", planProfessionalLabel:"Profesyonel", planProArchitectLabel:"Pro-Mimar",
+    planFreeBadge:"3 ANALİZ", planExplorerBadge:"BAŞLANGIÇ", planProfessionalBadge:"EN POPÜLER", planProArchitectBadge:"BAĞIMSIZ",
+    planFreeScope:"1 Sektör", planExplorerScope:"1 Sektör · 10 Analiz", planProfessionalScope:"Sınırsız · Tüm Sektörler", planProArchitectScope:"Küresel + Analitik DNA · 126 Yıl",
+    planFreeStats:"3 kredi · 3 analiz", planExplorerStats:"10 kredi · 10 analiz", planProfessionalStats:"Sınırsız kredi · tüm sektörler", planProArchitectStats:"Küresel erişim · 126 yıl", periodMonth:"/ay", accessActivated:"Erişim Aktif"
   },
   ru: {
-    planFreeLabel:"Бесплатный пробный доступ", planExplorerLabel:"Исследователь", planStrategistLabel:"Стратег", planProArchitectLabel:"Про-архитектор",
-    planFreeBadge:"3 АНАЛИЗА", planExplorerBadge:"СТАРТ", planStrategistBadge:"САМЫЙ ПОПУЛЯРНЫЙ", planProArchitectBadge:"СУВЕРЕННЫЙ",
-    planFreeScope:"1 сектор", planExplorerScope:"1 сектор · 10 анализов", planStrategistScope:"Без лимита · все секторы", planProArchitectScope:"Глобально + Signal DNA · 126 лет",
-    planFreeStats:"3 кредита · 3 анализа", planExplorerStats:"10 кредитов · 10 анализов", planStrategistStats:"Безлимитные кредиты · все секторы", planProArchitectStats:"Глобальный доступ · 126 лет", periodMonth:"/мес", accessActivated:"Доступ активирован"
+    planFreeLabel:"Бесплатный пробный доступ", planExplorerLabel:"Исследователь", planProfessionalLabel:"Профессиональный", planProArchitectLabel:"Про-архитектор",
+    planFreeBadge:"3 АНАЛИЗА", planExplorerBadge:"СТАРТ", planProfessionalBadge:"САМЫЙ ПОПУЛЯРНЫЙ", planProArchitectBadge:"СУВЕРЕННЫЙ",
+    planFreeScope:"1 сектор", planExplorerScope:"1 сектор · 10 анализов", planProfessionalScope:"Без лимита · все секторы", planProArchitectScope:"Глобально + Analytics DNA · 126 лет",
+    planFreeStats:"3 кредита · 3 анализа", planExplorerStats:"10 кредитов · 10 анализов", planProfessionalStats:"Безлимитные кредиты · все секторы", planProArchitectStats:"Глобальный доступ · 126 лет", periodMonth:"/мес", accessActivated:"Доступ активирован"
   },
   ar: {
-    planFreeLabel:"تجربة مجانية", planExplorerLabel:"المستكشف", planStrategistLabel:"الاستراتيجي", planProArchitectLabel:"المهندس المحترف",
-    planFreeBadge:"3 تحليلات", planExplorerBadge:"البداية", planStrategistBadge:"الأكثر شيوعاً", planProArchitectBadge:"سيادي",
-    planFreeScope:"قطاع واحد", planExplorerScope:"قطاع واحد · 10 تحليلات", planStrategistScope:"غير محدود · كل القطاعات", planProArchitectScope:"عالمي + Signal DNA · 126 سنة",
-    planFreeStats:"3 أرصدة · 3 تحليلات", planExplorerStats:"10 أرصدة · 10 تحليلات", planStrategistStats:"أرصدة غير محدودة · كل القطاعات", planProArchitectStats:"وصول عالمي · 126 سنة", periodMonth:"/شهر", accessActivated:"تم تفعيل الوصول"
+    planFreeLabel:"تجربة مجانية", planExplorerLabel:"المستكشف", planProfessionalLabel:"الاستراتيجي", planProArchitectLabel:"المهندس المحترف",
+    planFreeBadge:"3 تحليلات", planExplorerBadge:"البداية", planProfessionalBadge:"الأكثر شيوعاً", planProArchitectBadge:"سيادي",
+    planFreeScope:"قطاع واحد", planExplorerScope:"قطاع واحد · 10 تحليلات", planProfessionalScope:"غير محدود · كل القطاعات", planProArchitectScope:"عالمي + Analytics DNA · 126 سنة",
+    planFreeStats:"3 أرصدة · 3 تحليلات", planExplorerStats:"10 أرصدة · 10 تحليلات", planProfessionalStats:"أرصدة غير محدودة · كل القطاعات", planProArchitectStats:"وصول عالمي · 126 سنة", periodMonth:"/شهر", accessActivated:"تم تفعيل الوصول"
   },
   zh: {
-    planFreeLabel:"免费试用", planExplorerLabel:"探索者", planStrategistLabel:"策略师", planProArchitectLabel:"专业架构师",
-    planFreeBadge:"3 次分析", planExplorerBadge:"入门", planStrategistBadge:"最受欢迎", planProArchitectBadge:"主权级",
-    planFreeScope:"1 个行业", planExplorerScope:"1 个行业 · 10 次分析", planStrategistScope:"不限次数 · 全部行业", planProArchitectScope:"全球 + Signal DNA · 126 年",
-    planFreeStats:"3 个额度 · 3 次分析", planExplorerStats:"10 个额度 · 10 次分析", planStrategistStats:"不限额度 · 全部行业", planProArchitectStats:"全球访问 · 126 年", periodMonth:"/月", accessActivated:"访问已激活"
+    planFreeLabel:"免费试用", planExplorerLabel:"探索者", planProfessionalLabel:"专业版", planProArchitectLabel:"专业架构师",
+    planFreeBadge:"3 次分析", planExplorerBadge:"入门", planProfessionalBadge:"最受欢迎", planProArchitectBadge:"主权级",
+    planFreeScope:"1 个行业", planExplorerScope:"1 个行业 · 10 次分析", planProfessionalScope:"不限次数 · 全部行业", planProArchitectScope:"全球 + Analytics DNA · 126 年",
+    planFreeStats:"3 个额度 · 3 次分析", planExplorerStats:"10 个额度 · 10 次分析", planProfessionalStats:"不限额度 · 全部行业", planProArchitectStats:"全球访问 · 126 年", periodMonth:"/月", accessActivated:"访问已激活"
   },
   hi: {
-    planFreeLabel:"मुफ्त परीक्षण", planExplorerLabel:"एक्सप्लोरर", planStrategistLabel:"रणनीतिकार", planProArchitectLabel:"प्रो-आर्किटेक्ट",
-    planFreeBadge:"3 विश्लेषण", planExplorerBadge:"आरंभिक", planStrategistBadge:"सबसे लोकप्रिय", planProArchitectBadge:"स्वायत्त",
-    planFreeScope:"1 सेक्टर", planExplorerScope:"1 सेक्टर · 10 विश्लेषण", planStrategistScope:"असीमित · सभी सेक्टर", planProArchitectScope:"वैश्विक + Signal DNA · 126 वर्ष",
-    planFreeStats:"3 क्रेडिट · 3 विश्लेषण", planExplorerStats:"10 क्रेडिट · 10 विश्लेषण", planStrategistStats:"असीमित क्रेडिट · सभी सेक्टर", planProArchitectStats:"वैश्विक एक्सेस · 126 वर्ष", periodMonth:"/माह", accessActivated:"एक्सेस सक्रिय"
+    planFreeLabel:"मुफ्त परीक्षण", planExplorerLabel:"एक्सप्लोरर", planProfessionalLabel:"रणनीतिकार", planProArchitectLabel:"प्रो-आर्किटेक्ट",
+    planFreeBadge:"3 विश्लेषण", planExplorerBadge:"आरंभिक", planProfessionalBadge:"सबसे लोकप्रिय", planProArchitectBadge:"स्वायत्त",
+    planFreeScope:"1 सेक्टर", planExplorerScope:"1 सेक्टर · 10 विश्लेषण", planProfessionalScope:"असीमित · सभी सेक्टर", planProArchitectScope:"वैश्विक + Analytics DNA · 126 वर्ष",
+    planFreeStats:"3 क्रेडिट · 3 विश्लेषण", planExplorerStats:"10 क्रेडिट · 10 विश्लेषण", planProfessionalStats:"असीमित क्रेडिट · सभी सेक्टर", planProArchitectStats:"वैश्विक एक्सेस · 126 वर्ष", periodMonth:"/माह", accessActivated:"एक्सेस सक्रिय"
   },
   de: {
-    planFreeLabel:"Kostenlose Testversion", planExplorerLabel:"Explorer", planStrategistLabel:"Stratege", planProArchitectLabel:"Pro-Architekt",
-    planFreeBadge:"3 ANALYSEN", planExplorerBadge:"START", planStrategistBadge:"BELIEBT", planProArchitectBadge:"SOUVERÄN",
-    planFreeScope:"1 Sektor", planExplorerScope:"1 Sektor · 10 Analysen", planStrategistScope:"Unbegrenzt · alle Sektoren", planProArchitectScope:"Global + Signal DNA · 126 Jahre",
-    planFreeStats:"3 Credits · 3 Analysen", planExplorerStats:"10 Credits · 10 Analysen", planStrategistStats:"Unbegrenzte Credits · alle Sektoren", planProArchitectStats:"Globaler Zugriff · 126 Jahre", periodMonth:"/Monat", accessActivated:"Zugriff aktiviert"
+    planFreeLabel:"Kostenlose Testversion", planExplorerLabel:"Explorer", planProfessionalLabel:"Stratege", planProArchitectLabel:"Pro-Architekt",
+    planFreeBadge:"3 ANALYSEN", planExplorerBadge:"START", planProfessionalBadge:"BELIEBT", planProArchitectBadge:"SOUVERÄN",
+    planFreeScope:"1 Sektor", planExplorerScope:"1 Sektor · 10 Analysen", planProfessionalScope:"Unbegrenzt · alle Sektoren", planProArchitectScope:"Global + Analytics DNA · 126 Jahre",
+    planFreeStats:"3 Credits · 3 Analysen", planExplorerStats:"10 Credits · 10 Analysen", planProfessionalStats:"Unbegrenzte Credits · alle Sektoren", planProArchitectStats:"Globaler Zugriff · 126 Jahre", periodMonth:"/Monat", accessActivated:"Zugriff aktiviert"
   },
   es: {
-    planFreeLabel:"Prueba gratis", planExplorerLabel:"Explorador", planStrategistLabel:"Estratega", planProArchitectLabel:"Pro-arquitecto",
-    planFreeBadge:"3 ANÁLISIS", planExplorerBadge:"INICIAL", planStrategistBadge:"MÁS POPULAR", planProArchitectBadge:"SOBERANO",
-    planFreeScope:"1 sector", planExplorerScope:"1 sector · 10 análisis", planStrategistScope:"Ilimitado · todos los sectores", planProArchitectScope:"Global + Signal DNA · 126 años",
-    planFreeStats:"3 créditos · 3 análisis", planExplorerStats:"10 créditos · 10 análisis", planStrategistStats:"Créditos ilimitados · todos los sectores", planProArchitectStats:"Acceso global · 126 años", periodMonth:"/mes", accessActivated:"Acceso activado"
+    planFreeLabel:"Prueba gratis", planExplorerLabel:"Explorador", planProfessionalLabel:"Profesional", planProArchitectLabel:"Pro-arquitecto",
+    planFreeBadge:"3 ANÁLISIS", planExplorerBadge:"INICIAL", planProfessionalBadge:"MÁS POPULAR", planProArchitectBadge:"SOBERANO",
+    planFreeScope:"1 sector", planExplorerScope:"1 sector · 10 análisis", planProfessionalScope:"Ilimitado · todos los sectores", planProArchitectScope:"Global + Analytics DNA · 126 años",
+    planFreeStats:"3 créditos · 3 análisis", planExplorerStats:"10 créditos · 10 análisis", planProfessionalStats:"Créditos ilimitados · todos los sectores", planProArchitectStats:"Acceso global · 126 años", periodMonth:"/mes", accessActivated:"Acceso activado"
   }
 };
 Object.entries(GMA_PLAN_I18N_FIXES).forEach(([code, values]) => {
@@ -1234,7 +1234,7 @@ const GMA_PAGE_I18N_FIXES = {
   ru: {
     home:"ГЛАВНАЯ", markets:"РЫНКИ", about:"О ПРОЕКТЕ", contact:"КОНТАКТЫ", privacy:"КОНФИДЕНЦИАЛЬНОСТЬ", pricing:"ТАРИФЫ", login:"ВОЙТИ", register:"РЕГИСТРАЦИЯ", logout:"ВЫЙТИ",
     viewMarkets:"СМОТРЕТЬ РЫНКИ", loginRegister:"ВХОД / РЕГИСТРАЦИЯ", heroTitle:"Смотрите мировые рынки\nс большей ясностью", heroSub:"600+ глобальных организаций, рыночные данные в реальном времени и структурированная аналитика через GMA Consensus Engine.", heroSubtitle:"Снижайте неопределенность с помощью структурированного анализа.", heroBtn1:"СМОТРЕТЬ РЫНКИ", heroBtn2:"ТАРИФЫ", heroBtn3:"РЕГИСТРАЦИЯ",
-    howTitle:"Как это работает", howSub:"Глобальные инвестиции за 4 шага", step1t:"Регистрация", step1d:"Создайте аккаунт за 30 секунд", step2t:"Выберите план", step2d:"Планы от $2.99 в день", step3t:"Анализ", step3d:"Стратегическая ясность через GMA Consensus Engine", step4t:"Решение", step4d:"Создайте собственную рамку принятия решений",
+    howTitle:"Как это работает", howSub:"Глобальные инвестиции за 4 шага", step1t:"Регистрация", step1d:"Создайте аккаунт за 30 секунд", step2t:"Выберите план", step2d:"Планы от $2.99 в день", step3t:"Анализ", step3d:"Профессиональныйическая ясность через GMA Consensus Engine", step4t:"Решение", step4d:"Создайте собственную рамку принятия решений",
     featTitle:"Возможности платформы", featSub:"Все в одном месте", feat1t:"Живая лента рынка", feat1d:"Отслеживайте компании, крипто, сырье и валюты в реальном времени", feat2t:"Анализ GMA Triumvirate", feat2d:"Проверяйте согласование сигналов через GMA Consensus Engine", feat3t:"Исторические графики", feat3d:"Долгосрочные графики, кризисы и тренды", feat4t:"Сравнение компаний", feat4d:"Сравнивайте до 5 компаний с AI", feat5t:"Умные уведомления", feat5d:"Настраивайте ценовые уведомления", feat6t:"8 языков", feat6d:"Локализованный интерфейс на 8 языках",
     sector:"Сектор", sectors:"СЕКТОРЫ", allSectors:"ВСЕ", gainers:"РОСТ", losers:"ПАДЕНИЕ", live:"LIVE", autoRefresh:"АВТО-ОБНОВЛЕНИЕ", clear:"Очистить",
     noApiKey:"Нет API-ключа — добавьте в настройках", liveDataUpdated:"Живые данные обновлены", simulationRunning:"Симуляция запущена", cartRemoved:"удалён из корзины", basketAdded:"добавлен в корзину", watchRemoved:"удалён из списка наблюдения", watchAdded:"добавлен в список наблюдения", alertCreated:"уведомление создано", maxCompare:"Можно выбрать не более 5 компаний", addedToComparison:"добавлен в сравнение", chart:"ГРАФИК", add:"ДОБАВИТЬ", watch:"СЛЕДИТЬ", alert:"УВЕДОМЛЕНИЕ", aiAnalysis:"AI-АНАЛИЗ", riskOpportunity:"РИСК И ВОЗМОЖНОСТИ", historicalChart:"ИСТОРИЧЕСКИЙ ГРАФИК", priceRiseAlert:"УВЕДОМЛЕНИЕ О РОСТЕ ЦЕНЫ", riseThreshold:"ПОРОГ РОСТА", target:"ЦЕЛЬ", setAlert:"УСТАНОВИТЬ УВЕДОМЛЕНИЕ", cart:"КОРЗИНА", watchlist:"НАБЛЮДЕНИЕ", cartEmpty:"Корзина пуста", watchlistEmpty:"Список наблюдения пуст", noPurchasesYet:"Покупок ещё нет", remove:"удалить", units:"шт", buyIn:"вход", currentValue:"Текущая стоимость", cost:"Стоимость", profitLoss:"Прибыль / Убыток", signInLegalPrefix:"Входя в систему,", signInLegalSuffix:"продолжая.", disclaimer1:"Эта платформа предназначена только для цифрового информирования.", disclaimer2:"Никакой контент или AI-вывод не является инвестиционным советом.", disclaimer3:"Все инвестиционные решения — ответственность инвестора.", disclaimer4:"Прошлые результаты не гарантируют будущих.", disclaimer5:"Перед торговлей проконсультируйтесь с лицензированным финансовым советником.", disclaimer6:"Данные могут быть симулированы и не отражать реальные биржевые данные.", plan:"план", credits:"Кредиты", founded:"Основан", sectorMeta:"Сектор", livePrice:"Цена",

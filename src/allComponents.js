@@ -133,23 +133,29 @@ const GMA_CONFIG = {
   // "sk-ant-api03-..."
 
   // 3. Paddle — vendors.paddle.com/dashboard:
-  //    a) Vendor ID: Developer Tools → Authentication
+  //    a) Client-side token: Developer Tools → Authentication
   //    b) Price ID'leri: Catalog → Products → her plan icin (pri_...)
   //    c) Environment: 'sandbox' (test) veya 'production'
   finnhubKey: 'd7f8b4pr01qpjqqjrge0d7f8b4pr01qpjqqjrgeg',
   // finnhub.io API Key - free tier 60 req/min
 
   paddle: {
+    clientToken: '',
+    // Paddle Billing client-side token (public token)
     vendorId: '',
-    // Paddle Vendor ID (sayisal)
+    // Legacy Paddle Classic Vendor ID (opsiyonel geriye uyum)
     environment: 'production',
     // 'sandbox' | 'production'
     prices: {
+      explorer: '',
+      // Paddle Price ID — Explorer plan (pri_...)
+      strategist: '',
+      // Paddle Price ID — Professional plan (pri_...)
+      pro_architect: '',
+      // Paddle Price ID — Enterprise plan (pri_...)
       daily: '',
-      // Paddle Price ID — gunluk plan (pri_...)
       monthly: '',
-      // Paddle Price ID — aylik plan (pri_...)
-      yearly: '' // Paddle Price ID — yearlik plan (pri_...)
+      yearly: ''
     },
     successUrl: 'https://globalmarketanalytics.com?payment=success',
     cancelUrl: 'https://globalmarketanalytics.com?payment=cancel'
@@ -164,17 +170,25 @@ const GMA_CONFIG = {
   if (_gcid) localStorage.setItem('gma_google_client_id', _gcid);
   if (GMA_CONFIG.anthropicKey) localStorage.setItem('gma_platform_key', GMA_CONFIG.anthropicKey);
   if (GMA_CONFIG.finnhubKey) localStorage.setItem('gma_finnhub_key', GMA_CONFIG.finnhubKey);
+  if (GMA_CONFIG.paddle?.clientToken) localStorage.setItem('gma_paddle_client_token', GMA_CONFIG.paddle.clientToken);
   if (GMA_CONFIG.paddle?.vendorId) localStorage.setItem('gma_paddle_vendor_id', GMA_CONFIG.paddle.vendorId);
   if (GMA_CONFIG.paddle?.environment) localStorage.setItem('gma_paddle_env', GMA_CONFIG.paddle.environment);
+  if (GMA_CONFIG.paddle?.prices?.explorer) localStorage.setItem('gma_price_explorer', GMA_CONFIG.paddle.prices.explorer);
+  if (GMA_CONFIG.paddle?.prices?.strategist) localStorage.setItem('gma_price_strategist', GMA_CONFIG.paddle.prices.strategist);
+  if (GMA_CONFIG.paddle?.prices?.pro_architect) localStorage.setItem('gma_price_pro_architect', GMA_CONFIG.paddle.prices.pro_architect);
   if (GMA_CONFIG.paddle?.prices?.daily) localStorage.setItem('gma_price_daily', GMA_CONFIG.paddle.prices.daily);
   if (GMA_CONFIG.paddle?.prices?.monthly) localStorage.setItem('gma_price_monthly', GMA_CONFIG.paddle.prices.monthly);
   if (GMA_CONFIG.paddle?.prices?.yearly) localStorage.setItem('gma_price_yearly', GMA_CONFIG.paddle.prices.yearly);
 })();
 
 // Paddle config erisimi
+const PADDLE_CLIENT_TOKEN = () => GMA_CONFIG.paddle?.clientToken || localStorage.getItem('gma_paddle_client_token') || '';
 const PADDLE_VENDOR_ID = () => GMA_CONFIG.paddle?.vendorId || localStorage.getItem('gma_paddle_vendor_id') || '';
 const PADDLE_ENV = () => GMA_CONFIG.paddle?.environment || localStorage.getItem('gma_paddle_env') || 'production';
 const PADDLE_PRICES = () => ({
+  explorer: GMA_CONFIG.paddle?.prices?.explorer || localStorage.getItem('gma_price_explorer') || '',
+  strategist: GMA_CONFIG.paddle?.prices?.strategist || localStorage.getItem('gma_price_strategist') || '',
+  pro_architect: GMA_CONFIG.paddle?.prices?.pro_architect || localStorage.getItem('gma_price_pro_architect') || '',
   daily: GMA_CONFIG.paddle?.prices?.daily || localStorage.getItem('gma_price_daily') || '',
   monthly: GMA_CONFIG.paddle?.prices?.monthly || localStorage.getItem('gma_price_monthly') || '',
   yearly: GMA_CONFIG.paddle?.prices?.yearly || localStorage.getItem('gma_price_yearly') || ''
@@ -189,6 +203,162 @@ const LangContext = React.createContext({
   setLang: () => {},
   t: k => k,
   aiTranslating: false
+});
+
+const GMA_PADDLE_COMPLIANCE_I18N = {
+  en: {
+    howSub: "Global Market Data in 4 Steps",
+    step3t: "Review",
+    step3d: "Structured market intelligence via the GMA Consensus Engine",
+    step4t: "Frame",
+    step4d: "Build your own decision framework with data, scoring and context",
+    feat2d: "Review institutional-grade data alignment from the GMA Consensus Engine",
+    feat5d: "Set price movement alerts and follow rises or falls instantly",
+    aiAnalysisTitle: "AI Market Review",
+    aiAnalysisDesc: "Review company data, risk context and structured market notes with GMA Intelligence Layer",
+    portfolioTrackingTitle: "Personal Workspace",
+    portfolioTrackingDesc: "Save simulated entries and monitor reference values in one place",
+    aboutSub: "A market data intelligence platform delivering structured analytics and clarity across global markets.",
+    aboutMissionText: "To build market data infrastructure that reduces uncertainty through structured analytics without providing financial advice.",
+    aboutCardAIB: "Powered by the GMA Consensus Engine, the platform delivers structured company analytics, risk framing and data context. All outputs are informational only and do not constitute financial advice.",
+    pricingTitle: "AI Market Intelligence for Global Data",
+    pricingSub: "Access the GMA Consensus Engine through one institutional-grade subscription.",
+    ctaTitle: "Upgrade Market Clarity to Institutional Grade",
+    ctaSub: "Review global market data with plans starting from $2.99/day.",
+    footerDesc: "A market data intelligence platform built to deliver clarity across global markets.",
+    footerCompliance: "Global Market Analytics (GMA) is an AI-supported market data visualization platform. GMA is not a registered financial adviser and does not provide financial advice. Payments are securely processed by Paddle.com.",
+    planStrategistLabel: "Professional",
+    planProArchitectLabel: "Enterprise",
+    planProArchitectBadge: "ENTERPRISE",
+    planProArchitectScope: "Global + Analytics DNA · 126 Years",
+    recommendation: "SCORING",
+    recommended: "TOP SCORE",
+    aiRecommendation: "COMPOSITE SCORE HIGHLIGHT",
+    alternativeChoice: "SECONDARY DATA HIGHLIGHT",
+    finalDecisionNotice: "FOR INFORMATION ONLY - NOT FINANCIAL ADVICE",
+    finalBullet1: "This output is an AI-assisted market data assessment.",
+    finalBullet2: "No output is a buy, sell or hold recommendation.",
+    finalBullet3: "Risk values are illustrative scoring inputs, not trading instructions.",
+    finalBullet4: "Users remain responsible for their own decisions.",
+    finalBullet5: "Past performance does not guarantee future results.",
+    finalBullet6: "Consult a qualified professional for financial advice.",
+    comparisonIntro: "GMA Intelligence Layer generates educational scores and context for each company",
+    startAiComparisonAnalysis: "Start AI Comparison Review",
+    companiesAiComparison: "companies · AI-assisted market comparison",
+    priceRiseAlert: "Price Movement Alert",
+    riseThreshold: "Movement Threshold",
+    target: "Reference Level",
+    demoCompareRationale: "Superior financial metrics combined with the innovation pipeline make this the highest composite score under current market conditions.",
+    demoCompareAlternativeNote: "Strong enterprise positioning and cloud infrastructure provide a notable secondary data highlight.",
+    demoCompareOverall: "The selected companies show useful diversification across market leaders with complementary business models. The current macro environment favors quality over growth in this data review.",
+    demoShortTimeframe: "Strong Q4 earnings forecast and the new iPhone cycle may support near-term market interest. Services revenue growth provides a consistent business catalyst.",
+    demoLongTimeframe: "Sustained services expansion, Vision Pro ecosystem maturation and continued buybacks provide long-term business context through 2027.",
+    secureCheckoutBody: "Your payment is securely processed by Paddle.com, our authorized Merchant of Record. GMA never stores card details. Clicking below opens Paddle's secure hosted checkout.",
+    checkoutSecuredNote: "Secured by Paddle.com - card data is never stored on GMA servers."
+  },
+  tr: {
+    howSub: "4 Adımda Küresel Piyasa Verisi",
+    step3t: "İncele",
+    step3d: "GMA Consensus Engine ile yapılandırılmış piyasa zekası",
+    step4t: "Çerçevele",
+    step4d: "Veri, skor ve bağlamla kendi karar çerçevenizi kurun",
+    feat2d: "GMA Consensus Engine üzerinden kurumsal seviye veri uyumunu inceleyin",
+    feat5d: "Fiyat hareketi uyarıları kurun; yükseliş ve düşüşleri anında takip edin",
+    aiAnalysisTitle: "AI Piyasa İncelemesi",
+    aiAnalysisDesc: "GMA Intelligence Layer ile şirket verisi, risk bağlamı ve yapılandırılmış piyasa notlarını inceleyin",
+    portfolioTrackingTitle: "Kişisel Çalışma Alanı",
+    portfolioTrackingDesc: "Simüle kayıtları kaydedin ve referans değerleri tek yerde izleyin",
+    aboutSub: "Küresel piyasalarda yapılandırılmış analitik ve netlik sunan piyasa verisi zeka platformu.",
+    aboutMissionText: "Finansal tavsiye sunmadan, yapılandırılmış analitikle belirsizliği azaltan piyasa verisi altyapısı kurmak.",
+    aboutCardAIB: "GMA Consensus Engine tarafından desteklenen platform; yapılandırılmış şirket analitiği, risk çerçevesi ve veri bağlamı sunar. Tüm çıktılar yalnızca bilgilendirme amaçlıdır ve finansal tavsiye değildir.",
+    pricingTitle: "Küresel Veri İçin AI Piyasa Zekası",
+    pricingSub: "GMA Consensus Engine'e tek bir kurumsal abonelikle erişin.",
+    ctaTitle: "Piyasa Netliğini Kurumsal Seviyeye Taşıyın",
+    ctaSub: "Günlük 2.99$'dan başlayan planlarla küresel piyasa verilerini inceleyin.",
+    footerDesc: "Küresel piyasalarda netlik sağlamak için tasarlanmış piyasa verisi zeka platformu.",
+    footerCompliance: "Global Market Analytics (GMA), AI destekli piyasa verisi görselleştirme platformudur. GMA kayıtlı yatırım danışmanı değildir ve finansal tavsiye sunmaz. Ödemeler Paddle.com tarafından güvenli şekilde işlenir.",
+    planStrategistLabel: "Profesyonel",
+    planProArchitectLabel: "Kurumsal",
+    planProArchitectBadge: "KURUMSAL",
+    planProArchitectScope: "Küresel + Analitik DNA · 126 Yıl",
+    recommendation: "SKORLAMA",
+    recommended: "EN YÜKSEK SKOR",
+    aiRecommendation: "BİLEŞİK SKOR ÖNE ÇIKANI",
+    alternativeChoice: "İKİNCİ VERİ ÖNE ÇIKANI",
+    finalDecisionNotice: "YALNIZCA BİLGİLENDİRME AMAÇLIDIR - FİNANSAL TAVSİYE DEĞİLDİR",
+    finalBullet1: "Bu çıktı AI destekli piyasa verisi değerlendirmesidir.",
+    finalBullet2: "Hiçbir çıktı al, sat veya tut önerisi değildir.",
+    finalBullet3: "Risk değerleri örnek skor girdileridir, alım satım sinyali değildir.",
+    finalBullet4: "Kullanıcılar kendi kararlarından sorumludur.",
+    finalBullet5: "Geçmiş performans gelecek sonuçları garanti etmez.",
+    finalBullet6: "Finansal tavsiye için yetkin bir uzmana danışın.",
+    comparisonIntro: "GMA Intelligence Layer her şirket için eğitim amaçlı skorlar ve bağlam üretir",
+    startAiComparisonAnalysis: "AI Karşılaştırma İncelemesini Başlat",
+    companiesAiComparison: "şirket · AI destekli piyasa karşılaştırması",
+    priceRiseAlert: "Fiyat Hareketi Uyarısı",
+    riseThreshold: "Hareket Eşiği",
+    target: "Referans Seviye",
+    demoCompareRationale: "Güçlü finansal göstergeler ve inovasyon hattı, mevcut piyasa koşullarında en yüksek bileşik skoru oluşturuyor.",
+    demoCompareAlternativeNote: "Güçlü kurumsal konum ve bulut altyapısı, ikinci bir veri öne çıkan alanı sunuyor.",
+    demoCompareOverall: "Seçilen şirketler, birbirini tamamlayan iş modellerine sahip piyasa liderleri arasında faydalı bir çeşitlilik gösteriyor. Mevcut makro ortam bu veri incelemesinde kaliteyi öne çıkarıyor.",
+    demoShortTimeframe: "Güçlü 4. çeyrek beklentisi ve yeni iPhone döngüsü kısa vadeli piyasa ilgisini destekleyebilir. Servis gelirlerindeki büyüme düzenli bir iş katalizörü sağlar.",
+    demoLongTimeframe: "Servis segmentinin süren genişlemesi, Vision Pro ekosisteminin olgunlaşması ve geri alımlar 2027'ye kadar uzun vadeli iş bağlamı sunar.",
+    secureCheckoutBody: "Ödemeniz yetkili kayıtlı satıcı iş ortağımız Paddle.com tarafından güvenle işlenir. GMA kart bilgilerinizi saklamaz. Aşağıdaki buton Paddle'ın güvenli ödeme sayfasını açar.",
+    checkoutSecuredNote: "Paddle.com güvencesiyle - kart verileri GMA sunucularında saklanmaz."
+  },
+  ru: {
+    howSub: "Рыночные данные в 4 шага", step3t: "Обзор", step3d: "Структурированная рыночная аналитика через GMA Consensus Engine", step4t: "Контекст", step4d: "Создайте собственную рамку решений на основе данных, баллов и контекста", feat2d: "Проверяйте согласованность данных через GMA Consensus Engine", feat5d: "Настраивайте уведомления о движении цены и отслеживайте рост или падение", pricingTitle: "AI-аналитика рыночных данных", aboutSub: "Платформа рыночных данных с структурированной аналитикой и ясностью по глобальным рынкам.", footerCompliance: "GMA — платформа визуализации рыночных данных с AI. GMA не является инвестиционным советником и не предоставляет финансовые рекомендации. Платежи безопасно обрабатываются Paddle.com.", planStrategistLabel: "Профессиональный", planProArchitectLabel: "Корпоративный", planProArchitectBadge: "КОРПОРАТИВНЫЙ", planProArchitectScope: "Глобально + Analytics DNA · 126 лет", recommendation: "ОЦЕНКА", recommended: "ЛУЧШИЙ БАЛЛ", aiRecommendation: "ВЫДЕЛЕННЫЙ КОМПОЗИТНЫЙ БАЛЛ", alternativeChoice: "ВТОРИЧНЫЙ АНАЛИТИЧЕСКИЙ АКЦЕНТ", finalDecisionNotice: "ТОЛЬКО ДЛЯ ИНФОРМАЦИИ - НЕ ФИНАНСОВЫЙ СОВЕТ", finalBullet2: "Ни один вывод не является рекомендацией купить, продать или держать.", finalBullet3: "Значения риска являются иллюстративными баллами, а не торговыми указаниями.", comparisonIntro: "GMA Intelligence Layer создает учебные баллы и контекст по каждой компании", startAiComparisonAnalysis: "Начать AI-обзор сравнения", companiesAiComparison: "компании · AI-сравнение рынка"
+  },
+  ar: {
+    howSub: "بيانات السوق في 4 خطوات", step3t: "مراجعة", step3d: "ذكاء سوقي منظم عبر GMA Consensus Engine", step4t: "تأطير", step4d: "ابن إطارك الخاص باستخدام البيانات والدرجات والسياق", feat2d: "راجع توافق البيانات المؤسسي من GMA Consensus Engine", feat5d: "اضبط تنبيهات حركة السعر وتابع الصعود أو الهبوط فوراً", pricingTitle: "ذكاء سوقي AI للبيانات العالمية", aboutSub: "منصة ذكاء بيانات سوقية تقدم تحليلات منظمة ووضوحاً عبر الأسواق العالمية.", footerCompliance: "GMA منصة عرض بيانات سوقية مدعومة بالذكاء الاصطناعي. ليست مستشاراً استثمارياً ولا تقدم نصائح مالية. تتم المدفوعات بأمان عبر Paddle.com.", planStrategistLabel: "احترافي", planProArchitectLabel: "مؤسسي", planProArchitectBadge: "مؤسسي", planProArchitectScope: "عالمي + Analytics DNA · 126 سنة", recommendation: "الدرجات", recommended: "أعلى درجة", aiRecommendation: "أبرز درجة مركبة", alternativeChoice: "إبراز بيانات ثانوي", finalDecisionNotice: "للمعلومات فقط - ليست نصيحة مالية", finalBullet2: "لا يمثل أي مخرج توصية شراء أو بيع أو احتفاظ.", finalBullet3: "قيم المخاطر مدخلات درجات توضيحية وليست تعليمات تداول.", comparisonIntro: "ينشئ GMA Intelligence Layer درجات تعليمية وسياقاً لكل شركة", startAiComparisonAnalysis: "ابدأ مراجعة مقارنة AI", companiesAiComparison: "شركات · مقارنة سوقية بمساعدة AI"
+  },
+  zh: {
+    howSub: "4 步查看全球市场数据", step3t: "查看", step3d: "通过 GMA Consensus Engine 获取结构化市场情报", step4t: "形成框架", step4d: "用数据、评分和背景建立自己的决策框架", feat2d: "通过 GMA Consensus Engine 查看机构级数据一致性", feat5d: "设置价格变动提醒，实时关注上涨或下跌", pricingTitle: "全球数据的 AI 市场情报", aboutSub: "提供全球市场结构化分析与清晰视角的市场数据智能平台。", footerCompliance: "GMA 是 AI 支持的市场数据可视化平台。GMA 不是注册投资顾问，也不提供金融建议。付款由 Paddle.com 安全处理。", planStrategistLabel: "专业版", planProArchitectLabel: "企业版", planProArchitectBadge: "企业级", planProArchitectScope: "全球 + Analytics DNA · 126 年", recommendation: "评分", recommended: "最高评分", aiRecommendation: "综合评分亮点", alternativeChoice: "次级数据亮点", finalDecisionNotice: "仅供参考 - 不构成金融建议", finalBullet2: "任何输出都不是买入、卖出或持有建议。", finalBullet3: "风险值只是示例评分输入，不是交易指令。", comparisonIntro: "GMA Intelligence Layer 为每家公司生成教育性评分和背景", startAiComparisonAnalysis: "开始 AI 比较查看", companiesAiComparison: "家公司 · AI 辅助市场比较"
+  },
+  hi: {
+    howSub: "4 चरणों में वैश्विक बाज़ार डेटा", step3t: "समीक्षा", step3d: "GMA Consensus Engine से संरचित बाज़ार इंटेलिजेंस", step4t: "फ़्रेम करें", step4d: "डेटा, स्कोर और संदर्भ से अपना निर्णय ढाँचा बनाएँ", feat2d: "GMA Consensus Engine से संस्थागत-स्तर डेटा संरेखण देखें", feat5d: "मूल्य-गतिविधि अलर्ट सेट करें और बढ़त या गिरावट तुरंत देखें", pricingTitle: "वैश्विक डेटा के लिए AI बाज़ार इंटेलिजेंस", aboutSub: "वैश्विक बाज़ारों में संरचित एनालिटिक्स और स्पष्टता देने वाला बाज़ार डेटा प्लेटफ़ॉर्म।", footerCompliance: "GMA AI-समर्थित बाज़ार डेटा विज़ुअलाइज़ेशन प्लेटफ़ॉर्म है। GMA पंजीकृत निवेश सलाहकार नहीं है और वित्तीय सलाह नहीं देता। भुगतान Paddle.com द्वारा सुरक्षित रूप से संसाधित होते हैं।", planStrategistLabel: "प्रोफेशनल", planProArchitectLabel: "एंटरप्राइज़", planProArchitectBadge: "एंटरप्राइज़", planProArchitectScope: "वैश्विक + Analytics DNA · 126 वर्ष", recommendation: "स्कोरिंग", recommended: "शीर्ष स्कोर", aiRecommendation: "समग्र स्कोर हाइलाइट", alternativeChoice: "द्वितीय डेटा हाइलाइट", finalDecisionNotice: "केवल जानकारी के लिए - वित्तीय सलाह नहीं", finalBullet2: "कोई भी आउटपुट खरीदने, बेचने या होल्ड करने की सलाह नहीं है।", finalBullet3: "जोखिम मान केवल उदाहरणात्मक स्कोर इनपुट हैं, ट्रेडिंग निर्देश नहीं।", comparisonIntro: "GMA Intelligence Layer हर कंपनी के लिए शैक्षिक स्कोर और संदर्भ बनाता है", startAiComparisonAnalysis: "AI तुलना समीक्षा शुरू करें", companiesAiComparison: "कंपनियाँ · AI-सहायता बाज़ार तुलना"
+  },
+  de: {
+    howSub: "Globale Marktdaten in 4 Schritten", step3t: "Prüfen", step3d: "Strukturierte Marktintelligenz über die GMA Consensus Engine", step4t: "Einordnen", step4d: "Erstellen Sie Ihren eigenen Entscheidungsrahmen mit Daten, Scores und Kontext", feat2d: "Prüfen Sie institutionelle Datenausrichtung aus der GMA Consensus Engine", feat5d: "Setzen Sie Preisbewegungsalarme und verfolgen Sie Anstiege oder Rückgänge sofort", pricingTitle: "AI-Marktintelligenz für globale Daten", aboutSub: "Eine Marktdaten-Intelligence-Plattform für strukturierte Analytik und Klarheit in globalen Märkten.", footerCompliance: "GMA ist eine AI-gestützte Plattform zur Visualisierung von Marktdaten. GMA ist kein registrierter Anlageberater und bietet keine Finanzberatung. Zahlungen werden sicher von Paddle.com verarbeitet.", planStrategistLabel: "Professional", planProArchitectLabel: "Enterprise", planProArchitectBadge: "ENTERPRISE", planProArchitectScope: "Global + Analytics DNA · 126 Jahre", recommendation: "SCORING", recommended: "TOP-SCORE", aiRecommendation: "KOMPOSIT-SCORE-HIGHLIGHT", alternativeChoice: "ZWEITER DATEN-HINWEIS", finalDecisionNotice: "NUR ZUR INFORMATION - KEINE FINANZBERATUNG", finalBullet2: "Kein Output ist eine Kauf-, Verkaufs- oder Halteempfehlung.", finalBullet3: "Risikowerte sind illustrative Score-Eingaben, keine Handelsanweisungen.", comparisonIntro: "GMA Intelligence Layer erzeugt edukative Scores und Kontext pro Unternehmen", startAiComparisonAnalysis: "AI-Vergleich prüfen", companiesAiComparison: "Unternehmen · AI-gestützter Marktvergleich"
+  },
+  es: {
+    howSub: "Datos globales de mercado en 4 pasos", step3t: "Revisar", step3d: "Inteligencia de mercado estructurada mediante GMA Consensus Engine", step4t: "Enmarcar", step4d: "Crea tu propio marco con datos, puntuaciones y contexto", feat2d: "Revisa la alineación de datos institucional desde GMA Consensus Engine", feat5d: "Configura alertas de movimiento de precio y sigue subidas o caídas al instante", pricingTitle: "Inteligencia de mercado AI para datos globales", aboutSub: "Plataforma de inteligencia de datos de mercado con analítica estructurada y claridad global.", footerCompliance: "GMA es una plataforma de visualización de datos de mercado con AI. GMA no es asesor de inversión registrado ni ofrece asesoramiento financiero. Los pagos se procesan de forma segura por Paddle.com.", planStrategistLabel: "Profesional", planProArchitectLabel: "Empresarial", planProArchitectBadge: "EMPRESARIAL", planProArchitectScope: "Global + Analytics DNA · 126 años", recommendation: "PUNTUACIÓN", recommended: "MEJOR PUNTUACIÓN", aiRecommendation: "DESTACADO DE PUNTUACIÓN COMPUESTA", alternativeChoice: "SEGUNDO DESTACADO DE DATOS", finalDecisionNotice: "SOLO INFORMATIVO - NO ES ASESORAMIENTO FINANCIERO", finalBullet2: "Ninguna salida es recomendación de comprar, vender o mantener.", finalBullet3: "Los valores de riesgo son entradas de puntuación ilustrativas, no instrucciones de trading.", comparisonIntro: "GMA Intelligence Layer genera puntuaciones educativas y contexto por empresa", startAiComparisonAnalysis: "Iniciar revisión comparativa AI", companiesAiComparison: "empresas · comparación de mercado asistida por AI"
+  }
+};
+Object.keys(T).forEach(code => {
+  const values = GMA_PADDLE_COMPLIANCE_I18N[code] || GMA_PADDLE_COMPLIANCE_I18N.en;
+  T[code] = { ...(T[code] || EN), ...values };
+});
+Object.assign(EN, GMA_PADDLE_COMPLIANCE_I18N.en);
+
+function gmaPatchLegal(lang, page, match, replacement) {
+  const list = GMA_LEGAL_STATIC?.[lang]?.[page];
+  if (!Array.isArray(list)) return;
+  const idx = list.findIndex(s => s.t && s.t.indexOf(match) !== -1);
+  if (idx >= 0) list[idx] = { ...list[idx], ...replacement };
+}
+gmaPatchLegal('en', 'terms', 'No Financial Advice', {
+  t: '3. Informational Market Data Only',
+  b: 'GMA is not a registered financial adviser and does not provide financial, investment, legal, tax, buy/sell/hold or trading advice.\n\nAll AI-assisted outputs, scores, market summaries and visualizations are provided for informational and educational purposes only. Users remain solely responsible for their own decisions and should consult a qualified professional where appropriate.'
+});
+gmaPatchLegal('en', 'terms', 'Description of Service', {
+  b: 'GMA is a subscription-based digital platform for AI-assisted market data visualization, company data aggregation, educational scoring and structured analytics.\n\nAll market data is supplied by third-party providers and is presented for informational purposes only.'
+});
+gmaPatchLegal('en', 'privacy', 'Information We Collect', {
+  b: 'GMA operates as a client-side web application and collects only the minimum data needed to run the service:\n\n• Account information: email and display name, stored locally in your browser where applicable.\n• Platform configuration: admin-provided service keys and Paddle client tokens may be stored in browser localStorage for deployment configuration. Regular users are not asked to provide AI API keys.\n• Payment data: processed entirely by Paddle.com as Merchant of Record. GMA does not receive, store or process card details.\n• Analytics: anonymous, aggregated usage data only where enabled.'
+});
+gmaPatchLegal('tr', 'terms', 'Yatirim Tavsiyesi', {
+  t: '3. Yalnızca Bilgilendirici Piyasa Verisi',
+  b: 'GMA kayıtlı bir yatırım danışmanı değildir ve finansal, yatırım, hukuki, vergi, al/sat/tut veya alım satım tavsiyesi sunmaz.\n\nTüm AI destekli çıktılar, skorlar, piyasa özetleri ve görselleştirmeler yalnızca bilgilendirme ve eğitim amaçlıdır. Kullanıcılar kendi kararlarından tamamen sorumludur ve gerekli durumlarda yetkin bir uzmana danışmalıdır.'
+});
+gmaPatchLegal('tr', 'terms', 'Hizmetin Tanimi', {
+  b: 'GMA; abonelik esaslı AI destekli piyasa verisi görselleştirme, şirket verisi toplama, eğitim amaçlı skorlama ve yapılandırılmış analitik sunan dijital bir platformdur.\n\nTüm piyasa verileri üçüncü taraf sağlayıcılardan gelir ve yalnızca bilgilendirme amacıyla sunulur.'
+});
+gmaPatchLegal('tr', 'privacy', 'Topladığımız', {
+  b: 'GMA istemci taraflı bir web uygulaması olarak çalışır ve yalnızca hizmet için gerekli minimum veriyi toplar:\n\n• Hesap bilgileri: e-posta ve görünen ad, gerektiğinde tarayıcınızda yerel olarak saklanır.\n• Platform yapılandırması: admin tarafından sağlanan servis anahtarları ve Paddle client token bilgileri dağıtım yapılandırması için tarayıcı localStorage alanında saklanabilir. Normal kullanıcılardan AI API anahtarı istenmez.\n• Ödeme verileri: Merchant of Record olarak Paddle.com tarafından tamamen işlenir. GMA kart bilgisi almaz, saklamaz veya işlemez.\n• Analitik: etkinse yalnızca anonim ve toplu kullanım verisi.'
+});
+gmaPatchLegal('tr', 'privacy', 'Bilgiler', {
+  b: 'GMA istemci taraflı bir web uygulaması olarak çalışır ve yalnızca hizmet için gerekli minimum veriyi toplar:\n\n• Hesap bilgileri: e-posta ve görünen ad, gerektiğinde tarayıcınızda yerel olarak saklanır.\n• Platform yapılandırması: admin tarafından sağlanan servis anahtarları ve Paddle client token bilgileri dağıtım yapılandırması için tarayıcı localStorage alanında saklanabilir. Normal kullanıcılardan AI API anahtarı istenmez.\n• Ödeme verileri: Merchant of Record olarak Paddle.com tarafından tamamen işlenir. GMA kart bilgisi almaz, saklamaz veya işlemez.\n• Analitik: etkinse yalnızca anonim ve toplu kullanım verisi.'
 });
 
 // ── Ceviri Tablosu ──
@@ -1422,11 +1592,11 @@ const GMA_DEMO_COMPARE = (companies, t) => {
     bestTicker: companies[0]?.ticker || "AAPL",
     confidenceRate: 84,
     globalRiskShare: 4.2,
-    rationale: txt("demoCompareRationale", "Superior financial metrics combined with the innovation pipeline make this the preferred allocation under current market conditions."),
+    rationale: txt("demoCompareRationale", "Superior financial metrics combined with the innovation pipeline make this the highest composite score under current market conditions."),
     alternatif: companies[1]?.ticker || "MSFT",
-    alternativeNote: txt("demoCompareAlternativeNote", "Strong enterprise positioning and cloud infrastructure provide compelling risk-adjusted returns as a secondary allocation.")
+    alternativeNote: txt("demoCompareAlternativeNote", "Strong enterprise positioning and cloud infrastructure provide a notable secondary data highlight.")
   },
-  overallAssessment: txt("demoCompareOverall", "The portfolio demonstrates solid diversification across market leaders with complementary business models. The current macro environment favors quality over growth, supporting this allocation strategy."),
+  overallAssessment: txt("demoCompareOverall", "The selected companies show useful diversification across market leaders with complementary business models. The current macro environment favors quality over growth in this data review."),
   _demo: true
 };
 };
@@ -2670,9 +2840,9 @@ function CompareModal({
       // Acili parantez (<>) kullanmadan temiz prompt
       const companySchema = co.map(c => `{"ticker":"${c.ticker}","totalScore":0,"growthPotential":0,"riskLevel":0,"innovationScore":0,"financialStrength":0,"marketPosition":0,"summary":"","strengths":["",""],"risks":["",""],"nearFuture":""}`).join(",");
       const outputLanguage = LANGS.find(l => l.c === lang)?.n || "English";
-      const promptContent = `${co.length} compare companies and create an investment analysis in ${outputLanguage}: ${companyDetails}
+      const promptContent = `${co.length} compare companies and create an educational market intelligence review in ${outputLanguage}: ${companyDetails}
 
-Fill only the JSON template below. Do not write any extra explanation. Make all scores whole numbers from 0 to 100:
+Fill only the JSON template below. Do not write any extra explanation. Make all scores whole numbers from 0 to 100. Do not provide buy, sell, hold, allocation or financial advice language:
 
 {"companyAnalysis":[${companySchema}],"recommendation":{"bestTicker":"${co[0].ticker}","confidenceRate":80,"globalRiskShare":5,"rationale":"","alternatif":"${co[1] ? co[1].ticker : co[0].ticker}","alternativeNote":""},"overallAssessment":""}
 
@@ -6516,18 +6686,26 @@ function ApiKeyModal({onClose}) {
   var _ak = React.useState(localStorage.getItem('gma_platform_key')||''); var apiKey=_ak[0]; var setApiKey=_ak[1];
   var _gk = React.useState(localStorage.getItem('gma_google_client_id')||''); var googleId=_gk[0]; var setGoogleId=_gk[1];
   var _pv = React.useState(localStorage.getItem('gma_paddle_vendor_id')||''); var paddleVid=_pv[0]; var setPaddleVid=_pv[1];
+  var _pct = React.useState(localStorage.getItem('gma_paddle_client_token')||''); var paddleClientToken=_pct[0]; var setPaddleClientToken=_pct[1];
   var _pe = React.useState(localStorage.getItem('gma_paddle_env')||'production'); var paddleEnv=_pe[0]; var setPaddleEnv=_pe[1];
   var _pd = React.useState(localStorage.getItem('gma_price_daily')||''); var priceD=_pd[0]; var setPriceD=_pd[1];
   var _pm = React.useState(localStorage.getItem('gma_price_monthly')||''); var priceM=_pm[0]; var setPriceM=_pm[1];
   var _py = React.useState(localStorage.getItem('gma_price_yearly')||''); var priceY=_py[0]; var setPriceY=_py[1];
+  var _pex = React.useState(localStorage.getItem('gma_price_explorer')||''); var priceExplorer=_pex[0]; var setPriceExplorer=_pex[1];
+  var _pst = React.useState(localStorage.getItem('gma_price_strategist')||''); var priceStrategist=_pst[0]; var setPriceStrategist=_pst[1];
+  var _ppa = React.useState(localStorage.getItem('gma_price_pro_architect')||''); var priceProArchitect=_ppa[0]; var setPriceProArchitect=_ppa[1];
   var _sv = React.useState(false); var saved=_sv[0]; var setSaved=_sv[1];
 
   function save() {
     if (finnhubKey.trim()) localStorage.setItem('gma_finnhub_key', finnhubKey.trim());
     if (apiKey.trim()) localStorage.setItem('gma_platform_key', apiKey.trim());
     if (googleId.trim()) localStorage.setItem('gma_google_client_id', googleId.trim());
+    if (paddleClientToken.trim()) localStorage.setItem('gma_paddle_client_token', paddleClientToken.trim());
     if (paddleVid.trim()) localStorage.setItem('gma_paddle_vendor_id', paddleVid.trim());
     localStorage.setItem('gma_paddle_env', paddleEnv);
+    if (priceExplorer.trim()) localStorage.setItem('gma_price_explorer', priceExplorer.trim());
+    if (priceStrategist.trim()) localStorage.setItem('gma_price_strategist', priceStrategist.trim());
+    if (priceProArchitect.trim()) localStorage.setItem('gma_price_pro_architect', priceProArchitect.trim());
     if (priceD.trim()) localStorage.setItem('gma_price_daily', priceD.trim());
     if (priceM.trim()) localStorage.setItem('gma_price_monthly', priceM.trim());
     if (priceY.trim()) localStorage.setItem('gma_price_yearly', priceY.trim());
@@ -6537,10 +6715,12 @@ function ApiKeyModal({onClose}) {
 
   function clearAll() {
     if (!window.confirm('Clear all saved keys?')) return;
-    ['gma_finnhub_key','gma_platform_key','gma_google_client_id','gma_paddle_vendor_id','gma_paddle_env',
+    ['gma_finnhub_key','gma_platform_key','gma_google_client_id','gma_paddle_client_token','gma_paddle_vendor_id','gma_paddle_env',
+     'gma_price_explorer','gma_price_strategist','gma_price_pro_architect',
      'gma_price_daily','gma_price_monthly','gma_price_yearly'].forEach(function(k){localStorage.removeItem(k);});
     setFinnhubKey(''); setApiKey(''); setGoogleId(''); setPaddleVid(''); setPaddleEnv('production');
     setPriceD(''); setPriceM(''); setPriceY('');
+    setPaddleClientToken(''); setPriceExplorer(''); setPriceStrategist(''); setPriceProArchitect('');
   }
 
   var S = {
@@ -6580,6 +6760,8 @@ React.createElement("div",{style:S.section},"ANTHROPIC API"),
       ),
 
       React.createElement("div",{style:S.section},"PADDLE PAYMENTS"),
+      React.createElement("div",{style:S.label},"CLIENT-SIDE TOKEN (Billing v2)"),
+      React.createElement("input",{type:"text",value:paddleClientToken,onChange:function(e){setPaddleClientToken(e.target.value);},placeholder:"test_... / live_...",style:S.input}),
       React.createElement("div",{style:S.label},"VENDOR ID"),
       React.createElement("input",{type:"text",value:paddleVid,onChange:function(e){setPaddleVid(e.target.value);},placeholder:"123456",style:S.input}),
       React.createElement("div",{style:S.label},"ENVIRONMENT"),
@@ -6587,6 +6769,12 @@ React.createElement("div",{style:S.section},"ANTHROPIC API"),
         React.createElement("option",{value:"production"},"production"),
         React.createElement("option",{value:"sandbox"},"sandbox (test)")
       ),
+      React.createElement("div",{style:S.label},"EXPLORER PRICE ID (pri_...)"),
+      React.createElement("input",{type:"text",value:priceExplorer,onChange:function(e){setPriceExplorer(e.target.value);},placeholder:"pri_...",style:S.input}),
+      React.createElement("div",{style:S.label},"PROFESSIONAL PRICE ID (pri_...)"),
+      React.createElement("input",{type:"text",value:priceStrategist,onChange:function(e){setPriceStrategist(e.target.value);},placeholder:"pri_...",style:S.input}),
+      React.createElement("div",{style:S.label},"ENTERPRISE PRICE ID (pri_...)"),
+      React.createElement("input",{type:"text",value:priceProArchitect,onChange:function(e){setPriceProArchitect(e.target.value);},placeholder:"pri_...",style:S.input}),
       React.createElement("div",{style:S.label},"DAILY PRICE ID (pri_...)"),
       React.createElement("input",{type:"text",value:priceD,onChange:function(e){setPriceD(e.target.value);},placeholder:"pri_...",style:S.input}),
       React.createElement("div",{style:S.label},"MONTHLY PRICE ID (pri_...)"),
@@ -6628,14 +6816,14 @@ const GMA_PLANS = {
     badge: 'STARTER', badgeKey: 'planExplorerBadge', scope: '1 Sector · 10 Analyses', scopeKey: 'planExplorerScope', statsKey: 'planExplorerStats'
   },
   strategist: {
-    id: 'strategist', label: 'Strategist', labelKey: 'planStrategistLabel', price: 49.99, period: '/mo', periodKey: 'periodMonth',
+    id: 'strategist', label: 'Professional', labelKey: 'planStrategistLabel', price: 49.99, period: '/mo', periodKey: 'periodMonth',
     credits: 999, color: '#b6c2d0', multiAI: true,
     badge: 'MOST POPULAR', badgeKey: 'planStrategistBadge', scope: 'Unlimited · All Sectors', scopeKey: 'planStrategistScope', statsKey: 'planStrategistStats'
   },
   pro_architect: {
-    id: 'pro_architect', label: 'Pro-Architect', labelKey: 'planProArchitectLabel', price: 99.99, period: '/mo', periodKey: 'periodMonth',
+    id: 'pro_architect', label: 'Enterprise', labelKey: 'planProArchitectLabel', price: 99.99, period: '/mo', periodKey: 'periodMonth',
     credits: 999, color: '#c2a15a', multiAI: true,
-    badge: 'SOVEREIGN', badgeKey: 'planProArchitectBadge', scope: 'Global + Signal DNA · 126 Years', scopeKey: 'planProArchitectScope', statsKey: 'planProArchitectStats'
+    badge: 'ENTERPRISE', badgeKey: 'planProArchitectBadge', scope: 'Global + Analytics DNA · 126 Years', scopeKey: 'planProArchitectScope', statsKey: 'planProArchitectStats'
   }
 };
 function getPlanText(t, plan, part) {
@@ -6679,25 +6867,50 @@ function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
   var planColor = plan && plan.color ? plan.color : '#38bdf8';
   function handleCheckout() {
     var priceId = PADDLE_PRICES()[plan.id];
+    var clientToken = PADDLE_CLIENT_TOKEN();
     var vendorId = PADDLE_VENDOR_ID();
     setStep('processing');
-    if (!vendorId) { setTimeout(function(){setStep('success');onSuccess&&onSuccess(plan.id);},1200); return; }
+    if (!clientToken && !vendorId) { setTimeout(function(){setStep('success');onSuccess&&onSuccess(plan.id);},1200); return; }
+    if (!priceId && clientToken) { setErrMsg('Paddle Price ID is missing for this plan.'); setStep('error'); return; }
     if (!window.Paddle) {
       var s=document.createElement('script'); s.src='https://cdn.paddle.com/paddle/paddle.js';
-      s.onload=function(){openPaddle(vendorId,priceId)};
+      s.onload=function(){openPaddle(clientToken,vendorId,priceId)};
       s.onerror=function(){setErrMsg('Paddle.js could not be loaded.');setStep('error')};
       document.head.appendChild(s);
-    } else { openPaddle(vendorId, priceId); }
+    } else { openPaddle(clientToken, vendorId, priceId); }
   }
-  function openPaddle(vendorId, priceId) {
+  function openPaddle(clientToken, vendorId, priceId) {
     try {
-      window.Paddle.Environment.set(PADDLE_ENV());
-      window.Paddle.Setup({vendor:parseInt(vendorId,10)});
-      window.Paddle.Checkout.open({
-        product: priceId||plan.id, email: user&&user.email?user.email:'',
-        successCallback:function(){setStep('success');onSuccess&&onSuccess(plan.id)},
-        closeCallback:function(){setStep('confirm')}
-      });
+      if (PADDLE_ENV() === 'sandbox' && window.Paddle.Environment?.set) window.Paddle.Environment.set('sandbox');
+      if (clientToken && window.Paddle.Initialize) {
+        window.Paddle.Initialize({
+          token: clientToken,
+          eventCallback: function(event) {
+            if (event && event.name === 'checkout.completed') {
+              setStep('success');
+              onSuccess&&onSuccess(plan.id);
+            }
+            if (event && event.name === 'checkout.closed') setStep('confirm');
+          }
+        });
+        window.Paddle.Checkout.open({
+          items: [{ priceId: priceId, quantity: 1 }],
+          customer: user&&user.email ? { email: user.email } : undefined,
+          settings: {
+            successUrl: GMA_CONFIG.paddle?.successUrl,
+            theme: 'dark'
+          }
+        });
+      } else if (vendorId && window.Paddle.Setup) {
+        window.Paddle.Setup({vendor:parseInt(vendorId,10)});
+        window.Paddle.Checkout.open({
+          product: priceId||plan.id, email: user&&user.email?user.email:'',
+          successCallback:function(){setStep('success');onSuccess&&onSuccess(plan.id)},
+          closeCallback:function(){setStep('confirm')}
+        });
+      } else {
+        throw new Error('Paddle Billing client token is required.');
+      }
     } catch(e){setErrMsg('Paddle init failed: '+e.message);setStep('error');}
   }
   var badges = ['\uD83D\uDD12 256-bit SSL','\u2713 ' + t('paddleSecured'),'\u2713 PCI DSS'];
@@ -9156,7 +9369,7 @@ var GMA_DNA_QUESTIONS = [
     ]
   },
   {
-    id: 'risk', label: 'Your Investment Style?',
+    id: 'risk', label: 'Your Analysis Style?',
     options: [
       {v:'cube',    l:'Cube',    icon:'\u25a0', detail:'Conservative'},
       {v:'prism',   l:'Prism',      icon:'\u25c6', detail:'Balanced'},
@@ -9164,7 +9377,7 @@ var GMA_DNA_QUESTIONS = [
     ]
   },
   {
-    id: 'timeframe', label: 'Your Investment Timeframe?',
+    id: 'timeframe', label: 'Your Review Timeframe?',
     options: [
       {v:'short',  l:'Short',   icon:'\u25cf', detail:'0\u20131 Year'},
       {v:'medium', l:'Medium',        icon:'\u25d0', detail:'1\u20133 Years'},
@@ -9470,6 +9683,4 @@ export {
   AboutPage, ContactPage, PrivacyPage, TermsPage, RefundPage,
   GlobalHeader, GlobalFooter, OnboardingOverlay
 };
-
-
 
