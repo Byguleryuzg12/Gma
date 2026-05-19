@@ -608,3 +608,130 @@ h1,
 .gma-pricing-comparison div[style*="#f59e0b"] {
   color: var(--gma-platinum) !important;
 }
+
+/* Dashboard: institutional market terminal polish */
+.gma-dashboard-page {
+  background:
+    radial-gradient(circle at 50% -14%, rgba(191, 164, 108, 0.035), transparent 34%),
+    linear-gradient(180deg, #03060c 0%, #02040a 100%) !important;
+  color: var(--gma-text) !important;
+}
+
+.gma-dashboard-page > div {
+  border-color: rgba(200, 208, 216, 0.095) !important;
+}
+
+.gma-dashboard-page > div:first-child {
+  background: linear-gradient(180deg, rgba(12, 17, 26, 0.96), rgba(5, 8, 14, 0.98)) !important;
+  border-bottom: 1px solid rgba(200, 208, 216, 0.13) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.26) !important;
+}
+
+.gma-dashboard-page input {
+  background: rgba(5, 9, 15, 0.82) !important;
+  border: 1px solid rgba(200, 208, 216, 0.14) !important;
+  border-radius: 8px !important;
+  color: var(--gma-text) !important;
+}
+
+.gma-dashboard-page input::placeholder {
+  color: rgba(162, 172, 186, 0.58) !important;
+}
+
+.gma-dashboard-page button {
+  border-radius: 8px !important;
+  letter-spacing: 0.025em !important;
+}
+
+.gma-dashboard-page button[style*="linear-gradient(135deg,#0ea5e9"],
+.gma-dashboard-page button[style*="linear-gradient(135deg,#b45309"] {
+  background: linear-gradient(135deg, #2a3240, #0e131d) !important;
+  border: 1px solid rgba(200, 208, 216, 0.18) !important;
+  color: var(--gma-text) !important;
+}
+
+.gma-dashboard-page button[style*="rgba(56,189,248"],
+.gma-dashboard-page button[style*="rgba(255,255,255,0.02)"],
+.gma-dashboard-page button[style*="rgba(255,255,255,0.03)"],
+.gma-dashboard-page button[style*="rgba(255,255,255,0.04)"] {
+  background: rgba(12, 17, 26, 0.62) !important;
+  border: 1px solid rgba(200, 208, 216, 0.13) !important;
+  color: var(--gma-muted) !important;
+}
+
+.gma-dashboard-page button:hover {
+  border-color: rgba(200, 208, 216, 0.22) !important;
+  filter: brightness(1.06) saturate(0.92) !important;
+}
+
+.gma-dashboard-page div[style*="background: #070c1a"],
+.gma-dashboard-page div[style*="background: rgba(0,0,0,0.5)"],
+.gma-dashboard-page div[style*="background: rgba(0,0,0,0.3)"] {
+  background: rgba(3, 6, 12, 0.72) !important;
+  border-color: rgba(200, 208, 216, 0.095) !important;
+}
+
+.gma-dashboard-page div[style*="font-size: 19px"],
+.gma-dashboard-page div[style*="font-size: \"19px\""] {
+  color: var(--gma-platinum) !important;
+}
+
+.gma-market-card {
+  background: linear-gradient(180deg, rgba(14, 19, 29, 0.96), rgba(6, 9, 15, 0.98)) !important;
+  border: 1px solid rgba(200, 208, 216, 0.12) !important;
+  border-radius: 9px !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.025) !important;
+}
+
+.gma-market-card:hover {
+  border-color: rgba(200, 208, 216, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+.gma-market-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 32%);
+}
+
+.gma-market-card button {
+  background: rgba(9, 13, 20, 0.78) !important;
+  border: 1px solid rgba(200, 208, 216, 0.1) !important;
+  color: var(--gma-muted) !important;
+}
+
+.gma-market-card button:hover {
+  background: rgba(18, 24, 35, 0.88) !important;
+}
+
+.gma-market-card div[style*="font-size: 22px"] {
+  color: #f3f5f7 !important;
+  font-weight: 650 !important;
+}
+
+.gma-market-card div[style*="font-size: 15px"][style*="font-weight: bold"] {
+  color: #eef2f6 !important;
+}
+
+.gma-market-card span[style*="#e879f9"],
+.gma-market-card span[style*="#38bdf8"],
+.gma-market-card span[style*="#fb923c"],
+.gma-market-card span[style*="#fbbf24"] {
+  color: var(--gma-platinum) !important;
+}
+
+.gma-side-panel {
+  background: linear-gradient(180deg, rgba(12, 17, 26, 0.98), rgba(4, 7, 12, 0.99)) !important;
+  border-left: 1px solid rgba(200, 208, 216, 0.16) !important;
+  box-shadow: -22px 0 70px rgba(0, 0, 0, 0.38) !important;
+}
+
+.gma-side-panel button {
+  color: var(--gma-muted) !important;
+}
+
+.gma-side-panel div[style*="font-size: 16px"][style*="font-weight: bold"] {
+  color: var(--gma-platinum) !important;
+}

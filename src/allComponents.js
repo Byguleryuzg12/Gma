@@ -10264,6 +10264,7 @@ function SidePanel({
     letterSpacing: "0.07em"
   });
   return /*#__PURE__*/React.createElement("div", {
+    className: "gma-side-panel",
     style: {
       position: "fixed",
       top: 0,
@@ -10605,6 +10606,7 @@ function CompanyCard({
     }
   }, label));
   return /*#__PURE__*/React.createElement("div", {
+    className: "gma-market-card",
     style: {
       background: "linear-gradient(145deg,#0c1220 0%,#080d18 100%)",
       border: `1px solid ${isWatched ? "rgba(251,191,36,0.35)" : up ? "rgba(52,211,153,0.18)" : "rgba(248,113,113,0.18)"}`,
@@ -14344,6 +14346,7 @@ function MarketDashboard({
   const hasMore = displayed.length < filtered.length;
   const tickerTape = [...rows.slice(0, 40), ...rows.slice(0, 40)];
   return /*#__PURE__*/React.createElement("div", {
+    className: "gma-dashboard-page",
     style: {
       background: "#060912",
       minHeight: "100vh",
