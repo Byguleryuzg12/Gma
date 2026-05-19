@@ -2508,6 +2508,7 @@ function CompareBar({
   const companies = rows.filter(r => compareList.has(r.ticker));
   if (companies.length === 0) return null;
   return /*#__PURE__*/React.createElement("div", {
+    className: "gma-compare-bar",
     style: {
       position: "fixed",
       bottom: 0,
@@ -2815,6 +2816,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
   const winner = result?.recommendation?.bestTicker;
   const alt = result?.recommendation?.alternatif;
   return /*#__PURE__*/React.createElement("div", {
+    className: "gma-compare-modal-overlay",
     style: {
       position: "fixed",
       inset: 0,
@@ -2827,6 +2829,7 @@ CRITICAL: Return only JSON. The first character must be { and the last character
     },
     onClick: onClose
   }, /*#__PURE__*/React.createElement("div", {
+    className: "gma-compare-modal",
     onClick: e => e.stopPropagation(),
     style: {
       background: "linear-gradient(145deg,#080e1c,#060912)",
@@ -7251,6 +7254,7 @@ function HomePage({
     desc: t('portfolioTrackingDesc')
   }];
   return /*#__PURE__*/React.createElement("div", {
+    className: "gma-home-page",
     style: {
       minHeight: '100vh',
       background: '#060912',
@@ -7259,6 +7263,7 @@ function HomePage({
       overflowX: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("div", {
+    className: "gma-hero-section",
     style: {
       position: 'relative',
       overflow: 'hidden',
@@ -7273,6 +7278,7 @@ function HomePage({
       pointerEvents: 'none'
     }
   }), /*#__PURE__*/React.createElement("div", {
+    className: "gma-hero-eyebrow",
     style: {
       fontSize: '17px',
       color: '#d6b46f',
@@ -7280,6 +7286,7 @@ function HomePage({
       marginBottom: '18px'
     }
   }, "\u25C8 GLOBAL MARKET ANALYTICS \xB7 2026"), /*#__PURE__*/React.createElement("h1", {
+    className: "gma-hero-title",
     style: {
       fontSize: 'clamp(32px,5vw,56px)',
       fontWeight: 'bold',
@@ -7292,6 +7299,7 @@ function HomePage({
   }, t('heroTitle').split('\n').map((l, i) => /*#__PURE__*/React.createElement("span", {
     key: i
   }, l, i === 0 && /*#__PURE__*/React.createElement("br", null)))), /*#__PURE__*/React.createElement("p", {
+    className: "gma-hero-subtitle",
     style: {
       fontSize: '18px',
       color: '#94a3b8',
@@ -7335,6 +7343,7 @@ function HomePage({
       letterSpacing: '0.08em'
     }
   }, "\uD83D\uDD10 ", t('loginRegister')))), /*#__PURE__*/React.createElement("div", {
+    className: "gma-home-stats",
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit,minmax(160px,1fr))',
@@ -7369,6 +7378,7 @@ function HomePage({
       letterSpacing: '0.08em'
     }
   }, s.label)))), /*#__PURE__*/React.createElement("div", {
+    className: "gma-home-features-section",
     style: {
       maxWidth: '1100px',
       margin: '0 auto',
@@ -7393,6 +7403,7 @@ function HomePage({
       color: '#f1f5f9'
     }
   }, t('featSub'))), /*#__PURE__*/React.createElement("div", {
+    className: "gma-home-features-grid",
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
@@ -7400,6 +7411,7 @@ function HomePage({
     }
   }, features.map(f => /*#__PURE__*/React.createElement("div", {
     key: f.title,
+    className: "gma-home-feature-card",
     style: {
       background: 'linear-gradient(145deg,#0c1220,#080d18)',
       border: '1px solid #0f172a',

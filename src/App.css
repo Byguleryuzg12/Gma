@@ -735,3 +735,311 @@ h1,
 .gma-side-panel div[style*="font-size: 16px"][style*="font-weight: bold"] {
   color: var(--gma-platinum) !important;
 }
+
+/* Mobile polish: premium layout discipline */
+@media (max-width: 768px) {
+  #root,
+  .gma-home-page,
+  .gma-dashboard-page,
+  .gma-pricing-page {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .header-container {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+    align-items: center !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .header-container > div {
+    max-width: 100% !important;
+  }
+
+  .header-container > div:first-child {
+    min-width: 0 !important;
+  }
+
+  .header-container > div:nth-child(2) {
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .header-container img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .header-container nav,
+  .nav-menu {
+    width: 100% !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    padding-bottom: 2px !important;
+    scrollbar-width: none;
+  }
+
+  .header-container nav::-webkit-scrollbar,
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-item {
+    min-height: 34px !important;
+    padding: 7px 10px !important;
+    white-space: nowrap !important;
+  }
+
+  .gma-hero-section {
+    padding: 58px 18px 54px !important;
+  }
+
+  .gma-hero-eyebrow {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.06em !important;
+    padding: 0 4px !important;
+  }
+
+  .gma-hero-title {
+    font-size: 30px !important;
+    line-height: 1.12 !important;
+    padding: 0 !important;
+  }
+
+  .gma-hero-subtitle {
+    max-width: 330px !important;
+    width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.62 !important;
+    overflow-wrap: normal !important;
+  }
+
+  .gma-home-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .gma-home-features-section {
+    max-width: 100vw !important;
+    padding: 52px 16px !important;
+    overflow: hidden !important;
+  }
+
+  .gma-home-features-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .gma-home-feature-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+  }
+
+  .gma-home-feature-card div {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .gma-pricing-page {
+    padding: 34px 12px 70px !important;
+  }
+
+  .gma-pricing-page h1 {
+    font-size: 28px !important;
+    line-height: 1.16 !important;
+  }
+
+  .gma-pricing-page > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 34px !important;
+  }
+
+  .gma-pricing-card {
+    min-height: 0 !important;
+    padding: 20px 18px !important;
+    border-radius: 9px !important;
+  }
+
+  .gma-pricing-button {
+    min-height: 46px !important;
+  }
+
+  .gma-pricing-comparison {
+    width: calc(100vw - 24px) !important;
+    margin: 0 auto 8px !important;
+    padding: 0 0 4px !important;
+    overflow-x: auto !important;
+    scrollbar-color: rgba(200, 208, 216, 0.3) rgba(255, 255, 255, 0.04);
+  }
+
+  .gma-pricing-comparison > div:nth-child(2) {
+    min-width: 720px !important;
+  }
+
+  .gma-dashboard-page > div:first-child {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+
+  .gma-dashboard-page > div:first-child > div {
+    min-width: 0 !important;
+  }
+
+  .gma-dashboard-page input {
+    min-height: 42px !important;
+    font-size: 13px !important;
+  }
+
+  .gma-dashboard-page div[style*="repeat(auto-fill,minmax(240px,1fr))"],
+  .gma-dashboard-page div[style*="repeat(auto-fill, minmax(240px, 1fr))"],
+  .gma-dashboard-page div[style*="grid-template-columns: repeat(auto-fill"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    padding: 8px 12px 96px !important;
+  }
+
+  .gma-market-card {
+    padding: 13px !important;
+    border-radius: 8px !important;
+  }
+
+  .gma-market-card button {
+    min-height: 46px !important;
+    padding: 8px 6px !important;
+    font-size: 10px !important;
+  }
+
+  .gma-side-panel {
+    width: min(100vw, 360px) !important;
+    max-width: 100vw !important;
+  }
+
+  .gma-compare-bar {
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    padding: 8px !important;
+    gap: 8px !important;
+    border: 1px solid rgba(200, 208, 216, 0.16) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.48) !important;
+  }
+
+  .gma-compare-bar > div:nth-child(2) {
+    flex-basis: 100% !important;
+    order: 3 !important;
+    max-height: 76px !important;
+    overflow-y: auto !important;
+  }
+
+  .gma-compare-bar > div:last-child {
+    margin-left: auto !important;
+  }
+
+  .gma-compare-bar button {
+    min-height: 40px !important;
+    padding: 9px 12px !important;
+    white-space: nowrap !important;
+  }
+
+  .gma-compare-modal-overlay {
+    padding: 10px !important;
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+  }
+
+  .gma-compare-modal {
+    max-height: calc(100vh - 20px) !important;
+    border-radius: 14px !important;
+  }
+
+  .gma-compare-modal > div:first-child {
+    padding: 15px 16px 12px !important;
+    gap: 12px !important;
+  }
+
+  .gma-compare-modal > div:nth-child(2) {
+    overflow-x: auto !important;
+  }
+
+  .gma-compare-modal > div:nth-child(2) button {
+    min-width: 118px !important;
+    font-size: 12px !important;
+    padding: 10px 8px !important;
+    white-space: nowrap !important;
+  }
+
+  .gma-compare-modal > div:nth-child(3) {
+    padding: 16px !important;
+  }
+
+  .gma-compare-modal div[style*="gridTemplateColumns: \"1fr 1fr\""],
+  .gma-compare-modal div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gma-hero-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .gma-hero-subtitle {
+    max-width: 310px !important;
+  }
+
+  .gma-pricing-page {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .gma-pricing-comparison {
+    width: calc(100vw - 20px) !important;
+  }
+
+  .gma-dashboard-page div[style*="repeat(auto-fill,minmax(240px,1fr))"],
+  .gma-dashboard-page div[style*="repeat(auto-fill, minmax(240px, 1fr))"],
+  .gma-dashboard-page div[style*="grid-template-columns: repeat(auto-fill"] {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .gma-compare-bar {
+    left: 6px !important;
+    right: 6px !important;
+    bottom: 6px !important;
+  }
+
+  .gma-compare-bar > div:first-child {
+    font-size: 12px !important;
+  }
+
+  .gma-compare-bar > div:last-child {
+    width: 100% !important;
+  }
+
+  .gma-compare-bar > div:last-child button:first-child {
+    flex: 1 !important;
+  }
+
+  .gma-side-panel {
+    width: 100vw !important;
+  }
+
+  .gma-compare-modal-overlay {
+    padding: 6px !important;
+  }
+
+  .gma-compare-modal {
+    max-height: calc(100vh - 12px) !important;
+    border-radius: 12px !important;
+  }
+}
