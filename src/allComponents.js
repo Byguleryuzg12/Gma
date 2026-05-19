@@ -254,7 +254,9 @@ const GMA_PADDLE_COMPLIANCE_I18N = {
     demoShortTimeframe: "Strong Q4 earnings forecast and the new iPhone cycle may support near-term market interest. Services revenue growth provides a consistent business catalyst.",
     demoLongTimeframe: "Sustained services expansion, Vision Pro ecosystem maturation and continued buybacks provide long-term business context through 2027.",
     secureCheckoutBody: "Your payment is securely processed by Paddle.com, our authorized Merchant of Record. GMA never stores card details. Clicking below opens Paddle's secure hosted checkout.",
-    checkoutSecuredNote: "Secured by Paddle.com - card data is never stored on GMA servers."
+    checkoutSecuredNote: "Secured by Paddle.com - card data is never stored on GMA servers.",
+    paddleConfigMissing: "Paddle checkout is not configured yet. Add a client token and plan Price IDs in the admin panel.",
+    paddlePriceMissing: "Paddle Price ID is missing for this plan. Add the plan Price ID in the admin panel."
   },
   tr: {
     howSub: "4 Adımda Küresel Piyasa Verisi",
@@ -304,7 +306,9 @@ const GMA_PADDLE_COMPLIANCE_I18N = {
     demoShortTimeframe: "Güçlü 4. çeyrek beklentisi ve yeni iPhone döngüsü kısa vadeli piyasa ilgisini destekleyebilir. Servis gelirlerindeki büyüme düzenli bir iş katalizörü sağlar.",
     demoLongTimeframe: "Servis segmentinin süren genişlemesi, Vision Pro ekosisteminin olgunlaşması ve geri alımlar 2027'ye kadar uzun vadeli iş bağlamı sunar.",
     secureCheckoutBody: "Ödemeniz yetkili kayıtlı satıcı iş ortağımız Paddle.com tarafından güvenle işlenir. GMA kart bilgilerinizi saklamaz. Aşağıdaki buton Paddle'ın güvenli ödeme sayfasını açar.",
-    checkoutSecuredNote: "Paddle.com güvencesiyle - kart verileri GMA sunucularında saklanmaz."
+    checkoutSecuredNote: "Paddle.com güvencesiyle - kart verileri GMA sunucularında saklanmaz.",
+    paddleConfigMissing: "Paddle ödeme altyapısı henüz yapılandırılmamış. Admin panelinden client token ve plan Price ID bilgilerini ekleyin.",
+    paddlePriceMissing: "Bu plan için Paddle Price ID eksik. Admin panelinden plan Price ID bilgisini ekleyin."
   },
   ru: {
     howSub: "Рыночные данные в 4 шага", step3t: "Обзор", step3d: "Структурированная рыночная аналитика через GMA Consensus Engine", step4t: "Контекст", step4d: "Создайте собственную рамку решений на основе данных, баллов и контекста", feat2d: "Проверяйте согласованность данных через GMA Consensus Engine", feat5d: "Настраивайте уведомления о движении цены и отслеживайте рост или падение", pricingTitle: "AI-аналитика рыночных данных", aboutSub: "Платформа рыночных данных с структурированной аналитикой и ясностью по глобальным рынкам.", footerCompliance: "GMA — платформа визуализации рыночных данных с AI. GMA не является инвестиционным советником и не предоставляет финансовые рекомендации. Платежи безопасно обрабатываются Paddle.com.", planStrategistLabel: "Профессиональный", planProArchitectLabel: "Корпоративный", planProArchitectBadge: "КОРПОРАТИВНЫЙ", planProArchitectScope: "Глобально + Analytics DNA · 126 лет", recommendation: "ОЦЕНКА", recommended: "ЛУЧШИЙ БАЛЛ", aiRecommendation: "ВЫДЕЛЕННЫЙ КОМПОЗИТНЫЙ БАЛЛ", alternativeChoice: "ВТОРИЧНЫЙ АНАЛИТИЧЕСКИЙ АКЦЕНТ", finalDecisionNotice: "ТОЛЬКО ДЛЯ ИНФОРМАЦИИ - НЕ ФИНАНСОВЫЙ СОВЕТ", finalBullet2: "Ни один вывод не является рекомендацией купить, продать или держать.", finalBullet3: "Значения риска являются иллюстративными баллами, а не торговыми указаниями.", comparisonIntro: "GMA Intelligence Layer создает учебные баллы и контекст по каждой компании", startAiComparisonAnalysis: "Начать AI-обзор сравнения", companiesAiComparison: "компании · AI-сравнение рынка"
@@ -6870,8 +6874,8 @@ function PaddlePaymentModal({plan,user,onClose,onSuccess}) {
     var clientToken = PADDLE_CLIENT_TOKEN();
     var vendorId = PADDLE_VENDOR_ID();
     setStep('processing');
-    if (!clientToken && !vendorId) { setTimeout(function(){setStep('success');onSuccess&&onSuccess(plan.id);},1200); return; }
-    if (!priceId && clientToken) { setErrMsg('Paddle Price ID is missing for this plan.'); setStep('error'); return; }
+    if (!clientToken && !vendorId) { setErrMsg(t('paddleConfigMissing')); setStep('error'); return; }
+    if (!priceId) { setErrMsg(t('paddlePriceMissing')); setStep('error'); return; }
     if (!window.Paddle) {
       var s=document.createElement('script'); s.src='https://cdn.paddle.com/paddle/paddle.js';
       s.onload=function(){openPaddle(clientToken,vendorId,priceId)};
