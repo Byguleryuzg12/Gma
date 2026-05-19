@@ -5876,8 +5876,8 @@ function MarketDashboard({
     }]);
     setBuyModal(null);
     setPanelOpen(true);
-    addToast(`${c.name} · ${qty} units bought · $${total}`, "success", "◆");
-  }, [addToast]);
+    addToast(`${c.name} · ${qty} ${t('units')} ${t('basketAdded')} · $${total}`, "success", "◆");
+  }, [addToast, t]);
   const toggleCart = useCallback((ticker, name) => {
     setCart(s => {
       const n = new Set(s);
@@ -5887,7 +5887,7 @@ function MarketDashboard({
       addToast(wasIn ? `${name} ${t('cartRemoved')}` : `${name} ${t('basketAdded')}`, "success", "◆");
       return n;
     });
-  }, [addToast]);
+  }, [addToast, t]);
   const toggleWatch = useCallback((ticker, name) => {
     setWatchlist(s => {
       const n = new Set(s);
@@ -5897,7 +5897,7 @@ function MarketDashboard({
       addToast(wasIn ? `${name} ${t('watchRemoved')}` : `${name} ${t('watchAdded')}`, "success", "◆");
       return n;
     });
-  }, [addToast]);
+  }, [addToast, t]);
   const handleSetAlert = useCallback((c, pct) => {
     setAlerts(a => ({
       ...a,
@@ -5905,7 +5905,7 @@ function MarketDashboard({
     }));
     setAlertModal(null);
     addToast(`${c.name} +%${pct} ${t('alertCreated')}`, "warn", "◆");
-  }, [addToast]);
+  }, [addToast, t]);
   const toggleCompare = useCallback((ticker, name) => {
     setCompareList(prev => {
       const next = new Set(prev);
@@ -5921,7 +5921,7 @@ function MarketDashboard({
       addToast(`${name} ${t('addedToComparison')} (${next.size}/5)`, "success", "⚖️");
       return next;
     });
-  }, [addToast]);
+  }, [addToast, t]);
   const gainers = rows.filter(c => c.change > 0).length;
   const losers = rows.filter(c => c.change < 0).length;
   const avgChange = rows.reduce((a, c) => a + c.change, 0) / rows.length;
