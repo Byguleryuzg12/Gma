@@ -12,8 +12,11 @@ export default defineConfig({
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'react';
           }
-          if (id.endsWith('/src/allComponents.js') || id.endsWith('\\src\\allComponents.js')) {
-            return 'gma-core';
+          if (id.endsWith('/src/data/i18n.js') || id.endsWith('\\src\\data\\i18n.js')) {
+            return 'gma-i18n';
+          }
+          if (id.includes('/src/data/') || id.includes('\\src\\data\\')) {
+            return 'gma-market-data';
           }
         }
       }
