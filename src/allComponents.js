@@ -5093,7 +5093,6 @@ async function fetchFinnhubBatch(tickers, timeout) {
   var key = _getFinnhubKey();
   if (!key) { _fhLock = false; return {}; }
   var results = {};
-  console.log('[Finnhub] Sequential fetch: ' + tickers.length + ' symbols @ 2s/req');
   for (var i = 0; i < tickers.length; i++) {
     var sym = tickers[i];
     try {
@@ -5106,7 +5105,6 @@ async function fetchFinnhubBatch(tickers, timeout) {
     }
     if (i < tickers.length - 1) await _wait(_FH_DELAY);
   }
-  console.log('[Finnhub] Done: ' + Object.keys(results).length + '/' + tickers.length);
   _fhLock = false;
   return results;
 }
