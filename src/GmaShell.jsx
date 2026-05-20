@@ -13,7 +13,26 @@ import TermsPage from './pages/TermsPage';
 import RefundPage from './pages/RefundPage';
 
 function App() {
-  const [page, setPage] = React.useState('home');
+  const routeToPage = path => {
+    const key = String(path || '').replace(/^\/+|\/+$/g, '').toLowerCase();
+    return ({
+      '': 'home',
+      home: 'home',
+      markets: 'dashboard',
+      dashboard: 'dashboard',
+      pricing: 'pricing',
+      prices: 'pricing',
+      login: 'login',
+      profile: 'profile',
+      account: 'profile',
+      about: 'about',
+      contact: 'contact',
+      privacy: 'privacy',
+      terms: 'terms',
+      refund: 'refund'
+    })[key] || 'home';
+  };
+  const [page, setPage] = React.useState(() => routeToPage(window.location.pathname));
   const [user, setUser] = React.useState(() => {
     try {
       return JSON.parse(localStorage.getItem('gma_current_user'));
@@ -51,13 +70,25 @@ function App() {
     const tr = getTranslations(lang);
     return tr[key] || EN[key] || key;
   };
-  const navigate = p => setPage(p);
+  const pageToPath = p => p === 'home' ? '/' : '/' + p;
+  const navigate = p => {
+    setPage(p);
+    const nextPath = pageToPath(p);
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState({}, '', nextPath);
+    }
+  };
 
   // Global navigate event (from modals redirecting to login)
   React.useEffect(() => {
     const handler = e => navigate(e.detail);
     window.addEventListener('gma:navigate', handler);
-    return () => window.removeEventListener('gma:navigate', handler);
+    const popHandler = () => setPage(routeToPage(window.location.pathname));
+    window.addEventListener('popstate', popHandler);
+    return () => {
+      window.removeEventListener('gma:navigate', handler);
+      window.removeEventListener('popstate', popHandler);
+    };
   }, []);
   const handleLogin = u => {
     setUser(u);
