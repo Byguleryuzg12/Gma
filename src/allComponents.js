@@ -8252,12 +8252,19 @@ function UserPanelPage({
   };
   var handleLogout = function(){ localStorage.removeItem('gma_current_user'); onLogout(); };
 
-  var inp = { width:'100%', background:'rgba(255,255,255,0.05)', border:'1px solid #1e293b',
-    borderRadius:'8px', padding:'9px 12px', color:'#e2e8f0', fontSize:'15px',
-    fontFamily:"'Courier New',monospace", outline:'none', boxSizing:'border-box', marginBottom:'8px' };
-  var card = { background:'linear-gradient(145deg,#0c1220,#080d18)', border:'1px solid #1a2744',
-    borderRadius:'14px', padding:'20px', marginBottom:'14px' };
-  var lbl = { fontSize:'13px', color:'#64748b', letterSpacing:'0.07em', display:'block', marginBottom:'4px' };
+  var displayName = prof.name || user?.name || t('userFallback');
+  var joinedLabel = user?.joined ? new Date(user.joined).toLocaleDateString('tr-TR') : '2026';
+  var planTone = planData ? '#d6c38a' : '#8fa3b8';
+  var inp = { width:'100%', background:'rgba(3,7,18,0.62)', border:'1px solid rgba(200,208,216,0.14)',
+    borderRadius:'10px', padding:'11px 13px', color:'#eef2f6', fontSize:'14px',
+    fontFamily:"Inter,system-ui,sans-serif", outline:'none', boxSizing:'border-box', marginBottom:'8px' };
+  var card = { background:'linear-gradient(180deg,rgba(18,25,36,0.96),rgba(8,12,20,0.98))', border:'1px solid rgba(200,208,216,0.12)',
+    borderRadius:'12px', padding:'22px', marginBottom:'16px', boxShadow:'0 20px 60px rgba(0,0,0,0.26)' };
+  var lbl = { fontSize:'11px', color:'#8fa3b8', letterSpacing:'0.12em', display:'block', marginBottom:'6px', textTransform:'uppercase' };
+  var pill = {display:'inline-flex',alignItems:'center',gap:'6px',padding:'6px 10px',borderRadius:'999px',fontSize:'11px',letterSpacing:'0.08em',border:'1px solid rgba(214,195,138,0.22)',color:'#d6c38a',background:'rgba(214,195,138,0.07)'};
+  var statCard = {background:'rgba(255,255,255,0.035)',border:'1px solid rgba(200,208,216,0.10)',borderRadius:'11px',padding:'14px 16px'};
+  var primaryBtn = {padding:'11px 16px',background:'linear-gradient(135deg,#c8d0d8,#8fa3b8)',border:'none',borderRadius:'9px',color:'#060912',cursor:'pointer',fontSize:'13px',fontFamily:'Inter,system-ui,sans-serif',fontWeight:700,letterSpacing:'0.04em'};
+  var ghostBtn = {padding:'10px 15px',background:'rgba(255,255,255,0.035)',border:'1px solid rgba(200,208,216,0.14)',borderRadius:'9px',color:'#c8d0d8',cursor:'pointer',fontSize:'13px',fontFamily:'Inter,system-ui,sans-serif',fontWeight:650};
 
   return React.createElement(React.Fragment, null,
     editDNAField && React.createElement(OnboardingOverlay, {
@@ -8267,11 +8274,50 @@ function UserPanelPage({
       onSingleEditDone: function(newAns){ setEditDNAField(null); }
     }),
     React.createElement("div",
-    {style:{minHeight:'100vh',background:'linear-gradient(160deg,#060912,#080e1e)',color:'#e2e8f0',fontFamily:"'Courier New',monospace",padding:'28px 20px'}},
-    React.createElement("div",{style:{maxWidth:'740px',margin:'0 auto'}},
+    {style:{minHeight:'100vh',background:'radial-gradient(circle at 18% 0%,rgba(214,195,138,0.10),transparent 28%),linear-gradient(160deg,#02040a,#070b13 48%,#0b1020)',color:'#eef2f6',fontFamily:"Inter,system-ui,sans-serif",padding:'38px 20px 56px'}},
+    React.createElement("div",{style:{maxWidth:'1120px',margin:'0 auto'}},
 
-      React.createElement("div",{style:{fontSize:'13px',color:'#38bdf8',letterSpacing:'0.10em',marginBottom:'6px'}},"\u25c8 GLOBAL MARKET ANALYTICS"),
-      React.createElement("h1",{style:{fontSize:'22px',fontWeight:'bold',color:'#f1f5f9',marginBottom:'22px'}},t('accountMgmt')),
+      React.createElement("div",{style:{display:'flex',justifyContent:'space-between',alignItems:'flex-end',gap:'18px',flexWrap:'wrap',marginBottom:'18px'}},
+        React.createElement("div",null,
+          React.createElement("div",{style:{fontSize:'12px',color:'#d6c38a',letterSpacing:'0.18em',marginBottom:'8px',fontWeight:700}},"\u25c8 GLOBAL MARKET ANALYTICS"),
+          React.createElement("h1",{style:{fontSize:'clamp(28px,4vw,46px)',fontWeight:650,color:'#eef2f6',margin:'0 0 8px',lineHeight:1.08,letterSpacing:'0.01em'}},t('accountMgmt')),
+          React.createElement("div",{style:{fontSize:'14px',color:'#8fa3b8',lineHeight:1.6}},t('intelligenceLayerActive'), " · ", t('consensusSystem'))
+        ),
+        React.createElement("div",{style:pill}, planData ? planLabel + " " + t('member') : t('freeMember'))
+      ),
+
+      React.createElement("div",{style:Object.assign({},card,{padding:'0',overflow:'hidden',border:'1px solid rgba(214,195,138,0.18)',marginBottom:'18px'})},
+        React.createElement("div",{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'0'}},
+          React.createElement("div",{style:{padding:'26px',display:'flex',gap:'18px',alignItems:'center',borderRight:'1px solid rgba(200,208,216,0.10)'}},
+            React.createElement("div",{
+              onClick:function(){fileRef.current&&fileRef.current.click();},
+              style:{width:'92px',height:'92px',borderRadius:'18px',cursor:'pointer',overflow:'hidden',
+                border:'1px solid rgba(214,195,138,0.34)',flexShrink:0,position:'relative',
+                background:photo?'transparent':'linear-gradient(135deg,#1c2431,#3b4658)',
+                display:'flex',alignItems:'center',justifyContent:'center',fontSize:'34px',fontWeight:700,color:'#eef2f6',boxShadow:'0 16px 36px rgba(0,0,0,0.34)'}},
+              photo?React.createElement("img",{src:photo,alt:"profile",style:{width:'100%',height:'100%',objectFit:'cover'}})
+                   :(displayName?.[0]?.toUpperCase()||'U'),
+              React.createElement("div",{style:{position:'absolute',bottom:0,left:0,right:0,background:'rgba(2,4,10,0.72)',padding:'4px 6px',fontSize:'10px',textAlign:'center',color:'#c8d0d8',letterSpacing:'0.06em'}},t('edit'))
+            ),
+            React.createElement("div",{style:{minWidth:0}},
+              React.createElement("div",{style:{fontSize:'24px',fontWeight:650,color:'#eef2f6',lineHeight:1.15,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}},displayName),
+              React.createElement("div",{style:{fontSize:'14px',color:'#8fa3b8',marginTop:'6px',wordBreak:'break-all'}},prof.email||user?.email||''),
+              React.createElement("div",{style:{display:'flex',gap:'8px',flexWrap:'wrap',marginTop:'12px'}},
+                React.createElement("span",{style:Object.assign({},pill,{color:'#aeb8c4',border:'1px solid rgba(200,208,216,0.16)',background:'rgba(255,255,255,0.035)'})},user?.provider==='google'?'Google':'Email'),
+                React.createElement("span",{style:Object.assign({},pill,{color:'#aeb8c4',border:'1px solid rgba(200,208,216,0.16)',background:'rgba(255,255,255,0.035)'})},joinedLabel),
+                prof.city&&React.createElement("span",{style:Object.assign({},pill,{color:'#aeb8c4',border:'1px solid rgba(200,208,216,0.16)',background:'rgba(255,255,255,0.035)'})},prof.city)
+              )
+            )
+          ),
+          React.createElement("div",{style:{padding:'22px',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(96px,1fr))',gap:'10px',alignContent:'center'}},
+            React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('myPlan')),React.createElement("div",{style:{fontSize:'14px',color:planTone,fontWeight:700,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}},planLabel)),
+            React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('credits')),React.createElement("div",{style:{fontSize:'20px',color:creditsColor,fontWeight:700}},credits,"/",creditTotal)),
+            React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('accuracyIndex')),React.createElement("div",{style:{fontSize:'20px',color:'#d6c38a',fontWeight:700}},'84%')),
+            React.createElement("button",{onClick:function(){onNavigate('dashboard');},style:Object.assign({},primaryBtn,{gridColumn:'span 2'})},t('backToMarkets')),
+            React.createElement("button",{onClick:function(){onNavigate('pricing');},style:ghostBtn},t('upgrade'))
+          )
+        )
+      ),
 
       /* Profile Card */
       React.createElement("div",{style:card},
@@ -8279,8 +8325,8 @@ function UserPanelPage({
           React.createElement("div",{
             onClick:function(){fileRef.current&&fileRef.current.click();},
             style:{width:'76px',height:'76px',borderRadius:'14px',cursor:'pointer',overflow:'hidden',
-              border:'2px solid rgba(56,189,248,0.3)',flexShrink:0,position:'relative',
-              background:photo?'transparent':'linear-gradient(135deg,#0ea5e9,#6366f1)',
+              border:'1px solid rgba(214,195,138,0.30)',flexShrink:0,position:'relative',
+              background:photo?'transparent':'linear-gradient(135deg,#1c2431,#3b4658)',
               display:'flex',alignItems:'center',justifyContent:'center',fontSize:'28px',fontWeight:'bold',color:'#fff'}},
             photo?React.createElement("img",{src:photo,alt:"profile",style:{width:'100%',height:'100%',objectFit:'cover'}})
                  :(prof.name?.[0]?.toUpperCase()||user?.name?.[0]?.toUpperCase()||'U'),
@@ -8298,24 +8344,24 @@ function UserPanelPage({
             React.createElement("button",{
               onClick:function(){setEditProf(function(p){return !p;});},
               style:{marginTop:'8px',padding:'7px 14px',
-                background:editProf?'rgba(248,113,113,0.12)':'rgba(56,189,248,0.1)',
-                border:'1px solid '+(editProf?'rgba(248,113,113,0.3)':'rgba(56,189,248,0.3)'),
-                borderRadius:'9px',color:editProf?'#f87171':'#38bdf8',
-                cursor:'pointer',fontSize:'14px',fontFamily:'inherit',fontWeight:'bold'}},
+                background:editProf?'rgba(248,113,113,0.10)':'rgba(214,195,138,0.08)',
+                border:'1px solid '+(editProf?'rgba(248,113,113,0.26)':'rgba(214,195,138,0.24)'),
+                borderRadius:'9px',color:editProf?'#fca5a5':'#d6c38a',
+                cursor:'pointer',fontSize:'13px',fontFamily:'inherit',fontWeight:700,letterSpacing:'0.04em'}},
               editProf?'\u2715 ' + t('cancel'):'\u270f ' + t('edit'))
           )
         ),
         !editProf&&prof.bio&&React.createElement("div",{style:{fontSize:'14px',color:'#94a3b8',lineHeight:1.7,padding:'10px',background:'rgba(255,255,255,0.03)',borderRadius:'8px',marginBottom:'12px'}},prof.bio),
         editProf&&React.createElement("div",null,
-          React.createElement("div",{style:{fontSize:'13px',color:'#38bdf8',letterSpacing:'0.07em',marginBottom:'12px',borderBottom:'1px solid #0f172a',paddingBottom:'8px'}},"\ud83d\udc64 ", t('personalInfo')),
-          React.createElement("div",{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginBottom:'8px'}},
+          React.createElement("div",{style:{fontSize:'12px',color:'#d6c38a',letterSpacing:'0.12em',marginBottom:'14px',borderBottom:'1px solid rgba(200,208,216,0.10)',paddingBottom:'10px',fontWeight:700}},t('personalInfo')),
+          React.createElement("div",{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'10px',marginBottom:'8px'}},
             React.createElement("div",null,React.createElement("span",{style:lbl},t('fullname')),React.createElement("input",{value:prof.name,onChange:function(e){setProf(function(p){return Object.assign({},p,{name:e.target.value});});},placeholder:t('namePlaceholder'),style:inp})),
             React.createElement("div",null,React.createElement("span",{style:lbl},t('city')),React.createElement("input",{value:prof.city,onChange:function(e){setProf(function(p){return Object.assign({},p,{city:e.target.value});});},placeholder:"Tashkent",style:inp})),
             React.createElement("div",null,React.createElement("span",{style:lbl},t('email')),React.createElement("input",{value:prof.email,onChange:function(e){setProf(function(p){return Object.assign({},p,{email:e.target.value});});},type:"email",style:inp})),
             React.createElement("div",null,React.createElement("span",{style:lbl},t('phone')),React.createElement("input",{value:prof.phone,onChange:function(e){setProf(function(p){return Object.assign({},p,{phone:e.target.value});});},placeholder:"+998 90 000 00 00",style:inp}))
           ),
           React.createElement("div",{style:{display:'flex',gap:'10px'}},
-            React.createElement("button",{onClick:handleSaveProf,style:{flex:2,padding:'10px',background:'linear-gradient(135deg,#0ea5e9,#6366f1)',border:'none',borderRadius:'9px',color:'#fff',cursor:'pointer',fontSize:'15px',fontFamily:'inherit',fontWeight:'bold'}},"💾 ", t('saveProfile')),
+            React.createElement("button",{onClick:handleSaveProf,style:Object.assign({},primaryBtn,{flex:2})},t('saveProfile')),
             React.createElement("button",{onClick:function(){setEditProf(false);},style:{flex:1,padding:'10px',background:'transparent',border:'1px solid #1e293b',borderRadius:'9px',color:'#64748b',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}},t('cancel'))
           ),
           profSaved&&React.createElement("div",{style:{marginTop:'8px',fontSize:'14px',color:'#34d399'}},"✔ ", t('profileSaved'))
@@ -8325,25 +8371,15 @@ function UserPanelPage({
       /* GMA DNA Card */
       React.createElement(GMA_DNA_Card, {user:user, onEditField:function(k){ setEditDNAField(k); }}),
 
-      /* Status pill - top right */
-      React.createElement("div",{style:{display:"flex",justifyContent:"flex-end",marginBottom:"8px"}},
-        React.createElement("div",{style:{
-          padding:"4px 12px",
-          background:"rgba(251,191,36,0.08)",
-          border:"1px solid rgba(251,191,36,0.25)",
-          borderRadius:"999px",fontSize:"11px",color:"#fbbf24",
-          letterSpacing:"0.05em",fontWeight:"500"
-        }}, planData ? ((GMA_PLANS[planData.planId]||{}).label||planData.planId) + " " + t('member') : t('freeMember'))
-      ),
       /* GMA Core Card */
-      React.createElement("div",{style:Object.assign({},card,{border:"1px solid rgba(167,139,250,0.2)",textAlign:"center",padding:"28px 20px"})},
+      React.createElement("div",{style:Object.assign({},card,{border:"1px solid rgba(214,195,138,0.16)",textAlign:"center",padding:"28px 20px"})},
         React.createElement("div",{style:{fontSize:"11px",color:"#64748b",letterSpacing:"0.15em",marginBottom:"8px"}},"\u25c8 ", t('gmaCore')),
         React.createElement("div",{style:{fontSize:"22px",fontWeight:"300",color:"#e2e8f0",marginBottom:"6px",letterSpacing:"0.02em"}},t('intelligenceLayerActive')),
-        React.createElement("div",{style:{fontSize:"11px",color:"#38bdf8",letterSpacing:"0.08em"}},t('consensusSystem'))
+        React.createElement("div",{style:{fontSize:"11px",color:"#d6c38a",letterSpacing:"0.08em"}},t('consensusSystem'))
       ),
       /* Kredi & Plan Card */
-      React.createElement("div",{style:Object.assign({},card,{border:'1px solid rgba(167,139,250,0.2)'})},
-        React.createElement("div",{style:{fontSize:'13px',color:'#a78bfa',letterSpacing:'0.08em',marginBottom:'14px'}},"\ud83d\udcca ", t('analysisCredits')),
+      React.createElement("div",{style:Object.assign({},card,{border:'1px solid rgba(214,195,138,0.16)'})},
+        React.createElement("div",{style:{fontSize:'12px',color:'#d6c38a',letterSpacing:'0.12em',marginBottom:'14px',fontWeight:700}},t('analysisCredits')),
         React.createElement("div",{style:{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'12px'}},
           React.createElement("div",null,
             React.createElement("div",{style:{fontSize:'12px',color:'#64748b',letterSpacing:'0.05em',marginBottom:'4px'}},t('strategicAnalysis')),
@@ -8352,13 +8388,12 @@ function UserPanelPage({
           ),
           React.createElement("button",{
             onClick:function(){onNavigate('pricing');},
-            style:{padding:'8px 16px',background:'rgba(167,139,250,0.12)',border:'1px solid rgba(167,139,250,0.3)',
-              borderRadius:'8px',color:'#a78bfa',cursor:'pointer',fontSize:'12px',fontFamily:'inherit',fontWeight:'bold'}},
-            "🚀 ", t('upgrade'))
+            style:Object.assign({},ghostBtn,{color:'#d6c38a',border:'1px solid rgba(214,195,138,0.22)',background:'rgba(214,195,138,0.07)'})},
+            t('upgrade'))
         ),
         React.createElement("div",{style:{
-          background:'linear-gradient(135deg,rgba(251,191,36,0.06),rgba(56,189,248,0.04))',
-          border:'1px solid rgba(251,191,36,0.15)',
+          background:'linear-gradient(135deg,rgba(214,195,138,0.07),rgba(143,163,184,0.04))',
+          border:'1px solid rgba(214,195,138,0.15)',
           borderRadius:'10px',padding:'12px 14px',marginBottom:'10px',
           display:'flex',alignItems:'center',justifyContent:'space-between',gap:'10px'
         }},
@@ -8368,7 +8403,7 @@ function UserPanelPage({
           ),
           React.createElement('div',{style:{fontSize:'10px',color:'#94a3b8',textAlign:'right',lineHeight:1.4}},
             React.createElement('div',null,t('verifiedBy')),
-            React.createElement('div',{style:{color:'#38bdf8'}},t('yearsOfData'))
+            React.createElement('div',{style:{color:'#d6c38a'}},t('yearsOfData'))
           )
         ),
         React.createElement("div",{style:{background:'rgba(255,255,255,0.02)',borderRadius:'8px',padding:'10px 12px',fontSize:'12px',color:'#64748b',lineHeight:1.6}},
@@ -8383,8 +8418,7 @@ function UserPanelPage({
         React.createElement("div",{style:{fontSize:'14px',color:'#64748b',letterSpacing:'0.06em',marginBottom:'12px'}},"\u2699\ufe0f ", t('accountActions')),
         React.createElement("div",{style:{display:'flex',gap:'10px',flexWrap:'wrap'}},
           React.createElement("button",{onClick:function(){onNavigate('dashboard');},
-            style:{padding:'9px 16px',background:'rgba(56,189,248,0.1)',border:'1px solid rgba(56,189,248,0.3)',
-              borderRadius:'9px',color:'#38bdf8',cursor:'pointer',fontSize:'15px',fontFamily:'inherit',fontWeight:'bold'}},
+            style:ghostBtn},
             t('backToMarkets')),
           React.createElement("button",{onClick:handleLogout,
             style:{padding:'9px 16px',background:'rgba(248,113,113,0.1)',border:'1px solid rgba(248,113,113,0.3)',
