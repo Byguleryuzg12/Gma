@@ -6852,11 +6852,26 @@ function getPlanCredits(email) {
 }
 function setPlanActive(email, planId) {
   const p = GMA_PLANS[planId];
+  const record = {
+    id: 'plan-' + Date.now(),
+    type: 'plan',
+    planId,
+    label: p.label || planId,
+    price: p.price,
+    credits: p.credits,
+    at: Date.now(),
+    status: 'active'
+  };
   localStorage.setItem('gma_plan_' + email, JSON.stringify({
     planId,
     credits: p.credits,
-    at: Date.now()
+    at: record.at
   }));
+  try {
+    const key = 'gma_history_' + email;
+    const list = JSON.parse(localStorage.getItem(key) || '[]');
+    localStorage.setItem(key, JSON.stringify([record].concat(list).slice(0, 24)));
+  } catch(e) {}
 }
 
 // ======================================================================
@@ -8255,6 +8270,28 @@ function UserPanelPage({
   var displayName = prof.name || user?.name || t('userFallback');
   var joinedLabel = user?.joined ? new Date(user.joined).toLocaleDateString('tr-TR') : '2026';
   var planTone = planData ? '#d6c38a' : '#8fa3b8';
+  var historyItems = (function(){
+    var items = [];
+    try { items = JSON.parse(localStorage.getItem('gma_history_' + email) || '[]') || []; } catch(e) { items = []; }
+    if (planData && !items.some(function(x){ return x.type === 'plan' && x.at === planData.at; })) {
+      var activePlan = GMA_PLANS[planData.planId] || {};
+      items = [{
+        id:'active-plan',
+        type:'plan',
+        planId:planData.planId,
+        label:activePlan.label || planLabel,
+        price:activePlan.price,
+        credits:planData.credits,
+        at:planData.at,
+        status:'active'
+      }].concat(items);
+    }
+    try {
+      var dna = JSON.parse(localStorage.getItem('gma_user_dna_'+email) || 'null');
+      if (dna) items.push({id:'dna-current',type:'profile',label:t('gmaUserDna'),status:t('intelligenceLayerActive'),at:user?.joined || Date.now()});
+    } catch(e) {}
+    return items.slice(0, 6);
+  })();
   var inp = { width:'100%', background:'rgba(3,7,18,0.62)', border:'1px solid rgba(200,208,216,0.14)',
     borderRadius:'10px', padding:'11px 13px', color:'#eef2f6', fontSize:'14px',
     fontFamily:"Inter,system-ui,sans-serif", outline:'none', boxSizing:'border-box', marginBottom:'8px' };
@@ -8319,53 +8356,43 @@ function UserPanelPage({
         )
       ),
 
-      /* Profile Card */
-      React.createElement("div",{style:card},
-        React.createElement("div",{style:{display:'flex',alignItems:'center',gap:'18px',marginBottom:'18px'}},
-          React.createElement("div",{
-            onClick:function(){fileRef.current&&fileRef.current.click();},
-            style:{width:'76px',height:'76px',borderRadius:'14px',cursor:'pointer',overflow:'hidden',
-              border:'1px solid rgba(214,195,138,0.30)',flexShrink:0,position:'relative',
-              background:photo?'transparent':'linear-gradient(135deg,#1c2431,#3b4658)',
-              display:'flex',alignItems:'center',justifyContent:'center',fontSize:'28px',fontWeight:'bold',color:'#fff'}},
-            photo?React.createElement("img",{src:photo,alt:"profile",style:{width:'100%',height:'100%',objectFit:'cover'}})
-                 :(prof.name?.[0]?.toUpperCase()||user?.name?.[0]?.toUpperCase()||'U'),
-            React.createElement("div",{style:{position:'absolute',bottom:0,right:0,background:'rgba(0,0,0,0.7)',padding:'2px 5px',fontSize:'11px'}},"\ud83d\udcf7")
-          ),
-          React.createElement("input",{ref:fileRef,type:"file",accept:"image/*",onChange:handlePhoto,style:{display:'none'}}),
-          React.createElement("div",{style:{flex:1}},
-            React.createElement("div",{style:{fontSize:'19px',fontWeight:'bold',color:'#f1f5f9'}},prof.name||user?.name||t('userFallback')),
-            React.createElement("div",{style:{fontSize:'14px',color:'#64748b',marginTop:'3px'}},prof.email||user?.email||''),
-            prof.city&&React.createElement("div",{style:{fontSize:'13px',color:'#94a3b8',marginTop:'4px'}},"\ud83d\udccd ",prof.city),
-            React.createElement("div",{style:{fontSize:'12px',color:'#64748b',marginTop:'5px'}},
-              user?.provider==='google'?'\ud83d\udd11 Google':'\ud83d\udce7 Email',
-              " \xb7 ",user?.joined?new Date(user.joined).toLocaleDateString('tr-TR'):''
-            ),
-            React.createElement("button",{
-              onClick:function(){setEditProf(function(p){return !p;});},
-              style:{marginTop:'8px',padding:'7px 14px',
-                background:editProf?'rgba(248,113,113,0.10)':'rgba(214,195,138,0.08)',
-                border:'1px solid '+(editProf?'rgba(248,113,113,0.26)':'rgba(214,195,138,0.24)'),
-                borderRadius:'9px',color:editProf?'#fca5a5':'#d6c38a',
-                cursor:'pointer',fontSize:'13px',fontFamily:'inherit',fontWeight:700,letterSpacing:'0.04em'}},
-              editProf?'\u2715 ' + t('cancel'):'\u270f ' + t('edit'))
-          )
+      editProf&&React.createElement("div",{style:card},
+        React.createElement("div",{style:{fontSize:'12px',color:'#d6c38a',letterSpacing:'0.12em',marginBottom:'14px',borderBottom:'1px solid rgba(200,208,216,0.10)',paddingBottom:'10px',fontWeight:700}},t('personalInfo')),
+        React.createElement("input",{ref:fileRef,type:"file",accept:"image/*",onChange:handlePhoto,style:{display:'none'}}),
+        React.createElement("div",{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'10px',marginBottom:'8px'}},
+          React.createElement("div",null,React.createElement("span",{style:lbl},t('fullname')),React.createElement("input",{value:prof.name,onChange:function(e){setProf(function(p){return Object.assign({},p,{name:e.target.value});});},placeholder:t('namePlaceholder'),style:inp})),
+          React.createElement("div",null,React.createElement("span",{style:lbl},t('city')),React.createElement("input",{value:prof.city,onChange:function(e){setProf(function(p){return Object.assign({},p,{city:e.target.value});});},placeholder:"Tashkent",style:inp})),
+          React.createElement("div",null,React.createElement("span",{style:lbl},t('email')),React.createElement("input",{value:prof.email,onChange:function(e){setProf(function(p){return Object.assign({},p,{email:e.target.value});});},type:"email",style:inp})),
+          React.createElement("div",null,React.createElement("span",{style:lbl},t('phone')),React.createElement("input",{value:prof.phone,onChange:function(e){setProf(function(p){return Object.assign({},p,{phone:e.target.value});});},placeholder:"+998 90 000 00 00",style:inp}))
         ),
-        !editProf&&prof.bio&&React.createElement("div",{style:{fontSize:'14px',color:'#94a3b8',lineHeight:1.7,padding:'10px',background:'rgba(255,255,255,0.03)',borderRadius:'8px',marginBottom:'12px'}},prof.bio),
-        editProf&&React.createElement("div",null,
-          React.createElement("div",{style:{fontSize:'12px',color:'#d6c38a',letterSpacing:'0.12em',marginBottom:'14px',borderBottom:'1px solid rgba(200,208,216,0.10)',paddingBottom:'10px',fontWeight:700}},t('personalInfo')),
-          React.createElement("div",{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'10px',marginBottom:'8px'}},
-            React.createElement("div",null,React.createElement("span",{style:lbl},t('fullname')),React.createElement("input",{value:prof.name,onChange:function(e){setProf(function(p){return Object.assign({},p,{name:e.target.value});});},placeholder:t('namePlaceholder'),style:inp})),
-            React.createElement("div",null,React.createElement("span",{style:lbl},t('city')),React.createElement("input",{value:prof.city,onChange:function(e){setProf(function(p){return Object.assign({},p,{city:e.target.value});});},placeholder:"Tashkent",style:inp})),
-            React.createElement("div",null,React.createElement("span",{style:lbl},t('email')),React.createElement("input",{value:prof.email,onChange:function(e){setProf(function(p){return Object.assign({},p,{email:e.target.value});});},type:"email",style:inp})),
-            React.createElement("div",null,React.createElement("span",{style:lbl},t('phone')),React.createElement("input",{value:prof.phone,onChange:function(e){setProf(function(p){return Object.assign({},p,{phone:e.target.value});});},placeholder:"+998 90 000 00 00",style:inp}))
+        React.createElement("div",{style:{display:'flex',gap:'10px',flexWrap:'wrap'}},
+          React.createElement("button",{onClick:handleSaveProf,style:Object.assign({},primaryBtn,{flex:'2 1 220px'})},t('saveProfile')),
+          React.createElement("button",{onClick:function(){setEditProf(false);},style:Object.assign({},ghostBtn,{flex:'1 1 140px'})},t('cancel'))
+        ),
+        profSaved&&React.createElement("div",{style:{marginTop:'8px',fontSize:'14px',color:'#34d399'}},"✔ ", t('profileSaved'))
+      ),
+
+      React.createElement("div",{style:card},
+        React.createElement("div",{style:{display:'flex',justifyContent:'space-between',gap:'12px',alignItems:'center',marginBottom:'14px',flexWrap:'wrap'}},
+          React.createElement("div",null,
+            React.createElement("div",{style:{fontSize:'12px',color:'#d6c38a',letterSpacing:'0.12em',fontWeight:700}},t('myPlan'), " / ", t('accountActions')),
+            React.createElement("div",{style:{fontSize:'13px',color:'#8fa3b8',marginTop:'5px'}},t('paddleSecured'), " · ", t('oneClickCancel'))
           ),
-          React.createElement("div",{style:{display:'flex',gap:'10px'}},
-            React.createElement("button",{onClick:handleSaveProf,style:Object.assign({},primaryBtn,{flex:2})},t('saveProfile')),
-            React.createElement("button",{onClick:function(){setEditProf(false);},style:{flex:1,padding:'10px',background:'transparent',border:'1px solid #1e293b',borderRadius:'9px',color:'#64748b',cursor:'pointer',fontSize:'15px',fontFamily:'inherit'}},t('cancel'))
-          ),
-          profSaved&&React.createElement("div",{style:{marginTop:'8px',fontSize:'14px',color:'#34d399'}},"✔ ", t('profileSaved'))
-        )
+          React.createElement("button",{onClick:function(){onNavigate('pricing');},style:ghostBtn},t('upgrade'))
+        ),
+        historyItems.length===0
+          ? React.createElement("div",{style:{padding:'18px',border:'1px solid rgba(200,208,216,0.10)',borderRadius:'10px',color:'#8fa3b8',fontSize:'13px',background:'rgba(255,255,255,0.025)'}},t('noPlanSelected'))
+          : historyItems.map(function(item){
+              var dt = item.at ? new Date(item.at).toLocaleDateString('tr-TR') : joinedLabel;
+              return React.createElement("div",{key:item.id||item.type+dt,style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'12px',alignItems:'center',padding:'13px 0',borderTop:'1px solid rgba(200,208,216,0.08)'}},
+                React.createElement("div",null,
+                  React.createElement("div",{style:{fontSize:'14px',color:'#eef2f6',fontWeight:650}},item.type==='plan' ? (item.label || planLabel) : item.label),
+                  React.createElement("div",{style:{fontSize:'11px',color:'#8fa3b8',marginTop:'3px'}},item.type==='plan' ? (item.credits + " " + t('credits')) : item.status)
+                ),
+                React.createElement("div",{style:{fontSize:'12px',color:'#c8d0d8'}},item.type==='plan' ? ('$' + (item.price || 0)) : t('profileInfo')),
+                React.createElement("div",{style:{textAlign:'right',fontSize:'12px',color:'#d6c38a'}},dt)
+              );
+            })
       ),
 
       /* GMA DNA Card */
