@@ -8346,7 +8346,7 @@ function UserPanelPage({
               )
             )
           ),
-          React.createElement("div",{style:{padding:'22px',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(96px,1fr))',gap:'10px',alignContent:'center'}},
+          React.createElement("div",{style:{padding:'22px',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'10px',alignContent:'center'}},
             React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('myPlan')),React.createElement("div",{style:{fontSize:'14px',color:planTone,fontWeight:700,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}},planLabel)),
             React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('credits')),React.createElement("div",{style:{fontSize:'20px',color:creditsColor,fontWeight:700}},credits,"/",creditTotal)),
             React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('accuracyIndex')),React.createElement("div",{style:{fontSize:'20px',color:'#d6c38a',fontWeight:700}},'84%')),
