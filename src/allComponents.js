@@ -8350,8 +8350,7 @@ function UserPanelPage({
             React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('myPlan')),React.createElement("div",{style:{fontSize:'14px',color:planTone,fontWeight:700,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}},planLabel)),
             React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('credits')),React.createElement("div",{style:{fontSize:'20px',color:creditsColor,fontWeight:700}},credits,"/",creditTotal)),
             React.createElement("div",{style:statCard},React.createElement("div",{style:{fontSize:'10px',color:'#8fa3b8',letterSpacing:'0.12em',marginBottom:'7px'}},t('accuracyIndex')),React.createElement("div",{style:{fontSize:'20px',color:'#d6c38a',fontWeight:700}},'84%')),
-            React.createElement("button",{onClick:function(){onNavigate('dashboard');},style:Object.assign({},primaryBtn,{gridColumn:'span 2'})},t('backToMarkets')),
-            React.createElement("button",{onClick:function(){onNavigate('pricing');},style:ghostBtn},t('upgrade'))
+            React.createElement("button",{onClick:function(){onNavigate('dashboard');},style:Object.assign({},primaryBtn,{gridColumn:'1 / -1',textAlign:'center',justifyContent:'center'})},t('backToMarkets'))
           )
         )
       ),
